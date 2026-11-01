@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% from "_macros.html" import meter, row %}
+{% block main %}
+<section class="edition" aria-label="عدد اليوم">
+  <p class="edition__line">عدد {{ edition_day }}
+    {% if today_count %}<span>{{ today_count }} خبراً حتى الآن، من {{ today_sources }} تغطية في الصحف والوكالات والجهات الرسمية</span>{% endif %}</p>
+</section>
+
+{% if lead %}
+<section class="top">
+  <article class="lead" style="--cat: var(--c-{{ lead.category }})">
+    <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
+    <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    <p class="lead__excerpt">{{ lead.excerpt }}</p>
+    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{{ meter(lead.n_sources, lead.category) }}</div>
+  </article>
+  <div class="runners">
+    <h2 class="runners__title">الأكثر تغطية</h2>
+    {% for a in runners %}
+    <article class="runner" style="--cat: var(--c-{{ a.category }})">
+      <a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>
+      <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+      <div class="meta">{{ meter(a.n_sources, a.category) }}</div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% else %}
+<section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد بعد التشغيل التالي للمحرك.</p></section>
+{% endif %}
+
+{% if opinions %}
+<section class="opinions" aria-labelledby="op-h">
+  <div class="section-head" style="--cat: var(--c-opinion)"><h2 id="op-h">رأي ونقد</h2><a href="{{ root }}category/opinion.html">كل المقالات</a></div>
+  <div class="opinions__grid">
+  {% for a in opinions %}
+    <article class="op">
+      <p class="op__author">{{ a.author or 'كاتب غير مذكور' }}</p>
+      <p class="op__outlet">{{ a.outlet }}</p>
+      <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+    </article>
+  {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% for cat, items in sections %}
+<section class="section" aria-labelledby="h-{{ cat }}">
+  <div class="section-head" style="--cat: var(--c-{{ cat }})"><h2 id="h-{{ cat }}">{{ cats[cat].name_ar }}</h2><a href="{{ root }}category/{{ cat }}.html">المزيد</a></div>
+  <div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=False) }}{% endfor %}</div>
+</section>
+{% endfor %}
+{% endblock %}

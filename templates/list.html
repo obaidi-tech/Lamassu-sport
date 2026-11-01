@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% from "_macros.html" import row %}
+{% block title %}{{ title }} — {{ site.site_name }}{% endblock %}
+{% block main %}
+<div class="page-head" {% if cat %}style="--cat: var(--c-{{ cat }})"{% endif %}><h1>{{ title }}</h1>
+  <p>{{ items | length }} خبراً{% if cat %}، الأحدث أولاً{% else %}، مرتبة حسب حجم التغطية{% endif %}</p></div>
+{% if items %}
+<div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=not cat) }}{% endfor %}</div>
+{% else %}
+<p class="empty">لا أخبار في هذا القسم بعد.</p>
+{% endif %}
+{% endblock %}

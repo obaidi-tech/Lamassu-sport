@@ -1,0 +1,131 @@
+# الحصص اليومية = سقف أعلى لا هدف إلزامي (المجموع 50). في الأيام الهادئة يُنشر أقل.
+# max_per_sub = أقصى عدد أخبار لكل دوري/رياضة/دولة داخل الفئة
+# min_score   = أدنى درجة أهمية مقبولة. القصة الأضعف لا تُنشر حتى لو بقيت الحصة ناقصة.
+#   للتقريب: ناشر كبير واحد حديث ≈ 2، ناشران موثوقان ≈ 4، خبر تغطيه 5 جهات ≈ 9
+# الترتيب هنا = أولوية التصنيف عند تداخل الكلمات المفتاحية
+
+categories:
+  opinion:
+    name_ar: "رأي ونقد"
+    quota: 3
+    min_score: 0
+    max_per_sub: 1          # sub = الكاتب
+  nba:
+    name_ar: "كرة السلة الأمريكية"
+    quota: 3
+    min_score: 3
+    max_per_sub: 3
+  orgs:
+    name_ar: "المنظمات الدولية والقارية"
+    quota: 5
+    min_score: 2.5
+    max_per_sub: 2          # sub = المنظمة
+  top5:
+    name_ar: "الدوريات الخمس الكبرى"
+    quota: 12
+    min_score: 3
+    max_per_sub: 3          # sub = الدوري
+  other_sports:
+    name_ar: "رياضات عالمية"
+    quota: 12
+    min_score: 3
+    max_per_sub: 2          # sub = الرياضة
+  awareness:
+    name_ar: "توعية ودراسات"
+    quota: 3
+    min_score: 2
+    max_per_sub: 2
+  world:
+    name_ar: "كرة العالم"
+    quota: 10
+    min_score: 3
+    max_per_sub: 2          # sub = الدولة
+  flex:
+    name_ar: "الأبرز"
+    quota: 2                # تُملأ بأعلى الأخبار المتبقية من أي فئة
+    min_score: 5            # الحصة المرنة لا تُستخدم إلا لخبر قوي فعلاً
+    min_score: 5
+
+# مكافأة ترتيب حسب الفئة (تضاف لدرجة الأهمية)
+category_bonus:
+  orgs: 0.5
+  top5: 0.5
+  nba: 0.2
+
+keywords:
+  nba:
+    _: ["nba", "lakers", "celtics", "warriors", "knicks", "bucks", "nuggets", "thunder",
+        "76ers", "sixers", "mavericks", "heat", "suns", "clippers", "timberwolves", "cavaliers",
+        "lebron", "curry", "jokic", "doncic", "antetokounmpo", "wembanyama",
+        "الدوري الأمريكي للمحترفين", "كرة السلة الأمريكية", "ليكرز", "سلتيكس"]
+  orgs:
+    fifa: ["fifa", "infantino", "فيفا", "الاتحاد الدولي لكرة القدم"]
+    uefa: ["uefa", "ceferin", "يويفا", "الاتحاد الأوروبي لكرة القدم"]
+    afc: ["asian football confederation", "afc ", "الاتحاد الآسيوي"]
+    caf: ["confederation of african football", "caf ", "الاتحاد الأفريقي"]
+    conmebol: ["conmebol", "كونميبول"]
+    concacaf: ["concacaf", "كونكاكاف"]
+    ioc: ["ioc", "international olympic committee", "olympic committee", "اللجنة الأولمبية الدولية"]
+    wada: ["wada", "anti-doping agency", "الوكالة العالمية لمكافحة المنشطات"]
+    cas: ["court of arbitration for sport", "المحكمة الرياضية"]
+    fiba: ["fiba", "الاتحاد الدولي لكرة السلة"]
+    world_athletics: ["world athletics", "الاتحاد الدولي لألعاب القوى"]
+  top5:
+    premier_league: ["premier league", "arsenal", "liverpool", "man city", "manchester city",
+        "man utd", "manchester united", "chelsea", "tottenham", "newcastle", "aston villa",
+        "الدوري الإنجليزي", "أرسنال", "ليفربول", "مانشستر سيتي", "مانشستر يونايتد", "تشيلسي"]
+    laliga: ["la liga", "laliga", "real madrid", "barcelona", "atletico madrid", "atlético",
+        "sevilla", "villarreal", "real sociedad", "athletic bilbao",
+        "الدوري الإسباني", "ريال مدريد", "برشلونة", "أتلتيكو"]
+    bundesliga: ["bundesliga", "bayern", "dortmund", "leverkusen", "leipzig", "stuttgart",
+        "frankfurt", "الدوري الألماني", "بايرن", "دورتموند", "ليفركوزن"]
+    serie_a: ["serie a", "juventus", "inter milan", "internazionale", "ac milan", "napoli",
+        "roma", "lazio", "atalanta", "الدوري الإيطالي", "يوفنتوس", "إنتر", "ميلان", "نابولي"]
+    ligue_1: ["ligue 1", "psg", "paris saint-germain", "marseille", "lyon", "monaco", "lille",
+        "الدوري الفرنسي", "باريس سان جيرمان", "مارسيليا"]
+  other_sports:
+    tennis: ["tennis", "atp", "wta", "wimbledon", "roland garros", "us open", "australian open",
+        "sinner", "alcaraz", "djokovic", "sabalenka", "swiatek", "التنس"]
+    formula1: ["formula 1", "formula one", " f1 ", "grand prix", "verstappen", "hamilton",
+        "leclerc", "norris", "فورمولا"]
+    athletics: ["athletics", "marathon", "sprint", "100m", "diamond league", "ألعاب القوى", "ماراثون"]
+    boxing: ["boxing", "heavyweight", "usyk", "fury", "الملاكمة"]
+    mma: ["ufc", "mma", "mixed martial", "الفنون القتالية"]
+    golf: ["golf", "pga", "ryder cup", "masters", "الغولف"]
+    cricket: ["cricket", "test match", "ipl", "الكريكيت"]
+    rugby: ["rugby", "six nations", "الرغبي"]
+    cycling: ["cycling", "tour de france", "giro", "vuelta", "pogacar", "الدراجات"]
+    swimming: ["swimming", "swimmer", "السباحة"]
+    motogp: ["motogp", "moto gp", "الدراجات النارية"]
+    nfl: ["nfl", "super bowl", "quarterback", "كرة القدم الأمريكية"]
+    hockey: ["nhl", "ice hockey", "هوكي"]
+    handball: ["handball", "كرة اليد"]
+    volleyball: ["volleyball", "الكرة الطائرة"]
+  awareness:
+    doping: ["doping", "banned substance", "منشطات"]
+    health: ["concussion", "cardiac", "mental health", "injury prevention", "study", "research",
+        "scientists", "الصحة النفسية", "دراسة", "باحثون"]
+    integrity: ["match-fixing", "fake news", "misinformation", "hoax", "fact check",
+        "التلاعب بنتائج", "أخبار مزيفة", "شائعة"]
+  world:
+    saudi_arabia: ["saudi", "al-hilal", "al-nassr", "al-ittihad", "al-ahli", "السعودي", "الهلال", "النصر", "الاتحاد السعودي"]
+    usa: ["mls", "inter miami", "usmnt", "الدوري الأمريكي"]
+    brazil: ["brazil", "brasileirao", "flamengo", "palmeiras", "البرازيل"]
+    argentina: ["argentina", "boca juniors", "river plate", "الأرجنتين"]
+    portugal: ["portugal", "benfica", "porto", "sporting cp", "البرتغال"]
+    netherlands: ["eredivisie", "ajax", "psv", "feyenoord", "هولندا"]
+    turkey: ["turkey", "galatasaray", "fenerbahce", "besiktas", "تركيا"]
+    scotland: ["scotland", "celtic", "rangers", "اسكتلندا"]
+    japan: ["japan", "j-league", "j1 league", "اليابان"]
+    morocco: ["morocco", "wydad", "raja", "المغرب"]
+    egypt: ["egypt", "al ahly", "zamalek", "مصر", "الأهلي المصري", "الزمالك"]
+    mexico: ["mexico", "liga mx", "المكسيك"]
+    england_lower: ["championship", "league one", "fa cup", "carabao"]
+    qatar: ["qatar", "al sadd", "قطر", "السد"]
+    uae: ["uae", "al ain", "الإمارات", "العين"]
+    iraq: ["iraq", "العراق"]
+    general: []           # كرة قدم دون دولة محددة
+
+# كلمات تدل على أن الخبر كرة قدم (لتوجيه ما لم يُصنَّف إلى "كرة العالم")
+football_markers: ["football", "soccer", "striker", "midfielder", "goalkeeper", "coach",
+    "manager", "transfer", "league", "cup", "كرة القدم", "مدرب", "هداف", "انتقال", "الدوري"]

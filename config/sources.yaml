@@ -1,0 +1,54 @@
+# المصادر المجانية. كلها عامة ولا تتطلب اشتراكاً أو امتيازاً.
+# الحقول:
+#   kind: official | agency | major_media | media | aggregator | opinion
+#   category: (اختياري) يفرض الفئة لكل أخبار المصدر
+#   gnews: استعلام أخبار جوجل بدل الرابط (يُبنى الرابط آلياً، ويُحسب كل ناشر فيه على حدة)
+#   lang: en | ar
+# ⚠ شغّل check_feeds.py مرة على خادمك للتأكد من أن كل رابط يعمل، وعطّل ما لا يعمل بـ enabled: false
+
+sources:
+  # ── مصادر رسمية (عبر أخبار جوجل بفلتر النطاق) ──
+  - {id: fifa_official,  name: "FIFA",  kind: official, gnews: "site:fifa.com",          lang: en, category: orgs}
+  - {id: uefa_official,  name: "UEFA",  kind: official, gnews: "site:uefa.com",          lang: en}
+  - {id: ioc_official,   name: "Olympics.com", kind: official, gnews: "site:olympics.com", lang: en}
+  - {id: afc_official,   name: "AFC",   kind: official, gnews: "site:the-afc.com",       lang: en, category: orgs}
+  - {id: nba_official,   name: "NBA.com", kind: official, gnews: "site:nba.com",        lang: en, category: nba}
+  - {id: wada_official,  name: "WADA",  kind: official, gnews: "site:wada-ama.org",      lang: en, category: awareness}
+
+  # ── وكالات وصحف عامة (خلاصات RSS مفتوحة) ──
+  - {id: bbc_sport,      name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/rss.xml", lang: en}
+  - {id: bbc_football,   name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/football/rss.xml", lang: en}
+  - {id: bbc_tennis,     name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/tennis/rss.xml", lang: en}
+  - {id: bbc_f1,         name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/formula1/rss.xml", lang: en}
+  - {id: bbc_athletics,  name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/athletics/rss.xml", lang: en}
+  - {id: bbc_golf,       name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/golf/rss.xml", lang: en}
+  - {id: bbc_boxing,     name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/boxing/rss.xml", lang: en}
+  - {id: bbc_cricket,    name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/cricket/rss.xml", lang: en}
+  - {id: bbc_rugby,      name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/rugby-union/rss.xml", lang: en}
+  - {id: guardian_football, name: "The Guardian", kind: major_media, url: "https://www.theguardian.com/football/rss", lang: en}
+  - {id: guardian_sport,    name: "The Guardian", kind: major_media, url: "https://www.theguardian.com/sport/rss", lang: en}
+  - {id: espn_top,       name: "ESPN", kind: major_media, url: "https://www.espn.com/espn/rss/news", lang: en}
+  - {id: espn_nba,       name: "ESPN", kind: major_media, url: "https://www.espn.com/espn/rss/nba/news", lang: en, category: nba}
+  - {id: espn_soccer,    name: "ESPN", kind: major_media, url: "https://www.espn.com/espn/rss/soccer/news", lang: en}
+  - {id: sky_football,   name: "Sky Sports", kind: major_media, url: "https://www.skysports.com/rss/12040", lang: en}
+
+  # ── أخبار جوجل: تجمع عناوين رويترز وأسوشيتد برس وفرانس برس وغيرها مجاناً ──
+  - {id: gn_premier,     name: "Google News", kind: aggregator, gnews: "Premier League",     lang: en}
+  - {id: gn_laliga,      name: "Google News", kind: aggregator, gnews: "LaLiga",             lang: en}
+  - {id: gn_bundesliga,  name: "Google News", kind: aggregator, gnews: "Bundesliga",         lang: en}
+  - {id: gn_seriea,      name: "Google News", kind: aggregator, gnews: "Serie A football",   lang: en}
+  - {id: gn_ligue1,      name: "Google News", kind: aggregator, gnews: "Ligue 1",            lang: en}
+  - {id: gn_ucl,         name: "Google News", kind: aggregator, gnews: "Champions League",   lang: en}
+  - {id: gn_nba,         name: "Google News", kind: aggregator, gnews: "NBA",                lang: en, category: nba}
+  - {id: gn_fifa,        name: "Google News", kind: aggregator, gnews: "FIFA OR UEFA OR CONMEBOL OR CAF OR \"Asian Football Confederation\"", lang: en}
+  - {id: gn_olympic,     name: "Google News", kind: aggregator, gnews: "\"International Olympic Committee\" OR IOC", lang: en}
+  - {id: gn_reuters_sport, name: "Google News", kind: aggregator, gnews: "Reuters sport",   lang: en}
+  - {id: gn_ap_sport,    name: "Google News", kind: aggregator, gnews: "AP sports",          lang: en}
+  - {id: gn_world_fb,    name: "Google News", kind: aggregator, gnews: "football league -\"Premier League\"", lang: en}
+  - {id: gn_sport_ar,    name: "Google News", kind: aggregator, gnews: "رياضة",             lang: ar}
+  - {id: gn_football_ar, name: "Google News", kind: aggregator, gnews: "كرة القدم",          lang: ar}
+  - {id: gn_awareness,   name: "Google News", kind: aggregator, gnews: "athletes study concussion OR \"mental health\" OR doping", lang: en, category: awareness}
+
+  # ── مقالات الرأي (يُنشر ملخص + اسم الكاتب + المصدر + الرابط فقط) ──
+  - {id: guardian_fb_opinion, name: "The Guardian", kind: opinion, url: "https://www.theguardian.com/football/football-opinion/rss", lang: en, category: opinion}
+  - {id: guardian_sport_blog, name: "The Guardian", kind: opinion, url: "https://www.theguardian.com/sport/blog/rss", lang: en, category: opinion}

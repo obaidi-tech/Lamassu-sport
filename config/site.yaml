@@ -1,0 +1,37 @@
+# إعدادات الموقع العامة — غيّر الاسم هنا فقط
+site_name: "رياضة العالم"        # اسم مؤقت
+tagline: "أهم أخبار الرياضة في العالم، كل يوم، مع مصادرها"
+site_url: "https://example.github.io/sports-newsroom"   # يُحدَّث بعد تفعيل GitHub Pages
+contact_email: "editor@example.com"                     # لطلبات التصحيح
+month_names: gulf                                       # gulf = نوفمبر | levant = تشرين الثاني
+language: ar
+timezone: "Asia/Riyadh"
+
+# النشر اليومي: 50 سقف أعلى؛ في الأيام الهادئة يُنشر أقل (انظر min_score في categories.yaml)
+daily_total: 50
+# أوقات التشغيل (بتوقيت المنطقة أعلاه). كل تشغيل ينشر حصته؛ تشغيل كل ساعتين يوزّع الأخبار على اليوم
+run_hours: [6, 8, 10, 12, 14, 16, 18, 20, 22]
+# المسافة بين خبر وآخر عند الجدولة (دقائق)
+spacing_minutes: 20
+# أقصى عمر للخبر المقبول (ساعات)
+max_age_hours: 36
+
+# أين يُنشر:
+#   static    = موقع ثابت يبنيه المحرك بنفسه ويُستضاف مجاناً على GitHub Pages (النسخة التجريبية)
+#   wordpress = يرسل الأخبار إلى موقع ووردبريس قائم
+output: static
+
+# وضع النشر:
+#   auto  = الأخبار السليمة تُنشر آلياً، والحساسة تذهب إلى قائمة المراجعة (content/pending)
+#   draft = كل شيء ينتظر موافقة المحرر
+publish_mode: auto
+
+llm:
+  provider: anthropic
+  model: "claude-haiku-5-5"      # أرخص؛ للجودة الأعلى: claude-sonnet-5-5
+  max_tokens: 1400
+  temperature: 0.3
+
+wordpress:
+  # القيم السرية تُقرأ من متغيرات البيئة: WP_URL, WP_USER, WP_APP_PASSWORD
+  default_author_id: null

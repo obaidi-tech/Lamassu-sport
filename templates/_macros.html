@@ -1,0 +1,19 @@
+{% macro meter(n, cat) -%}
+{% if cat == 'opinion' %}<span class="meter meter--opinion">مقال رأي</span>
+{%- else %}<span class="meter" title="عدد المصادر المستقلة التي غطّت الخبر">
+  <span class="meter__bars" aria-hidden="true">{% for i in range(8) %}<i{% if i < n %} class="on"{% endif %}></i>{% endfor %}</span>
+  <span class="meter__label">{{ n | sources }}</span></span>
+{%- endif %}
+{%- endmacro %}
+
+{% macro row(a, root, cats, show_cat=True) -%}
+<article class="row" style="--cat: var(--c-{{ a.category }})">
+  <div class="row__text">
+    {% if show_cat %}<a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>{% endif %}
+    <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+    {% if a.category == 'opinion' and a.author %}<p class="byline">{{ a.author }} — {{ a.outlet }}</p>{% endif %}
+    <p class="excerpt">{{ a.excerpt }}</p>
+    <div class="meta"><time datetime="{{ a.published_at }}">{{ a.published_at | ago }}</time>{{ meter(a.n_sources, a.category) }}</div>
+  </div>
+</article>
+{%- endmacro %}

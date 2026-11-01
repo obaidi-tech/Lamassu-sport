@@ -1,0 +1,89 @@
+# ضوابط التحرير الآلي
+
+# أوزان الناشرين (تُستخدم لحساب الأهمية). أي ناشر غير مذكور يأخذ وزن نوع مصدره
+publisher_weights:
+  agency: ["reuters", "associated press", "ap news", "afp", "agence france-presse", "dpa", "efe", "ansa"]
+  major_media: ["bbc", "the guardian", "espn", "sky sports", "the athletic", "marca", "as.com",
+                "l'equipe", "l'équipe", "gazzetta", "kicker", "the times", "the independent",
+                "new york times", "washington post", "cbs sports", "nbc sports", "al jazeera",
+                "الجزيرة", "بي إن سبورتس", "beIN"]
+kind_weights:
+  official: 3.0
+  agency: 2.5
+  major_media: 2.0
+  media: 1.6
+  aggregator: 1.0       # ناشر مجهول ظهر عبر أخبار جوجل
+  opinion: 1.0
+
+# الخبر الذي يحوي هذه الكلمات يذهب إلى "بانتظار المراجعة" ولا يُنشر آلياً أبداً
+sensitive_keywords:
+  - died
+  - dies
+  - death
+  - killed
+  - tragedy
+  - collapsed
+  - cardiac arrest
+  - arrested
+  - charged
+  - in court
+  - police
+  - assault
+  - racism
+  - racist
+  - abuse
+  - doping ban
+  - banned for
+  - suspended
+  - match-fixing
+  - betting
+  - وفاة
+  - توفي
+  - مقتل
+  - اعتقال
+  - الشرطة
+  - محكمة
+  - عنصرية
+  - إيقاف
+  - منشطات
+
+# كلمات الشائعات: خبر بهذه الكلمات من مصدر واحد غير رسمي = مراجعة إلزامية
+rumour_keywords:
+  - reportedly
+  - rumour
+  - rumor
+  - linked with
+  - set to
+  - close to
+  - in talks
+  - according to reports
+  - could
+  - eyes
+  - target
+  - شائعة
+  - مصادر
+  - يقترب
+  - مفاوضات
+  - يُقال
+
+# قاموس الأسماء الثابتة بالعربية (يُمرَّر للنموذج حتى لا تتذبذب الأسماء)
+glossary:
+  Premier League: الدوري الإنجليزي الممتاز
+  LaLiga: الدوري الإسباني
+  Bundesliga: الدوري الألماني
+  Serie A: الدوري الإيطالي
+  Ligue 1: الدوري الفرنسي
+  Champions League: دوري أبطال أوروبا
+  Real Madrid: ريال مدريد
+  Barcelona: برشلونة
+  Manchester City: مانشستر سيتي
+  Manchester United: مانشستر يونايتد
+  Bayern Munich: بايرن ميونخ
+  Paris Saint-Germain: باريس سان جيرمان
+  Inter Milan: إنتر ميلان
+  Juventus: يوفنتوس
+  FIFA: الاتحاد الدولي لكرة القدم (فيفا)
+  UEFA: الاتحاد الأوروبي لكرة القدم (يويفا)
+  IOC: اللجنة الأولمبية الدولية
+  NBA: دوري كرة السلة الأمريكي للمحترفين (NBA)
+  Formula 1: فورمولا 1

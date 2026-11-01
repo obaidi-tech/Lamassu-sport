@@ -1,0 +1,5 @@
+Fonts bundled with this project (assets/fonts, site_assets/fonts):
+  Cairo            — The Cairo Project Authors
+  Noto Naskh Arabic — The Noto Project Authors
+Both are licensed under the SIL Open Font License, Version 1.1.
+Full licence text: https://openfontlicense.org/open-font-license-official-text/

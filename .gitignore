@@ -1,0 +1,9 @@
+.env
+out/
+__pycache__/
+*.pyc
+tests/fixtures/*.xml
+tests/fixtures/sources_test.yaml
+public/
+demo_site/
+.demo_tmp/

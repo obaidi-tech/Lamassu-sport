@@ -1,0 +1,1 @@
+"""Automated sports newsroom (prototype)."""

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block title %}الأرشيف — {{ site.site_name }}{% endblock %}
+{% block main %}
+<div class="page-head"><h1>الأرشيف</h1><p>كل عدد يجمع أخبار يوم واحد.</p></div>
+<ul class="archive">
+  {% for key, label, n in days %}<li><a href="day/{{ key }}.html">{{ label }}</a><span>{{ n }} خبراً</span></li>{% endfor %}
+</ul>
+{% endblock %}
