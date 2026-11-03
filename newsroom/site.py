@@ -158,8 +158,11 @@ class Builder:
                      edition_day=self.day_label(self.now), **common)
 
         for a in articles:
-            related = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]
-            self._render("article.html", f"article/{a['id']}.html", 1, a=a, related=related, **common)
+            same = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]
+            others = [b for b in articles if b["category"] != a["category"] and b["id"] != a["id"]]
+            related = (same + others)[:4]
+            related_title = "من القسم نفسه" if related and len(same) == len(related) else "اقرأ أيضاً"
+            self._render("article.html", f"article/{a['id']}.html", 1, a=a, related=related, related_title=related_title, **common)
 
         for cat in DISPLAY_ORDER + ["opinion"]:
             items = [a for a in articles if a["category"] == cat][:80]
