@@ -6,7 +6,7 @@
 
 categories:
   opinion:
-    name_ar: "رأي ونقد"
+    name_ar: "رأي"
     quota: 3
     min_score: 0
     max_per_sub: 1          # sub = الكاتب
@@ -21,7 +21,7 @@ categories:
     min_score: 2.5
     max_per_sub: 2          # sub = المنظمة
   top5:
-    name_ar: "الدوريات الخمس الكبرى"
+    name_ar: "الدوريات الكبرى"
     quota: 12
     min_score: 3
     max_per_sub: 3          # sub = الدوري
@@ -31,12 +31,12 @@ categories:
     min_score: 3
     max_per_sub: 2          # sub = الرياضة
   awareness:
-    name_ar: "توعية ودراسات"
+    name_ar: "أبحاث ودراسات"
     quota: 3
     min_score: 2
     max_per_sub: 2
   world:
-    name_ar: "كرة العالم"
+    name_ar: "كرة قدم"
     quota: 10
     min_score: 3
     max_per_sub: 2          # sub = الدولة
@@ -126,6 +126,6 @@ keywords:
     iraq: ["iraq", "العراق"]
     general: []           # كرة قدم دون دولة محددة
 
-# كلمات تدل على أن الخبر كرة قدم (لتوجيه ما لم يُصنَّف إلى "كرة العالم")
+# كلمات تدل على أن الخبر كرة قدم (لتوجيه ما لم يُصنَّف إلى "كرة قدم")
 football_markers: ["football", "soccer", "striker", "midfielder", "goalkeeper", "coach",
     "manager", "transfer", "league", "cup", "كرة القدم", "مدرب", "هداف", "انتقال", "الدوري"]

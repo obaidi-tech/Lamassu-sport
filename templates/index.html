@@ -29,12 +29,12 @@
   {% endif %}
 </section>
 {% else %}
-<section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد قريباً، وتجد طريقة اختيارنا للأخبار في <a href="{{ root }}about.html">كيف نعمل</a>.</p></section>
+<section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد قريباً، وتجد طريقة اختيارنا للأخبار في <a href="{{ root }}about.html">سياسة الموقع</a>.</p></section>
 {% endif %}
 
 {% if opinions %}
 <section class="opinions" aria-labelledby="op-h">
-  <div class="section-head" style="--cat: var(--c-opinion)"><h2 id="op-h">رأي ونقد</h2><a href="{{ root }}category/opinion.html">كل المقالات</a></div>
+  <div class="section-head" style="--cat: var(--c-opinion)"><h2 id="op-h">{{ cats.opinion.name_ar }}</h2><a href="{{ root }}category/opinion.html">كل المقالات</a></div>
   <div class="opinions__grid">
   {% for a in opinions %}
     <article class="op{% if a.own %} op--own{% endif %}">
