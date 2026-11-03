@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+{% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification }}">{% endif %}
 <title>{% block title %}{{ site.site_name }} — {{ site.tagline }}{% endblock %}</title>
 <meta name="description" content="{% block description %}{{ site.description or site.tagline }}{% endblock %}">
 <link rel="canonical" href="{{ site.site_url | trim('/') }}/{{ path if path != 'index.html' else '' }}">
