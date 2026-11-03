@@ -37,9 +37,9 @@ jobs:
           if [ -n "$ANTHROPIC_API_KEY" ]; then
             python run.py --publish
           else
-            # لا مفتاح بعد: لا جمع ولا صياغة ولا تكلفة. يُبنى الموقع كما هو مع تنبيه، ويبدأ النشر تلقائياً عند إضافة المفتاح
-            echo "::notice::ANTHROPIC_API_KEY غير موجود — بناء الموقع فقط دون نشر أخبار"
-            python run.py --build-only --banner "الموقع قيد الإطلاق، وتبدأ الأخبار بالظهور قريباً"
+            # لا مفتاح بعد: لا جمع آلي ولا تكلفة. يُبنى الموقع من الأخبار والمقالات اليدوية، ويبدأ النشر الآلي تلقائياً عند إضافة المفتاح
+            echo "::notice::ANTHROPIC_API_KEY غير موجود — بناء الموقع من المحتوى اليدوي فقط"
+            python run.py --build-only
           fi
       - name: Save content
         run: |

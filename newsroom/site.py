@@ -70,6 +70,7 @@ class Builder:
         self.env.filters["news"] = news_label
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
+        self.nav = DISPLAY_ORDER + ["opinion"]
 
     # ── helpers ────────────────────────────────────────────────────────
     def local(self, iso):
@@ -92,7 +93,7 @@ class Builder:
         full = os.path.join(self.out, path)
         os.makedirs(os.path.dirname(full), exist_ok=True)
         root = "../" * depth
-        html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=DISPLAY_ORDER + ["opinion"],
+        html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=self.nav,
                                                  root=root, path=path, now=self.now, **ctx)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
@@ -137,6 +138,8 @@ class Builder:
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         self._images(articles)
         common = {"banner": banner}
+        present = {a["category"] for a in articles}
+        self.nav = [c for c in DISPLAY_ORDER + ["opinion"] if c in present]   # empty sections stay hidden until their first story
 
         news = [a for a in articles if a["category"] != "opinion"]
         recent = [a for a in news if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
