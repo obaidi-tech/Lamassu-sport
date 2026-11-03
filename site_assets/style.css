@@ -36,7 +36,7 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .wordmark:hover{text-decoration:none}
 .wordmark{display:inline-flex;align-items:baseline;gap:12px}
 .mast__brand{display:flex;flex-direction:column;align-items:flex-start;gap:2px}
-.mast__tagline{margin:0;font-family:var(--head);font-weight:600;font-size:.98rem;color:var(--amber)}
+.mast__tagline{margin:4px 0 0;padding-top:5px;border-top:1px solid color-mix(in srgb,var(--amber) 75%,transparent);font-family:var(--head);font-weight:600;font-size:.98rem;color:var(--amber)}
 .foot__tag{font-family:var(--head);font-weight:600;color:var(--amber);margin:0 0 6px}
 .foot__tag span{display:block;color:#C5CEDB;font-weight:400;font-size:.9em;text-align:right}
 .wordmark__en{font-family:"Cairo",sans-serif;font-weight:600;font-size:.42em;letter-spacing:.18em;color:var(--amber);text-transform:uppercase}

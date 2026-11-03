@@ -4,14 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %}{{ site.site_name }} — {{ site.tagline }}{% endblock %}</title>
-<meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+<meta name="description" content="{% block description %}{{ site.description or site.tagline }}{% endblock %}">
 <link rel="canonical" href="{{ site.site_url | trim('/') }}/{{ path if path != 'index.html' else '' }}">
 <meta property="og:site_name" content="{{ site.site_name }}{% if site.site_name_en %} | {{ site.site_name_en }}{% endif %}">
 <meta property="og:locale" content="ar_AR">
 {% if site.tagline_en %}<meta name="application-name" content="{{ site.site_name }} — {{ site.tagline_en }}">{% endif %}
 {% block og %}<meta property="og:type" content="website"><meta property="og:title" content="{{ site.site_name }} — {{ site.tagline }}">
-<meta property="og:description" content="{{ site.tagline }}{% if site.tagline_en %} | {{ site.tagline_en }}{% endif %}">
-<meta property="og:image" content="{{ site.site_url | trim('/') }}/img/default-top5.jpg">{% endblock %}
+<meta property="og:description" content="{{ site.description or site.tagline }}">
+<meta property="og:image" content="{{ site.site_url | trim('/') }}/img/og-default.jpg">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">{% endblock %}
 <meta name="twitter:card" content="summary_large_image">
 <link rel="alternate" type="application/rss+xml" title="{{ site.site_name }}" href="{{ root }}feed.xml">
 <link rel="preload" href="{{ root }}assets/fonts/Cairo_800ExtraBold.woff2" as="font" type="font/woff2" crossorigin>

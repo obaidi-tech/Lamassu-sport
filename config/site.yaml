@@ -3,6 +3,7 @@ site_name: "Lamassu"
 site_name_en: ""
 tagline: "قوة في التغطية، ثقة في المصدر"
 tagline_en: "Strength in Coverage, Trust in Sources"   # للحسابات والمشاركة الدولية
+description: "Lamassu: أهم أخبار الرياضة العالمية يومياً، مع مصادرها كاملة. قوة في التغطية، ثقة في المصدر."
 site_url: "https://obaidi-tech.github.io/Lamassu-sport"
 contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")
 owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته

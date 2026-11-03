@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .cards import make_card, news_label, sources_label
+from .cards import make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
@@ -107,6 +107,8 @@ class Builder:
 
     def _make_images(self, articles):
         img_dir = os.path.join(self.out, "img")
+        make_brand_card(os.path.join(img_dir, "og-default.jpg"), self.site["site_name"],
+                        self.site["tagline"], self.site.get("tagline_en", ""))
         for cat, c in self.cats.items():
             path = os.path.join(img_dir, f"default-{cat}.jpg")
             if not os.path.exists(path):

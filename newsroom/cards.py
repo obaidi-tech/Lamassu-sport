@@ -124,3 +124,26 @@ def make_card(path: str, title: str, category: str, cat_name: str, site_name: st
     os.makedirs(os.path.dirname(path), exist_ok=True)
     img.save(path, "JPEG", quality=85, optimize=True, progressive=True)
     return path
+
+
+def make_brand_card(path: str, name: str, tagline: str, tagline_en: str = ""):
+    """The site's own share image (home page and any page without its own picture)."""
+    img = Image.new("RGB", (W, H), INK)
+    d = ImageDraw.Draw(img)
+    for r in range(180, 1500, 110):                       # stadium-bowl arcs, centred low on the reading edge
+        d.ellipse((W - r - 120, H - r // 2 + 40, W + r - 120, H + r * 1.5 + 40),
+                  outline=tuple(int(a * 0.18 + b * 0.82) for a, b in zip(AMBER, INK)), width=3)
+    d.rectangle((W - 18, 0, W, H), fill=AMBER)
+    pad_r = W - 90
+    big = ImageFont.truetype(os.path.join(FONTS, "Cairo_800ExtraBold.ttf"), 150)
+    nw = big.getlength(name)
+    d.text((pad_r - nw, 150), name, font=big, fill=PAPER)
+    y_rule = 360
+    d.rectangle((pad_r - nw, y_rule, pad_r, y_rule + 4), fill=AMBER)
+    _rtl(d, pad_r, y_rule + 30, tagline, _font("semi", 52), AMBER)
+    if tagline_en:
+        f = ImageFont.truetype(os.path.join(FONTS, "Cairo_600SemiBold.ttf"), 34)
+        d.text((pad_r - f.getlength(tagline_en), y_rule + 120), tagline_en, font=f, fill=(184, 194, 211))
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    img.save(path, "JPEG", quality=88, optimize=True, progressive=True)
+    return path
