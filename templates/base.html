@@ -6,7 +6,7 @@
 <title>{% block title %}{{ site.site_name }} — {{ site.tagline }}{% endblock %}</title>
 <meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
 <link rel="canonical" href="{{ site.site_url | trim('/') }}/{{ path if path != 'index.html' else '' }}">
-<meta property="og:site_name" content="{{ site.site_name }}">
+<meta property="og:site_name" content="{{ site.site_name }}{% if site.site_name_en %} | {{ site.site_name_en }}{% endif %}">
 <meta property="og:locale" content="ar_AR">
 {% block og %}<meta property="og:type" content="website"><meta property="og:title" content="{{ site.site_name }}">
 <meta property="og:image" content="{{ site.site_url | trim('/') }}/img/default-top5.jpg">{% endblock %}
@@ -20,7 +20,7 @@
 {% if banner %}<div class="banner" role="note">{{ banner }}</div>{% endif %}
 <header class="mast">
   <div class="wrap mast__inner">
-    <a class="wordmark" href="{{ root }}index.html">{{ site.site_name }}</a>
+    <a class="wordmark" href="{{ root }}index.html">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
     <p class="mast__date">{{ now | day }}</p>
   </div>
   <nav class="nav" aria-label="الأقسام">
@@ -37,7 +37,7 @@
 </main>
 <footer class="foot">
   <div class="wrap foot__inner">
-    <p class="foot__name">{{ site.site_name }}</p>
+    <p class="foot__name">{{ site.site_name }}{% if site.site_name_en %} <span lang="en">| {{ site.site_name_en }}</span>{% endif %}</p>
     <p>{{ site.tagline }}. نختار الأخبار حسب عدد المصادر المستقلة التي تناولتها، ونذكر هذه المصادر مع كل خبر.</p>
     <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
