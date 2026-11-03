@@ -26,6 +26,7 @@
   <nav class="nav" aria-label="الأقسام">
     <div class="wrap nav__inner">
       {% for c in nav %}<a href="{{ root }}category/{{ c }}.html" style="--cat: var(--c-{{ c }})"{% if path == 'category/' ~ c ~ '.html' %} aria-current="page"{% endif %}>{{ cats[c].name_ar }}</a>{% endfor %}
+      <a href="{{ root }}schedules.html"{% if path == 'schedules.html' %} aria-current="page"{% endif %}>الجداول والمباريات</a>
       <a href="{{ root }}archive.html"{% if path == 'archive.html' %} aria-current="page"{% endif %}>الأرشيف</a>
       <a href="{{ root }}contact.html"{% if path == 'contact.html' %} aria-current="page"{% endif %}>تواصل معنا</a>
     </div>

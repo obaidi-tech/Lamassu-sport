@@ -21,6 +21,36 @@ DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "awareness"]
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
+def load_links(path: str) -> dict:
+    """config/links.yaml → groups of competitions, each with (label, url) pairs. Missing file = no page content."""
+    import yaml
+    from urllib.parse import urlparse
+    if not os.path.exists(path):
+        return {"groups": [], "home": []}
+    with open(path, encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+    groups, home = [], []
+    for g in data.get("groups") or []:
+        items = []
+        for it in g.get("items") or []:
+            parsed = []
+            for raw in it.get("links") or []:
+                label, _, url = str(raw).partition("|")
+                label, url = label.strip(), url.strip()
+                if label and url.startswith("https://"):
+                    parsed.append((label, url))
+            if not parsed:
+                continue
+            item = {"name": it["name"], "parsed": parsed,
+                    "domain": urlparse(parsed[0][1]).netloc.replace("www.", "")}
+            items.append(item)
+            if it.get("home"):
+                home.append(item)
+        if items:
+            groups.append({"title": g.get("title", ""), "comps": items})
+    return {"groups": groups, "home": home}
+
+
 class Builder:
     def __init__(self, site: dict, cats_cfg: dict, out_dir: str):
         self.site, self.cats = dict(site), cats_cfg["categories"]
@@ -38,6 +68,7 @@ class Builder:
         self.env.filters["ago"] = self.ago
         self.env.filters["sources"] = sources_label
         self.now = datetime.now(timezone.utc)
+        self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
 
     # ── helpers ────────────────────────────────────────────────────────
     def local(self, iso):
@@ -60,7 +91,7 @@ class Builder:
         full = os.path.join(self.out, path)
         os.makedirs(os.path.dirname(full), exist_ok=True)
         root = "../" * depth
-        html = self.env.get_template(tpl).render(site=self.site, cats=self.cats, nav=DISPLAY_ORDER + ["opinion"],
+        html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=DISPLAY_ORDER + ["opinion"],
                                                  root=root, path=path, now=self.now, **ctx)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
@@ -145,6 +176,7 @@ class Builder:
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
+        self._render("schedules.html", "schedules.html", 0, **common)
         self._render("404.html", "404.html", 0, **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
@@ -169,7 +201,7 @@ class Builder:
                f"<title>{escape(self.site['site_name'])}</title><link>{base}/</link>"
                f"<description>{escape(self.site['tagline'])}</description><language>ar</language>"
                + "".join(items) + "</channel></rss>")
-        urls = [f"{base}/", f"{base}/about.html", f"{base}/contact.html", f"{base}/archive.html"]
+        urls = [f"{base}/", f"{base}/about.html", f"{base}/contact.html", f"{base}/schedules.html", f"{base}/archive.html"]
         urls += [f"{base}/category/{c}.html" for c in DISPLAY_ORDER + ["opinion"]]
         urls += [f"{base}/article/{a['id']}.html" for a in articles]
         sitemap = ('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'

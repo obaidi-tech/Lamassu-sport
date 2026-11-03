@@ -1,0 +1,58 @@
+# روابط صفحة "الجداول والمباريات" — كلها صفحات رسمية لأصحاب المسابقات
+# لكل مسابقة: الاسم، ثم الروابط (نص الزر | الرابط). أضف أو احذف أو عدّل كما تشاء.
+# home: true = تظهر المسابقة أيضاً في شريط الروابط السريعة على الصفحة الرئيسية
+
+groups:
+  - title: "الدوريات الكبرى"
+    items:
+      - name: "الدوري الإنجليزي الممتاز"
+        home: true
+        links:
+          - "الترتيب | https://www.premierleague.com/tables"
+          - "المباريات | https://www.premierleague.com/fixtures"
+          - "النتائج | https://www.premierleague.com/results"
+      - name: "الدوري الألماني"
+        home: true
+        links:
+          - "الترتيب | https://www.bundesliga.com/en/bundesliga/table"
+          - "المباريات والنتائج | https://www.bundesliga.com/en/bundesliga/matchday"
+      - name: "الدوري الإسباني"
+        links:
+          - "الترتيب | https://www.laliga.com/en-GB/laliga-easports/standing"
+          - "المباريات والنتائج | https://www.laliga.com/en-GB/laliga-easports/results"
+      - name: "الدوري الإيطالي"
+        links:
+          - "الترتيب والمباريات | https://www.legaseriea.it/en"
+      - name: "الدوري الفرنسي"
+        links:
+          - "الترتيب والمباريات | https://ligue1.com/en"
+
+  - title: "البطولات الأوروبية"
+    items:
+      - name: "دوري أبطال أوروبا"
+        home: true
+        links:
+          - "المباريات والنتائج | https://www.uefa.com/uefachampionsleague/fixtures-results/"
+          - "الترتيب | https://www.uefa.com/uefachampionsleague/standings/"
+      - name: "الدوري الأوروبي"
+        home: true
+        links:
+          - "المباريات والنتائج | https://www.uefa.com/uefaeuropaleague/fixtures-results/"
+          - "الترتيب | https://www.uefa.com/uefaeuropaleague/standings/"
+
+  - title: "البطولات الآسيوية للأندية"
+    items:
+      - name: "دوري أبطال آسيا للنخبة"
+        home: true
+        links:
+          - "المباريات والترتيب | https://www.the-afc.com/en/club/afc_champions_league_elite.html"
+      - name: "دوري أبطال آسيا 2"
+        home: true
+        links:
+          - "المباريات والترتيب | https://www.the-afc.com/en/club/afc_champions_league_two.html"
+      - name: "دوري التحدي الآسيوي"
+        links:
+          - "المباريات والترتيب | https://www.the-afc.com/en/club/afc_challenge_league.html"
+      - name: "دوري أبطال آسيا للسيدات"
+        links:
+          - "المباريات والترتيب | https://www.the-afc.com/en/club/afc_womens_champions_league.html"

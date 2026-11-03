@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}الجداول والمباريات — {{ site.site_name }}{% endblock %}
+{% block description %}روابط مباشرة إلى جداول الترتيب ومواعيد المباريات ونتائجها في الدوريات الكبرى والبطولات الأوروبية والآسيوية.{% endblock %}
+{% block main %}
+<div class="page-head"><h1>الجداول والمباريات</h1>
+  <p>روابط مباشرة إلى الترتيب ومواعيد المباريات ونتائجها، من المواقع الرسمية لكل مسابقة. تُفتح في نافذة جديدة.</p></div>
+{% for g in links.groups %}
+<section class="section sched" aria-labelledby="g{{ loop.index }}">
+  <div class="section-head"><h2 id="g{{ loop.index }}">{{ g.title }}</h2></div>
+  <div class="sched__grid">
+    {% for it in g.comps %}
+    <div class="sched__card">
+      <h3>{{ it.name }}</h3>
+      <ul class="sched__links">
+        {% for label, url in it.parsed %}<li><a href="{{ url }}" target="_blank" rel="noopener">{{ label }}</a></li>{% endfor %}
+      </ul>
+      <p class="sched__src" dir="ltr">{{ it.domain }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}
+<p class="story__note">الجداول والمواعيد تُحدَّث في مواقع الجهات المنظمة نفسها، وقد تكون بالإنجليزية.</p>
+{% endblock %}

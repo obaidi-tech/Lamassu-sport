@@ -6,6 +6,14 @@
     {% if today_count %}<span>{{ today_count }} خبراً حتى الآن، من {{ today_sources }} تغطية في الصحف والوكالات والجهات الرسمية</span>{% endif %}</p>
 </section>
 
+{% if links.home %}
+<nav class="quick" aria-label="الجداول والمباريات">
+  <a class="quick__title" href="{{ root }}schedules.html">الجداول والمباريات</a>
+  <ul>{% for it in links.home %}<li><a href="{{ it.parsed[0][1] }}" target="_blank" rel="noopener">{{ it.name }}</a></li>{% endfor %}
+    <li><a href="{{ root }}schedules.html">كل المسابقات</a></li></ul>
+</nav>
+{% endif %}
+
 {% if lead %}
 <section class="top">
   <article class="lead" style="--cat: var(--c-{{ lead.category }})">

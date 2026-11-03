@@ -145,6 +145,22 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .archive li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--head);font-weight:600}
 .archive span{color:var(--ink-2);font-size:.9rem}
 
+/* quick links strip + schedules page */
+.quick{display:flex;align-items:center;gap:6px 14px;flex-wrap:wrap;margin:0 0 18px;padding:10px 14px;background:var(--card);border:1px solid var(--line);border-radius:8px}
+.quick__title{font-family:var(--head);font-weight:800;font-size:.95rem;color:var(--ink);padding-left:12px;border-left:2px solid var(--amber)}
+.quick ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.quick li a{display:inline-block;font-family:var(--head);font-weight:600;font-size:.86rem;padding:3px 11px;border:1px solid var(--line);border-radius:999px;color:var(--ink-2)}
+.quick li a:hover{border-color:var(--amber);color:var(--ink);text-decoration:none}
+.quick li:last-child a{border-color:transparent;color:var(--c-orgs)}
+.sched__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px;margin-top:8px}
+.sched__card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px 18px 12px;display:flex;flex-direction:column}
+.sched__card h3{font-size:1.12rem;margin:0 0 10px}
+.sched__links{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.sched__links a{display:inline-block;font-family:var(--head);font-weight:600;font-size:.92rem;padding:5px 14px;border-radius:6px;background:color-mix(in srgb,var(--c-orgs) 12%,transparent);color:var(--c-orgs)}
+.sched__links a:hover{background:var(--c-orgs);color:#fff;text-decoration:none}
+.sched__src{margin:12px 0 0;font-size:.78rem;color:var(--ink-2);text-align:left;font-family:var(--head)}
+.sched .section-head h2{border-right-color:var(--amber)}
+
 /* footer */
 .foot{margin-top:56px;background:var(--navy);color:#C5CEDB;padding:30px 0 40px;font-size:.95rem}
 .foot__name{font-family:var(--head);font-weight:800;font-size:1.5rem;color:#fff;margin:0 0 6px}
