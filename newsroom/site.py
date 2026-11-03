@@ -136,6 +136,8 @@ class Builder:
     def build(self, articles: list, pending_count: int = 0, banner: str = ""):
         os.makedirs(self.out, exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
+        if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
+            shutil.copytree(os.path.join(ROOT, "site_root"), self.out, dirs_exist_ok=True)
         self._images(articles)
         common = {"banner": banner}
         present = {a["category"] for a in articles}
