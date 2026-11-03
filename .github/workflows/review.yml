@@ -1,11 +1,13 @@
 # إعادة بناء الموقع فوراً عند:
 #   - تغيير "decision" في ملف داخل content/pending إلى "publish" أو "reject"
 #   - إضافة مقال خاص أو تعديله في content/posts
+#   - أي تعديل على التصميم أو الإعدادات (templates، site_assets، config، newsroom)
 name: review
 
 on:
   push:
-    paths: ["content/pending/**", "content/posts/**"]
+    branches: [main]
+    paths: ["content/pending/**", "content/posts/**", "templates/**", "site_assets/**", "config/**", "newsroom/**"]
   workflow_dispatch: {}
 
 permissions:
