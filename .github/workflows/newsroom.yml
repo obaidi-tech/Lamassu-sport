@@ -33,12 +33,20 @@ jobs:
       - name: Collect, write, publish
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python run.py --publish
+        run: |
+          if [ -n "$ANTHROPIC_API_KEY" ]; then
+            python run.py --publish
+          else
+            # لا مفتاح بعد: لا جمع ولا صياغة ولا تكلفة. يُبنى الموقع كما هو مع تنبيه، ويبدأ النشر تلقائياً عند إضافة المفتاح
+            echo "::notice::ANTHROPIC_API_KEY غير موجود — بناء الموقع فقط دون نشر أخبار"
+            python run.py --build-only --banner "الموقع قيد الإطلاق، وتبدأ الأخبار بالظهور قريباً"
+          fi
       - name: Save content
         run: |
           git config user.name "newsroom-bot"
           git config user.email "newsroom-bot@users.noreply.github.com"
-          git add -A content state
+          git add -A content
+          [ -d state ] && git add -A state
           git commit -m "أخبار: $(date -u +%F_%H%M)" || echo "no changes"
           git pull --rebase && git push
       - uses: actions/upload-pages-artifact@v3
