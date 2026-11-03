@@ -1,6 +1,6 @@
 # إعدادات الموقع العامة — غيّر الاسم هنا فقط
-site_name: "لاماسو"
-site_name_en: "Lamassu"
+site_name: "Lamassu"
+site_name_en: ""
 tagline: "الرياضة العالمية بمصادرها"
 site_url: "https://obaidi-tech.github.io/sports-newsroom"
 contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")

@@ -20,7 +20,7 @@
 {% if banner %}<div class="banner" role="note">{{ banner }}</div>{% endif %}
 <header class="mast">
   <div class="wrap mast__inner">
-    <a class="wordmark" href="{{ root }}index.html">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
+    <a class="wordmark" href="{{ root }}index.html" lang="en" dir="ltr">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
     <p class="mast__date">{{ now | day }}</p>
   </div>
   <nav class="nav" aria-label="الأقسام">
