@@ -84,15 +84,11 @@ class CommonsCache:
         if not info.get("mime", "image/jpeg").startswith("image/"):
             log(f"  ⚠ صورة {title}: الملف ليس صورة، فلم يُستخدم.")
             return None, None
-        ext = os.path.splitext(info["thumb"].split("?")[0])[1].lower() or ".jpg"
-        if ext not in (".jpg", ".jpeg", ".png", ".webp"):
-            ext = ".jpg"
-        local = hashlib.sha1(title.encode()).hexdigest()[:12] + ext
+        local = hashlib.sha1(title.encode()).hexdigest()[:12] + ".jpg"
         try:
             os.makedirs(self.dir, exist_ok=True)
             data = (download or _download)(info["thumb"])
-            with open(os.path.join(self.dir, local), "wb") as f:
-                f.write(data)
+            _save_compressed(data, os.path.join(self.dir, local))
         except Exception as ex:
             log(f"  ⚠ صورة {title}: تعذر تنزيلها ({type(ex).__name__}).")
             return None, None
@@ -107,6 +103,19 @@ class CommonsCache:
         if self.dirty:
             with open(self.path, "w", encoding="utf-8") as f:
                 json.dump(self.data, f, ensure_ascii=False, indent=1)
+
+
+MAX_W, QUALITY = 1400, 80
+
+
+def _save_compressed(data: bytes, path: str):
+    """Keep stored photos small: at most 1400px wide, JPEG quality 80 (≈150–300 KB)."""
+    from io import BytesIO
+    from PIL import Image
+    im = Image.open(BytesIO(data)).convert("RGB")
+    if im.width > MAX_W:
+        im = im.resize((MAX_W, round(im.height * MAX_W / im.width)), Image.LANCZOS)
+    im.save(path, "JPEG", quality=QUALITY, optimize=True, progressive=True)
 
 
 def _download(url: str) -> bytes:
@@ -155,11 +164,9 @@ class RemoteImages:
             from io import BytesIO
             from PIL import Image
             im = Image.open(BytesIO(raw)).convert("RGB")
-            if im.width > 1600:
-                im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
             os.makedirs(self.dir, exist_ok=True)
             local = hashlib.sha1(key.encode()).hexdigest()[:12] + ".jpg"
-            im.save(os.path.join(self.dir, local), "JPEG", quality=84, optimize=True, progressive=True)
+            _save_compressed(raw, os.path.join(self.dir, local))
         except Exception as ex:
             log(f"  ⚠ صورة Unsplash {key}: تعذر تنزيلها ({type(ex).__name__}). نُشر الخبر دون صورة، وتُعاد المحاولة في التشغيل التالي.")
             return None, None

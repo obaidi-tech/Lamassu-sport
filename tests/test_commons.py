@@ -73,7 +73,7 @@ def test_unsplash():
     cm.RemoteImages.resolve_unsplash = lambda self, link, ph, log=print, download=None: real(self, link, ph, log, big)
     p = load_posts(d, "Asia/Riyadh", "Lamassu", log=lambda *a: None)[0]
     ok = {
-        "unsplash image saved and resized to 1600": bool(p["cover_src"]) and Image.open(p["cover_src"]).width == 1600,
+        "unsplash image saved and resized to 1400": bool(p["cover_src"]) and Image.open(p["cover_src"]).width == 1400,
         "unsplash credit: photographer + licence + source": p["credit"]["artist"] == "Yucel M" and p["credit"]["license"] == "Unsplash License" and p["credit"]["source"] == "Unsplash",
     }
     for k, v in ok.items():
