@@ -1,7 +1,7 @@
 # إعدادات الموقع العامة — غيّر الاسم هنا فقط
 site_name: "رياضة العالم"        # اسم مؤقت
 tagline: "أهم أخبار الرياضة في العالم، كل يوم، مع مصادرها"
-site_url: "https://example.github.io/sports-newsroom"   # يُحدَّث بعد تفعيل GitHub Pages
+site_url: "https://obaidi-tech.github.io/sports-newsroom"
 contact_email: "editor@example.com"                     # لطلبات التصحيح
 month_names: gulf                                       # gulf = نوفمبر | levant = تشرين الثاني
 language: ar
