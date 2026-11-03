@@ -11,9 +11,11 @@
   <article class="lead" style="--cat: var(--c-{{ lead.category }})">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
     <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    {% if lead.own %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
     <p class="lead__excerpt">{{ lead.excerpt }}</p>
-    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{{ meter(lead.n_sources, lead.category) }}</div>
+    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{{ meter(lead.n_sources, 'opinion' if lead.own else lead.category) }}</div>
   </article>
+  {% if runners %}
   <div class="runners">
     <h2 class="runners__title">الأكثر تغطية</h2>
     {% for a in runners %}
@@ -24,6 +26,7 @@
     </article>
     {% endfor %}
   </div>
+  {% endif %}
 </section>
 {% else %}
 <section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد قريباً، وتجد طريقة اختيارنا للأخبار في <a href="{{ root }}about.html">كيف نعمل</a>.</p></section>
@@ -34,9 +37,9 @@
   <div class="section-head" style="--cat: var(--c-opinion)"><h2 id="op-h">رأي ونقد</h2><a href="{{ root }}category/opinion.html">كل المقالات</a></div>
   <div class="opinions__grid">
   {% for a in opinions %}
-    <article class="op">
+    <article class="op{% if a.own %} op--own{% endif %}">
       <p class="op__author">{{ a.author or 'كاتب غير مذكور' }}</p>
-      <p class="op__outlet">{{ a.outlet }}</p>
+      <p class="op__outlet">{% if a.own %}مقال خاص{% else %}{{ a.outlet }}{% endif %}</p>
       <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
     </article>
   {% endfor %}

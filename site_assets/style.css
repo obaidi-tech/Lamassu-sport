@@ -70,6 +70,8 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .lead h1{font-size:clamp(1.8rem,3.8vw,2.9rem);line-height:1.35;margin:40px 0 12px;max-width:22ch}
 .lead__excerpt{font-size:1.15rem;margin:0 0 16px;max-width:60ch;color:#D3DAE5}
 .lead .meta{color:#AEB9CB}
+.lead__byline{margin:-4px 0 12px;font-family:var(--head);font-weight:600;font-size:1.1rem;color:var(--amber)}
+.top:not(:has(.runners)){grid-template-columns:minmax(0,1fr)}
 .lead .meter__bars i{background:#3A4A6E}
 .lead .meter__bars i.on{background:var(--amber)}
 .runners__title{font-size:1.05rem;color:var(--ink-2);font-weight:600;padding-bottom:8px;border-bottom:3px solid var(--ink)}
@@ -113,6 +115,9 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .badge{font-family:var(--head);font-weight:600;font-size:.72rem;border:1px solid var(--line);border-radius:999px;padding:0 8px;margin-inline-start:6px;color:var(--ink-2)}
 .story__note{font-size:.92rem;color:var(--ink-2)}
 .story__note a,.prose a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.2em}
+.story__body h2{font-size:1.4rem;margin:30px 0 8px}
+.story__byline--own{font-size:1.1rem}
+.op--own .op__author::after{content:"";display:block;width:36px;height:3px;background:var(--c-opinion);margin-top:4px}
 .prose h2{font-size:1.3rem;margin:28px 0 6px}
 .prose p{font-size:1.15rem}
 

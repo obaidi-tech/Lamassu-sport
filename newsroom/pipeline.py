@@ -11,6 +11,7 @@ from .cluster import cluster_items
 from .dedupe import dedupe
 from .fetch import collect
 from .preview import write_preview
+from .posts import load_posts
 from .rank import editorial_flags, score_cluster
 from .select import run_fraction, select, targets
 from .site import Builder
@@ -34,9 +35,11 @@ def build_site(cfg_dir="config", content_dir="content", site_dir="public", banne
     """(Re)build the static site from content/. `extra` = unsaved records to include (preview)."""
     site, cats, _, _ = load(cfg_dir)
     store = Store(content_dir)
-    articles = sorted(store.all_articles() + (extra or []), key=lambda a: a["published_at"], reverse=True)
+    posts = load_posts(os.path.join(content_dir, "posts"), site["timezone"], site["site_name"], log=log)
+    posts = [p for p in posts if p["category"] in cats["categories"]]
+    articles = sorted(store.all_articles() + posts + (extra or []), key=lambda a: a["published_at"], reverse=True)
     res = Builder(site, cats, site_dir).build(articles, banner=banner)
-    log(f"✔ الموقع: {res['articles']} خبراً في {res['days']} يوماً → {site_dir}/index.html")
+    log(f"✔ الموقع: {res['articles']} مادة (منها {len(posts)} مقالاً خاصاً) في {res['days']} يوماً → {site_dir}/index.html")
     return res
 
 

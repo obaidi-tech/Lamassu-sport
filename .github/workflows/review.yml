@@ -1,10 +1,11 @@
-# قائمة المراجعة: حين يغيّر المحرر "decision" في ملف داخل content/pending
-# إلى "publish" أو "reject" ويحفظ التعديل من واجهة GitHub، يُعاد بناء الموقع ونشره فوراً
+# إعادة بناء الموقع فوراً عند:
+#   - تغيير "decision" في ملف داخل content/pending إلى "publish" أو "reject"
+#   - إضافة مقال خاص أو تعديله في content/posts
 name: review
 
 on:
   push:
-    paths: ["content/pending/**"]
+    paths: ["content/pending/**", "content/posts/**"]
   workflow_dispatch: {}
 
 permissions:

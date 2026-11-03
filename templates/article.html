@@ -10,15 +10,19 @@
 <article class="story" style="--cat: var(--c-{{ a.category }})">
   <a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>
   <h1>{{ a.title }}</h1>
-  {% if a.category == 'opinion' %}
+  {% if a.own %}
+  <p class="story__byline story__byline--own">بقلم <strong>{{ a.author }}</strong></p>
+  {% elif a.category == 'opinion' %}
   <p class="story__byline">ملخص لمقال رأي بقلم <strong>{{ a.author or 'كاتب غير مذكور' }}</strong> في {{ a.outlet }}</p>
   {% endif %}
-  <div class="meta story__meta"><time datetime="{{ a.published_at }}">{{ a.published_at | day }}، {{ a.published_at | time }}</time>{{ meter(a.n_sources, a.category) }}</div>
+  <div class="meta story__meta"><time datetime="{{ a.published_at }}">{{ a.published_at | day }}</time>{% if not a.own %}، {{ a.published_at | time }}{{ meter(a.n_sources, a.category) }}{% endif %}</div>
   <div class="story__body">
-    {% for p in a.body %}<p>{{ p }}</p>{% endfor %}
+    {% for p in a.body %}{% if p.startswith('## ') %}<h2>{{ p[3:] }}</h2>{% else %}<p>{{ p }}</p>{% endif %}{% endfor %}
   </div>
 
-  {% if a.category == 'opinion' %}
+  {% if a.own %}
+  <p class="story__note">مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="mailto:{{ site.contact_email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}">راسلنا</a>.</p>
+  {% elif a.category == 'opinion' %}
   <aside class="sources">
     <h2>المقال الأصلي</h2>
     <p>هذا ملخص بصياغتنا. الرأي لصاحبه، والنص الكامل في مصدره:</p>
@@ -33,7 +37,9 @@
       <span class="src-title" dir="auto">{{ s.title }}</span></li>{% endfor %}</ul>
   </aside>
   {% endif %}
+  {% if not a.own %}
   <p class="story__note">أُعدّ هذا الخبر آلياً من المصادر المذكورة وفق <a href="{{ root }}about.html">سياسة التحرير</a>. لاحظت خطأً؟ <a href="mailto:{{ site.contact_email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}">أرسل طلب تصحيح</a>.</p>
+  {% endif %}
 </article>
 
 {% if related %}

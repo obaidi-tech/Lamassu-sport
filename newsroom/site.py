@@ -94,20 +94,24 @@ class Builder:
         self._images(articles)
         common = {"banner": banner}
 
-        news = [a for a in articles if a["category"] != "opinion"]
+        news = [a for a in articles if a["category"] != "opinion" and not a.get("own")]
         recent = [a for a in news if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
         ranked = sorted(recent or news[:30], key=lambda a: -a["score"])
         lead, runners = (ranked[0] if ranked else None), ranked[1:5]
         used = {a["id"] for a in ranked[:5]}
+        own = [a for a in articles if a.get("own")]
+        if lead is None and own:          # no news yet: our own newest article takes the lead spot
+            lead = own[0]
+            used.add(lead["id"])
         sections = []
         for cat in DISPLAY_ORDER:
             items = [a for a in news if a["category"] == cat and a["id"] not in used][:5]
             if items:
                 sections.append((cat, items))
         today_key = self.now.astimezone(self.tz).date()
-        today = [a for a in articles if self.local(a["published_at"]).date() == today_key]
+        today = [a for a in news if self.local(a["published_at"]).date() == today_key]
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
-                     opinions=[a for a in articles if a["category"] == "opinion"][:3],
+                     opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
                      edition_day=self.day_label(self.now), **common)
 
@@ -133,6 +137,13 @@ class Builder:
         self._render("404.html", "404.html", 0, **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
+
+    @staticmethod
+    def _opinion_band(articles):
+        """Home-page opinion band: the newest piece by our own writers first, then the latest others."""
+        ops = [a for a in articles if a["category"] == "opinion"]          # already newest-first
+        own = [a for a in ops if a.get("own")][:1]
+        return (own + [a for a in ops if a not in own])[:3]
 
     def _feeds(self, articles):
         base = self.site["site_url"].rstrip("/")
