@@ -1,9 +1,22 @@
-{% macro meter(n, cat) -%}
+{% macro meter(n, cat, href=None) -%}
 {% if cat == 'opinion' or n is none %}<span class="meter meter--opinion">مقال رأي</span>
-{%- else %}<span class="meter" title="عدد المصادر المستقلة التي غطّت الخبر">
+{%- else %}<{{ 'a' if href else 'span' }} class="meter"{% if href %} href="{{ href }}"{% endif %} title="عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر">
   <span class="meter__bars" aria-hidden="true">{% for i in range(8) %}<i{% if i < n %} class="on"{% endif %}></i>{% endfor %}</span>
-  <span class="meter__label">{{ n | sources }}</span></span>
+  <span class="meter__label">{{ n | covered }}</span></{{ 'a' if href else 'span' }}>
 {%- endif %}
+{%- endmacro %}
+
+{% macro share(url, title) -%}
+{% set u = url | urlencode %}{% set t = title | urlencode %}
+<div class="share" aria-label="مشاركة الخبر">
+  <span class="share__label">مشاركة:</span>
+  <a href="https://wa.me/?text={{ t }}%20{{ u }}" target="_blank" rel="noopener">واتساب</a>
+  <a href="https://twitter.com/intent/tweet?url={{ u }}&text={{ t }}" target="_blank" rel="noopener">إكس</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u={{ u }}" target="_blank" rel="noopener">فيسبوك</a>
+  <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ u }}" target="_blank" rel="noopener">لينكدإن</a>
+  <a href="https://t.me/share/url?url={{ u }}&text={{ t }}" target="_blank" rel="noopener">تيليغرام</a>
+  <button type="button" class="share__copy" data-url="{{ url }}">نسخ الرابط</button>
+</div>
 {%- endmacro %}
 
 {% macro row(a, root, cats, show_cat=True) -%}
@@ -14,7 +27,7 @@
     {% if a.own and a.category == 'opinion' %}<p class="byline">بقلم {{ a.author }}</p>
     {% elif a.category == 'opinion' and a.author %}<p class="byline">{{ a.author }} — {{ a.outlet }}</p>{% endif %}
     <p class="excerpt">{{ a.excerpt }}</p>
-    <div class="meta"><time datetime="{{ a.published_at }}">{{ a.published_at | ago }}</time>{% if a.own and a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif a.n_sources %}{{ meter(a.n_sources, a.category) }}{% endif %}</div>
+    <div class="meta"><time datetime="{{ a.published_at }}">{{ a.published_at | ago }}</time>{% if a.own and a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif a.n_sources %}{{ meter(a.n_sources, a.category, root ~ 'article/' ~ a.id ~ '.html#sources') }}{% endif %}</div>
   </div>
 </article>
 {%- endmacro %}

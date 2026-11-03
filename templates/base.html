@@ -17,6 +17,12 @@
 <meta property="og:image:alt" content="{{ site.site_name }} — {{ site.tagline }}">{% endblock %}
 <meta property="og:url" content="{{ site.site_url | trim('/') }}/{{ path if path != 'index.html' else '' }}">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{ root }}favicon.ico" sizes="32x32">
+<link rel="icon" href="{{ root }}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="{{ root }}apple-touch-icon.png">
+<link rel="manifest" href="{{ root }}site.webmanifest">
+<meta name="theme-color" content="#14213D">
+{% block jsonld %}{% endblock %}
 <link rel="alternate" type="application/rss+xml" title="{{ site.site_name }}" href="{{ root }}feed.xml">
 <link rel="preload" href="{{ root }}assets/fonts/Cairo_800ExtraBold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{{ root }}assets/style.css">
@@ -27,13 +33,19 @@
 <header class="mast">
   <div class="wrap mast__inner">
     <div class="mast__brand">
-      <a class="wordmark" href="{{ root }}index.html" lang="en" dir="ltr">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
+      <a class="wordmark" href="{{ root }}index.html" lang="en" dir="ltr"><img class="wordmark__mark" src="{{ root }}assets/brand/lamassu-mark.svg" alt="" width="40" height="40">{{ site.site_name }}</a>
       <p class="mast__tagline">{{ site.tagline }}</p>
     </div>
-    <p class="mast__date">{{ now | day }}</p>
+    <div class="mast__tools">
+      <p class="mast__date">{{ now | day }}</p>
+      <a class="tool-btn" href="{{ root }}search.html" aria-label="البحث في الموقع"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M15.5 15.5 21 21" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>بحث</span></a>
+      <button class="tool-btn nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><span>الأقسام</span></button>
+    </div>
   </div>
-  <nav class="nav" aria-label="الأقسام">
+  <nav class="nav" id="site-nav" aria-label="الأقسام">
     <div class="wrap nav__inner">
+      <a href="{{ root }}index.html"{% if path == 'index.html' %} aria-current="page"{% endif %}>الرئيسية</a>
+      <a href="{{ root }}latest.html"{% if path == 'latest.html' %} aria-current="page"{% endif %}>آخر الأخبار</a>
       {% for c in nav %}<a href="{{ root }}category/{{ c }}.html" style="--cat: var(--c-{{ c }})"{% if path == 'category/' ~ c ~ '.html' %} aria-current="page"{% endif %}>{{ cats[c].name_ar }}</a>{% endfor %}
       <a href="{{ root }}schedules.html"{% if path == 'schedules.html' %} aria-current="page"{% endif %}>الجداول والمباريات</a>
       <a href="{{ root }}archive.html"{% if path == 'archive.html' %} aria-current="page"{% endif %}>الأرشيف</a>
@@ -52,5 +64,25 @@
     <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
 </footer>
+<script>
+(function () {
+  // mobile menu: collapsed behind a button on small screens (stays a normal row without JS)
+  var btn = document.querySelector('.nav-toggle'), nav = document.getElementById('site-nav');
+  if (btn && nav) {
+    btn.hidden = false; document.documentElement.classList.add('js');
+    btn.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open'); btn.setAttribute('aria-expanded', open);
+    });
+  }
+  // copy-link buttons
+  document.querySelectorAll('.share__copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var url = b.getAttribute('data-url'), done = function () { b.textContent = 'نُسخ الرابط'; setTimeout(function () { b.textContent = 'نسخ الرابط'; }, 2000); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt('انسخ الرابط:', url); });
+      else { prompt('انسخ الرابط:', url); }
+    });
+  });
+})();
+</script>
 </body>
 </html>

@@ -28,6 +28,17 @@ def news_label(n: int) -> str:
     return f"{n} خبراً"
 
 
+def covered_label(n: int) -> str:
+    """'Covered by N independent outlets' with Arabic number agreement."""
+    if n == 1:
+        return "غطّته جهة واحدة"
+    if n == 2:
+        return "غطّته جهتان"
+    if 3 <= n <= 10:
+        return f"غطّته {n} جهات"
+    return f"غطّته {n} جهة"
+
+
 def sources_label(n: int) -> str:
     """Arabic number agreement for 'sources'."""
     if n == 1:

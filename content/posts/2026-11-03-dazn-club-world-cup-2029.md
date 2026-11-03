@@ -7,6 +7,7 @@ sources:
   - الغارديان
 unsplash: https://unsplash.com/photos/a-stadium-filled-with-lots-of-people-sitting-in-the-bleachers-6T3liG3AqSs
 photographer: Yucel M
+unsplash_image: https://images.unsplash.com/photo-1717352291583-226b76535ca9
 ---
 
 حصلت منصة "دازن" (DAZN) على خيار حصري لنيل حقوق البث الرقمي العالمية لكأس العالم للأندية 2029، وفق ما كشفته صحيفة الغارديان البريطانية، من دون الإعلان عن قيمة الصفقة أو المهلة المحددة لتفعيل الخيار.

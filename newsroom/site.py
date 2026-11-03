@@ -1,4 +1,5 @@
 """Build the static website from content/ — no server, no database, free hosting (GitHub Pages)."""
+import json
 import os
 import shutil
 from datetime import datetime, timedelta, timezone
@@ -7,8 +8,9 @@ from xml.sax.saxutils import escape
 from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
+from markupsafe import Markup
 
-from .cards import make_brand_card, make_card, news_label, sources_label
+from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
@@ -68,6 +70,9 @@ class Builder:
         self.env.filters["ago"] = self.ago
         self.env.filters["sources"] = sources_label
         self.env.filters["news"] = news_label
+        self.env.filters["covered"] = covered_label
+        # JSON for <script> blocks: marked safe so quotes aren't HTML-escaped; "</" broken up so it can't close the tag
+        self.env.filters["tojson_ar"] = lambda o: Markup(json.dumps(o, ensure_ascii=False).replace("</", "<\\/"))
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
         self.nav = DISPLAY_ORDER + ["opinion"]
@@ -122,6 +127,12 @@ class Builder:
                 os.makedirs(img_dir, exist_ok=True)
                 shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
                 a["image"] = a["cover"] = rel
+                try:
+                    from PIL import Image
+                    with Image.open(a["cover_src"]) as im:
+                        a["cover_w"], a["cover_h"] = im.size
+                except Exception:
+                    pass
             elif datetime.fromisoformat(a["published_at"]) >= cutoff:
                 rel = f"img/{a['id']}.jpg"
                 if not os.path.exists(os.path.join(self.out, rel)):
@@ -188,6 +199,26 @@ class Builder:
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
         self._render("schedules.html", "schedules.html", 0, **common)
+
+        # latest news: chronological, grouped by day (most recent 120 items)
+        latest, groups = articles[:120], []
+        for a in latest:
+            label = self.day_label(a["published_at"])
+            if not groups or groups[-1][0] != label:
+                groups.append((label, []))
+            groups[-1][1].append(a)
+        self._render("latest.html", "latest.html", 0, days=groups, more=len(articles) > len(latest), **common)
+
+        # site search: a small JSON index read by search.html in the browser (no external service)
+        idx = []
+        for a in articles:
+            body = " ".join(p.lstrip("#- ").replace("\n- ", " ") for p in a.get("body", []))
+            idx.append({"t": a["title"], "e": a.get("excerpt", ""), "u": f"article/{a['id']}.html", "c": a["category"],
+                        "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body[:1500],
+                        "s": " ".join(filter(None, [a.get("author") or ""] + [x.get("publisher", "") for x in a.get("sources", [])]))})
+        with open(os.path.join(self.out, "search-index.json"), "w", encoding="utf-8") as f:
+            json.dump(idx, f, ensure_ascii=False, separators=(",", ":"))
+        self._render("search.html", "search.html", 0, cat_names={k: v["name_ar"] for k, v in self.cats.items()}, **common)
         self._render("404.html", "404.html", 0, **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
@@ -213,7 +244,7 @@ class Builder:
                f"<description>{escape(self.site['tagline'])}</description><language>ar</language>"
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
-        urls = [(f"{base}/", newest), (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest), (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

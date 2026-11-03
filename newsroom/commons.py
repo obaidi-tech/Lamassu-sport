@@ -150,7 +150,7 @@ class RemoteImages:
         self.data = json.load(open(self.path, encoding="utf-8")) if os.path.exists(self.path) else {}
         self.dirty = False
 
-    def resolve_unsplash(self, link: str, photographer: str, log=print, download=None):
+    def resolve_unsplash(self, link: str, photographer: str, log=print, download=None, image_url: str = ""):
         key = link.strip()
         rec = self.data.get(key)
         credit = {"artist": photographer or "Unsplash", "license": "Unsplash License",
@@ -159,7 +159,8 @@ class RemoteImages:
         if rec and os.path.exists(os.path.join(self.dir, rec["local"])):
             return os.path.join(self.dir, rec["local"]), dict(credit, **{k: rec[k] for k in ("artist",) if rec.get(k)})
         try:
-            url = unsplash_download_url(key)
+            # prefer the direct images.unsplash.com address (the /download link may refuse automated requests)
+            url = unsplash_download_url(image_url.strip() if image_url else key)
             raw = (download or _download_big)(url)
             from io import BytesIO
             from PIL import Image

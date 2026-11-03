@@ -11,6 +11,8 @@ File format (edit it straight in GitHub's web editor):
     image: images/cover.jpg       (optional; a picture inside content/posts/, shown on the page and when shared)
     commons: File:Photo.jpg       (optional; a free-licence picture from Wikimedia Commons, credited automatically)
     unsplash: https://unsplash.com/photos/...   + photographer: Name   (optional; a free Unsplash photo)
+    updated: 2026-11-03 18:40     (optional) when the story was last changed …
+    update_note: سبب التحديث       … and why — shown at the end of the story
     sources:                      (optional, for news) one line per source: "الاسم | الرابط"
       - الاتحاد الآسيوي | https://www.the-afc.com/...
     featured: true                (optional, for news) put it in the lead spot on the home page
@@ -142,11 +144,27 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                 cover = None
         credit = None
         if not cover and meta.get("unsplash"):
-            cover, credit = remote.resolve_unsplash(str(meta["unsplash"]), str(meta.get("photographer") or ""), log=log)
+            cover, credit = remote.resolve_unsplash(str(meta["unsplash"]), str(meta.get("photographer") or ""), log=log,
+                                                    image_url=str(meta.get("unsplash_image") or ""))
         if not cover and meta.get("commons"):
             cover, credit = cache.resolve(str(meta["commons"]), log=log)
         elif cover and meta.get("image_credit"):
             credit = {"artist": str(meta["image_credit"]), "license": "", "page": "", "license_url": ""}
+        updates = []
+        raw_upd = meta.get("updates") or []
+        if meta.get("updated"):
+            raw_upd = [f"{meta['updated']} | {meta.get('update_note') or 'تحديث'}"] + list(raw_upd)
+        for u in raw_upd:
+            d, _, note = str(u).partition("|")
+            try:
+                at = datetime.fromisoformat(d.strip())
+            except ValueError:
+                log(f"  ⚠ {name}: تاريخ تحديث غير مفهوم «{d.strip()}»، استخدم الصيغة 2026-11-03 18:40")
+                continue
+            if at.tzinfo is None:
+                at = at.replace(tzinfo=zone)
+            updates.append({"at": at.isoformat(), "note": note.strip() or "تحديث"})
+        updates.sort(key=lambda u: u["at"], reverse=True)
         category = str(meta.get("category") or "opinion")
         srcs = _sources(meta.get("sources"))
         is_news = category != "opinion"
@@ -171,6 +189,9 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "file": name,
             "cover_src": cover,
             "credit": credit,
+            "cover_alt": str(meta.get("image_alt") or ""),
+            "updates": updates,
+            "updated_at": updates[0]["at"] if updates else None,
         })
     cache.save()
     remote.save()

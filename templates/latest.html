@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "_macros.html" import meter %}
+{% block title %}آخر الأخبار | {{ site.site_name }}{% endblock %}
+{% block description %}آخر الأخبار الرياضية المنشورة في {{ site.site_name }} بترتيب زمني، مع مصادر كل خبر.{% endblock %}
+{% block main %}
+<div class="page-head"><h1>آخر الأخبار</h1><p>كل ما نُشر بترتيب زمني، الأحدث أولاً.</p></div>
+{% if days %}
+{% for label, items in days %}
+<section class="latest-day" aria-label="{{ label }}">
+  <h2 class="latest-day__h">{{ label }}</h2>
+  <ol class="latest">
+    {% for a in items %}
+    <li class="latest__item" style="--cat: var(--c-{{ a.category }})">
+      <time datetime="{{ a.published_at }}">{{ a.published_at | time }}</time>
+      <div>
+        <a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>
+        <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+        <div class="meta">{% if a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% if a.author %}<span>{{ a.author }}</span>{% endif %}{% elif a.n_sources %}{{ meter(a.n_sources, a.category, root ~ 'article/' ~ a.id ~ '.html#sources') }}{% endif %}</div>
+      </div>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endfor %}
+{% if more %}<p class="story__note">تجد الأخبار الأقدم في <a href="{{ root }}archive.html">الأرشيف</a>.</p>{% endif %}
+{% else %}
+<p class="empty">لا أخبار منشورة بعد.</p>
+{% endif %}
+{% endblock %}
