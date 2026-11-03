@@ -9,6 +9,9 @@ File format (edit it straight in GitHub's web editor):
     category: opinion             (optional; any category key from config/categories.yaml)
     excerpt: سطر يلخص المقال      (optional; defaults to the opening of the first paragraph)
     image: images/cover.jpg       (optional; a picture inside content/posts/, shown on the page and when shared)
+    sources:                      (optional, for news) one line per source: "الاسم | الرابط"
+      - الاتحاد الآسيوي | https://www.the-afc.com/...
+    featured: true                (optional, for news) put it in the lead spot on the home page
     draft: true                   (optional; keeps the article off the site)
     ---
 
@@ -49,6 +52,19 @@ def _blocks(text: str) -> list:
                 out.append(" ".join(lines[1:]))
         else:
             out.append(" ".join(lines))
+    return out
+
+
+def _sources(raw) -> list:
+    out = []
+    for item in raw or []:
+        if isinstance(item, dict):
+            name, link = item.get("name") or item.get("publisher"), item.get("link") or item.get("url")
+        else:
+            name, _, link = str(item).partition("|")
+        name, link = (name or "").strip(), (link or "").strip()
+        if name:
+            out.append({"publisher": name, "title": "", "link": link if link.startswith("http") else "", "kind": "manual"})
     return out
 
 
@@ -93,6 +109,9 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
             if not cover.startswith(os.path.normpath(posts_dir)) or not os.path.isfile(cover):
                 log(f"  ⚠ {name}: الصورة {meta['image']} غير موجودة، فنُشر المقال دونها")
                 cover = None
+        category = str(meta.get("category") or "opinion")
+        srcs = _sources(meta.get("sources"))
+        is_news = category != "opinion"
         excerpt = str(meta.get("excerpt") or (first[:180].rsplit(" ", 1)[0] + "…" if len(first) > 180 else first))
         out.append({
             "id": "p" + hashlib.sha1(name.encode()).hexdigest()[:9],
@@ -100,12 +119,12 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
             "excerpt": excerpt,
             "body": body,
             "tags": meta.get("tags") or [],
-            "category": str(meta.get("category") or "opinion"),
+            "category": category,
             "sub": "own",
-            "score": 0,
-            "n_sources": 0,
-            "sources": [],
-            "author": str(meta.get("author") or site_name),
+            "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
+            "n_sources": len(srcs),
+            "sources": srcs,
+            "author": str(meta.get("author") or ("" if is_news else site_name)),
             "outlet": site_name,
             "original_title": None,
             "lang": "ar",

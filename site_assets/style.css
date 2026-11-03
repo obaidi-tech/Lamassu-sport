@@ -120,6 +120,17 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .story__body ul{margin:0 0 1.2em;padding:0 1.3em 0 0}
 .story__body li{font-size:1.15rem;line-height:1.9;margin:0 0 .35em}
 .story__body li::marker{color:var(--cat)}
+.story__byline a{color:inherit;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--cat) 45%,transparent);text-underline-offset:.25em}
+.author-box{margin:30px 0 10px;padding:16px 20px;border-top:3px solid var(--cat);background:var(--card);border-radius:0 0 6px 6px}
+.author-box__name{margin:0;font-family:var(--head);font-weight:800;font-size:1.2rem;color:var(--cat)}
+.author-box__links{margin:4px 0 0;font-family:var(--head);font-weight:600;font-size:.95rem}
+.author-box__links a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.2em}
+.contact__cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:22px 0 10px}
+.prose .contact__card{text-decoration:none}
+.contact__card{display:flex;flex-direction:column;gap:4px;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-right:5px solid var(--c-orgs);border-radius:6px;text-decoration:none}
+.contact__card:hover{border-color:var(--c-orgs);text-decoration:none}
+.contact__label{font-family:var(--head);font-weight:600;font-size:.9rem;color:var(--ink-2)}
+.contact__value{font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--c-orgs);overflow-wrap:anywhere}
 .story__cover{width:100%;border-radius:6px;margin:0 0 24px}
 .story__byline--own{font-size:1.1rem}
 .op--own .op__author::after{content:"";display:block;width:36px;height:3px;background:var(--c-opinion);margin-top:4px}

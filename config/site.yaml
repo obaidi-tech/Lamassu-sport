@@ -2,7 +2,9 @@
 site_name: "رياضة العالم"        # اسم مؤقت
 tagline: "أهم أخبار الرياضة في العالم، كل يوم، مع مصادرها"
 site_url: "https://obaidi-tech.github.io/sports-newsroom"
-contact_email: "editor@example.com"                     # لطلبات التصحيح
+contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")
+owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته
+linkedin_url: "https://www.linkedin.com/in/al0baidi"
 month_names: gulf                                       # gulf = نوفمبر | levant = تشرين الثاني
 language: ar
 timezone: "Asia/Riyadh"

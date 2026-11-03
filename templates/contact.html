@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}تواصل معنا — {{ site.site_name }}{% endblock %}
+{% block description %}للتواصل مع {{ site.site_name }}: تصحيح خبر، أو اقتراح موضوع، أو مقال للنشر.{% endblock %}
+{% block main %}
+<article class="story prose contact">
+  <h1>تواصل معنا</h1>
+  <p>نرحب برسائلكم في كل ما يخص الموقع: تصحيح معلومة في خبر منشور، أو اقتراح موضوع أو قصة تستحق التغطية، أو مقال رأي ترغبون في نشره.</p>
+
+  <div class="contact__cards">
+    {% if site.email %}
+    <a class="contact__card" href="mailto:{{ site.email }}">
+      <span class="contact__label">البريد الإلكتروني</span>
+      <span class="contact__value" dir="ltr">{{ site.email }}</span>
+    </a>
+    {% endif %}
+    {% if site.linkedin %}
+    <a class="contact__card" href="{{ site.linkedin }}" target="_blank" rel="noopener me">
+      <span class="contact__label">لينكدإن{% if site.owner_name %} — {{ site.owner_name }}{% endif %}</span>
+      <span class="contact__value">الصفحة الشخصية</span>
+    </a>
+    {% endif %}
+  </div>
+  {% if not site.email and not site.linkedin %}
+  <p class="empty">تُضاف وسائل التواصل قريباً.</p>
+  {% endif %}
+
+  {% if site.email %}
+  <h2>لطلب تصحيح</h2>
+  <p>أرسل رابط الخبر وموضع الخطأ، ومصدر المعلومة الصحيحة إن وُجد. نراجع كل طلب، ونصحّح الخبر أو نزيله إن ثبت الخطأ.</p>
+  <h2>لاقتراح مقال</h2>
+  <p>أرسل عنوان المقال وفكرته في أسطر قليلة، أو النص كاملاً، مع اسمك كما تحب أن يظهر.</p>
+  {% endif %}
+</article>
+{% endblock %}

@@ -10,12 +10,17 @@
 <article class="story" style="--cat: var(--c-{{ a.category }})">
   <a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>
   <h1>{{ a.title }}</h1>
-  {% if a.own %}
-  <p class="story__byline story__byline--own">بقلم <strong>{{ a.author }}</strong></p>
+  {% set own_op = a.own and a.category == 'opinion' %}
+  {% set own_news = a.own and a.category != 'opinion' %}
+  {% set is_owner = site.owner_name and a.author == site.owner_name and site.linkedin %}
+  {% if own_op %}
+  <p class="story__byline story__byline--own">بقلم {% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me"><strong>{{ a.author }}</strong></a>{% else %}<strong>{{ a.author }}</strong>{% endif %}</p>
+  {% elif own_news and a.author %}
+  <p class="story__byline">إعداد: {% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me">{{ a.author }}</a>{% else %}{{ a.author }}{% endif %}</p>
   {% elif a.category == 'opinion' %}
   <p class="story__byline">ملخص لمقال رأي بقلم <strong>{{ a.author or 'كاتب غير مذكور' }}</strong> في {{ a.outlet }}</p>
   {% endif %}
-  <div class="meta story__meta"><time datetime="{{ a.published_at }}">{{ a.published_at | day }}</time>{% if not a.own %}، {{ a.published_at | time }}{{ meter(a.n_sources, a.category) }}{% endif %}</div>
+  <div class="meta story__meta"><time datetime="{{ a.published_at }}">{{ a.published_at | day }}{% if not own_op %}، {{ a.published_at | time }}{% endif %}</time>{% if not own_op and a.n_sources %}{{ meter(a.n_sources, a.category) }}{% endif %}</div>
   {% if a.cover %}<img class="story__cover" src="{{ root }}{{ a.cover }}" alt="{{ a.title }}">{% endif %}
   <div class="story__body">
     {% for p in a.body %}
@@ -26,8 +31,23 @@
     {% endfor %}
   </div>
 
-  {% if a.own %}
-  <p class="story__note">مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="mailto:{{ site.contact_email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}">راسلنا</a>.</p>
+  {% set correct_link %}{% if site.email %}mailto:{{ site.email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}{% endset %}
+  {% if own_op %}
+  {% if is_owner %}
+  <aside class="author-box">
+    <p class="author-box__name">{{ a.author }}</p>
+    <p class="author-box__links"><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">الصفحة الشخصية على لينكدإن</a>{% if site.email %} · <a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a>{% endif %}</p>
+  </aside>
+  {% endif %}
+  <p class="story__note">مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="{% if site.email %}mailto:{{ site.email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}">راسلنا</a>.</p>
+  {% elif own_news %}
+  {% if a.sources %}
+  <aside class="sources">
+    <h2>مصادر هذا الخبر</h2>
+    <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}{{ s.publisher }}{% endif %}</li>{% endfor %}</ul>
+  </aside>
+  {% endif %}
+  <p class="story__note">لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.</p>
   {% elif a.category == 'opinion' %}
   <aside class="sources">
     <h2>المقال الأصلي</h2>
@@ -42,9 +62,7 @@
       {% if s.kind == 'official' %}<span class="badge">جهة رسمية</span>{% elif s.kind == 'agency' %}<span class="badge">وكالة</span>{% endif %}
       <span class="src-title" dir="auto">{{ s.title }}</span></li>{% endfor %}</ul>
   </aside>
-  {% endif %}
-  {% if not a.own %}
-  <p class="story__note">أُعدّ هذا الخبر آلياً من المصادر المذكورة وفق <a href="{{ root }}about.html">سياسة التحرير</a>. لاحظت خطأً؟ <a href="mailto:{{ site.contact_email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}">أرسل طلب تصحيح</a>.</p>
+  <p class="story__note">أُعدّ هذا الخبر آلياً من المصادر المذكورة وفق <a href="{{ root }}about.html">سياسة التحرير</a>. لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.</p>
   {% endif %}
 </article>
 

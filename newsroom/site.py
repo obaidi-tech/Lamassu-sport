@@ -23,7 +23,11 @@ CARD_DAYS = 30            # newer articles get their own card image; older ones 
 
 class Builder:
     def __init__(self, site: dict, cats_cfg: dict, out_dir: str):
-        self.site, self.cats = site, cats_cfg["categories"]
+        self.site, self.cats = dict(site), cats_cfg["categories"]
+        email = str(self.site.get("contact_email") or "")
+        self.site["email"] = email if "@" in email and "example." not in email else ""
+        li = str(self.site.get("linkedin_url") or "")
+        self.site["linkedin"] = li if li.startswith("https://") and "linkedin.com/" in li else ""
         self.out = out_dir
         self.tz = ZoneInfo(site["timezone"])
         self.months = MONTHS.get(site.get("month_names", "gulf"), MONTHS["gulf"])
@@ -100,12 +104,12 @@ class Builder:
         self._images(articles)
         common = {"banner": banner}
 
-        news = [a for a in articles if a["category"] != "opinion" and not a.get("own")]
+        news = [a for a in articles if a["category"] != "opinion"]
         recent = [a for a in news if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
         ranked = sorted(recent or news[:30], key=lambda a: -a["score"])
         lead, runners = (ranked[0] if ranked else None), ranked[1:5]
         used = {a["id"] for a in ranked[:5]}
-        own = [a for a in articles if a.get("own")]
+        own = [a for a in articles if a.get("own") and a["category"] == "opinion"]
         if lead is None and own:          # no news yet: our own newest article takes the lead spot
             lead = own[0]
             used.add(lead["id"])
@@ -140,6 +144,7 @@ class Builder:
         self._render("archive.html", "archive.html", 0, days=[(d, self.day_label(v[0]["published_at"]), len(v))
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
+        self._render("contact.html", "contact.html", 0, **common)
         self._render("404.html", "404.html", 0, **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
@@ -164,7 +169,7 @@ class Builder:
                f"<title>{escape(self.site['site_name'])}</title><link>{base}/</link>"
                f"<description>{escape(self.site['tagline'])}</description><language>ar</language>"
                + "".join(items) + "</channel></rss>")
-        urls = [f"{base}/", f"{base}/about.html", f"{base}/archive.html"]
+        urls = [f"{base}/", f"{base}/about.html", f"{base}/contact.html", f"{base}/archive.html"]
         urls += [f"{base}/category/{c}.html" for c in DISPLAY_ORDER + ["opinion"]]
         urls += [f"{base}/article/{a['id']}.html" for a in articles]
         sitemap = ('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
