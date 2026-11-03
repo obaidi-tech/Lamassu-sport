@@ -1,7 +1,8 @@
 # إعدادات الموقع العامة — غيّر الاسم هنا فقط
 site_name: "Lamassu"
 site_name_en: ""
-tagline: "الرياضة العالمية بمصادرها"
+tagline: "قوة في التغطية، ثقة في المصدر"
+tagline_en: "Strength in Coverage, Trust in Sources"   # للحسابات والمشاركة الدولية
 site_url: "https://obaidi-tech.github.io/sports-newsroom"
 contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")
 owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته

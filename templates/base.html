@@ -8,6 +8,7 @@
 <link rel="canonical" href="{{ site.site_url | trim('/') }}/{{ path if path != 'index.html' else '' }}">
 <meta property="og:site_name" content="{{ site.site_name }}{% if site.site_name_en %} | {{ site.site_name_en }}{% endif %}">
 <meta property="og:locale" content="ar_AR">
+{% if site.tagline_en %}<meta name="application-name" content="{{ site.site_name }} — {{ site.tagline_en }}">{% endif %}
 {% block og %}<meta property="og:type" content="website"><meta property="og:title" content="{{ site.site_name }}">
 <meta property="og:image" content="{{ site.site_url | trim('/') }}/img/default-top5.jpg">{% endblock %}
 <meta name="twitter:card" content="summary_large_image">
@@ -20,7 +21,10 @@
 {% if banner %}<div class="banner" role="note">{{ banner }}</div>{% endif %}
 <header class="mast">
   <div class="wrap mast__inner">
-    <a class="wordmark" href="{{ root }}index.html" lang="en" dir="ltr">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
+    <div class="mast__brand">
+      <a class="wordmark" href="{{ root }}index.html" lang="en" dir="ltr">{{ site.site_name }}{% if site.site_name_en %}<span class="wordmark__en" lang="en">{{ site.site_name_en }}</span>{% endif %}</a>
+      <p class="mast__tagline">{{ site.tagline }}</p>
+    </div>
     <p class="mast__date">{{ now | day }}</p>
   </div>
   <nav class="nav" aria-label="الأقسام">
@@ -38,7 +42,8 @@
 <footer class="foot">
   <div class="wrap foot__inner">
     <p class="foot__name">{{ site.site_name }}{% if site.site_name_en %} <span lang="en">| {{ site.site_name_en }}</span>{% endif %}</p>
-    <p>{{ site.tagline }}. نختار الأخبار حسب عدد المصادر المستقلة التي تناولتها، ونذكر هذه المصادر مع كل خبر.</p>
+    <p class="foot__tag">{{ site.tagline }}{% if site.tagline_en %} <span lang="en">{{ site.tagline_en }}</span>{% endif %}</p>
+    <p>نختار الأخبار حسب عدد المصادر المستقلة التي تناولتها، ونذكر هذه المصادر مع كل خبر.</p>
     <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
 </footer>
