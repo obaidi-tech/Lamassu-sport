@@ -55,6 +55,30 @@ def _blocks(text: str) -> list:
     return out
 
 
+def _lenient_meta(text: str) -> dict:
+    """Fallback when the header isn't strict YAML (e.g. a title with ':' or starting with quotes):
+    'key: value' per line, the value is everything after the first ': '; '  - item' lines form a list."""
+    meta, last = {}, None
+    for line in text.splitlines():
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        stripped = line.strip()
+        if stripped.startswith("- ") and last:
+            if not isinstance(meta.get(last), list):
+                meta[last] = []
+            meta[last].append(stripped[2:].strip())
+            continue
+        key, sep, val = line.partition(":")
+        if not sep or not re.fullmatch(r"[A-Za-z_]+", key.strip()):
+            continue
+        last, val = key.strip(), val.strip()
+        if val.lower() in ("true", "false"):
+            meta[last] = val.lower() == "true"
+        elif val:
+            meta[last] = val
+    return meta
+
+
 def _sources(raw) -> list:
     out = []
     for item in raw or []:
@@ -83,9 +107,10 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
             continue
         try:
             meta = yaml.safe_load(m.group(1)) or {}
-        except yaml.YAMLError as ex:
-            log(f"  ⚠ {name}: خطأ في معلومات المقال ({ex.__class__.__name__})، فلم يُنشر")
-            continue
+            if not isinstance(meta, dict):
+                raise yaml.YAMLError("header is not a mapping")
+        except yaml.YAMLError:
+            meta = _lenient_meta(m.group(1))
         if meta.get("draft") or not meta.get("title"):
             if not meta.get("title"):
                 log(f"  ⚠ {name}: لا يوجد عنوان (title)، فلم يُنشر")

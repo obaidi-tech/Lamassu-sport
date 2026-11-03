@@ -3,7 +3,7 @@
 {% block main %}
 <section class="edition" aria-label="عدد اليوم">
   <p class="edition__line">عدد {{ edition_day }}
-    {% if today_count %}<span>{{ today_count }} خبراً حتى الآن، من {{ today_sources }} تغطية في الصحف والوكالات والجهات الرسمية</span>{% endif %}</p>
+    {% if today_count %}<span>{{ today_count | news }} حتى الآن، من {{ today_sources | sources }} بين صحف ووكالات وجهات رسمية</span>{% endif %}</p>
 </section>
 
 {% if links.home %}

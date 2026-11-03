@@ -17,6 +17,17 @@ CAT_COLORS = {
 W, H = 1200, 630
 
 
+def news_label(n: int) -> str:
+    """Arabic number agreement for 'news items'."""
+    if n == 1:
+        return "خبر واحد"
+    if n == 2:
+        return "خبران"
+    if 3 <= n <= 10:
+        return f"{n} أخبار"
+    return f"{n} خبراً"
+
+
 def sources_label(n: int) -> str:
     """Arabic number agreement for 'sources'."""
     if n == 1:

@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from .cards import make_card, sources_label
+from .cards import make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
@@ -67,6 +67,7 @@ class Builder:
         self.env.filters["time"] = lambda iso: self.local(iso).strftime("%H:%M")
         self.env.filters["ago"] = self.ago
         self.env.filters["sources"] = sources_label
+        self.env.filters["news"] = news_label
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
 
