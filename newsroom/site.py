@@ -77,7 +77,13 @@ class Builder:
                 make_card(path, self.site["tagline"], cat, c["name_ar"], self.site["site_name"], "", 0)
         cutoff = self.now - timedelta(days=CARD_DAYS)
         for a in articles:
-            if datetime.fromisoformat(a["published_at"]) >= cutoff:
+            if a.get("cover_src"):                       # hand-written post with its own image
+                ext = os.path.splitext(a["cover_src"])[1].lower()
+                rel = f"img/{a['id']}{ext}"
+                os.makedirs(img_dir, exist_ok=True)
+                shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
+                a["image"] = a["cover"] = rel
+            elif datetime.fromisoformat(a["published_at"]) >= cutoff:
                 rel = f"img/{a['id']}.jpg"
                 if not os.path.exists(os.path.join(self.out, rel)):
                     make_card(os.path.join(self.out, rel), a["title"], a["category"],

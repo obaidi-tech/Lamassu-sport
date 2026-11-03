@@ -16,8 +16,14 @@
   <p class="story__byline">ملخص لمقال رأي بقلم <strong>{{ a.author or 'كاتب غير مذكور' }}</strong> في {{ a.outlet }}</p>
   {% endif %}
   <div class="meta story__meta"><time datetime="{{ a.published_at }}">{{ a.published_at | day }}</time>{% if not a.own %}، {{ a.published_at | time }}{{ meter(a.n_sources, a.category) }}{% endif %}</div>
+  {% if a.cover %}<img class="story__cover" src="{{ root }}{{ a.cover }}" alt="{{ a.title }}">{% endif %}
   <div class="story__body">
-    {% for p in a.body %}{% if p.startswith('## ') %}<h2>{{ p[3:] }}</h2>{% else %}<p>{{ p }}</p>{% endif %}{% endfor %}
+    {% for p in a.body %}
+      {%- if p.startswith('### ') %}<h3>{{ p[4:] }}</h3>
+      {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
+      {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] }}</li>{% endfor %}</ul>
+      {%- else %}<p>{{ p }}</p>{% endif %}
+    {% endfor %}
   </div>
 
   {% if a.own %}
