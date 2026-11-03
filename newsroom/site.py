@@ -212,11 +212,17 @@ class Builder:
                f"<title>{escape(self.site['site_name'])}</title><link>{base}/</link>"
                f"<description>{escape(self.site['tagline'])}</description><language>ar</language>"
                + "".join(items) + "</channel></rss>")
-        urls = [f"{base}/", f"{base}/about.html", f"{base}/contact.html", f"{base}/schedules.html", f"{base}/archive.html"]
-        urls += [f"{base}/category/{c}.html" for c in DISPLAY_ORDER + ["opinion"]]
-        urls += [f"{base}/article/{a['id']}.html" for a in articles]
-        sitemap = ('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
-                   + "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
+        newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
+        urls = [(f"{base}/", newest), (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+                (f"{base}/about.html", None), (f"{base}/contact.html", None)]
+        for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
+            items = [a for a in articles if a["category"] == c]
+            if items:
+                urls.append((f"{base}/category/{c}.html", items[0]["published_at"][:10]))
+        urls += [(f"{base}/article/{a['id']}.html", a["published_at"][:10]) for a in articles]
+        sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+                   + "".join(f"<url><loc>{u}</loc>{f'<lastmod>{d}</lastmod>' if d else ''}</url>\n" for u, d in urls)
+                   + "</urlset>\n")
         for name, body in [("feed.xml", rss), ("sitemap.xml", sitemap),
                            ("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n"),
                            (".nojekyll", "")]:
