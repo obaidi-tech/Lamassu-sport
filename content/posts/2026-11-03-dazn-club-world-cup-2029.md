@@ -5,7 +5,8 @@ date: 2026-11-03 12:20
 excerpt: المنصة التي دفعت مليار دولار لنسخة 2025 تضمن أولوية حقوق النسخة المقبلة، بينما لم يحسم فيفا بعد مكان البطولة ونظامها.
 sources:
   - الغارديان
-commons: File:Cole_Palmer_2025_FIFA_Club_World_Cup_Final.jpg
+unsplash: https://unsplash.com/photos/a-stadium-filled-with-lots-of-people-sitting-in-the-bleachers-6T3liG3AqSs
+photographer: Yucel M
 ---
 
 حصلت منصة "دازن" (DAZN) على خيار حصري لنيل حقوق البث الرقمي العالمية لكأس العالم للأندية 2029، وفق ما كشفته صحيفة الغارديان البريطانية، من دون الإعلان عن قيمة الصفقة أو المهلة المحددة لتفعيل الخيار.

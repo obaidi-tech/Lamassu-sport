@@ -64,5 +64,27 @@ def main():
     sys.exit(0 if all(checks.values()) else 1)
 
 
+def test_unsplash():
+    d = tempfile.mkdtemp()
+    open(os.path.join(d, "u.md"), "w", encoding="utf-8").write(
+        "---\ntitle: خبر\ncategory: orgs\nunsplash: https://unsplash.com/photos/a-stadium-6T3liG3AqSs\nphotographer: Yucel M\n---\n\nنص.\n")
+    real = cm.RemoteImages.resolve_unsplash
+    big = lambda url: (lambda b: (Image.new("RGB", (3000, 2000), (9, 9, 9)).save(b, "JPEG"), b.getvalue())[1])(io.BytesIO())  # noqa: E731
+    cm.RemoteImages.resolve_unsplash = lambda self, link, ph, log=print, download=None: real(self, link, ph, log, big)
+    p = load_posts(d, "Asia/Riyadh", "Lamassu", log=lambda *a: None)[0]
+    ok = {
+        "unsplash image saved and resized to 1600": bool(p["cover_src"]) and Image.open(p["cover_src"]).width == 1600,
+        "unsplash credit: photographer + licence + source": p["credit"]["artist"] == "Yucel M" and p["credit"]["license"] == "Unsplash License" and p["credit"]["source"] == "Unsplash",
+    }
+    for k, v in ok.items():
+        print(("PASS" if v else "FAIL"), k)
+    shutil.rmtree(d)
+    return all(ok.values())
+
+
 if __name__ == "__main__":
-    main()
+    u = test_unsplash()
+    try:
+        main()
+    except SystemExit as e:
+        sys.exit(e.code or (0 if u else 1))

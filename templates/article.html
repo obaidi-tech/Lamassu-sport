@@ -24,7 +24,7 @@
   {% if a.cover %}
   <figure class="story__figure">
     <img class="story__cover" src="{{ root }}{{ a.cover }}" alt="{{ a.title }}">
-    {% if a.credit %}<figcaption class="story__credit">الصورة: <bdi dir="ltr">{% if a.credit.page %}<a href="{{ a.credit.page }}" target="_blank" rel="noopener">{{ a.credit.artist }}</a>{% else %}{{ a.credit.artist }}{% endif %}{% if a.credit.license %} / Wikimedia Commons ({% if a.credit.license_url %}<a href="{{ a.credit.license_url }}" target="_blank" rel="noopener license">{{ a.credit.license }}</a>{% else %}{{ a.credit.license }}{% endif %}){% endif %}</bdi></figcaption>{% endif %}
+    {% if a.credit %}<figcaption class="story__credit">الصورة: <bdi dir="ltr">{% if a.credit.page %}<a href="{{ a.credit.page }}" target="_blank" rel="noopener">{{ a.credit.artist }}</a>{% else %}{{ a.credit.artist }}{% endif %}{% if a.credit.license %} / {{ a.credit.source or 'Wikimedia Commons' }} ({% if a.credit.license_url %}<a href="{{ a.credit.license_url }}" target="_blank" rel="noopener license">{{ a.credit.license }}</a>{% else %}{{ a.credit.license }}{% endif %}){% endif %}</bdi></figcaption>{% endif %}
   </figure>
   {% endif %}
   <div class="story__body">

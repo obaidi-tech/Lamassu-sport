@@ -115,3 +115,70 @@ def _download(url: str) -> bytes:
     if len(r.content) > 8 * 1024 * 1024:
         raise ValueError("image too large")
     return r.content
+
+
+# ── Unsplash (free photos under the Unsplash License) ──────────────────────────
+UNSPLASH_LICENSE = "https://unsplash.com/license"
+
+
+def unsplash_download_url(page_or_image: str) -> str:
+    """Accept a photo page (unsplash.com/photos/<slug>-<id>) or a direct images.unsplash.com link."""
+    u = page_or_image.strip()
+    if "images.unsplash.com/" in u:
+        base = u.split("?")[0]
+        return base + "?fm=jpg&q=80&w=1600&fit=max"
+    m = re.search(r"unsplash\.com/photos/(?:[^/?#]*-)?([A-Za-z0-9_-]{11})(?:[/?#]|$)", u)
+    if not m:
+        raise ValueError("not an Unsplash photo link")
+    return f"https://unsplash.com/photos/{m.group(1)}/download?force=true"
+
+
+class RemoteImages:
+    """Downloads a free photo once (on GitHub, where the internet is open), keeps a local copy and its credit."""
+    def __init__(self, posts_dir: str):
+        self.dir = os.path.join(posts_dir, "images", "remote")
+        self.path = os.path.join(posts_dir, "images", "remote.json")
+        self.data = json.load(open(self.path, encoding="utf-8")) if os.path.exists(self.path) else {}
+        self.dirty = False
+
+    def resolve_unsplash(self, link: str, photographer: str, log=print, download=None):
+        key = link.strip()
+        rec = self.data.get(key)
+        credit = {"artist": photographer or "Unsplash", "license": "Unsplash License",
+                  "license_url": UNSPLASH_LICENSE, "page": key if key.startswith("https://unsplash.com/") else "",
+                  "source": "Unsplash"}
+        if rec and os.path.exists(os.path.join(self.dir, rec["local"])):
+            return os.path.join(self.dir, rec["local"]), dict(credit, **{k: rec[k] for k in ("artist",) if rec.get(k)})
+        try:
+            url = unsplash_download_url(key)
+            raw = (download or _download_big)(url)
+            from io import BytesIO
+            from PIL import Image
+            im = Image.open(BytesIO(raw)).convert("RGB")
+            if im.width > 1600:
+                im = im.resize((1600, round(im.height * 1600 / im.width)), Image.LANCZOS)
+            os.makedirs(self.dir, exist_ok=True)
+            local = hashlib.sha1(key.encode()).hexdigest()[:12] + ".jpg"
+            im.save(os.path.join(self.dir, local), "JPEG", quality=84, optimize=True, progressive=True)
+        except Exception as ex:
+            log(f"  ⚠ صورة Unsplash {key}: تعذر تنزيلها ({type(ex).__name__}). نُشر الخبر دون صورة، وتُعاد المحاولة في التشغيل التالي.")
+            return None, None
+        self.data[key] = {"local": local, "artist": credit["artist"]}
+        self.dirty = True
+        log(f"  ✔ صورة Unsplash: {credit['artist']}")
+        return os.path.join(self.dir, local), credit
+
+    def save(self):
+        if self.dirty:
+            with open(self.path, "w", encoding="utf-8") as f:
+                json.dump(self.data, f, ensure_ascii=False, indent=1)
+
+
+def _download_big(url: str) -> bytes:
+    r = requests.get(url, timeout=90, headers={"User-Agent": UA}, allow_redirects=True)
+    r.raise_for_status()
+    if not r.headers.get("content-type", "").startswith("image/"):
+        raise ValueError("not an image")
+    if len(r.content) > 30 * 1024 * 1024:
+        raise ValueError("image too large")
+    return r.content

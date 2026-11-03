@@ -10,6 +10,7 @@ File format (edit it straight in GitHub's web editor):
     excerpt: سطر يلخص المقال      (optional; defaults to the opening of the first paragraph)
     image: images/cover.jpg       (optional; a picture inside content/posts/, shown on the page and when shared)
     commons: File:Photo.jpg       (optional; a free-licence picture from Wikimedia Commons, credited automatically)
+    unsplash: https://unsplash.com/photos/...   + photographer: Name   (optional; a free Unsplash photo)
     sources:                      (optional, for news) one line per source: "الاسم | الرابط"
       - الاتحاد الآسيوي | https://www.the-afc.com/...
     featured: true                (optional, for news) put it in the lead spot on the home page
@@ -31,7 +32,7 @@ from zoneinfo import ZoneInfo
 
 import yaml
 
-from .commons import CommonsCache
+from .commons import CommonsCache, RemoteImages
 
 FRONT = re.compile(r"^﻿?---\s*\n(.*?)\n---\s*\n(.*)$", re.S)
 
@@ -99,6 +100,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
     zone = ZoneInfo(tz)
     out = []
     cache = commons or CommonsCache(posts_dir)
+    remote = RemoteImages(posts_dir)
     for path in sorted(glob.glob(os.path.join(posts_dir, "*.md"))):
         name = os.path.basename(path)
         if name.lower().startswith(("readme", "_")):
@@ -139,6 +141,8 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                 log(f"  ⚠ {name}: الصورة {meta['image']} غير موجودة، فنُشر المقال دونها")
                 cover = None
         credit = None
+        if not cover and meta.get("unsplash"):
+            cover, credit = remote.resolve_unsplash(str(meta["unsplash"]), str(meta.get("photographer") or ""), log=log)
         if not cover and meta.get("commons"):
             cover, credit = cache.resolve(str(meta["commons"]), log=log)
         elif cover and meta.get("image_credit"):
@@ -169,4 +173,5 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "credit": credit,
         })
     cache.save()
+    remote.save()
     return out
