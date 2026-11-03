@@ -138,6 +138,10 @@ h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.4;margin:0}
 .contact__card:hover{border-color:var(--c-orgs);text-decoration:none}
 .contact__label{font-family:var(--head);font-weight:600;font-size:.9rem;color:var(--ink-2)}
 .contact__value{font-family:var(--head);font-weight:800;font-size:1.15rem;color:var(--c-orgs);overflow-wrap:anywhere}
+.story__figure{margin:0 0 24px}
+.story__figure .story__cover{margin:0}
+.story__credit{margin-top:6px;font-family:var(--head);font-size:.78rem;color:var(--ink-2)}
+.story__credit a{color:inherit;text-decoration:underline;text-underline-offset:.2em}
 .story__cover{width:100%;border-radius:6px;margin:0 0 24px}
 .story__byline--own{font-size:1.1rem}
 .op--own .op__author::after{content:"";display:block;width:36px;height:3px;background:var(--c-opinion);margin-top:4px}

@@ -9,6 +9,7 @@ File format (edit it straight in GitHub's web editor):
     category: opinion             (optional; any category key from config/categories.yaml)
     excerpt: سطر يلخص المقال      (optional; defaults to the opening of the first paragraph)
     image: images/cover.jpg       (optional; a picture inside content/posts/, shown on the page and when shared)
+    commons: File:Photo.jpg       (optional; a free-licence picture from Wikimedia Commons, credited automatically)
     sources:                      (optional, for news) one line per source: "الاسم | الرابط"
       - الاتحاد الآسيوي | https://www.the-afc.com/...
     featured: true                (optional, for news) put it in the lead spot on the home page
@@ -29,6 +30,8 @@ from datetime import datetime
 from zoneinfo import ZoneInfo
 
 import yaml
+
+from .commons import CommonsCache
 
 FRONT = re.compile(r"^﻿?---\s*\n(.*?)\n---\s*\n(.*)$", re.S)
 
@@ -92,9 +95,10 @@ def _sources(raw) -> list:
     return out
 
 
-def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
+def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None) -> list:
     zone = ZoneInfo(tz)
     out = []
+    cache = commons or CommonsCache(posts_dir)
     for path in sorted(glob.glob(os.path.join(posts_dir, "*.md"))):
         name = os.path.basename(path)
         if name.lower().startswith(("readme", "_")):
@@ -134,6 +138,11 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
             if not cover.startswith(os.path.normpath(posts_dir)) or not os.path.isfile(cover):
                 log(f"  ⚠ {name}: الصورة {meta['image']} غير موجودة، فنُشر المقال دونها")
                 cover = None
+        credit = None
+        if not cover and meta.get("commons"):
+            cover, credit = cache.resolve(str(meta["commons"]), log=log)
+        elif cover and meta.get("image_credit"):
+            credit = {"artist": str(meta["image_credit"]), "license": "", "page": "", "license_url": ""}
         category = str(meta.get("category") or "opinion")
         srcs = _sources(meta.get("sources"))
         is_news = category != "opinion"
@@ -157,5 +166,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print) -> list:
             "own": True,
             "file": name,
             "cover_src": cover,
+            "credit": credit,
         })
+    cache.save()
     return out
