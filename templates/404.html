@@ -1,6 +1,23 @@
 {% extends "base.html" %}
+{% from "_macros.html" import row %}
 {% block title %}الصفحة غير موجودة — {{ site.site_name }}{% endblock %}
+{% block jsonld %}<meta name="robots" content="noindex">{% endblock %}
 {% block main %}
-<div class="page-head"><h1>الصفحة غير موجودة</h1>
-<p>ربما نُقل الخبر أو أُزيل بعد تصحيح. تجد أحدث الأخبار في <a href="{{ root }}index.html">الصفحة الرئيسية</a> وكل الأعداد السابقة في <a href="{{ root }}archive.html">الأرشيف</a>.</p></div>
+<div class="page-head nf">
+  <p class="nf__code" aria-hidden="true">404</p>
+  <h1>الصفحة غير موجودة</h1>
+  <p>ربما تغيّر الرابط، أو نُقل الخبر أو أُزيل بعد تصحيح. جرّب البحث عمّا كنت تريده:</p>
+</div>
+<form class="search" role="search" action="{{ root }}search.html" method="get">
+  <label for="q404" class="visually-hidden">كلمات البحث</label>
+  <input id="q404" name="q" type="search" placeholder="اسم فريق أو لاعب أو بطولة…" autocomplete="off">
+  <button type="submit">ابحث</button>
+</form>
+<p class="nf__links"><a href="{{ root }}index.html">الصفحة الرئيسية</a> · <a href="{{ root }}latest.html">آخر الأخبار</a> · <a href="{{ root }}archive.html">الأرشيف</a></p>
+{% if latest %}
+<section class="section" aria-labelledby="nf-h">
+  <div class="section-head"><h2 id="nf-h">آخر الأخبار</h2></div>
+  <div class="rows">{% for a in latest %}{{ row(a, root, cats) }}{% endfor %}</div>
+</section>
+{% endif %}
 {% endblock %}

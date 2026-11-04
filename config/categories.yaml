@@ -16,7 +16,7 @@ categories:
     min_score: 3
     max_per_sub: 3
   orgs:
-    name_ar: "المنظمات الدولية والقارية"
+    name_ar: "دولي وقاري"
     quota: 5
     min_score: 2.5
     max_per_sub: 2          # sub = المنظمة

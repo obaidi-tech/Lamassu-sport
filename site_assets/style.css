@@ -287,3 +287,20 @@ body:has(.hero) .edition__line{display:none}
 
 /* links written inside a story ([نص](رابط)) */
 .story__body a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.25em;font-family:var(--head);font-weight:600;font-size:.95em}
+
+/* source without a link: the reason, in small type */
+.src-note{display:block;font-family:var(--head);font-size:.78rem;color:var(--ink-2)}
+
+/* "قراءة مرتبطة / الخبر المرتبط" box at the end of a story */
+.linked{margin:26px 0 8px;padding:14px 18px;border-inline-start:4px solid var(--cat);background:var(--card);border-radius:8px}
+.linked h2{font-size:1rem;margin:0 0 8px;color:var(--cat)}
+.linked ul{list-style:none;margin:0;padding:0}
+.linked li{padding:6px 0;border-top:1px solid var(--line);font-family:var(--head)}
+.linked li:first-child{border-top:0}
+.linked a{font-weight:700;font-size:1.05rem}
+.linked__kind{display:block;font-size:.8rem;color:var(--ink-2)}
+
+/* 404 */
+.nf__code{margin:0;font-family:var(--head);font-weight:800;font-size:3.4rem;line-height:1;color:var(--amber)}
+.nf__links{font-family:var(--head);margin:6px 0 26px}
+.nf__links a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.2em}

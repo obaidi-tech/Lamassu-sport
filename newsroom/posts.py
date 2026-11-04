@@ -22,7 +22,9 @@ File format (edit it straight in GitHub's web editor):
     original_title: العنوان الأصلي
     roundup: true                  (optional, opinion only) a digest of pieces from other outlets ("أبرز ما كُتب"):
                                    by-line "إعداد: Lamassu", each original listed under "المقالات الأصلية".
-    Inside the text, [نص](https://...) becomes a link.
+    related:                       (optional) other posts on the same event, by file name; the link shows on both pages
+      - 2026-11-04-best-reads-01.md
+    Inside the text, [نص](https://...) becomes a link and **نص** becomes bold.
     ---
 
     فقرة أولى…
@@ -92,15 +94,25 @@ def _lenient_meta(text: str) -> dict:
 
 
 def _sources(raw) -> list:
+    """Each source: "الاسم | الرابط" or "الاسم | الرابط | ملاحظة". With no link, a short reason is shown instead
+    (the given note, or a default)."""
     out = []
     for item in raw or []:
+        note = ""
         if isinstance(item, dict):
             name, link = item.get("name") or item.get("publisher"), item.get("link") or item.get("url")
+            note = str(item.get("note") or "")
         else:
-            name, _, link = str(item).partition("|")
-        name, link = (name or "").strip(), (link or "").strip()
-        if name:
-            out.append({"publisher": name, "title": "", "link": link if link.startswith("http") else "", "kind": "manual"})
+            name, _, rest = str(item).partition("|")
+            link, _, note = rest.partition("|")
+        name, link, note = (name or "").strip(), (link or "").strip(), note.strip()
+        if not name:
+            continue
+        link = link if link.startswith("http") else ""
+        if not link and not note:
+            note = ("لم تُحدَّد الوكالة في المادة الأصلية" if re.search(r"وكالات|agencies", name, re.I)
+                    else "لم نعثر على رابط المادة الأصلية")
+        out.append({"publisher": name, "title": "", "link": link, "kind": "manual", "note": note})
     return out
 
 
@@ -203,6 +215,9 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "credit": credit,
             "cover_alt": str(meta.get("image_alt") or ""),
             "updates": updates,
+            "related_files": [str(x).strip() for x in (meta.get("related") or []) if str(x).strip()]
+                             if isinstance(meta.get("related"), list) else
+                             [x.strip() for x in str(meta.get("related") or "").split(",") if x.strip()],
             "roundup": bool(meta.get("roundup")) and not is_news,
             "updated_at": updates[0]["at"] if updates else None,
         })

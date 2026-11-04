@@ -23,6 +23,13 @@ DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "awareness"]
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
+def _domain(url: str) -> str:
+    """https://sports.yahoo.com/x/y → sports.yahoo.com  (shown under a source name instead of the long address)"""
+    from urllib.parse import urlparse
+    host = urlparse(str(url or "")).netloc.lower()
+    return host[4:] if host.startswith("www.") else host
+
+
 def _inline_links(text: str) -> Markup:
     """Escape a paragraph, then turn **bold** into bold and [label](https://…) into an outbound link."""
     import re
@@ -83,6 +90,7 @@ class Builder:
         self.env.filters["covered"] = covered_label
         # JSON for <script> blocks: marked safe so quotes aren't HTML-escaped; "</" broken up so it can't close the tag
         self.env.filters["links"] = _inline_links
+        self.env.filters["domain"] = _domain
         self.env.filters["tojson_ar"] = lambda o: Markup(json.dumps(o, ensure_ascii=False).replace("</", "<\\/"))
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
@@ -109,7 +117,10 @@ class Builder:
         full = os.path.join(self.out, path)
         os.makedirs(os.path.dirname(full), exist_ok=True)
         root = "../" * depth
+        if path == "404.html":      # GitHub shows this page at any address, so its links must be absolute
+            root = str(self.site.get("site_url") or "").rstrip("/") + "/"
         html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=self.nav,
+                                                 has_reads=getattr(self, "has_reads", False),
                                                  root=root, path=path, now=self.now, **ctx)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
@@ -180,6 +191,20 @@ class Builder:
         common = {"banner": banner}
         present = {a["category"] for a in articles}
         self.nav = [c for c in DISPLAY_ORDER + ["opinion"] if c in present]   # empty sections stay hidden until their first story
+        self.has_reads = any(a.get("roundup") for a in articles)
+        by_file = {a["file"]: a for a in articles if a.get("file")}
+        for a in articles:
+            a["linked"] = []
+        for a in articles:                      # "related:" links an article and a news story both ways
+            for f in a.get("related_files", []):
+                b = by_file.get(f) or by_file.get(f + ".md")
+                if not b or b is a:
+                    print(f"  ⚠ {a.get('file')}: الملف المرتبط «{f}» غير موجود")
+                    continue
+                if b not in a["linked"]:
+                    a["linked"].append(b)
+                if a not in b["linked"]:
+                    b["linked"].append(a)
 
         news = [a for a in articles if a["category"] != "opinion"]
         recent = [a for a in news if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
@@ -241,12 +266,17 @@ class Builder:
         for a in articles:
             body = " ".join(p.lstrip("#- ").replace("\n- ", " ") for p in a.get("body", []))
             idx.append({"t": a["title"], "e": a.get("excerpt", ""), "u": f"article/{a['id']}.html", "c": a["category"],
-                        "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body[:1500],
-                        "s": " ".join(filter(None, [a.get("author") or ""] + [x.get("publisher", "") for x in a.get("sources", [])]))})
+                        "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body,
+                        "s": " ".join(filter(None, [a.get("author") or ""]
+                                             + [x.get("publisher", "") for x in a.get("sources", [])]
+                                             + [_domain(x.get("link")) for x in a.get("sources", [])]))})
         with open(os.path.join(self.out, "search-index.json"), "w", encoding="utf-8") as f:
             json.dump(idx, f, ensure_ascii=False, separators=(",", ":"))
         self._render("search.html", "search.html", 0, cat_names={k: v["name_ar"] for k, v in self.cats.items()}, **common)
-        self._render("404.html", "404.html", 0, **common)
+        reads = [a for a in articles if a.get("roundup")]
+        if reads:
+            self._render("reads.html", "reads.html", 0, items=reads, **common)
+        self._render("404.html", "404.html", 0, latest=[a for a in articles if a["category"] != "opinion"][:5], **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
 
@@ -271,7 +301,8 @@ class Builder:
                f"<description>{escape(self.site['tagline'])}</description><language>ar</language>"
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
-        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest), (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        reads = [a for a in articles if a.get("roundup")]
+        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

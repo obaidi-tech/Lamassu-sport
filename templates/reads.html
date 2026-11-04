@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% from "_macros.html" import row %}
+{% block title %}أبرز ما كُتب — {{ site.site_name }}{% endblock %}
+{% block description %}مختارات من مقالات الرأي والتحليل في الصحافة الرياضية العالمية، نلخصها بالعربية مع روابطها الأصلية.{% endblock %}
+{% block main %}
+<div class="page-head" style="--cat: var(--c-opinion)"><h1>أبرز ما كُتب</h1>
+  <p>مختارات من مقالات الرأي والتحليل في الصحافة الرياضية العالمية، نلخصها بصياغتنا مع اسم كاتب كل مقال ورابطه الأصلي. الآراء لأصحابها.</p></div>
+<div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=False) }}{% endfor %}</div>
+{% endblock %}
