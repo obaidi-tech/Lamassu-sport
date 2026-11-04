@@ -7,13 +7,13 @@
   --navy:#14213D; --navy-2:#1D2D50; --paper:#F4F6F5; --card:#FFFFFF; --ink:#16202F; --ink-2:#4A5568;
   --line:#D9DEE3; --amber:#F2A900; --off:#D3D8DE;
   --c-top5:#1F7A4D; --c-orgs:#2F5AA8; --c-nba:#C8553D; --c-other_sports:#7A4FA0; --c-world:#0F7F81;
-  --c-opinion:#8C6D1F; --c-awareness:#A23B72; --c-flex:#1F7A4D; --c-para:#007A99;
+  --c-opinion:#8C6D1F; --c-awareness:#A23B72; --c-flex:#1F7A4D; --c-para:#007A99; --c-culture:#8B5A2B;
   --head:"Cairo","Segoe UI",Tahoma,sans-serif; --body:"Naskh","Noto Naskh Arabic","Cairo","Segoe UI",Tahoma,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
   --paper:#10151F; --card:#171E2B; --ink:#E8ECF1; --ink-2:#A9B3C1; --line:#2A3446; --off:#334055;
   --c-top5:#4CC38A; --c-orgs:#7FA6EE; --c-nba:#F08A6E; --c-other_sports:#B794E0; --c-world:#45C2C4;
-  --c-opinion:#D9B45A; --c-awareness:#E57CB4; --c-flex:#4CC38A; --c-para:#4FC3DE;
+  --c-opinion:#D9B45A; --c-awareness:#E57CB4; --c-flex:#4CC38A; --c-para:#4FC3DE; --c-culture:#D9A066;
 }}
 
 *{box-sizing:border-box}
@@ -358,3 +358,10 @@ body:has(.hero) .edition__line{display:none}
 .hero--section .hero__title{font-size:clamp(1.6rem,4vw,2.7rem);margin:0}
 .page-head--slim{padding-top:14px}
 .hero--section:not(:has(.hero__img + .hero__img)){height:clamp(170px,22vw,280px)}
+
+/* pictures inside a story */
+.story__fig{margin:6px 0 1.6em}
+.story__fig img{width:100%;height:auto;border-radius:8px;background:var(--line)}
+.story__fig figcaption{margin-top:6px;font-family:var(--head);font-size:.85rem;line-height:1.6;color:var(--ink-2)}
+.story__fig-credit{font-size:.78rem}
+.story__fig-credit a{color:inherit;text-decoration:underline}

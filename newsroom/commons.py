@@ -57,6 +57,19 @@ def fetch_info(title: str, width: int = 1600) -> dict:
     }
 
 
+def search_title(query: str) -> str:
+    """Find a picture on Commons by words (used when the exact file name is unknown). Returns 'File:…' or ''."""
+    r = requests.get(API, timeout=30, headers={"User-Agent": UA}, params={
+        "action": "query", "format": "json", "list": "search", "srsearch": query,
+        "srnamespace": 6, "srlimit": 10})
+    r.raise_for_status()
+    for hit in r.json().get("query", {}).get("search", []):
+        t = hit.get("title", "")
+        if re.search(r"\.(jpe?g|png|tiff?)$", t, re.I):
+            return t
+    return ""
+
+
 class CommonsCache:
     def __init__(self, posts_dir: str):
         self.dir = os.path.join(posts_dir, "images", "commons")
@@ -68,7 +81,25 @@ class CommonsCache:
         self.dirty = False
 
     def resolve(self, raw: str, log=print, fetch=fetch_info, download=None):
-        """Return (local_image_path, credit_dict) or (None, None). Never raises."""
+        """Return (local_image_path, credit_dict) or (None, None). Never raises.
+        raw = 'File:Name.jpg' (or a Commons link), or 'search:words' to take the first matching picture."""
+        raw = str(raw).strip()
+        if raw.lower().startswith("search:"):
+            q = raw[7:].strip()
+            found = self.data.setdefault("_search", {}).get(q)
+            if not found:
+                try:
+                    found = search_title(q)
+                except Exception as ex:
+                    log(f"  ⚠ بحث صورة «{q}»: تعذر الوصول إلى Wikimedia ({type(ex).__name__})")
+                    return None, None
+                if not found:
+                    log(f"  ⚠ بحث صورة «{q}»: لا نتيجة")
+                    return None, None
+                self.data["_search"][q] = found
+                self.dirty = True
+                log(f"  ✔ بحث صورة «{q}» ← {found}")
+            raw = found
         title = normalize_title(raw)
         rec = self.data.get(title)
         if rec and rec.get("local") and os.path.exists(os.path.join(self.dir, rec["local"])):

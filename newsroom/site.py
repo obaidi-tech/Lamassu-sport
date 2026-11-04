@@ -20,7 +20,7 @@ MONTHS = {
     "levant": ["كانون الثاني", "شباط", "آذار", "نيسان", "أيار", "حزيران", "تموز", "آب", "أيلول",
                "تشرين الأول", "تشرين الثاني", "كانون الأول"],
 }
-DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "para", "awareness"]
+DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "para", "culture", "awareness"]
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
@@ -172,6 +172,22 @@ class Builder:
                 make_card(path, self.site["tagline"], cat, c["name_ar"], self.site["site_name"], "", 0)
         cutoff = self.now - timedelta(days=CARD_DAYS)
         for a in articles:
+            for fg in a.get("figures") or []:            # pictures inside the text: light copies, loaded on scroll
+                try:
+                    import hashlib
+                    from PIL import Image
+                    with open(fg["src"], "rb") as f:
+                        tag = hashlib.sha1(f.read()).hexdigest()[:10]
+                    rel = f"img/fig-{tag}.jpg"
+                    with Image.open(fg["src"]) as im:
+                        im = im.convert("RGB")
+                        if im.width > 1100:
+                            im = im.resize((1100, round(im.height * 1100 / im.width)), Image.LANCZOS)
+                        os.makedirs(img_dir, exist_ok=True)
+                        im.save(os.path.join(self.out, rel), "JPEG", quality=76, optimize=True, progressive=True)
+                        fg["url"], fg["w"], fg["h"] = rel, im.width, im.height
+                except Exception as ex:
+                    print(f"  ⚠ صورة داخل المقال {a.get('file')}: {type(ex).__name__}")
             if a.get("cover_src"):                       # hand-written post with its own image
                 ext = os.path.splitext(a["cover_src"])[1].lower()
                 rel = f"img/{a['id']}{ext}"
@@ -318,7 +334,8 @@ class Builder:
         # site search: a small JSON index read by search.html in the browser (no external service)
         idx = []
         for a in articles:
-            body = " ".join(p.lstrip("#- ").replace("\n- ", " ").replace("|", " ") for p in a.get("body", []))
+            body = " ".join(p.lstrip("#- ").replace("\n- ", " ").replace("|", " ") for p in a.get("body", []) if not p.startswith("!fig:"))
+            body += " " + " ".join(fg.get("caption", "") for fg in a.get("figures") or [])
             idx.append({"t": a["title"], "e": a.get("excerpt", ""), "u": f"article/{a['id']}.html", "c": a["category"],
                         "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body,
                         "s": " ".join(filter(None, [a.get("author") or ""]

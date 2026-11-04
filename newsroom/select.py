@@ -1,7 +1,7 @@
 """Pick this run's stories according to daily quotas, diversity caps and importance."""
 
 # small fixed quotas first, so rounding never squeezes them out
-ORDER = ["opinion", "awareness", "para", "nba", "orgs", "top5", "other_sports", "world"]
+ORDER = ["opinion", "awareness", "para", "culture", "nba", "orgs", "top5", "other_sports", "world"]
 
 
 def run_fraction(run_hours: list, hour_local: int) -> float:

@@ -28,6 +28,8 @@ File format (edit it straight in GitHub's web editor):
     related:                       (optional) other posts on the same event, by file name; the link shows on both pages
       - 2026-11-04-best-reads-01.md
     Inside the text, [نص](https://...) becomes a link and **نص** becomes bold.
+    A picture inside the text, on its own line:  ![التعليق](commons:File:اسم_الملف.jpg)
+    (or ![التعليق](commons:search:كلمات البحث) to take the first matching free picture on Commons).
     ---
 
     فقرة أولى…
@@ -149,6 +151,18 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                 log(f"  ⚠ {name}: لا يوجد عنوان (title)، فلم يُنشر")
             continue
         body = _blocks(m.group(2))
+        figures = []
+        for i, b in enumerate(body):                     # ![تعليق](commons:File:… ) or ![تعليق](commons:search:كلمات)
+            fm = re.fullmatch(r"!\[([^\]]*)\]\(commons:([^)]+)\)", b.strip())
+            if not fm:
+                continue
+            path, cr = cache.resolve(fm.group(2).strip(), log=log)
+            if path:
+                figures.append({"src": path, "credit": cr, "caption": fm.group(1).strip()})
+                body[i] = f"!fig:{len(figures) - 1}"
+            else:
+                body[i] = ""
+        body = [b for b in body if b]
         if not body:
             log(f"  ⚠ {name}: المقال فارغ، فلم يُنشر")
             continue
@@ -160,7 +174,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                     else datetime.fromtimestamp(os.path.getmtime(path)))
         if when.tzinfo is None:
             when = when.replace(tzinfo=zone)
-        first = next((b for b in body if not b.startswith(("#", "- ", "|"))), body[0])
+        first = next((b for b in body if not b.startswith(("#", "- ", "|", "!fig:"))), body[0])
         cover = None
         if meta.get("image"):
             cover = os.path.normpath(os.path.join(posts_dir, str(meta["image"])))
@@ -222,6 +236,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "credit": credit,
             "cover_alt": str(meta.get("image_alt") or ""),
             "updates": updates,
+            "figures": figures,
             "related_files": [str(x).strip() for x in (meta.get("related") or []) if str(x).strip()]
                              if isinstance(meta.get("related"), list) else
                              [x.strip() for x in str(meta.get("related") or "").split(",") if x.strip()],

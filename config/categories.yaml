@@ -35,6 +35,11 @@ categories:
     quota: 3
     min_score: 2
     max_per_sub: 2          # sub = البطولة أو الرياضة
+  culture:
+    name_ar: "ثقافة وتاريخ"
+    quota: 2
+    min_score: 2
+    max_per_sub: 1
   awareness:
     name_ar: "أبحاث ودراسات"
     quota: 3
@@ -113,6 +118,9 @@ keywords:
     para_sports: ["para athletics", "para powerlifting", "para swimming", "para cycling", "para table tennis",
         "wheelchair basketball", "wheelchair tennis", "wheelchair rugby", "sitting volleyball", "blind football",
         "goalball", "boccia", "كرة السلة على الكراسي", "الكرة الطائرة جلوس", "رفع الأثقال البارالمبي"]
+  culture:
+    history: ["history of football", "football history", "museum", "anniversary", "تاريخ كرة القدم", "متحف"]
+    art: ["painting", "artist", "exhibition", "لوحة", "معرض فني", "رسام"]
   awareness:
     doping: ["doping", "banned substance", "منشطات"]
     health: ["concussion", "cardiac", "mental health", "injury prevention", "study", "research",
