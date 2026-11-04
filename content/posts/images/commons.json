@@ -98,7 +98,8 @@
  "_search": {
   "cuju painting": "File:Painting of Cuju by Huang Shen.jpg",
   "Thomas Webster football painting 1839": "File:The Football Game. Thomas Webster, 1839, 1.jpg",
-  "Nevinson Any Wintry Afternoon in England": "File:Any Wintry Afternoon in England.jpg"
+  "Nevinson Any Wintry Afternoon in England": "File:Any Wintry Afternoon in England.jpg",
+  "sports journalists press box": "File:Campanelli Stadium - press box.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -147,5 +148,13 @@
   "license": "Public domain",
   "license_url": "",
   "local": "ee85cfa1010b.jpg"
+ },
+ "File:Campanelli Stadium - press box.jpg": {
+  "title": "File:Campanelli Stadium - press box.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Campanelli_Stadium_-_press_box.jpg",
+  "artist": "Waz8",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "local": "0256e65840a0.jpg"
  }
 }
