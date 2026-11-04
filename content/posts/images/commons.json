@@ -97,7 +97,8 @@
  },
  "_search": {
   "cuju painting": "File:Painting of Cuju by Huang Shen.jpg",
-  "Thomas Webster football painting 1839": "File:The Football Game. Thomas Webster, 1839, 1.jpg"
+  "Thomas Webster football painting 1839": "File:The Football Game. Thomas Webster, 1839, 1.jpg",
+  "Nevinson Any Wintry Afternoon in England": "File:Any Wintry Afternoon in England.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -138,5 +139,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "f6cf258d90d3.jpg"
+ },
+ "File:Any Wintry Afternoon in England.jpg": {
+  "title": "File:Any Wintry Afternoon in England.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Any_Wintry_Afternoon_in_England.jpg",
+  "artist": "Christopher Richard Wynne Nevinson (Life time: 1889-1946)",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "ee85cfa1010b.jpg"
  }
 }
