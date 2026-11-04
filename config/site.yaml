@@ -83,10 +83,10 @@ section_heroes:
   orgs:
     sub: الاتحادات الدولية والقارية، والمنتخبات، والبطولات الكبرى
     images:
-      - unsplash: https://unsplash.com/photos/a-circular-building-with-a-green-circle-in-the-center-r6bUvUv3b_k
-        unsplash_image: https://images.unsplash.com/photo-1666461941397-254b6ea059ef
-        photographer: Timur Khamidov
-        alt: ملعب كرة قدم من الأعلى
+      - image: images/orgs-banner-ai.jpg
+        credit: Lamassu
+        note: صورة توضيحية مولّدة بالذكاء الاصطناعي
+        alt: قاعة اجتماعات بأعلام دول من قارات مختلفة أمام كرة أرضية
   world:
     sub: كرة القدم في بقية العالم، من آسيا والخليج إلى أفريقيا والأمريكتين
     images:
