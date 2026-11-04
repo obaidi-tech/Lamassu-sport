@@ -28,6 +28,7 @@ SEARCH_ALIASES = {        # extra words a reader may type for a section
     "orgs": "فيفا الاتحاد الدولي الاتحاد الآسيوي المنتخبات",
     "opinion": "رأي مقال",
 }
+FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
@@ -316,8 +317,10 @@ class Builder:
                     b["linked"].append(a)
 
         news = [a for a in articles if a["category"] != "opinion"]
-        recent = [a for a in news if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
-        ranked = sorted(recent or news[:30], key=lambda a: -a["score"])
+        # the lead spot and "most covered" are for the day's news, not features (culture, studies)
+        headline = [a for a in news if a["category"] not in FEATURE_CATS]
+        recent = [a for a in headline if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
+        ranked = sorted(recent or headline[:30], key=lambda a: -a["score"])
         lead, runners = (ranked[0] if ranked else None), ranked[1:5]
         used = {a["id"] for a in ranked[:5]}
         own = [a for a in articles if a.get("own") and a["category"] == "opinion"]

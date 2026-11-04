@@ -17,22 +17,6 @@
   <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر.</p>
 </section>
 
-{% if coming %}
-<section class="events" aria-labelledby="ev-h">
-  <div class="section-head"><h2 id="ev-h">أحداث قادمة</h2><a href="{{ root }}events.html">كل الأحداث</a></div>
-  <ul class="events__list">{% for e in coming %}{{ event_card(e) }}{% endfor %}</ul>
-  {% if events_updated %}<p class="events__stamp">آخر تحديث للمواعيد: {{ events_updated }} · قد تتغير وفق الجهة المنظمة</p>{% endif %}
-</section>
-{% endif %}
-
-{% if links.home %}
-<nav class="quick" aria-label="الجداول والمباريات">
-  <a class="quick__title" href="{{ root }}schedules.html">الجداول والمباريات</a>
-  <ul>{% for it in links.home %}<li><a href="{{ it.parsed[0][1] }}" target="_blank" rel="noopener">{{ it.name }}</a></li>{% endfor %}
-    <li><a href="{{ root }}schedules.html">كل المسابقات</a></li></ul>
-</nav>
-{% endif %}
-
 {% if lead %}
 <section class="top">
   <article class="lead" style="--cat: var(--c-{{ lead.category }})">
@@ -57,6 +41,22 @@
 </section>
 {% else %}
 <section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد قريباً، وتجد طريقة اختيارنا للأخبار في <a href="{{ root }}about.html">سياسة الموقع</a>.</p></section>
+{% endif %}
+
+{% if coming %}
+<section class="events" aria-labelledby="ev-h">
+  <div class="section-head"><h2 id="ev-h">أحداث قادمة</h2><a href="{{ root }}events.html">كل الأحداث</a></div>
+  <ul class="events__list">{% for e in coming %}{{ event_card(e) }}{% endfor %}</ul>
+  {% if events_updated %}<p class="events__stamp">آخر تحديث للمواعيد: {{ events_updated }} · قد تتغير وفق الجهة المنظمة</p>{% endif %}
+</section>
+{% endif %}
+
+{% if links.home %}
+<nav class="quick" aria-label="الجداول والمباريات">
+  <a class="quick__title" href="{{ root }}schedules.html">الجداول والمباريات</a>
+  <ul>{% for it in links.home %}<li><a href="{{ it.parsed[0][1] }}" target="_blank" rel="noopener">{{ it.name }}</a></li>{% endfor %}
+    <li><a href="{{ root }}schedules.html">كل المسابقات</a></li></ul>
+</nav>
 {% endif %}
 
 {% if opinions %}
