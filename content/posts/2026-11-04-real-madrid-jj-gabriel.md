@@ -7,8 +7,10 @@ sources:
   - ذا أتلتيك (عبر ياهو سبورتس) | https://sports.yahoo.com/articles/real-madrid-close-manchester-united-144900687.html
   - الجزيرة نت
   - مانشستر إيفنينغ نيوز
-commons: search:Estadio Santiago Bernabeu exterior
-image_alt: ملعب سانتياغو برنابيو معقل نادي ريال مدريد
+image: images/transfer-tunnel-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل اللاعب
+image_alt: لاعب ناشئ يمشي من نفق الملعب نحو أرضيته
 related:
   - 2026-11-04-nadal-real-madrid-board.md
 ---
