@@ -370,3 +370,7 @@ body:has(.hero) .edition__line{display:none}
 .tag-label{display:inline-block;margin:0 0 6px;padding:2px 10px;border-radius:999px;background:var(--ink);color:var(--paper);font-family:var(--head);font-size:.75rem;font-weight:700;vertical-align:middle}
 .tag-label--inline{margin:0 0 0 6px;font-size:.68rem;padding:1px 8px;position:relative;top:-2px}
 .events__stamp{margin:8px 0 0;font-family:var(--head);font-size:.78rem;color:var(--ink-2)}
+/* a single-picture banner stays still and shows the whole picture */
+.hero__img:only-child,.hero__img:only-child.is-on{animation:none;transform:none}
+.hero--section .hero__shade{background:linear-gradient(to top,rgba(20,33,61,.78),rgba(20,33,61,.1) 60%,transparent)}
+.hero--section .hero__title,.hero--section .hero__sub{text-shadow:0 2px 14px rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.5)}

@@ -108,6 +108,13 @@ section_heroes:
         unsplash_image: https://images.unsplash.com/photo-1559369064-c4d65141e408
         photographer: Patrick Schöpflin
         alt: صالة كرة سلة
+  culture:
+    sub: تاريخ الرياضة وفنونها وقصصها
+    images:
+      - image: images/culture-banner-ai.jpg
+        credit: Lamassu
+        note: صورة توضيحية مولّدة بالذكاء الاصطناعي، وليست عملاً فنياً تاريخياً
+        alt: مشهد توضيحي لتاريخ كرة القدم من الصين القديمة إلى مونديال قطر
   opinion:
     sub: مقالات رأي بأقلام كتّابها، وملخصات لأبرز ما تكتبه الصحافة العالمية
     images:

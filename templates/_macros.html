@@ -56,7 +56,8 @@
     {% if heading %}<h1 class="hero__title">{{ title }}</h1>{% else %}<p class="hero__title">{{ title }}</p>{% endif %}
     {% if sub %}<p class="hero__sub">{{ sub }}</p>{% endif %}
   </div>
-  <p class="hero__credit">الصورة: <bdi dir="ltr"><a class="hero__who" href="{{ hero[0].credit.page }}" target="_blank" rel="noopener">{{ hero[0].credit.artist }}</a> / <a class="hero__src" href="{{ hero[0].credit.license_url }}" target="_blank" rel="noopener license">{{ src_label }}</a></bdi></p>
+  {% if hero[0].credit.note %}<p class="hero__credit">{{ hero[0].credit.note }} — {{ hero[0].credit.artist }}</p>
+  {% else %}<p class="hero__credit">الصورة: <bdi dir="ltr"><a class="hero__who" href="{{ hero[0].credit.page }}" target="_blank" rel="noopener">{{ hero[0].credit.artist }}</a> / <a class="hero__src" href="{{ hero[0].credit.license_url }}" target="_blank" rel="noopener license">{{ src_label }}</a></bdi></p>{% endif %}
 </section>
 {% if hero | length > 1 %}
 <script>

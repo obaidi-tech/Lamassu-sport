@@ -269,7 +269,14 @@ def load_hero(posts_dir: str, entries, log=print) -> list:
     for e in entries or []:
         if not isinstance(e, dict):
             continue
-        if e.get("commons"):                     # free-licence check and credit come from Wikimedia itself
+        if e.get("image"):                       # our own picture (e.g. an AI-generated illustration), with a note
+            path = os.path.normpath(os.path.join(posts_dir, str(e["image"])))
+            if not path.startswith(os.path.normpath(posts_dir)) or not os.path.isfile(path):
+                log(f"  ⚠ صورة الترويسة {e['image']} غير موجودة")
+                continue
+            credit = {"artist": str(e.get("credit") or "Lamassu"), "page": "", "license": "", "license_url": "",
+                      "source": "", "note": str(e.get("note") or "")}
+        elif e.get("commons"):                     # free-licence check and credit come from Wikimedia itself
             path, credit = commons.resolve(str(e["commons"]), log=log)
             if credit:
                 credit = dict(credit, source="Wikimedia Commons")
