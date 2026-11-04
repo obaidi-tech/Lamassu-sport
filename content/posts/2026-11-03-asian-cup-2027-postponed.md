@@ -10,8 +10,10 @@ sources:
   - NBC Sports | https://www.nbcsports.com/soccer/news/2027-asian-cup-postponed-moved-back-11-months-due-to-current-exceptional-circumstances-in-the-region
 updated: 2026-11-03 22:30
 update_note: تصحيح المصادر: إضافة رابط البيان الرسمي للاتحاد الآسيوي وتغطيتين مستقلتين، وحذف وكالة الأنباء القطرية لأنها كانت مصدر الصورة في المادة الأصلية لا مصدر النص.
-commons: File:Qatar - Japan, AFC Asian Cup 2019 38.jpg
-image_alt: من نهائي كأس آسيا 2019 بين قطر واليابان
+unsplash: https://unsplash.com/photos/illuminated-stadium-glows-under-a-dramatic-sunset-sky-h7j3AlvUGcc
+unsplash_image: https://images.unsplash.com/photo-1774419477272-693534dc0bdb
+photographer: NHN
+image_alt: ملعب كرة قدم آسيوي مضاء عند الغروب
 ---
 
 أعلن الاتحاد الآسيوي لكرة القدم تأجيل نهائيات كأس آسيا 2027 في السعودية، لتقام بين 23 ديسمبر 2027 و21 يناير 2028، بدلاً من موعدها الأصلي الممتد من 7 يناير إلى 5 فبراير 2027.
