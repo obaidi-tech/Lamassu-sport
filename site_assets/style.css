@@ -352,3 +352,8 @@ body:has(.hero) .edition__line{display:none}
 @media (max-width:560px){.story__body th,.story__body td{padding:7px 5px;font-size:.84rem}}
 .contribute .contribute__btn{text-decoration:none}
 @media (max-width:1240px) and (min-width:761px){.nav a{padding:11px 8px 9px;font-size:.9rem}}
+
+/* section banner (e.g. الرياضة البارالمبية) */
+.hero--section{height:clamp(200px,28vw,340px)}
+.hero--section .hero__title{font-size:clamp(1.6rem,4vw,2.7rem);margin:0}
+.page-head--slim{padding-top:14px}

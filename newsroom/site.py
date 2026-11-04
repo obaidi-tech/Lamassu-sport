@@ -195,13 +195,13 @@ class Builder:
                 a["image"] = f"img/default-{a['category']}.jpg"
 
     # ── build ──────────────────────────────────────────────────────────
-    def _hero(self, hero):
+    def _hero(self, hero, prefix="hero"):
         """Copy the banner photos next to the page and keep their size, for the moving banner on the home page."""
         out = []
         for i, h in enumerate(hero or []):
             try:
                 from PIL import Image
-                rel = f"img/hero-{i + 1}.jpg"
+                rel = f"img/{prefix}-{i + 1}.jpg"
                 os.makedirs(os.path.join(self.out, "img"), exist_ok=True)
                 shutil.copyfile(h["src"], os.path.join(self.out, rel))
                 with Image.open(h["src"]) as im:
@@ -211,7 +211,7 @@ class Builder:
                 print(f"  ⚠ صورة الواجهة {i + 1}: {type(ex).__name__}")
         return out
 
-    def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None):
+    def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):
         os.makedirs(self.out, exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
@@ -267,8 +267,11 @@ class Builder:
 
         for cat in DISPLAY_ORDER + ["opinion"]:
             items = [a for a in articles if a["category"] == cat][:80]
+            sh = (section_heroes or {}).get(cat)
+            imgs = self._hero(sh["images"], prefix=f"hero-{cat}") if sh else []
             self._render("list.html", f"category/{cat}.html", 1, title=self.cats[cat]["name_ar"],
-                         items=items, cat=cat, **common)
+                         items=items, cat=cat, section_hero={"images": imgs, "sub": sh.get("sub", "")} if imgs else None,
+                         **common)
 
         by_day = {}
         for a in articles:

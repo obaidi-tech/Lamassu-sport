@@ -43,3 +43,36 @@
   {% if e.note %}<p class="ev__note">{{ e.note }}</p>{% endif %}
 </li>
 {%- endmacro %}
+
+
+{% macro hero_block(hero, root, title, sub='', heading=False, label='') -%}
+{% set src_label = (hero[0].credit.source or 'Unsplash') ~ ((' (' ~ hero[0].credit.license ~ ')') if hero[0].credit.license and hero[0].credit.source != 'Unsplash' else '') %}
+<section class="hero{% if heading %} hero--section{% endif %}" aria-label="{{ label or title }}">
+  <div class="hero__slides" aria-hidden="true">
+    {% for h in hero %}<img class="hero__img{% if loop.first %} is-on{% endif %}" src="{{ root }}{{ h.src }}" alt="" width="{{ h.w }}" height="{{ h.h }}"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %} decoding="async" data-credit="{{ h.credit.artist }}" data-page="{{ h.credit.page }}" data-src="{{ h.credit.source or 'Unsplash' }}{% if h.credit.license and h.credit.source != 'Unsplash' %} ({{ h.credit.license }}){% endif %}" data-lic="{{ h.credit.license_url }}">{% endfor %}
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="wrap hero__text">
+    {% if heading %}<h1 class="hero__title">{{ title }}</h1>{% else %}<p class="hero__title">{{ title }}</p>{% endif %}
+    {% if sub %}<p class="hero__sub">{{ sub }}</p>{% endif %}
+  </div>
+  <p class="hero__credit">الصورة: <bdi dir="ltr"><a class="hero__who" href="{{ hero[0].credit.page }}" target="_blank" rel="noopener">{{ hero[0].credit.artist }}</a> / <a class="hero__src" href="{{ hero[0].credit.license_url }}" target="_blank" rel="noopener license">{{ src_label }}</a></bdi></p>
+</section>
+{% if hero | length > 1 %}
+<script>
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var imgs = document.querySelectorAll('.hero__img'), who = document.querySelector('.hero__who'), src = document.querySelector('.hero__src'), i = 0;
+  setInterval(function () {
+    if (document.hidden) return;
+    var prev = imgs[i]; i = (i + 1) % imgs.length; var cur = imgs[i];
+    imgs.forEach(function (im) { im.classList.remove('was'); });
+    prev.classList.remove('is-on'); prev.classList.add('was');
+    cur.classList.add('is-on');
+    if (who) { who.textContent = cur.dataset.credit; who.href = cur.dataset.page; }
+    if (src) { src.textContent = cur.dataset.src; src.href = cur.dataset.lic; }
+  }, 7000);
+})();
+</script>
+{% endif %}
+{%- endmacro %}

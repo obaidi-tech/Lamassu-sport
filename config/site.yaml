@@ -61,3 +61,17 @@ hero:
     alt: ملعب عند الغروب
   - commons: File:قانون-كرة-السلة.jpg
     alt: كرة سلة تدخل السلة
+
+# ترويسة متحركة لصفحة قسم (بنفس صيغة hero أعلاه). المفتاح = اسم القسم في categories.yaml
+section_heroes:
+  para:
+    sub: إنجازات الرياضيين البارالمبيين وأرقامهم وقصصهم
+    images:
+      - commons: File:Wheelchair racers Los Angeles Marathon.jpg
+        alt: متسابقون على الكراسي المتحركة
+      - commons: File:2013 Warrior Games Wheelchair Basketball 130414-N-DT940-550.jpg
+        alt: كرة السلة على الكراسي المتحركة
+      - commons: File:Sitting volleyball match 130513-A-XX999-002.jpg
+        alt: الكرة الطائرة جلوساً
+      - commons: File:Women's wheelchair, London Marathon 2011.jpg
+        alt: سباق السيدات على الكراسي المتحركة
