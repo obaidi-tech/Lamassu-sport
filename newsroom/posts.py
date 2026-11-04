@@ -25,6 +25,8 @@ File format (edit it straight in GitHub's web editor):
     author_link: https://...       (optional) their public page
     roundup: true                  (optional, opinion only) a digest of pieces from other outlets ("أبرز ما كُتب"):
                                    by-line "إعداد: Lamassu", each original listed under "المقالات الأصلية".
+    image_credit / image_license / image_license_url / image_page / image_source / image_note
+                                   (optional) credit for an own-folder picture, e.g. an edited free photo
     image_crop: 0 0 21.5 0         (optional) trim the cover: percent from top, right, bottom, left
                                    (e.g. to remove a watermark; allowed by CC BY / CC BY-SA, noted under the photo)
     label: تقرير مرجعي              (optional) a small tag shown with the title, e.g. أرشيف / تقرير مرجعي / ملف
@@ -191,7 +193,9 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
         if not cover and meta.get("commons"):
             cover, credit = cache.resolve(str(meta["commons"]), log=log)
         elif cover and meta.get("image_credit"):
-            credit = {"artist": str(meta["image_credit"]), "license": "", "page": "", "license_url": ""}
+            credit = {"artist": str(meta["image_credit"]), "license": str(meta.get("image_license") or ""),
+                      "page": str(meta.get("image_page") or ""), "license_url": str(meta.get("image_license_url") or ""),
+                      "source": str(meta.get("image_source") or ""), "note": str(meta.get("image_note") or "")}
         updates = []
         raw_upd = meta.get("updates") or []
         if meta.get("updated"):

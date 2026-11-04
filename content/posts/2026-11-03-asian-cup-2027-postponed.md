@@ -10,8 +10,13 @@ sources:
   - NBC Sports | https://www.nbcsports.com/soccer/news/2027-asian-cup-postponed-moved-back-11-months-due-to-current-exceptional-circumstances-in-the-region
 updated: 2026-11-03 22:30
 update_note: تصحيح المصادر: إضافة رابط البيان الرسمي للاتحاد الآسيوي وتغطيتين مستقلتين، وحذف وكالة الأنباء القطرية لأنها كانت مصدر الصورة في المادة الأصلية لا مصدر النص.
-commons: File:Asian Nations Cup - Jordan and South Korea (62).jpg
-image_crop: 0 0 21.5 0
+image: images/asian-cup-2023-trophy.jpg
+image_credit: M.Sadegh Nikgostar
+image_source: Wikimedia Commons
+image_license: CC BY 4.0
+image_license_url: https://creativecommons.org/licenses/by/4.0
+image_page: https://commons.wikimedia.org/wiki/File:Asian_Nations_Cup_-_Jordan_and_South_Korea_(62).jpg
+image_note: عُدّلت لإزالة شعار الوكالة
 image_alt: كأس آسيا وسط الملعب قبل مباراة الأردن وكوريا الجنوبية في نسخة قطر 2023
 ---
 
