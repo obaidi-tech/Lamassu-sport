@@ -6,7 +6,7 @@ date: 2026-11-04 16:30
 excerpt: مؤتمر «Connecting Media Communities 2026» في بروكسل ينقل التركيز من سرعة النشر إلى الموثوقية وإثبات أصالة المحتوى. قراءة في خمسة مجالات تمس الإعلام الرياضي ومؤسسات كرة القدم.
 sources:
   - دائرة العمل الخارجي الأوروبي (EEAS) | https://www.eeas.europa.eu/eeas/connecting-media-communities-2026-who-shapes-what-we-believe_en
-commons: search:press box journalists football stadium
+commons: search:sports journalists press box
 image_alt: صحفيون في منصة الإعلام بأحد الملاعب
 related:
   - 2026-11-03-afc-media-impact.md
