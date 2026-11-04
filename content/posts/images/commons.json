@@ -101,7 +101,8 @@
   "Nevinson Any Wintry Afternoon in England": "File:Any Wintry Afternoon in England.jpg",
   "sports journalists press box": "File:Campanelli Stadium - press box.jpg",
   "FIFA headquarters Zurich Home of FIFA": "File:Home of FIFA - buiding and flags.jpg",
-  "Stephen Curry Golden State Warriors": "File:Stephen Curry close up.jpg"
+  "Stephen Curry Golden State Warriors": "File:Stephen Curry close up.jpg",
+  "Ciudad Real Madrid Valdebebas": "File:La ciudad de Madrid homenajea a Alfredo Di Stéfano con una calle en Valdebebas (03).jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -190,5 +191,13 @@
   "license": "CC0",
   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "local": "6f34a6cac42c.jpg"
+ },
+ "File:La ciudad de Madrid homenajea a Alfredo Di Stéfano con una calle en Valdebebas (03).jpg": {
+  "title": "File:La ciudad de Madrid homenajea a Alfredo Di Stéfano con una calle en Valdebebas (03).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:La_ciudad_de_Madrid_homenajea_a_Alfredo_Di_St%C3%A9fano_con_una_calle_en_Valdebebas_(03).jpg",
+  "artist": "Diario de Madrid",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "local": "a1da5ba3d22e.jpg"
  }
 }
