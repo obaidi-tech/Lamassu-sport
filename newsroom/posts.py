@@ -228,16 +228,24 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
 
 def load_hero(posts_dir: str, entries, log=print) -> list:
     """Free photos for the moving banner on the home page (config/site.yaml → hero).
-    Each entry: unsplash (photo page), unsplash_image (direct link), photographer, alt.
+    Each entry: unsplash (photo page) + unsplash_image (direct link) + photographer, or commons: File:…; and alt.
     Downloaded once on GitHub and kept in content/posts/images/remote/, like story photos."""
-    remote = RemoteImages(posts_dir)
+    remote, commons = RemoteImages(posts_dir), CommonsCache(posts_dir)
     out = []
     for e in entries or []:
-        if not isinstance(e, dict) or not e.get("unsplash"):
+        if not isinstance(e, dict):
             continue
-        path, credit = remote.resolve_unsplash(str(e["unsplash"]), str(e.get("photographer") or ""), log=log,
-                                               image_url=str(e.get("unsplash_image") or ""))
+        if e.get("commons"):                     # free-licence check and credit come from Wikimedia itself
+            path, credit = commons.resolve(str(e["commons"]), log=log)
+            if credit:
+                credit = dict(credit, source="Wikimedia Commons")
+        elif e.get("unsplash"):
+            path, credit = remote.resolve_unsplash(str(e["unsplash"]), str(e.get("photographer") or ""), log=log,
+                                                   image_url=str(e.get("unsplash_image") or ""))
+        else:
+            continue
         if path:
             out.append({"src": path, "credit": credit, "alt": str(e.get("alt") or "")})
     remote.save()
+    commons.save()
     return out

@@ -43,7 +43,8 @@ wordpress:
   default_author_id: null
 
 # صور الواجهة المتحركة في الصفحة الرئيسية: صور رياضية عامة حرة من Unsplash، تتبدل كل 7 ثوانٍ
-# لكل صورة: رابط صفحتها، والرابط المباشر images.unsplash.com، واسم المصور (يظهر تلقائياً على الصورة)
+# لكل صورة من Unsplash: رابط صفحتها، والرابط المباشر images.unsplash.com، واسم المصور
+# أو من Wikimedia Commons: commons: File:اسم_الملف (الرخصة واسم المصور يُقرآن تلقائياً)
 hero:
   - unsplash: https://unsplash.com/photos/a-stadium-lit-up-at-night-with-a-lot-of-lights-GCEAqghDxRo
     unsplash_image: https://images.unsplash.com/photo-1549333580-4cb2c5c8e421
@@ -57,7 +58,5 @@ hero:
     unsplash_image: https://images.unsplash.com/photo-1774419477272-693534dc0bdb
     photographer: NHN
     alt: ملعب عند الغروب
-  - unsplash: https://unsplash.com/photos/basketball-court-hEQpoeUuJXA
-    unsplash_image: https://images.unsplash.com/photo-1559369064-c4d65141e408
-    photographer: Patrick Schöpflin
-    alt: صالة كرة سلة
+  - commons: File:قانون-كرة-السلة.jpg
+    alt: كرة سلة تدخل السلة
