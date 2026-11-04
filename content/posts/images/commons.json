@@ -94,5 +94,41 @@
   "license": "CC BY 4.0",
   "license_url": "https://creativecommons.org/licenses/by/4.0",
   "local": "6a0b1115d68d.jpg"
+ },
+ "_search": {
+  "cuju painting": "File:Painting of Cuju by Huang Shen.jpg",
+  "Thomas Webster football painting 1839": "File:The Football Game. Thomas Webster, 1839, 1.jpg"
+ },
+ "File:Painting of Cuju by Huang Shen.jpg": {
+  "title": "File:Painting of Cuju by Huang Shen.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Painting_of_Cuju_by_Huang_Shen.jpg",
+  "artist": "Huang Shen (黄慎)",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "2135faa4d74f.jpg"
+ },
+ "File:The Football Game. Thomas Webster, 1839, 1.jpg": {
+  "title": "File:The Football Game. Thomas Webster, 1839, 1.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Football_Game._Thomas_Webster,_1839,_1.jpg",
+  "artist": "Thomas Webster (1800—1886)",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "a6ef82f2c0a1.jpg"
+ },
+ "File:Henri Rousseau - The Football Players.jpg": {
+  "title": "File:Henri Rousseau - The Football Players.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Henri_Rousseau_-_The_Football_Players.jpg",
+  "artist": "Henri Rousseau",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "31ad32bdc9ea.jpg"
+ },
+ "File:Thomas Hemy Sunderland v Aston Villa 1895 A Corner Kick.jpg": {
+  "title": "File:Thomas Hemy Sunderland v Aston Villa 1895 A Corner Kick.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Thomas_Hemy_Sunderland_v_Aston_Villa_1895_A_Corner_Kick.jpg",
+  "artist": "Thomas M. M. Hemy (complete name: Thomas Marie Madawaska Hemy) (1852-1931)",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "6fd4d899c8ce.jpg"
  }
 }
