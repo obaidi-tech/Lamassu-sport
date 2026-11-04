@@ -21,6 +21,13 @@ MONTHS = {
                "تشرين الأول", "تشرين الثاني", "كانون الأول"],
 }
 DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "para", "culture", "awareness"]
+SEARCH_ALIASES = {        # extra words a reader may type for a section
+    "para": "بارالمبي ذوي الإعاقة أصحاب الهمم paralympic",
+    "culture": "ثقافة تاريخ فن",
+    "nba": "كرة السلة nba",
+    "orgs": "فيفا الاتحاد الدولي الاتحاد الآسيوي المنتخبات",
+    "opinion": "رأي مقال",
+}
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
@@ -150,6 +157,7 @@ class Builder:
         html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=self.nav,
                                                  has_reads=getattr(self, "has_reads", False),
                                                  has_events=getattr(self, "has_events", False),
+                                                 events_updated=getattr(self, "events_updated", ""),
                                                  root=root, path=path, now=self.now, **ctx)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
@@ -211,6 +219,29 @@ class Builder:
                 a["image"] = f"img/default-{a['category']}.jpg"
 
     # ── build ──────────────────────────────────────────────────────────
+    def _file_date(self, path):
+        """The 'updated:' date written in the file, or else its last commit date (GitHub resets file times)."""
+        import subprocess
+        try:
+            import yaml
+            with open(path, encoding="utf-8") as f:
+                upd = (yaml.safe_load(f) or {}).get("updated")
+            if upd:
+                return self.day_label(datetime.fromisoformat(str(upd)).replace(tzinfo=self.tz).isoformat()).split(" ", 1)[1]
+        except Exception:
+            pass
+        try:
+            iso = subprocess.run(["git", "log", "-1", "--format=%cI", "--", path], cwd=ROOT,
+                                 capture_output=True, text=True, timeout=10).stdout.strip()
+            if iso:
+                return self.day_label(iso).split(" ", 1)[1]          # "4 نوفمبر 2026" (no weekday)
+        except Exception:
+            pass
+        try:
+            return self.day_label(datetime.fromtimestamp(os.path.getmtime(path), self.tz).isoformat()).split(" ", 1)[1]
+        except Exception:
+            return ""
+
     def _hero(self, hero, prefix="hero"):
         """Banner photos, made light: cropped to the banner's shape and saved in two sizes (phone ~760px,
         desktop ~1400px). The file name carries a fingerprint of the photo, so a browser never shows an
@@ -255,6 +286,7 @@ class Builder:
         self.nav = [c for c in DISPLAY_ORDER + ["opinion"] if c in present]   # empty sections stay hidden until their first story
         self.has_reads = any(a.get("roundup") for a in articles)
         coming = upcoming(events or [], self.now.astimezone(self.tz).date(), self.months)
+        self.events_updated = self._file_date(os.path.join(ROOT, "content", "events.yaml")) if coming else ""
         self.has_events = bool(coming)
         by_file = {a["file"]: a for a in articles if a.get("file")}
         for a in articles:
@@ -338,6 +370,7 @@ class Builder:
             body += " " + " ".join(fg.get("caption", "") for fg in a.get("figures") or [])
             idx.append({"t": a["title"], "e": a.get("excerpt", ""), "u": f"article/{a['id']}.html", "c": a["category"],
                         "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body,
+                        "k": " ".join([self.cats[a["category"]]["name_ar"], SEARCH_ALIASES.get(a["category"], ""), a.get("label") or ""]),
                         "s": " ".join(filter(None, [a.get("author") or ""]
                                              + [x.get("publisher", "") for x in a.get("sources", [])]
                                              + [_domain(x.get("link")) for x in a.get("sources", [])]))})

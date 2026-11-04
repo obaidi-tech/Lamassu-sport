@@ -13,7 +13,7 @@
 {% block main %}
 <section class="edition" aria-label="عدد اليوم">
   <p class="edition__line">عدد {{ edition_day }}
-    {% if today_count %}<span>{{ today_count | news }} حتى الآن، من {{ today_sources | sources }} بين صحف ووكالات وجهات رسمية</span>{% endif %}</p>
+</p>
   <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر.</p>
 </section>
 
@@ -21,6 +21,7 @@
 <section class="events" aria-labelledby="ev-h">
   <div class="section-head"><h2 id="ev-h">أحداث قادمة</h2><a href="{{ root }}events.html">كل الأحداث</a></div>
   <ul class="events__list">{% for e in coming %}{{ event_card(e) }}{% endfor %}</ul>
+  {% if events_updated %}<p class="events__stamp">آخر تحديث للمواعيد: {{ events_updated }} · قد تتغير وفق الجهة المنظمة</p>{% endif %}
 </section>
 {% endif %}
 

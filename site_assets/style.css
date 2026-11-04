@@ -365,3 +365,8 @@ body:has(.hero) .edition__line{display:none}
 .story__fig figcaption{margin-top:6px;font-family:var(--head);font-size:.85rem;line-height:1.6;color:var(--ink-2)}
 .story__fig-credit{font-size:.78rem}
 .story__fig-credit a{color:inherit;text-decoration:underline}
+
+/* small tag before a title: تقرير مرجعي / أرشيف */
+.tag-label{display:inline-block;margin:0 0 6px;padding:2px 10px;border-radius:999px;background:var(--ink);color:var(--paper);font-family:var(--head);font-size:.75rem;font-weight:700;vertical-align:middle}
+.tag-label--inline{margin:0 0 0 6px;font-size:.68rem;padding:1px 8px;position:relative;top:-2px}
+.events__stamp{margin:8px 0 0;font-family:var(--head);font-size:.78rem;color:var(--ink-2)}

@@ -25,6 +25,7 @@ File format (edit it straight in GitHub's web editor):
     author_link: https://...       (optional) their public page
     roundup: true                  (optional, opinion only) a digest of pieces from other outlets ("أبرز ما كُتب"):
                                    by-line "إعداد: Lamassu", each original listed under "المقالات الأصلية".
+    label: تقرير مرجعي              (optional) a small tag shown with the title, e.g. أرشيف / تقرير مرجعي / ملف
     related:                       (optional) other posts on the same event, by file name; the link shows on both pages
       - 2026-11-04-best-reads-01.md
     Inside the text, [نص](https://...) becomes a link and **نص** becomes bold.
@@ -237,6 +238,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "cover_alt": str(meta.get("image_alt") or ""),
             "updates": updates,
             "figures": figures,
+            "label": str(meta.get("label") or "").strip(),
             "related_files": [str(x).strip() for x in (meta.get("related") or []) if str(x).strip()]
                              if isinstance(meta.get("related"), list) else
                              [x.strip() for x in str(meta.get("related") or "").split(",") if x.strip()],

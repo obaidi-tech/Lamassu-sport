@@ -23,7 +23,7 @@
 <article class="row" style="--cat: var(--c-{{ a.category }})">
   <div class="row__text">
     {% if show_cat %}<a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>{% endif %}
-    <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+    <h3>{% if a.label %}<span class="tag-label tag-label--inline">{{ a.label }}</span> {% endif %}<a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
     {% if a.roundup %}<p class="byline">إعداد: {{ a.outlet }}</p>
     {% elif a.own and a.category == 'opinion' %}<p class="byline">بقلم {{ a.author }}</p>
     {% elif a.category == 'opinion' and a.author %}<p class="byline">{{ a.author }} — {{ a.outlet }}</p>{% endif %}

@@ -20,7 +20,13 @@
       .replace(/[أإآٱ]/g, 'ا').replace(/ى/g, 'ي').replace(/ة/g, 'ه').replace(/ؤ/g, 'و').replace(/ئ/g, 'ي')
       .replace(/[٠-٩]/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'.indexOf(d); });
   };
-  var stem = function (w) { return w.length > 4 && w.indexOf('ال') === 0 ? w.slice(2) : w; };
+  var stem = function (w) {
+    w = w.length > 4 && w.indexOf('ال') === 0 ? w.slice(2) : w;
+    // word families: بارالمبياد / بارالمبية / بارالمبي → بارالمب ، أولمبياد / أولمبية → اولمب
+    if (w.indexOf('بارالمب') === 0) return 'بارالمب';
+    if (w.indexOf('اولمب') === 0) return 'اولمب';
+    return w;
+  };
   var input = document.getElementById('q'), out = document.getElementById('search-results'),
       status = document.getElementById('search-status'), index = null;
   var esc = function (s) { var d = document.createElement('div'); d.textContent = s; return d.innerHTML; };
@@ -30,7 +36,7 @@
     if (!terms.length) { status.textContent = ''; return; }
     var hits = [];
     index.forEach(function (d) {
-      var t = norm(d.t), e = norm(d.e), b = norm(d.b), s = norm(d.s), score = 0, all = true;
+      var t = norm(d.t), e = norm(d.e), b = norm(d.b), s = norm((d.s || '') + ' ' + (d.k || '')), score = 0, all = true;
       terms.forEach(function (w) {
         var p = (t.indexOf(w) > -1 ? 6 : 0) + (e.indexOf(w) > -1 ? 3 : 0) + (s.indexOf(w) > -1 ? 2 : 0) + (b.indexOf(w) > -1 ? 1 : 0);
         if (!p) all = false; score += p;

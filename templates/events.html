@@ -8,6 +8,7 @@
 } | tojson_ar }}</script>{% endblock %}
 {% block main %}
 <div class="page-head"><h1>أحداث قادمة</h1>
+  {% if events_updated %}<p class="events__stamp">آخر تحديث للمواعيد: {{ events_updated }} · قد تتغير وفق الجهة المنظمة</p>{% endif %}
   <p>مواعيد أهم البطولات والمنافسات القادمة، من مصادرها الرسمية. ينقلك اسم الحدث إلى الجهة المنظمة، ويختفي الحدث من القائمة بعد انتهائه.</p></div>
 {% for label, items in months %}
 <section class="events events--month" aria-labelledby="m{{ loop.index }}">
@@ -15,5 +16,5 @@
   <ul class="events__list">{% for e in items %}{{ event_card(e) }}{% endfor %}</ul>
 </section>
 {% endfor %}
-<p class="events__foot">المواعيد كما أعلنتها الجهات المنظمة، وقد تتغير. لاحظت موعداً غير دقيق؟ <a href="{{ root }}contact.html">راسلنا</a>.</p>
+<p class="events__foot">{% if events_updated %}<strong>آخر تحديث للمواعيد: {{ events_updated }}.</strong> {% endif %}المواعيد كما أعلنتها الجهات المنظمة، وقد تتغير. لاحظت موعداً غير دقيق؟ <a href="{{ root }}contact.html">راسلنا</a>.</p>
 {% endblock %}

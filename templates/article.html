@@ -33,6 +33,7 @@
 {% block main %}
 <article class="story" style="--cat: var(--c-{{ a.category }})">
   <nav class="crumbs" aria-label="مسار الصفحة"><a href="{{ root }}index.html">الرئيسية</a> <span aria-hidden="true">›</span> <a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a></nav>
+  {% if a.label %}<p class="tag-label">{{ a.label }}</p>{% endif %}
   <h1>{{ a.title }}</h1>
   {% if own_op %}
   <p class="story__byline story__byline--own">بقلم {% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me"><strong>{{ a.author }}</strong></a>{% else %}<strong>{{ a.author }}</strong>{% endif %}</p>
