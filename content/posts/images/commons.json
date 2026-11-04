@@ -105,7 +105,8 @@
   "Ciudad Real Madrid Valdebebas": "File:La ciudad de Madrid homenajea a Alfredo Di Stéfano con una calle en Valdebebas (03).jpg",
   "Estadio Santiago Bernabeu exterior": "File:Estadio Santiago Bernabeu - vista exterior.jpg",
   "Fenerbahçe team photo": "File:Fenerbahçe 1910-II Team.jpg",
-  "Fenerbahçe players 2025 match": "File:Fenerbahçe maç başlamadan önce (2021-22 Süper Lig Sezonu, Aralik 2021) (cropped).png"
+  "Fenerbahçe players 2025 match": "File:Fenerbahçe maç başlamadan önce (2021-22 Süper Lig Sezonu, Aralik 2021) (cropped).png",
+  "Şükrü Saracoğlu Stadium Fenerbahçe": "File:Kurbağalıdere and Fenerbahçe Şükrü Saraçoğlu Stadium.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -226,5 +227,13 @@
   "license": "CC BY 3.0",
   "license_url": "https://creativecommons.org/licenses/by/3.0",
   "local": "ccffcf55884b.jpg"
+ },
+ "File:Kurbağalıdere and Fenerbahçe Şükrü Saraçoğlu Stadium.jpg": {
+  "title": "File:Kurbağalıdere and Fenerbahçe Şükrü Saraçoğlu Stadium.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Kurba%C4%9Fal%C4%B1dere_and_Fenerbah%C3%A7e_%C5%9E%C3%BCkr%C3%BC_Sara%C3%A7o%C4%9Flu_Stadium.jpg",
+  "artist": "Raicem",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "f7f731afa31c.jpg"
  }
 }
