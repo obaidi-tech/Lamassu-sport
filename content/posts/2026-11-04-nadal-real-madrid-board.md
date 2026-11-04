@@ -5,6 +5,7 @@ date: 2026-11-04 17:00
 excerpt: مجلس إدارة ريال مدريد يقترح تعيين أسطورة التنس رافاييل نادال عضواً فيه، على أن تصادق الجمعية العمومية الاستثنائية على القرار في 21 نوفمبر.
 sources:
   - ريال مدريد (بيان رسمي) | https://www.realmadrid.com/en-US/news/club/latest-news/el-sabado-21-de-noviembre-tendran-lugar-las-asambleas-generales-ordinaria-y-extraordinaria-de-socios-representantes-04-11-2026
+  - رويترز | https://www.reuters.com/ar/sports/72IYUIVJUJON3A24VVEDYDNDEQ-2026-11-04/
   - فرانس برس
   - ديلي صباح | https://www.dailysabah.com/sports/football/real-madrid-move-to-appoint-tennis-legend-rafael-nadal-to-board
 commons: File:Rafael Nadal (12054444625).jpg
