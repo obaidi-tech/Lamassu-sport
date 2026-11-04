@@ -83,16 +83,16 @@ section_heroes:
   orgs:
     sub: الاتحادات الدولية والقارية، والمنتخبات، والبطولات الكبرى
     images:
-      - unsplash: https://unsplash.com/photos/a-couple-of-people-holding-a-flag-in-front-of-a-crowd-aRoQGKEMj4k
-        unsplash_image: https://images.unsplash.com/photo-1720904991040-8af04451e521
-        photographer: Omar Ramadan
-        alt: جماهير بأعلام منتخباتها
+      - unsplash: https://unsplash.com/photos/a-circular-building-with-a-green-circle-in-the-center-r6bUvUv3b_k
+        unsplash_image: https://images.unsplash.com/photo-1666461941397-254b6ea059ef
+        photographer: Timur Khamidov
+        alt: ملعب كرة قدم من الأعلى
   world:
     sub: كرة القدم في بقية العالم، من آسيا والخليج إلى أفريقيا والأمريكتين
     images:
-      - unsplash: https://unsplash.com/photos/white-green-and-blue-soccer-ball-on-green-grass-field-during-daytime-6NhmiPpy6y4
-        unsplash_image: https://images.unsplash.com/photo-1617144519956-bba853571334
-        photographer: Ben Hershey
+      - unsplash: https://unsplash.com/photos/white-and-black-soccer-ball-on-green-grass-adcyN9XhzwY
+        unsplash_image: https://images.unsplash.com/photo-1520804588595-ac2328f38c4a
+        photographer: Wuilmar Matias-Morales
         alt: كرة قدم على العشب
   other_sports:
     sub: التنس وفورمولا 1 وألعاب القوى والراليات وبقية الرياضات
@@ -111,7 +111,7 @@ section_heroes:
   opinion:
     sub: مقالات رأي بأقلام كتّابها، وملخصات لأبرز ما تكتبه الصحافة العالمية
     images:
-      - unsplash: https://unsplash.com/photos/a-man-reading-a-newspaper-kNOEeOPQxFs
-        unsplash_image: https://images.unsplash.com/photo-1660475464525-6ad2cd921e3e
-        photographer: roomshot
-        alt: رجل يقرأ صحيفة
+      - unsplash: https://unsplash.com/photos/a-person-reading-a-newspaper-with-a-cup-of-coffee-hbwl0zqt-TQ
+        unsplash_image: https://images.unsplash.com/photo-1689421755150-9c3b8dc3a45b
+        photographer: Anna Keibalo
+        alt: قراءة الصحيفة مع فنجان قهوة
