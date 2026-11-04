@@ -200,11 +200,24 @@ class Builder:
                 ext = os.path.splitext(a["cover_src"])[1].lower()
                 rel = f"img/{a['id']}{ext}"
                 os.makedirs(img_dir, exist_ok=True)
-                shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
+                crop = a.get("crop") or []
+                if len(crop) == 4 and any(crop):            # trimmed copy (e.g. a watermark removed)
+                    from PIL import Image
+                    rel = f"img/{a['id']}.jpg"
+                    with Image.open(a["cover_src"]) as im:
+                        im = im.convert("RGB")
+                        w, h = im.size
+                        t, r, b, l = crop
+                        im = im.crop((round(w * l / 100), round(h * t / 100), round(w * (1 - r / 100)), round(h * (1 - b / 100))))
+                        im.save(os.path.join(self.out, rel), "JPEG", quality=82, optimize=True, progressive=True)
+                    if a.get("credit"):
+                        a["credit"] = dict(a["credit"], cropped=True)
+                else:
+                    shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
                 a["image"] = a["cover"] = rel
                 try:
                     from PIL import Image
-                    with Image.open(a["cover_src"]) as im:
+                    with Image.open(os.path.join(self.out, rel)) as im:
                         a["cover_w"], a["cover_h"] = im.size
                 except Exception:
                     pass
