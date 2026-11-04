@@ -99,7 +99,9 @@
   "cuju painting": "File:Painting of Cuju by Huang Shen.jpg",
   "Thomas Webster football painting 1839": "File:The Football Game. Thomas Webster, 1839, 1.jpg",
   "Nevinson Any Wintry Afternoon in England": "File:Any Wintry Afternoon in England.jpg",
-  "sports journalists press box": "File:Campanelli Stadium - press box.jpg"
+  "sports journalists press box": "File:Campanelli Stadium - press box.jpg",
+  "FIFA headquarters Zurich Home of FIFA": "File:Home of FIFA - buiding and flags.jpg",
+  "Stephen Curry Golden State Warriors": "File:Stephen Curry close up.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -156,5 +158,29 @@
   "license": "CC0",
   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "local": "0256e65840a0.jpg"
+ },
+ "File:Home of FIFA - buiding and flags.jpg": {
+  "title": "File:Home of FIFA - buiding and flags.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Home_of_FIFA_-_buiding_and_flags.jpg",
+  "artist": "albinfo",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "a327b5514f92.jpg"
+ },
+ "File:Rafael Nadal (12054444625).jpg": {
+  "title": "File:Rafael Nadal (12054444625).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Rafael_Nadal_(12054444625).jpg",
+  "artist": "Doha Stadium Plus Qatar/ Vinod Divakaran",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "local": "509341e7a688.jpg"
+ },
+ "File:Stephen Curry close up.jpg": {
+  "title": "File:Stephen Curry close up.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Stephen_Curry_close_up.jpg",
+  "artist": "Noah Salzman",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "local": "ab3dafe72ce8.jpg"
  }
 }
