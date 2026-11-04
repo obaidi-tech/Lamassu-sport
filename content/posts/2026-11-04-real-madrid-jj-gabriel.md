@@ -7,8 +7,8 @@ sources:
   - ذا أتلتيك (عبر ياهو سبورتس) | https://sports.yahoo.com/articles/real-madrid-close-manchester-united-144900687.html
   - الجزيرة نت
   - مانشستر إيفنينغ نيوز
-commons: search:Ciudad Real Madrid Valdebebas
-image_alt: المدينة الرياضية لنادي ريال مدريد في فالديبيباس
+commons: search:Estadio Santiago Bernabeu exterior
+image_alt: ملعب سانتياغو برنابيو معقل نادي ريال مدريد
 related:
   - 2026-11-04-nadal-real-madrid-board.md
 ---
