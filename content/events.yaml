@@ -5,7 +5,7 @@
 #   name:  اسم الحدث
 #   start: تاريخ البداية بصيغة 2026-11-24
 #   end:   تاريخ النهاية (اختياري، لحدث يمتد أكثر من يوم)
-#   sport: football | basketball | tennis | f1 | rally | olympic
+#   sport: football | basketball | tennis | f1 | rally | olympic | para
 #   place: المكان (اختياري)
 #   note:  ملاحظة قصيرة (اختياري)
 #   link:  رابط الجهة المنظمة أو مصدر الموعد
@@ -158,3 +158,11 @@ events:
     sport: olympic
     place: لوس أنجلوس، الولايات المتحدة
     link: https://la28.org/
+
+  - name: دورة الألعاب البارالمبية لوس أنجلوس 2028
+    start: 2028-08-15
+    end: 2028-08-27
+    sport: para
+    place: لوس أنجلوس، الولايات المتحدة
+    note: أول استضافة للوس أنجلوس للألعاب البارالمبية
+    link: https://www.paralympic.org/news/LA28-announces-official-dates-for-the-Olympic-and-Paralympic-Games

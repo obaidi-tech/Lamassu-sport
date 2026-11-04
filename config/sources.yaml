@@ -63,3 +63,8 @@ sources:
   - {id: lequipe_chronique,   name: "L'Équipe",     kind: opinion, gnews: "site:lequipe.fr chronique OR édito football", lang: fr, category: opinion}
   - {id: gazzetta_editoriale, name: "La Gazzetta dello Sport", kind: opinion, gnews: "site:gazzetta.it editoriale OR commento calcio", lang: it, category: opinion}
   - {id: kicker_kommentar,    name: "kicker",       kind: opinion, gnews: "site:kicker.de Kommentar Fußball", lang: de, category: opinion}
+
+  # ── الرياضة البارالمبية ──
+  - {id: ipc_news,       name: "International Paralympic Committee", kind: official, gnews: "site:paralympic.org", lang: en, category: para}
+  - {id: apc_news,       name: "Asian Paralympic Committee", kind: official, gnews: "\"Asian Paralympic Committee\" OR \"Asian Para Games\"", lang: en, category: para}
+  - {id: gn_para_ar,     name: "Google News", kind: aggregator, gnews: "البارالمبية OR البارالمبي OR \"أصحاب الهمم\" رياضة", lang: ar, category: para}

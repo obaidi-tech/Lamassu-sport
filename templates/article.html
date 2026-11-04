@@ -41,7 +41,7 @@
   {% elif a.category == 'opinion' %}
   <p class="story__byline">ملخص لمقال رأي بقلم <strong>{{ a.author or 'كاتب غير مذكور' }}</strong> في {{ a.outlet }}</p>
   {% else %}
-  <p class="story__byline">إعداد: {% if own_news and a.author %}{% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me">{{ a.author }}</a>{% else %}{{ a.author }}{% endif %}{% else %}{{ site.site_name }}{% endif %}</p>
+  <p class="story__byline">{% if a.contributor %}بقلم{% else %}إعداد:{% endif %} {% if own_news and a.author %}{% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me">{{ a.author }}</a>{% else %}{{ a.author }}{% endif %}{% else %}{{ site.site_name }}{% endif %}</p>
   {% endif %}
   <div class="meta story__meta">
     <span>نُشر: <time datetime="{{ a.published_at }}">{{ a.published_at | day }}{% if not own_op %}، {{ a.published_at | time }}{% endif %}</time></span>
@@ -58,6 +58,7 @@
     {% for p in a.body %}
       {%- if p.startswith('### ') %}<h3>{{ p[4:] }}</h3>
       {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
+      {%- elif p.startswith('|') %}{{ p | table }}
       {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] | links }}</li>{% endfor %}</ul>
       {%- else %}<p>{{ p | links }}</p>{% endif %}
     {% endfor %}
@@ -68,6 +69,15 @@
     <h2 id="lnk-h">{% if a.category == 'opinion' %}الخبر المرتبط{% else %}قراءة مرتبطة{% endif %}</h2>
     <ul>{% for b in a.linked %}<li><a href="{{ root }}article/{{ b.id }}.html">{{ b.title }}</a>
       <span class="linked__kind">{% if b.roundup %}أبرز ما كُتب{% elif b.category == 'opinion' %}{% if b.own %}مقال رأي{% else %}رأي — {{ b.outlet }}{% endif %}{% else %}{{ cats[b.category].name_ar }}{% endif %}</span></li>{% endfor %}</ul>
+  </aside>
+  {% endif %}
+
+  {% if a.contributor %}
+  <aside class="contrib-box">
+    <p class="contrib-box__tag">مشاركة تطوعية</p>
+    <p class="contrib-box__name">{% if a.author_link %}<a href="{{ a.author_link }}" target="_blank" rel="noopener">{{ a.author }}</a>{% else %}{{ a.author }}{% endif %}</p>
+    {% if a.author_bio %}<p class="contrib-box__bio">{{ a.author_bio }}</p>{% endif %}
+    {% if site.contribute %}<p class="contrib-box__cta">لديك مقال أو صور أو بحث في الشأن الرياضي؟ <a href="{{ root }}contribute.html">شارك معنا</a></p>{% endif %}
   </aside>
   {% endif %}
 

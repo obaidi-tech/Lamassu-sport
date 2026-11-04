@@ -20,8 +20,31 @@ MONTHS = {
     "levant": ["كانون الثاني", "شباط", "آذار", "نيسان", "أيار", "حزيران", "تموز", "آب", "أيلول",
                "تشرين الأول", "تشرين الثاني", "كانون الأول"],
 }
-DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "awareness"]
+DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "para", "awareness"]
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
+
+
+def _table(block: str) -> Markup:
+    """'| a | b |' lines → an accessible HTML table; first row is the heading, '|---|' rows are skipped.
+    Columns whose cells are numbers are aligned for easy comparison."""
+    import re
+    rows = []
+    for line in block.splitlines():
+        cells = [c.strip() for c in line.strip().strip("|").split("|")]
+        if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c):
+            continue
+        rows.append(cells)
+    if not rows:
+        return Markup("")
+    head, body = rows[0], rows[1:]
+    num = lambda c: bool(re.fullmatch(r"[\d٠-٩.,+\-–% ]+", c))  # noqa: E731
+    th = "".join(f'<th scope="col">{_inline_links(c)}</th>' for c in head)
+    trs = []
+    for r in body:
+        tds = "".join(f'<td{" class=num" if num(c) else ""}>{_inline_links(c)}</td>' for c in r)
+        trs.append(f"<tr>{tds}</tr>")
+    return Markup(f'<div class="table-wrap" tabindex="0"><table><thead><tr>{th}</tr></thead>'
+                  f'<tbody>{"".join(trs)}</tbody></table></div>')
 
 
 def _domain(url: str) -> str:
@@ -78,6 +101,9 @@ class Builder:
         self.site["email"] = email if "@" in email and "example." not in email else ""
         li = str(self.site.get("linkedin_url") or "")
         self.site["linkedin"] = li if li.startswith("https://") and "linkedin.com/" in li else ""
+        form = str(self.site.get("contribute_form_url") or "").strip()
+        ok_form = form.startswith("https://") and any(h in form for h in ("docs.google.com/forms", "forms.gle/"))
+        self.site["contribute"] = form if ok_form else ""
         self.out = out_dir
         self.tz = ZoneInfo(site["timezone"])
         self.months = MONTHS.get(site.get("month_names", "gulf"), MONTHS["gulf"])
@@ -92,6 +118,7 @@ class Builder:
         # JSON for <script> blocks: marked safe so quotes aren't HTML-escaped; "</" broken up so it can't close the tag
         self.env.filters["links"] = _inline_links
         self.env.filters["domain"] = _domain
+        self.env.filters["table"] = _table
         self.env.filters["tojson_ar"] = lambda o: Markup(json.dumps(o, ensure_ascii=False).replace("</", "<\\/"))
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))
@@ -254,6 +281,9 @@ class Builder:
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
+        contributions = [a for a in articles if a.get("contributor")]
+        if self.site["contribute"]:          # the page goes live once the Google Form link is set
+            self._render("contribute.html", "contribute.html", 0, contributions=contributions, **common)
         self._render("schedules.html", "schedules.html", 0, **common)
 
         # latest news: chronological, grouped by day (most recent 120 items)
@@ -268,7 +298,7 @@ class Builder:
         # site search: a small JSON index read by search.html in the browser (no external service)
         idx = []
         for a in articles:
-            body = " ".join(p.lstrip("#- ").replace("\n- ", " ") for p in a.get("body", []))
+            body = " ".join(p.lstrip("#- ").replace("\n- ", " ").replace("|", " ") for p in a.get("body", []))
             idx.append({"t": a["title"], "e": a.get("excerpt", ""), "u": f"article/{a['id']}.html", "c": a["category"],
                         "d": a["published_at"], "dl": self.day_label(a["published_at"]), "b": body,
                         "s": " ".join(filter(None, [a.get("author") or ""]
@@ -313,7 +343,7 @@ class Builder:
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
-        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

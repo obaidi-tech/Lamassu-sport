@@ -50,7 +50,7 @@
       {% if has_reads %}<a href="{{ root }}reads.html" style="--cat: var(--c-opinion)"{% if path == 'reads.html' %} aria-current="page"{% endif %}>أبرز ما كُتب</a>{% endif %}
       {% if has_events %}<a href="{{ root }}events.html"{% if path == 'events.html' %} aria-current="page"{% endif %}>أحداث قادمة</a>{% endif %}
       <a href="{{ root }}schedules.html"{% if path == 'schedules.html' %} aria-current="page"{% endif %}>الجداول والمباريات</a>
-      <a href="{{ root }}archive.html"{% if path == 'archive.html' %} aria-current="page"{% endif %}>الأرشيف</a>
+      {% if site.contribute %}<a href="{{ root }}contribute.html"{% if path == 'contribute.html' %} aria-current="page"{% endif %}>شارك معنا</a>{% endif %}
       <a href="{{ root }}contact.html"{% if path == 'contact.html' %} aria-current="page"{% endif %}>تواصل معنا</a>
     </div>
   </nav>
@@ -64,7 +64,7 @@
     <p class="foot__name">{{ site.site_name }}{% if site.site_name_en %} <span lang="en">| {{ site.site_name_en }}</span>{% endif %}</p>
     <p class="foot__tag">{{ site.tagline }}{% if site.tagline_en %} <span lang="en">{{ site.tagline_en }}</span>{% endif %}</p>
     <p>نذكر مصادر كل خبر، ويظهر بجانبه عدد الجهات المستقلة التي تناولته.</p>
-    <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
+    <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.contribute %}<li><a href="{{ root }}contribute.html">شارك معنا</a></li>{% endif %}{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
 </footer>
 <script>

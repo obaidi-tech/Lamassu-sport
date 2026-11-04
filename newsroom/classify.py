@@ -1,7 +1,7 @@
 """Assign each cluster a category (quota bucket) and a sub-key (league / sport / country / org)."""
 from .textutil import has_keyword, normalize
 
-PRIORITY = ["opinion", "nba", "orgs", "top5", "other_sports", "awareness", "world"]
+PRIORITY = ["opinion", "para", "nba", "orgs", "top5", "other_sports", "awareness", "world"]
 
 
 def _match_group(text_norm: str, groups: dict):
@@ -33,7 +33,7 @@ def classify(cluster: dict, cats_cfg: dict) -> tuple:
         return cat, sub or "other"
 
     for text in (titles, full):
-        for cat in ["nba", "orgs", "top5", "other_sports", "awareness"]:
+        for cat in ["para", "nba", "orgs", "top5", "other_sports", "awareness"]:
             sub = _match_group(text, kw.get(cat, {}))
             if sub:
                 return cat, sub

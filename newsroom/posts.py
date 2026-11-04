@@ -20,6 +20,9 @@ File format (edit it straight in GitHub's web editor):
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
     original_url: https://...      our own summary under the writer's name, with a link to the original
     original_title: العنوان الأصلي
+    contributor: true              (optional) a volunteer contribution («شارك معنا»), with:
+    author_bio: سطر تعريفي          the writer's/photographer's one-line bio
+    author_link: https://...       (optional) their public page
     roundup: true                  (optional, opinion only) a digest of pieces from other outlets ("أبرز ما كُتب"):
                                    by-line "إعداد: Lamassu", each original listed under "المقالات الأصلية".
     related:                       (optional) other posts on the same event, by file name; the link shows on both pages
@@ -49,11 +52,15 @@ FRONT = re.compile(r"^﻿?---\s*\n(.*?)\n---\s*\n(.*)$", re.S)
 
 def _blocks(text: str) -> list:
     """Paragraphs separated by blank lines. '## ' / '### ' lines become subheadings;
-    lines starting with '- ' become a bullet list (consecutive list lines merge into one list)."""
+    lines starting with '- ' become a bullet list (consecutive list lines merge into one list);
+    lines starting with '|' become a table (first row = headings; a |---| row is ignored)."""
     out = []
     for chunk in re.split(r"\n\s*\n", text.strip()):
         lines = [line.strip() for line in chunk.splitlines() if line.strip()]
         if not lines:
+            continue
+        if all(l.startswith("|") for l in lines):           # a table: | col | col | rows
+            out.append("\n".join(lines))
             continue
         if all(l.startswith("- ") for l in lines):
             if out and out[-1].startswith("- "):
@@ -153,7 +160,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                     else datetime.fromtimestamp(os.path.getmtime(path)))
         if when.tzinfo is None:
             when = when.replace(tzinfo=zone)
-        first = next((b for b in body if not b.startswith(("#", "- "))), body[0])
+        first = next((b for b in body if not b.startswith(("#", "- ", "|"))), body[0])
         cover = None
         if meta.get("image"):
             cover = os.path.normpath(os.path.join(posts_dir, str(meta["image"])))
@@ -219,6 +226,9 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
                              if isinstance(meta.get("related"), list) else
                              [x.strip() for x in str(meta.get("related") or "").split(",") if x.strip()],
             "roundup": bool(meta.get("roundup")) and not is_news,
+            "contributor": bool(meta.get("contributor")),
+            "author_bio": str(meta.get("author_bio") or "").strip(),
+            "author_link": (lambda u: u if u.startswith("https://") else "")(str(meta.get("author_link") or "").strip()),
             "updated_at": updates[0]["at"] if updates else None,
         })
     cache.save()

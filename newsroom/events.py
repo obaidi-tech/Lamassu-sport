@@ -11,6 +11,7 @@ SPORTS = {   # key: (Arabic label, colour variable from the site's palette)
     "f1": ("فورمولا 1", "--c-awareness"),
     "rally": ("رالي", "--c-opinion"),
     "olympic": ("أولمبياد", "--c-orgs"),
+    "para": ("بارالمبياد", "--c-para"),
 }
 
 

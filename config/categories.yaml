@@ -30,6 +30,11 @@ categories:
     quota: 12
     min_score: 3
     max_per_sub: 2          # sub = الرياضة
+  para:
+    name_ar: "الرياضة البارالمبية"
+    quota: 3
+    min_score: 2
+    max_per_sub: 2          # sub = البطولة أو الرياضة
   awareness:
     name_ar: "أبحاث ودراسات"
     quota: 3
@@ -50,6 +55,7 @@ categories:
 category_bonus:
   orgs: 0.5
   top5: 0.5
+  para: 0.3
   nba: 0.2
 
 keywords:
@@ -101,6 +107,12 @@ keywords:
     hockey: ["nhl", "ice hockey", "هوكي"]
     handball: ["handball", "كرة اليد"]
     volleyball: ["volleyball", "الكرة الطائرة"]
+  para:
+    paralympics: ["paralympic", "paralympics", "para games", "asian para games", "ipc ",
+        "بارالمبي", "البارالمبية", "البارالمبياد", "الألعاب البارالمبية", "ذوي الإعاقة", "أصحاب الهمم"]
+    para_sports: ["para athletics", "para powerlifting", "para swimming", "para cycling", "para table tennis",
+        "wheelchair basketball", "wheelchair tennis", "wheelchair rugby", "sitting volleyball", "blind football",
+        "goalball", "boccia", "كرة السلة على الكراسي", "الكرة الطائرة جلوس", "رفع الأثقال البارالمبي"]
   awareness:
     doping: ["doping", "banned substance", "منشطات"]
     health: ["concussion", "cardiac", "mental health", "injury prevention", "study", "research",

@@ -7,13 +7,13 @@
   --navy:#14213D; --navy-2:#1D2D50; --paper:#F4F6F5; --card:#FFFFFF; --ink:#16202F; --ink-2:#4A5568;
   --line:#D9DEE3; --amber:#F2A900; --off:#D3D8DE;
   --c-top5:#1F7A4D; --c-orgs:#2F5AA8; --c-nba:#C8553D; --c-other_sports:#7A4FA0; --c-world:#0F7F81;
-  --c-opinion:#8C6D1F; --c-awareness:#A23B72; --c-flex:#1F7A4D;
+  --c-opinion:#8C6D1F; --c-awareness:#A23B72; --c-flex:#1F7A4D; --c-para:#007A99;
   --head:"Cairo","Segoe UI",Tahoma,sans-serif; --body:"Naskh","Noto Naskh Arabic","Cairo","Segoe UI",Tahoma,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
   --paper:#10151F; --card:#171E2B; --ink:#E8ECF1; --ink-2:#A9B3C1; --line:#2A3446; --off:#334055;
   --c-top5:#4CC38A; --c-orgs:#7FA6EE; --c-nba:#F08A6E; --c-other_sports:#B794E0; --c-world:#45C2C4;
-  --c-opinion:#D9B45A; --c-awareness:#E57CB4; --c-flex:#4CC38A;
+  --c-opinion:#D9B45A; --c-awareness:#E57CB4; --c-flex:#4CC38A; --c-para:#4FC3DE;
 }}
 
 *{box-sizing:border-box}
@@ -327,3 +327,28 @@ body:has(.hero) .edition__line{display:none}
   .events:not(.events--month) .ev{flex:0 0 78%;scroll-snap-align:start}
   .events--month .events__list{grid-template-columns:1fr}
 }
+
+/* tables inside stories (medal tables etc.) */
+.table-wrap{overflow-x:auto;margin:0 0 1.4em;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+.story__body table{width:100%;border-collapse:collapse;font-family:var(--head);font-size:.95rem;line-height:1.5}
+.story__body th{background:var(--navy);color:#F4F6F5;font-weight:700;padding:9px 10px;text-align:start;white-space:nowrap}
+.story__body td{padding:8px 10px;border-top:1px solid var(--line)}
+.story__body td.num,.story__body th:not(:nth-child(2)){text-align:center;font-variant-numeric:tabular-nums}
+.story__body tbody tr:nth-child(even){background:color-mix(in srgb,var(--line) 30%,transparent)}
+.story__body tbody tr.hl,.story__body td strong{color:var(--cat)}
+
+/* شارك معنا */
+.contribute__lead{font-size:1.2rem}
+.contribute__btn{display:inline-block;margin:6px 0 4px;padding:11px 26px;border-radius:999px;background:var(--amber);color:#14213D;font-family:var(--head);font-weight:800;font-size:1.05rem}
+.contribute__btn:hover{text-decoration:none;filter:brightness(1.05)}
+.contribute ol,.contribute ul{padding-inline-start:1.3em}
+.contribute li{margin:0 0 .45em;line-height:1.9}
+.contrib-box{margin:24px 0 8px;padding:14px 18px;border-radius:10px;background:var(--card);border:1px solid var(--line);border-inline-start:4px solid var(--amber)}
+.contrib-box__tag{margin:0;font-family:var(--head);font-size:.78rem;font-weight:700;color:var(--amber)}
+.contrib-box__name{margin:2px 0;font-family:var(--head);font-weight:800;font-size:1.1rem}
+.contrib-box__bio{margin:0;font-family:var(--head);font-size:.92rem;color:var(--ink-2)}
+.contrib-box__cta{margin:8px 0 0;font-family:var(--head);font-size:.88rem}
+.contrib-box__cta a{color:var(--c-orgs);text-decoration:underline}
+@media (max-width:560px){.story__body th,.story__body td{padding:7px 5px;font-size:.84rem}}
+.contribute .contribute__btn{text-decoration:none}
+@media (max-width:1240px) and (min-width:761px){.nav a{padding:11px 8px 9px;font-size:.9rem}}

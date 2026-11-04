@@ -8,6 +8,7 @@ site_url: "https://obaidi-tech.github.io/Lamassu-sport"
 contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")
 owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته
 linkedin_url: "https://www.linkedin.com/in/al0baidi"
+contribute_form_url: ""          # رابط نموذج Google «شارك معنا». عند وضعه تظهر صفحة «شارك معنا» ورابطها تلقائياً
 google_site_verification: "XKPOWis_ohj3JA_Ij46o99p0IODwohHvgIWkCBJeIfA"                            # رمز Google Search Console (من وسم HTML)
 month_names: gulf                                       # gulf = نوفمبر | levant = تشرين الثاني
 language: ar
