@@ -1,0 +1,160 @@
+# أحداث قادمة — تظهر في الصفحة الرئيسية (أقرب 6) وفي صفحة «أحداث قادمة» كاملة.
+# يختفي الحدث تلقائياً بعد تاريخ نهايته، ويُحسب «بعد كم يوم» عند كل بناء للموقع.
+#
+# لكل حدث:
+#   name:  اسم الحدث
+#   start: تاريخ البداية بصيغة 2026-11-24
+#   end:   تاريخ النهاية (اختياري، لحدث يمتد أكثر من يوم)
+#   sport: football | basketball | tennis | f1 | rally | olympic
+#   place: المكان (اختياري)
+#   note:  ملاحظة قصيرة (اختياري)
+#   link:  رابط الجهة المنظمة أو مصدر الموعد
+
+events:
+  - name: دورة الألعاب الأولمبية للشباب داكار 2026
+    start: 2026-10-31
+    end: 2026-11-13
+    sport: olympic
+    place: داكار، السنغال
+    note: أول حدث أولمبي في القارة الأفريقية
+    link: https://olympics.com/ioc/news/dates-for-dakar-2026-approved-by-ioc-executive-board
+
+  - name: جائزة البرازيل الكبرى — فورمولا 1
+    start: 2026-11-08
+    sport: f1
+    place: ساو باولو، البرازيل
+    link: https://www.formula1.com/en/racing/2026
+
+  - name: بطولة WTA الختامية للسيدات
+    start: 2026-11-08
+    end: 2026-11-15
+    sport: tennis
+    place: إنديان ويلز، الولايات المتحدة
+    note: انتقلت هذا العام من الرياض
+    link: https://www.wtatennis.com/tournaments/808/wta-finals/2026
+
+  - name: رالي السعودية
+    start: 2026-11-11
+    end: 2026-11-14
+    sport: rally
+    place: جدة، السعودية
+    note: ضمن بطولة الشرق الأوسط للراليات
+    link: https://www.fia.com/news/fia-and-wrc-promoter-confirm-final-round-2026-fia-world-rally-championship
+
+  - name: بطولة ATP الختامية للرجال
+    start: 2026-11-15
+    end: 2026-11-22
+    sport: tennis
+    place: تورينو، إيطاليا
+    link: https://www.nittoatpfinals.com/
+
+  - name: جائزة لاس فيغاس الكبرى — فورمولا 1
+    start: 2026-11-21
+    sport: f1
+    place: لاس فيغاس، الولايات المتحدة
+    link: https://www.formula1.com/en/racing/2026
+
+  - name: دوري أبطال آسيا للنخبة — الجولة 5
+    start: 2026-11-23
+    end: 2026-11-25
+    sport: football
+    note: الغرب 23 و24 نوفمبر، والشرق 24 و25 نوفمبر
+    link: https://www.the-afc.com/en/club/afc_champions_league.html
+
+  - name: دوري أبطال أوروبا — الجولة 5
+    start: 2026-11-24
+    end: 2026-11-25
+    sport: football
+    link: https://www.uefa.com/uefachampionsleague/fixtures-results/
+
+  - name: نهائيات كأس ديفيز للتنس
+    start: 2026-11-24
+    end: 2026-11-29
+    sport: tennis
+    place: بولونيا، إيطاليا
+    note: المباراة النهائية الأحد 29 نوفمبر
+    link: https://www.daviscup.com/
+
+  - name: جائزة قطر الكبرى — فورمولا 1
+    start: 2026-11-29
+    sport: f1
+    place: لوسيل، قطر
+    link: https://www.formula1.com/en/racing/2026
+
+  - name: دوري أبطال آسيا للنخبة — الجولة 6
+    start: 2026-12-01
+    end: 2026-12-08
+    sport: football
+    note: الشرق 1 و2 ديسمبر، والغرب 7 و8 ديسمبر
+    link: https://www.the-afc.com/en/club/afc_champions_league.html
+
+  - name: كأس NBA — الأدوار الإقصائية
+    start: 2026-12-04
+    end: 2026-12-11
+    sport: basketball
+    place: النهائي في إنديانابوليس
+    note: ربع النهائي 4 و5 ديسمبر، ونصف النهائي 8 و9 ديسمبر، والنهائي 11 ديسمبر
+    link: https://www.nba.com/news/nba-cup-101
+
+  - name: جائزة أبوظبي الكبرى — ختام موسم فورمولا 1
+    start: 2026-12-06
+    sport: f1
+    place: حلبة ياس مارينا، أبوظبي
+    link: https://www.formula1.com/en/racing/2026
+
+  - name: دوري أبطال أوروبا — الجولة 6
+    start: 2026-12-08
+    end: 2026-12-09
+    sport: football
+    link: https://www.uefa.com/uefachampionsleague/fixtures-results/
+
+  - name: كأس القارات للأندية (إنتركونتيننتال)
+    start: 2026-12-09
+    end: 2026-12-16
+    sport: football
+    place: الدوحة والريان، قطر
+    note: النهائي 16 ديسمبر بمشاركة باريس سان جيرمان
+    link: https://inside.fifa.com/news/qatar-host-final-matches-intercontinental-cup-2026
+
+  - name: رالي داكار 2027
+    start: 2027-01-01
+    end: 2027-01-15
+    sport: rally
+    note: نُقل من السعودية، والبلد المضيف لم يُعلَن بعد
+    link: https://www.dakar.com/
+
+  - name: بطولة أستراليا المفتوحة للتنس
+    start: 2027-01-17
+    end: 2027-01-31
+    sport: tennis
+    place: ملبورن، أستراليا
+    link: https://ausopen.com/
+
+  - name: دوري أبطال أوروبا — الجولتان 7 و8
+    start: 2027-01-19
+    end: 2027-01-27
+    sport: football
+    note: الجولة 7 في 19 و20 يناير، والجولة 8 في 27 يناير
+    link: https://www.uefa.com/uefachampionsleague/fixtures-results/
+
+  - name: كأس الأمم الأفريقية 2027
+    start: 2027-06-19
+    end: 2027-07-17
+    sport: football
+    place: كينيا وأوغندا وتنزانيا
+    link: https://www.cafonline.com/
+
+  - name: كأس آسيا 2027
+    start: 2027-12-23
+    end: 2028-01-21
+    sport: football
+    place: السعودية
+    note: الموعد الجديد بعد التأجيل، بانتظار موافقة فيفا
+    link: https://www.the-afc.com/en/national/afc_asian_cup.html
+
+  - name: دورة الألعاب الأولمبية لوس أنجلوس 2028
+    start: 2028-07-14
+    end: 2028-07-30
+    sport: olympic
+    place: لوس أنجلوس، الولايات المتحدة
+    link: https://la28.org/

@@ -48,6 +48,7 @@
       <a href="{{ root }}latest.html"{% if path == 'latest.html' %} aria-current="page"{% endif %}>آخر الأخبار</a>
       {% for c in nav %}<a href="{{ root }}category/{{ c }}.html" style="--cat: var(--c-{{ c }})"{% if path == 'category/' ~ c ~ '.html' %} aria-current="page"{% endif %}>{{ cats[c].name_ar }}</a>{% endfor %}
       {% if has_reads %}<a href="{{ root }}reads.html" style="--cat: var(--c-opinion)"{% if path == 'reads.html' %} aria-current="page"{% endif %}>أبرز ما كُتب</a>{% endif %}
+      {% if has_events %}<a href="{{ root }}events.html"{% if path == 'events.html' %} aria-current="page"{% endif %}>أحداث قادمة</a>{% endif %}
       <a href="{{ root }}schedules.html"{% if path == 'schedules.html' %} aria-current="page"{% endif %}>الجداول والمباريات</a>
       <a href="{{ root }}archive.html"{% if path == 'archive.html' %} aria-current="page"{% endif %}>الأرشيف</a>
       <a href="{{ root }}contact.html"{% if path == 'contact.html' %} aria-current="page"{% endif %}>تواصل معنا</a>

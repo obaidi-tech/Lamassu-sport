@@ -32,3 +32,14 @@
   </div>
 </article>
 {%- endmacro %}
+
+
+{% macro event_card(e) -%}
+<li class="ev{% if e.live %} ev--live{% endif %}" style="--ev: var({{ e.colour }})">
+  <p class="ev__top"><span class="ev__sport">{{ e.sport }}</span><span class="ev__when">{{ e.when }}</span></p>
+  <h3 class="ev__name">{% if e.link %}<a href="{{ e.link }}" target="_blank" rel="noopener">{{ e.name }}</a>{% else %}{{ e.name }}{% endif %}</h3>
+  <p class="ev__date"><time datetime="{{ e.start }}">{{ e.dates }}</time></p>
+  {% if e.place %}<p class="ev__place">{{ e.place }}</p>{% endif %}
+  {% if e.note %}<p class="ev__note">{{ e.note }}</p>{% endif %}
+</li>
+{%- endmacro %}

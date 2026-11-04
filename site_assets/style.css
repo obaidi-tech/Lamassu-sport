@@ -304,3 +304,26 @@ body:has(.hero) .edition__line{display:none}
 .nf__code{margin:0;font-family:var(--head);font-weight:800;font-size:3.4rem;line-height:1;color:var(--amber)}
 .nf__links{font-family:var(--head);margin:6px 0 26px}
 .nf__links a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.2em}
+
+/* ── أحداث قادمة ── */
+.events{margin:26px 0 8px}
+.events__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ev{position:relative;background:var(--card);border:1px solid var(--line);border-top:4px solid var(--ev);border-radius:10px;padding:12px 14px 12px}
+.ev__top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:0 0 6px;font-family:var(--head);font-size:.8rem}
+.ev__sport{font-weight:700;color:var(--ev)}
+.ev__when{padding:1px 9px;border-radius:999px;background:color-mix(in srgb,var(--ev) 14%,transparent);color:var(--ink);font-weight:700}
+.ev--live .ev__when{background:var(--amber);color:#14213D}
+.ev__name{font-size:1.02rem;line-height:1.5;margin:0 0 4px}
+.ev__name a:hover{color:var(--ev)}
+.ev__date{margin:0;font-family:var(--head);font-weight:600;font-size:.9rem}
+.ev__place,.ev__note{margin:2px 0 0;font-family:var(--head);font-size:.82rem;line-height:1.6;color:var(--ink-2)}
+.events__month{font-size:1.15rem;margin:0 0 10px;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.events--month{margin-top:22px}
+.events__foot{margin:24px 0 8px;font-family:var(--head);font-size:.85rem;color:var(--ink-2)}
+.events__foot a{color:var(--c-orgs);text-decoration:underline}
+@media (max-width:900px){.events__list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){
+  .events:not(.events--month) .events__list{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:6px;-webkit-overflow-scrolling:touch}
+  .events:not(.events--month) .ev{flex:0 0 78%;scroll-snap-align:start}
+  .events--month .events__list{grid-template-columns:1fr}
+}

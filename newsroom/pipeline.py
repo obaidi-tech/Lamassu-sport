@@ -11,6 +11,7 @@ from .cluster import cluster_items
 from .dedupe import dedupe
 from .fetch import collect
 from .preview import write_preview
+from .events import load_events
 from .posts import load_hero, load_posts
 from .rank import editorial_flags, score_cluster
 from .select import run_fraction, select, targets
@@ -39,7 +40,8 @@ def build_site(cfg_dir="config", content_dir="content", site_dir="public", banne
     posts = [p for p in posts if p["category"] in cats["categories"]]
     articles = sorted(store.all_articles() + posts + (extra or []), key=lambda a: a["published_at"], reverse=True)
     hero = load_hero(os.path.join(content_dir, "posts"), site.get("hero"), log=log)
-    res = Builder(site, cats, site_dir).build(articles, banner=banner, hero=hero)
+    events = load_events(os.path.join(content_dir, "events.yaml"), log=log)
+    res = Builder(site, cats, site_dir).build(articles, banner=banner, hero=hero, events=events)
     log(f"✔ الموقع: {res['articles']} مادة (منها {len(posts)} مقالاً خاصاً) في {res['days']} يوماً → {site_dir}/index.html")
     return res
 

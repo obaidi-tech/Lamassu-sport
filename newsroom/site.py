@@ -10,6 +10,7 @@ from zoneinfo import ZoneInfo
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
+from .events import upcoming
 from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -121,6 +122,7 @@ class Builder:
             root = str(self.site.get("site_url") or "").rstrip("/") + "/"
         html = self.env.get_template(tpl).render(site=self.site, links=self.links, cats=self.cats, nav=self.nav,
                                                  has_reads=getattr(self, "has_reads", False),
+                                                 has_events=getattr(self, "has_events", False),
                                                  root=root, path=path, now=self.now, **ctx)
         with open(full, "w", encoding="utf-8") as f:
             f.write(html)
@@ -182,7 +184,7 @@ class Builder:
                 print(f"  ⚠ صورة الواجهة {i + 1}: {type(ex).__name__}")
         return out
 
-    def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None):
+    def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None):
         os.makedirs(self.out, exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
@@ -192,6 +194,8 @@ class Builder:
         present = {a["category"] for a in articles}
         self.nav = [c for c in DISPLAY_ORDER + ["opinion"] if c in present]   # empty sections stay hidden until their first story
         self.has_reads = any(a.get("roundup") for a in articles)
+        coming = upcoming(events or [], self.now.astimezone(self.tz).date(), self.months)
+        self.has_events = bool(coming)
         by_file = {a["file"]: a for a in articles if a.get("file")}
         for a in articles:
             a["linked"] = []
@@ -225,7 +229,7 @@ class Builder:
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
-                     edition_day=self.day_label(self.now), hero=self._hero(hero), **common)
+                     edition_day=self.day_label(self.now), hero=self._hero(hero), coming=coming[:6], **common)
 
         for a in articles:
             same = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]
@@ -273,6 +277,13 @@ class Builder:
         with open(os.path.join(self.out, "search-index.json"), "w", encoding="utf-8") as f:
             json.dump(idx, f, ensure_ascii=False, separators=(",", ":"))
         self._render("search.html", "search.html", 0, cat_names={k: v["name_ar"] for k, v in self.cats.items()}, **common)
+        if coming:
+            months = []
+            for e in coming:
+                if not months or months[-1][0] != e["month"]:
+                    months.append((e["month"], []))
+                months[-1][1].append(e)
+            self._render("events.html", "events.html", 0, months=months, coming=coming, **common)
         reads = [a for a in articles if a.get("roundup")]
         if reads:
             self._render("reads.html", "reads.html", 0, items=reads, **common)
@@ -302,7 +313,7 @@ class Builder:
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
-        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

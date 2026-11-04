@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import meter, row %}
+{% from "_macros.html" import meter, row, event_card %}
 {% block jsonld %}<script type="application/ld+json">{{ [
   {"@context": "https://schema.org", "@type": "WebSite", "name": site.site_name, "url": site.site_url | trim('/') ~ '/', "inLanguage": "ar",
    "description": site.description or site.tagline,
@@ -44,6 +44,13 @@
     {% if today_count %}<span>{{ today_count | news }} حتى الآن، من {{ today_sources | sources }} بين صحف ووكالات وجهات رسمية</span>{% endif %}</p>
   <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر.</p>
 </section>
+
+{% if coming %}
+<section class="events" aria-labelledby="ev-h">
+  <div class="section-head"><h2 id="ev-h">أحداث قادمة</h2><a href="{{ root }}events.html">كل الأحداث</a></div>
+  <ul class="events__list">{% for e in coming %}{{ event_card(e) }}{% endfor %}</ul>
+</section>
+{% endif %}
 
 {% if links.home %}
 <nav class="quick" aria-label="الجداول والمباريات">
