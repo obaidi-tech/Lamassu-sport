@@ -7,8 +7,8 @@ sources:
   - ليفربول (الموقع الرسمي) | https://www.liverpoolfc.com/news/liverpool-fenerbahce-champions-league-match-report
   - تي إن تي سبورتس | https://www.tntsports.co.uk/football/champions-league/2026-2027/live-fenerbahce-liverpool_mtc21878647/live-commentary.shtml
   - إي إس بي إن | https://www.espn.com/soccer/player-stats/_/gameId/401915382
-commons: search:Fenerbahçe team photo
-image_alt: لاعبو فريق فنربهتشه التركي
+commons: search:Fenerbahçe players 2025 match
+image_alt: لاعبو فنربهتشه خلال إحدى المباريات
 related:
   - 2026-11-04-ucl-matchday-4-tuesday.md
 ---
