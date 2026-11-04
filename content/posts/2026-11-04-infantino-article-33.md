@@ -5,7 +5,7 @@ date: 2026-11-04 17:10
 excerpt: ميغيل مادورو يرى أن لوائح الاتحاد الدولي لا تسمح لجياني إنفانتينو بالترشح مجدداً عام 2027، فيما يستند إنفانتينو إلى قرار لمجلس فيفا لا يحتسب ولايته الأولى.
 sources:
   - رويترز (عبر SRN News) | https://srnnews.com/soccer-ex-fifa-governance-chief-says-infantino-ineligible-for-re-election-members-urged-to-act/
-  - الجزيرة الإنجليزية | https://www.aljazeera.com/sports/2026/11/4/fifas-infantino-ineligible-for-re-election-says-former-governance-chief
+  - الجزيرة نت | https://www.aljazeera.net/sport/2026/11/4/%D8%A7%D9%84%D9%81%D9%8A%D9%81%D8%A7-%D8%A5%D9%86%D9%81%D8%A7%D9%86%D8%AA%D9%8A%D9%86%D9%88-%D8%BA%D9%8A%D8%B1-%D9%85%D8%A4%D9%87%D9%84-%D9%84%D8%A7%D9%86%D8%AA%D8%AE%D8%A7%D8%A8%D9%87
   - ذا ناشونال | https://www.thenationalnews.com/sport/football/2026/10/23/asian-football-chief-backs-gianni-infantinos-fifa-presidency-bid/
 commons: search:FIFA headquarters Zurich Home of FIFA
 image_alt: مقر الاتحاد الدولي لكرة القدم في زيورخ
