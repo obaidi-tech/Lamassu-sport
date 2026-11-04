@@ -104,10 +104,8 @@ section_heroes:
   nba:
     sub: أخبار الدوري الأمريكي للمحترفين وأرقامه
     images:
-      - unsplash: https://unsplash.com/photos/basketball-court-hEQpoeUuJXA
-        unsplash_image: https://images.unsplash.com/photo-1559369064-c4d65141e408
-        photographer: Patrick Schöpflin
-        alt: صالة كرة سلة
+      - commons: search:Phoenix Suns Mexico City Arena dunk
+        alt: قفزة استعراضية نحو السلة في صالة مكسيكو سيتي أرينا
   culture:
     sub: تاريخ الرياضة وفنونها وقصصها
     images:
