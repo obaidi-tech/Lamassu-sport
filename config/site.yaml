@@ -41,3 +41,23 @@ llm:
 wordpress:
   # القيم السرية تُقرأ من متغيرات البيئة: WP_URL, WP_USER, WP_APP_PASSWORD
   default_author_id: null
+
+# صور الواجهة المتحركة في الصفحة الرئيسية: صور رياضية عامة حرة من Unsplash، تتبدل كل 7 ثوانٍ
+# لكل صورة: رابط صفحتها، والرابط المباشر images.unsplash.com، واسم المصور (يظهر تلقائياً على الصورة)
+hero:
+  - unsplash: https://unsplash.com/photos/a-stadium-lit-up-at-night-with-a-lot-of-lights-GCEAqghDxRo
+    unsplash_image: https://images.unsplash.com/photo-1549333580-4cb2c5c8e421
+    photographer: Christopher Alvarenga
+    alt: ملعب مضاء ليلاً
+  - unsplash: https://unsplash.com/photos/red-running-track-with-green-field-and-stadium-DCAtBn5o1bA
+    unsplash_image: https://images.unsplash.com/photo-1760114852702-9c65fe257a52
+    photographer: Sincerely Media
+    alt: مضمار ألعاب قوى
+  - unsplash: https://unsplash.com/photos/illuminated-stadium-glows-under-a-dramatic-sunset-sky-h7j3AlvUGcc
+    unsplash_image: https://images.unsplash.com/photo-1774419477272-693534dc0bdb
+    photographer: NHN
+    alt: ملعب عند الغروب
+  - unsplash: https://unsplash.com/photos/basketball-court-hEQpoeUuJXA
+    unsplash_image: https://images.unsplash.com/photo-1559369064-c4d65141e408
+    photographer: Patrick Schöpflin
+    alt: صالة كرة سلة

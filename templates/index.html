@@ -7,6 +7,38 @@
   {"@context": "https://schema.org", "@type": "Organization", "name": site.site_name, "url": site.site_url | trim('/') ~ '/',
    "logo": site.site_url | trim('/') ~ '/icon-512.png', "slogan": site.tagline, "sameAs": ([site.linkedin] if site.linkedin else [])}
 ] | tojson_ar }}</script>{% endblock %}
+{% block hero %}
+{% if hero %}
+<section class="hero" aria-label="{{ site.site_name }}">
+  <div class="hero__slides" aria-hidden="true">
+    {% for h in hero %}<img class="hero__img{% if loop.first %} is-on{% endif %}" src="{{ root }}{{ h.src }}" alt="" width="{{ h.w }}" height="{{ h.h }}"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %} decoding="async" data-credit="{{ h.credit.artist }}" data-page="{{ h.credit.page }}">{% endfor %}
+  </div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="wrap hero__text">
+    <p class="hero__kicker">عدد {{ edition_day }}</p>
+    <p class="hero__title">أهم أخبار الرياضة العالمية، بمصادرها كاملة</p>
+    {% if today_count %}<p class="hero__sub">{{ today_count | news }} حتى الآن، من {{ today_sources | sources }} بين صحف ووكالات وجهات رسمية</p>{% endif %}
+  </div>
+  <p class="hero__credit">الصورة: <bdi dir="ltr"><a class="hero__who" href="{{ hero[0].credit.page }}" target="_blank" rel="noopener">{{ hero[0].credit.artist }}</a> / <a href="{{ hero[0].credit.license_url }}" target="_blank" rel="noopener license">Unsplash</a></bdi></p>
+</section>
+{% if hero | length > 1 %}
+<script>
+(function () {
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var imgs = document.querySelectorAll('.hero__img'), who = document.querySelector('.hero__who'), i = 0;
+  setInterval(function () {
+    if (document.hidden) return;
+    var prev = imgs[i]; i = (i + 1) % imgs.length; var cur = imgs[i];
+    imgs.forEach(function (im) { im.classList.remove('was'); });
+    prev.classList.remove('is-on'); prev.classList.add('was');
+    cur.classList.add('is-on');
+    if (who) { who.textContent = cur.dataset.credit; who.href = cur.dataset.page; }
+  }, 7000);
+})();
+</script>
+{% endif %}
+{% endif %}
+{% endblock %}
 {% block main %}
 <section class="edition" aria-label="عدد اليوم">
   <p class="edition__line">عدد {{ edition_day }}

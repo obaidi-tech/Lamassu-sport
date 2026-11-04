@@ -144,7 +144,23 @@ class Builder:
                 a["image"] = f"img/default-{a['category']}.jpg"
 
     # ── build ──────────────────────────────────────────────────────────
-    def build(self, articles: list, pending_count: int = 0, banner: str = ""):
+    def _hero(self, hero):
+        """Copy the banner photos next to the page and keep their size, for the moving banner on the home page."""
+        out = []
+        for i, h in enumerate(hero or []):
+            try:
+                from PIL import Image
+                rel = f"img/hero-{i + 1}.jpg"
+                os.makedirs(os.path.join(self.out, "img"), exist_ok=True)
+                shutil.copyfile(h["src"], os.path.join(self.out, rel))
+                with Image.open(h["src"]) as im:
+                    w, ht = im.size
+                out.append({"src": rel, "w": w, "h": ht, "credit": h["credit"], "alt": h["alt"]})
+            except Exception as ex:
+                print(f"  ⚠ صورة الواجهة {i + 1}: {type(ex).__name__}")
+        return out
+
+    def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None):
         os.makedirs(self.out, exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
@@ -173,7 +189,7 @@ class Builder:
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
-                     edition_day=self.day_label(self.now), **common)
+                     edition_day=self.day_label(self.now), hero=self._hero(hero), **common)
 
         for a in articles:
             same = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]
