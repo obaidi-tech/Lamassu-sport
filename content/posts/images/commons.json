@@ -103,7 +103,8 @@
   "FIFA headquarters Zurich Home of FIFA": "File:Home of FIFA - buiding and flags.jpg",
   "Stephen Curry Golden State Warriors": "File:Stephen Curry close up.jpg",
   "Ciudad Real Madrid Valdebebas": "File:La ciudad de Madrid homenajea a Alfredo Di Stéfano con una calle en Valdebebas (03).jpg",
-  "Estadio Santiago Bernabeu exterior": "File:Estadio Santiago Bernabeu - vista exterior.jpg"
+  "Estadio Santiago Bernabeu exterior": "File:Estadio Santiago Bernabeu - vista exterior.jpg",
+  "Fenerbahçe team photo": "File:Fenerbahçe 1910-II Team.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -208,5 +209,13 @@
   "license": "CC BY 2.5",
   "license_url": "https://creativecommons.org/licenses/by/2.5",
   "local": "2e4258fcd3ae.jpg"
+ },
+ "File:Fenerbahçe 1910-II Team.jpg": {
+  "title": "File:Fenerbahçe 1910-II Team.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Fenerbah%C3%A7e_1910-II_Team.jpg",
+  "artist": "İdman Mecmuası",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "e3240b93f8e6.jpg"
  }
 }
