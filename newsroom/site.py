@@ -196,19 +196,36 @@ class Builder:
 
     # ── build ──────────────────────────────────────────────────────────
     def _hero(self, hero, prefix="hero"):
-        """Copy the banner photos next to the page and keep their size, for the moving banner on the home page."""
+        """Banner photos, made light: cropped to the banner's shape and saved in two sizes (phone ~760px,
+        desktop ~1400px). The file name carries a fingerprint of the photo, so a browser never shows an
+        old picture after a photo is changed."""
+        import hashlib
         out = []
+        os.makedirs(os.path.join(self.out, "img"), exist_ok=True)
         for i, h in enumerate(hero or []):
             try:
                 from PIL import Image
-                rel = f"img/{prefix}-{i + 1}.jpg"
-                os.makedirs(os.path.join(self.out, "img"), exist_ok=True)
-                shutil.copyfile(h["src"], os.path.join(self.out, rel))
+                with open(h["src"], "rb") as f:
+                    tag = hashlib.sha1(f.read()).hexdigest()[:8]
                 with Image.open(h["src"]) as im:
+                    im = im.convert("RGB")
+                    ratio = 2.4                                    # wide banner shape
                     w, ht = im.size
-                out.append({"src": rel, "w": w, "h": ht, "credit": h["credit"], "alt": h["alt"]})
+                    if w / ht < ratio:                              # too tall: keep the upper-middle band
+                        nh = round(w / ratio)
+                        top = max(0, min(ht - nh, round((ht - nh) * 0.4)))
+                        im = im.crop((0, top, w, top + nh))
+                    files = {}
+                    for size in (1400, 760):
+                        rel = f"img/{prefix}-{tag}-{size}.jpg"
+                        small = im if im.width <= size else im.resize((size, round(im.height * size / im.width)), Image.LANCZOS)
+                        small.save(os.path.join(self.out, rel), "JPEG", quality=72, optimize=True, progressive=True)
+                        files[size] = (rel, small.size)
+                big, big_size = files[1400]
+                out.append({"src": big, "w": big_size[0], "h": big_size[1], "src_small": files[760][0],
+                            "credit": h["credit"], "alt": h["alt"]})
             except Exception as ex:
-                print(f"  ⚠ صورة الواجهة {i + 1}: {type(ex).__name__}")
+                print(f"  ⚠ صورة الترويسة {prefix} {i + 1}: {type(ex).__name__}")
         return out
 
     def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):

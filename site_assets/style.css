@@ -357,3 +357,4 @@ body:has(.hero) .edition__line{display:none}
 .hero--section{height:clamp(200px,28vw,340px)}
 .hero--section .hero__title{font-size:clamp(1.6rem,4vw,2.7rem);margin:0}
 .page-head--slim{padding-top:14px}
+.hero--section:not(:has(.hero__img + .hero__img)){height:clamp(170px,22vw,280px)}

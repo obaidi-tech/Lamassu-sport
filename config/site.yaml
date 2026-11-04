@@ -73,3 +73,46 @@ section_heroes:
         alt: كرة السلة على الكراسي المتحركة
       - commons: File:Women's wheelchair, London Marathon 2011.jpg
         alt: سباق السيدات على الكراسي المتحركة
+  # صورة ثابتة واحدة لكل قسم (خفيفة)
+  top5:
+    sub: أهم أخبار الدوريات الأوروبية الكبرى
+    images:
+      - unsplash: https://unsplash.com/photos/crowd-watching-a-sports-game-in-a-stadium-GKItuYGlOfk
+        unsplash_image: https://images.unsplash.com/photo-1777715330440-025d52e54435
+        photographer: T
+        alt: جمهور في ملعب ويمبلي
+  orgs:
+    sub: الاتحادات الدولية والقارية، والمنتخبات، والبطولات الكبرى
+    images:
+      - unsplash: https://unsplash.com/photos/a-couple-of-people-holding-a-flag-in-front-of-a-crowd-aRoQGKEMj4k
+        unsplash_image: https://images.unsplash.com/photo-1720904991040-8af04451e521
+        photographer: Omar Ramadan
+        alt: جماهير بأعلام منتخباتها
+  world:
+    sub: كرة القدم في بقية العالم، من آسيا والخليج إلى أفريقيا والأمريكتين
+    images:
+      - unsplash: https://unsplash.com/photos/white-green-and-blue-soccer-ball-on-green-grass-field-during-daytime-6NhmiPpy6y4
+        unsplash_image: https://images.unsplash.com/photo-1617144519956-bba853571334
+        photographer: Ben Hershey
+        alt: كرة قدم على العشب
+  other_sports:
+    sub: التنس وفورمولا 1 وألعاب القوى والراليات وبقية الرياضات
+    images:
+      - unsplash: https://unsplash.com/photos/an-aerial-view-of-a-tennis-court-surrounded-by-trees-LqusW4i447A
+        unsplash_image: https://images.unsplash.com/photo-1600614282844-a885427b0c15
+        photographer: Yente Van Eynde
+        alt: ملعب تنس من الأعلى
+  nba:
+    sub: أخبار الدوري الأمريكي للمحترفين وأرقامه
+    images:
+      - unsplash: https://unsplash.com/photos/basketball-court-hEQpoeUuJXA
+        unsplash_image: https://images.unsplash.com/photo-1559369064-c4d65141e408
+        photographer: Patrick Schöpflin
+        alt: صالة كرة سلة
+  opinion:
+    sub: مقالات رأي بأقلام كتّابها، وملخصات لأبرز ما تكتبه الصحافة العالمية
+    images:
+      - unsplash: https://unsplash.com/photos/a-man-reading-a-newspaper-kNOEeOPQxFs
+        unsplash_image: https://images.unsplash.com/photo-1660475464525-6ad2cd921e3e
+        photographer: roomshot
+        alt: رجل يقرأ صحيفة

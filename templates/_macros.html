@@ -49,7 +49,7 @@
 {% set src_label = (hero[0].credit.source or 'Unsplash') ~ ((' (' ~ hero[0].credit.license ~ ')') if hero[0].credit.license and hero[0].credit.source != 'Unsplash' else '') %}
 <section class="hero{% if heading %} hero--section{% endif %}" aria-label="{{ label or title }}">
   <div class="hero__slides" aria-hidden="true">
-    {% for h in hero %}<img class="hero__img{% if loop.first %} is-on{% endif %}" src="{{ root }}{{ h.src }}" alt="" width="{{ h.w }}" height="{{ h.h }}"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %} decoding="async" data-credit="{{ h.credit.artist }}" data-page="{{ h.credit.page }}" data-src="{{ h.credit.source or 'Unsplash' }}{% if h.credit.license and h.credit.source != 'Unsplash' %} ({{ h.credit.license }}){% endif %}" data-lic="{{ h.credit.license_url }}">{% endfor %}
+    {% for h in hero %}<img class="hero__img{% if loop.first %} is-on{% endif %}" src="{{ root }}{{ h.src }}"{% if h.src_small %} srcset="{{ root }}{{ h.src_small }} 760w, {{ root }}{{ h.src }} 1400w" sizes="100vw"{% endif %} alt="" width="{{ h.w }}" height="{{ h.h }}"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %} decoding="async" data-credit="{{ h.credit.artist }}" data-page="{{ h.credit.page }}" data-src="{{ h.credit.source or 'Unsplash' }}{% if h.credit.license and h.credit.source != 'Unsplash' %} ({{ h.credit.license }}){% endif %}" data-lic="{{ h.credit.license_url }}">{% endfor %}
   </div>
   <div class="hero__shade" aria-hidden="true"></div>
   <div class="wrap hero__text">
