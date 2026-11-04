@@ -320,8 +320,11 @@ class Builder:
         # the lead spot and "most covered" are for the day's news, not features (culture, studies)
         headline = [a for a in news if a["category"] not in FEATURE_CATS]
         recent = [a for a in headline if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
-        ranked = sorted(recent or headline[:30], key=lambda a: -a["score"])
-        lead, runners = (ranked[0] if ranked else None), ranked[1:5]
+        pool = recent or headline[:30]
+        # the lead is always the newest story; the runners are the rest ranked by coverage
+        lead = max(pool, key=lambda a: a["published_at"]) if pool else None
+        ranked = ([lead] if lead else []) + sorted([a for a in pool if a is not lead], key=lambda a: -a["score"])
+        runners = ranked[1:5]
         used = {a["id"] for a in ranked[:5]}
         own = [a for a in articles if a.get("own") and a["category"] == "opinion"]
         if lead is None and own:          # no news yet: our own newest article takes the lead spot
