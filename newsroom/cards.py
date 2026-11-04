@@ -137,6 +137,38 @@ def make_card(path: str, title: str, category: str, cat_name: str, site_name: st
     return path
 
 
+# the Lamassu wing (same four feathers as site_assets/brand/lamassu-mark.svg, in its 64-unit box)
+FEATHERS = [
+    [(52, 13), (52, 19), (22, 19), ("Q", (13, 19), (10, 11)), ("Q", (20, 13), (52, 13))],
+    [(52, 24), (52, 30), (20, 30), ("Q", (12, 30), (9, 23)), ("Q", (18, 24), (52, 24))],
+    [(52, 35), (52, 41), (24, 41), ("Q", (16, 41), (14, 35)), ("Q", (22, 35), (52, 35))],
+    [(52, 46), (52, 52), (31, 52), ("Q", (24, 52), (22, 46)), ("Q", (29, 46), (52, 46))],
+]
+
+
+def _feather_points(path, x0, y0, scale):
+    out, cur = [], None
+    for p in path:
+        if p[0] == "Q":
+            (cx, cy), (ex, ey) = p[1], p[2]
+            for i in range(1, 13):
+                t = i / 12
+                out.append(((1 - t) ** 2 * cur[0] + 2 * (1 - t) * t * cx + t * t * ex,
+                            (1 - t) ** 2 * cur[1] + 2 * (1 - t) * t * cy + t * t * ey))
+            cur = (ex, ey)
+        else:
+            out.append(p)
+            cur = p
+    return [(x0 + (x - 9) * scale, y0 + (y - 11) * scale) for x, y in out]
+
+
+def _draw_wing(draw, right_x, top_y, scale=4.0):
+    """The wing mark, its right edge at right_x."""
+    x0 = right_x - (52 - 9) * scale
+    for f in FEATHERS:
+        draw.polygon(_feather_points(f, x0, top_y, scale), fill=AMBER)
+
+
 def make_brand_card(path: str, name: str, tagline: str, tagline_en: str = ""):
     """The site's own share image (home page and any page without its own picture)."""
     img = Image.new("RGB", (W, H), INK)
@@ -149,6 +181,7 @@ def make_brand_card(path: str, name: str, tagline: str, tagline_en: str = ""):
     big = ImageFont.truetype(os.path.join(FONTS, "Cairo_800ExtraBold.ttf"), 150)
     nw = big.getlength(name)
     d.text((pad_r - nw, 150), name, font=big, fill=PAPER)
+    _draw_wing(d, pad_r - nw - 34, 205)                    # the wing, left of the name (as in the site header)
     y_rule = 360
     d.rectangle((pad_r - nw, y_rule, pad_r, y_rule + 4), fill=AMBER)
     _rtl(d, pad_r, y_rule + 30, tagline, _font("semi", 52), AMBER)
