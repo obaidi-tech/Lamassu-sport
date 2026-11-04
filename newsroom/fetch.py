@@ -18,6 +18,9 @@ def gnews_url(query: str, lang: str = "en") -> str:
     q = quote_plus(f"{query} when:1d")
     if lang == "ar":
         return f"https://news.google.com/rss/search?q={q}&hl=ar&gl=SA&ceid=SA:ar"
+    edition = {"es": "ES", "fr": "FR", "it": "IT", "de": "DE"}.get(lang)
+    if edition:
+        return f"https://news.google.com/rss/search?q={q}&hl={lang}&gl={edition}&ceid={edition}:{lang}"
     return f"https://news.google.com/rss/search?q={q}&hl=en-US&gl=US&ceid=US:en"
 
 

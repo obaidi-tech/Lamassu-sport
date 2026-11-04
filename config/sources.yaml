@@ -52,3 +52,14 @@ sources:
   # ── مقالات الرأي (يُنشر ملخص + اسم الكاتب + المصدر + الرابط فقط) ──
   - {id: guardian_fb_opinion, name: "The Guardian", kind: opinion, url: "https://www.theguardian.com/football/football-opinion/rss", lang: en, category: opinion}
   - {id: guardian_sport_blog, name: "The Guardian", kind: opinion, url: "https://www.theguardian.com/sport/blog/rss", lang: en, category: opinion}
+  # مصادر «أبرز ما كُتب» الدائمة: نلخص المقال بصياغتنا مع اسم كاتبه ورابطه، ولا ننشر النص أو الصور
+  - {id: athletic_analysis,   name: "The Athletic", kind: opinion, gnews: "site:nytimes.com athletic analysis football OR NBA", lang: en, category: opinion}
+  - {id: bbc_sport_analysis,  name: "BBC Sport",    kind: opinion, gnews: "site:bbc.com sport analysis OR column", lang: en, category: opinion}
+  - {id: espn_analysis,       name: "ESPN",         kind: opinion, gnews: "site:espn.com analysis OR column football OR NBA", lang: en, category: opinion}
+  - {id: nba_analysis,        name: "NBA.com",      kind: opinion, gnews: "site:nba.com takeaways OR analysis OR \"Starting 5\"", lang: en, category: opinion}
+  - {id: asiangame_opinion,   name: "The Asian Game", kind: opinion, url: "https://www.theasiangame.net/feed/", lang: en, category: opinion}
+  - {id: national_sport,      name: "The National", kind: opinion, gnews: "site:thenationalnews.com sport talking points OR analysis", lang: en, category: opinion}
+  - {id: marca_opinion,       name: "Marca",        kind: opinion, gnews: "site:marca.com opinión fútbol", lang: es, category: opinion}
+  - {id: lequipe_chronique,   name: "L'Équipe",     kind: opinion, gnews: "site:lequipe.fr chronique OR édito football", lang: fr, category: opinion}
+  - {id: gazzetta_editoriale, name: "La Gazzetta dello Sport", kind: opinion, gnews: "site:gazzetta.it editoriale OR commento calcio", lang: it, category: opinion}
+  - {id: kicker_kommentar,    name: "kicker",       kind: opinion, gnews: "site:kicker.de Kommentar Fußball", lang: de, category: opinion}

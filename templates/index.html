@@ -58,7 +58,7 @@
   <article class="lead" style="--cat: var(--c-{{ lead.category }})">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
     <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
-    {% if lead.own and lead.category == 'opinion' %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
+    {% if lead.roundup %}<p class="lead__byline">إعداد: {{ lead.outlet }}</p>{% elif lead.own and lead.category == 'opinion' %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
     <p class="lead__excerpt">{{ lead.excerpt }}</p>
     <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.own and lead.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </article>
@@ -86,7 +86,7 @@
   {% for a in opinions %}
     <article class="op{% if a.own %} op--own{% endif %}">
       <p class="op__author">{{ a.author or 'كاتب غير مذكور' }}</p>
-      <p class="op__outlet">{% if a.own %}مقال خاص{% else %}{{ a.outlet }}{% endif %}</p>
+      <p class="op__outlet">{% if a.roundup %}أبرز ما كُتب{% elif a.own %}مقال خاص{% else %}{{ a.outlet }}{% endif %}</p>
       <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
     </article>
   {% endfor %}

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% from "_macros.html" import meter, row, share %}
-{% set own_op = a.own and a.category == 'opinion' %}
+{% set own_op = a.own and a.category == 'opinion' and not a.roundup %}
 {% set own_news = a.own and a.category != 'opinion' %}
 {% set is_owner = site.owner_name and a.author == site.owner_name and site.linkedin %}
 {% set page_url = site.site_url | trim('/') ~ '/article/' ~ a.id ~ '.html' %}
@@ -36,6 +36,8 @@
   <h1>{{ a.title }}</h1>
   {% if own_op %}
   <p class="story__byline story__byline--own">بقلم {% if is_owner %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener me"><strong>{{ a.author }}</strong></a>{% else %}<strong>{{ a.author }}</strong>{% endif %}</p>
+  {% elif a.roundup %}
+  <p class="story__byline">إعداد: {{ site.site_name }}</p>
   {% elif a.category == 'opinion' %}
   <p class="story__byline">ملخص لمقال رأي بقلم <strong>{{ a.author or 'كاتب غير مذكور' }}</strong> في {{ a.outlet }}</p>
   {% else %}
@@ -56,8 +58,8 @@
     {% for p in a.body %}
       {%- if p.startswith('### ') %}<h3>{{ p[4:] }}</h3>
       {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
-      {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] }}</li>{% endfor %}</ul>
-      {%- else %}<p>{{ p }}</p>{% endif %}
+      {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] | links }}</li>{% endfor %}</ul>
+      {%- else %}<p>{{ p | links }}</p>{% endif %}
     {% endfor %}
   </div>
 
@@ -71,6 +73,13 @@
     <p class="author-box__links"><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">الصفحة الشخصية على لينكدإن</a>{% if site.email %} · <a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a>{% endif %}</p>
   </aside>
   {% endif %}
+  {% elif a.roundup %}
+  <aside class="sources" id="sources">
+    <h2>المقالات الأصلية</h2>
+    <p class="sources__note">ملخصات بصياغتنا، والآراء لأصحابها. النصوص الكاملة في مصادرها:</p>
+    <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
+      {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | replace('https://', '') | replace('www.', '') | truncate(70, True, '…') }}</span>{% endif %}</li>{% endfor %}</ul>
+  </aside>
   {% elif a.category == 'opinion' %}
   <aside class="sources" id="sources">
     <h2>المقال الأصلي</h2>
@@ -97,6 +106,7 @@
 
   <p class="story__note">
     {% if own_op %}مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="{% if site.email %}mailto:{{ site.email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}">راسلنا</a>.
+    {% elif a.roundup %}ملخصات بصياغتنا لمقالات رأي وتحليل تعبّر عن كتّابها، وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً في التلخيص؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.
     {% elif a.category == 'opinion' %}ملخص بصياغتنا لمقال رأي يعبّر عن كاتبه، وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً في التلخيص؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.
     {% elif own_news %}أُعدّ هذا الخبر من مصادره المذكورة وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.
     {% else %}أُعدّ هذا الخبر آلياً من المصادر المذكورة وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.{% endif %}

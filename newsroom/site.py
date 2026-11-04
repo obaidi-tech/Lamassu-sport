@@ -23,6 +23,16 @@ DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "awareness"]
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
+def _inline_links(text: str) -> Markup:
+    """Escape a paragraph, then turn **bold** into bold and [label](https://…) into an outbound link."""
+    import re
+    from markupsafe import escape as esc
+    out = str(esc(text))
+    out = re.sub(r"\*\*([^*]+)\*\*", r"<strong>\1</strong>", out)
+    return Markup(re.sub(r"\[([^\]]+)\]\((https?://[^\s)]+)\)",
+                         lambda m: f'<a href="{m.group(2)}" rel="nofollow noopener" target="_blank">{m.group(1)}</a>', out))
+
+
 def load_links(path: str) -> dict:
     """config/links.yaml → groups of competitions, each with (label, url) pairs. Missing file = no page content."""
     import yaml
@@ -72,6 +82,7 @@ class Builder:
         self.env.filters["news"] = news_label
         self.env.filters["covered"] = covered_label
         # JSON for <script> blocks: marked safe so quotes aren't HTML-escaped; "</" broken up so it can't close the tag
+        self.env.filters["links"] = _inline_links
         self.env.filters["tojson_ar"] = lambda o: Markup(json.dumps(o, ensure_ascii=False).replace("</", "<\\/"))
         self.now = datetime.now(timezone.utc)
         self.links = load_links(os.path.join(ROOT, "config", "links.yaml"))

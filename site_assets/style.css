@@ -284,3 +284,6 @@ body:has(.hero) .edition__line{display:none}
   .wordmark__mark .feather,.wordmark:hover .feather,.hero__img.is-on{animation:none}
   .hero__img{transition:none}
 }
+
+/* links written inside a story ([نص](رابط)) */
+.story__body a{color:var(--c-orgs);text-decoration:underline;text-underline-offset:.25em;font-family:var(--head);font-weight:600;font-size:.95em}

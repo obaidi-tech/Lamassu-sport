@@ -20,6 +20,9 @@ File format (edit it straight in GitHub's web editor):
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
     original_url: https://...      our own summary under the writer's name, with a link to the original
     original_title: العنوان الأصلي
+    roundup: true                  (optional, opinion only) a digest of pieces from other outlets ("أبرز ما كُتب"):
+                                   by-line "إعداد: Lamassu", each original listed under "المقالات الأصلية".
+    Inside the text, [نص](https://...) becomes a link.
     ---
 
     فقرة أولى…
@@ -187,7 +190,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "category": category,
             "sub": "own",
             "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
-            "n_sources": 0 if external else len(srcs),
+            "n_sources": 0 if (external or meta.get("roundup")) else len(srcs),
             "sources": srcs,
             "author": str(meta.get("author") or ("" if is_news else site_name)),
             "outlet": outlet if external else site_name,
@@ -200,6 +203,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "credit": credit,
             "cover_alt": str(meta.get("image_alt") or ""),
             "updates": updates,
+            "roundup": bool(meta.get("roundup")) and not is_news,
             "updated_at": updates[0]["at"] if updates else None,
         })
     cache.save()

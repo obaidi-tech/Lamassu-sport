@@ -24,7 +24,8 @@
   <div class="row__text">
     {% if show_cat %}<a class="cat-link" href="{{ root }}category/{{ a.category }}.html">{{ cats[a.category].name_ar }}</a>{% endif %}
     <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
-    {% if a.own and a.category == 'opinion' %}<p class="byline">بقلم {{ a.author }}</p>
+    {% if a.roundup %}<p class="byline">إعداد: {{ a.outlet }}</p>
+    {% elif a.own and a.category == 'opinion' %}<p class="byline">بقلم {{ a.author }}</p>
     {% elif a.category == 'opinion' and a.author %}<p class="byline">{{ a.author }} — {{ a.outlet }}</p>{% endif %}
     <p class="excerpt">{{ a.excerpt }}</p>
     <div class="meta"><time datetime="{{ a.published_at }}">{{ a.published_at | ago }}</time>{% if a.own and a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif a.n_sources %}{{ meter(a.n_sources, a.category, root ~ 'article/' ~ a.id ~ '.html#sources') }}{% endif %}</div>
