@@ -17,6 +17,9 @@ File format (edit it straight in GitHub's web editor):
       - الاتحاد الآسيوي | https://www.the-afc.com/...
     featured: true                (optional, for news) put it in the lead spot on the home page
     draft: true                   (optional; keeps the article off the site)
+    outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
+    original_url: https://...      our own summary under the writer's name, with a link to the original
+    original_title: العنوان الأصلي
     ---
 
     فقرة أولى…
@@ -168,6 +171,12 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
         category = str(meta.get("category") or "opinion")
         srcs = _sources(meta.get("sources"))
         is_news = category != "opinion"
+        # an opinion piece first published elsewhere: shown as our summary, under its writer's name, linked to the original
+        outlet = str(meta.get("outlet") or "").strip()
+        external = (not is_news) and bool(outlet) and outlet != site_name
+        if external:
+            link = str(meta.get("original_url") or "").strip()
+            srcs = [{"publisher": outlet, "title": "", "link": link if link.startswith("http") else "", "kind": "manual"}]
         excerpt = str(meta.get("excerpt") or (first[:180].rsplit(" ", 1)[0] + "…" if len(first) > 180 else first))
         out.append({
             "id": "p" + hashlib.sha1(name.encode()).hexdigest()[:9],
@@ -178,14 +187,14 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "category": category,
             "sub": "own",
             "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
-            "n_sources": len(srcs),
+            "n_sources": 0 if external else len(srcs),
             "sources": srcs,
             "author": str(meta.get("author") or ("" if is_news else site_name)),
-            "outlet": site_name,
-            "original_title": None,
+            "outlet": outlet if external else site_name,
+            "original_title": str(meta.get("original_title") or meta["title"]).strip() if external else None,
             "lang": "ar",
             "published_at": when.isoformat(),
-            "own": True,
+            "own": not external,
             "file": name,
             "cover_src": cover,
             "credit": credit,

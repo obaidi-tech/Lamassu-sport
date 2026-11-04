@@ -75,7 +75,7 @@
   <aside class="sources" id="sources">
     <h2>المقال الأصلي</h2>
     <p>هذا ملخص بصياغتنا. الرأي لصاحبه، والنص الكامل في مصدره:</p>
-    <p><a href="{{ a.sources[0].link }}" rel="nofollow noopener" target="_blank">{{ a.original_title }}</a> — {{ a.outlet }}</p>
+    <p>{% if a.sources and a.sources[0].link %}<a href="{{ a.sources[0].link }}" rel="nofollow noopener" target="_blank">{{ a.original_title }}</a>{% else %}«{{ a.original_title }}»{% endif %} — {{ a.outlet }}</p>
   </aside>
   {% elif a.sources %}
   <aside class="sources" id="sources">
@@ -97,6 +97,7 @@
 
   <p class="story__note">
     {% if own_op %}مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="{% if site.email %}mailto:{{ site.email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}">راسلنا</a>.
+    {% elif a.category == 'opinion' %}ملخص بصياغتنا لمقال رأي يعبّر عن كاتبه، وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً في التلخيص؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.
     {% elif own_news %}أُعدّ هذا الخبر من مصادره المذكورة وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.
     {% else %}أُعدّ هذا الخبر آلياً من المصادر المذكورة وفق <a href="{{ root }}about.html">سياسة الموقع</a>. لاحظت خطأً؟ <a href="{{ correct_link }}">أرسل طلب تصحيح</a>.{% endif %}
   </p>
