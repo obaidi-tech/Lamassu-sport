@@ -65,7 +65,6 @@ hero:
 # ترويسة متحركة لصفحة قسم (بنفس صيغة hero أعلاه). المفتاح = اسم القسم في categories.yaml
 section_heroes:
   para:
-    sub: إنجازات الرياضيين البارالمبيين وأرقامهم وقصصهم
     images:
       - commons: File:Wheelchair racers Los Angeles Marathon.jpg
         alt: متسابقون على الكراسي المتحركة
