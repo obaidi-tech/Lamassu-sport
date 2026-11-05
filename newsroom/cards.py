@@ -181,7 +181,12 @@ def make_brand_card(path: str, name: str, tagline: str, tagline_en: str = ""):
     big = ImageFont.truetype(os.path.join(FONTS, "Cairo_800ExtraBold.ttf"), 150)
     nw = big.getlength(name)
     d.text((pad_r - nw, 150), name, font=big, fill=PAPER)
-    _draw_wing(d, pad_r - nw - 34, 205)                    # the wing, left of the name (as in the site header)
+    wing_png = os.path.join(ROOT, "site_assets", "brand", "lamassu-wing.png")
+    if os.path.exists(wing_png):                           # the owner's wing (6 Nov 2026), left of the name
+        wing = Image.open(wing_png).convert("RGBA").resize((176, 176), Image.LANCZOS)
+        img.paste(wing, (int(pad_r - nw - 34 - 176), 170), wing)
+    else:
+        _draw_wing(d, pad_r - nw - 34, 205)
     y_rule = 360
     d.rectangle((pad_r - nw, y_rule, pad_r, y_rule + 4), fill=AMBER)
     _rtl(d, pad_r, y_rule + 30, tagline, _font("semi", 52), AMBER)
