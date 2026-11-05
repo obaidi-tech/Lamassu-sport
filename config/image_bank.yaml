@@ -17,7 +17,7 @@ entries:
     alt: ملعب كامب نو في برشلونة
   - id: atletico
     match: ["أتلتيكو مدريد", "Atlético Madrid", "Atletico Madrid"]
-    commons: File:Madrid - Estadio Wanda Metropolitano 25.jpg
+    commons: File:Estadio Metropolitano de Madrid.jpg
     alt: ملعب ميتروبوليتانو معقل أتلتيكو مدريد
   - id: man-united
     match: ["مانشستر يونايتد", "Manchester United", "أولد ترافورد"]
@@ -33,7 +33,7 @@ entries:
     alt: ملعب أنفيلد معقل ليفربول
   - id: arsenal
     match: ["أرسنال", "Arsenal"]
-    commons: File:Inside the Emirates Stadium - Panorama.jpg
+    commons: File:Emirates Stadium, Arsenal's home ground.jpg
     alt: ملعب الإمارات معقل أرسنال في لندن
   - id: chelsea
     match: ["تشيلسي", "Chelsea"]
@@ -102,7 +102,7 @@ entries:
     alt: استاد الملك فهد الدولي في الرياض
   - id: qatar
     match: ["الدوري القطري", "دوري نجوم قطر", "استاد لوسيل"]
-    commons: File:Lusail Iconic Stadium - 2022 FIFA WC.jpg
+    commons: File:Stade de Lusail match Brazil vs Serbia.jpg
     alt: استاد لوسيل في قطر
   - id: egypt
     match: ["الأهلي المصري", "الزمالك", "الدوري المصري"]
@@ -119,7 +119,7 @@ entries:
     commons: File:Interior view of the MetLife Stadium - ARG v CAN - 2024-07-09.jpg
     alt: ملعب ميتلايف الذي يستضيف نهائي كأس العالم 2026
 
-  # ── كرة السلة والتنس والفورمولا 1 ──
+  # ── كرة السلة والتنس ── (الفورمولا 1: لا صورة حرة عامة بلا سيارة سائق بعينه؛ تُغطى بمكتبة الصور التوضيحية)
   - id: warriors
     match: ["ووريورز", "Warriors"]
     commons: File:Chase Center - Warriors.jpg
@@ -140,7 +140,3 @@ entries:
     match: ["رولان غاروس", "بطولة فرنسا المفتوحة", "Roland Garros"]
     commons: File:Court Philippe Chatrier 001.jpg
     alt: ملعب فيليب شاترييه في رولان غاروس
-  - id: f1
-    match: ["فورمولا 1", "فورمولا وان", "Formula 1", "F1"]
-    commons: File:Singapore Grand Prix F1 Race (53185941249).jpg
-    alt: انطلاق سباق في بطولة العالم لفورمولا 1
