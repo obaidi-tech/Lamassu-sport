@@ -438,8 +438,9 @@ body:has(.hero) .edition__line{display:none}
 .brand-link:hover .lamassu-wing-logo .f3{animation:wingBeat .6s ease-in-out infinite alternate .08s}
 .brand-link:hover .lamassu-wing-logo .f2{animation:wingBeat .6s ease-in-out infinite alternate .16s}
 .brand-link:hover .lamassu-wing-logo .f1{animation:wingBeat .6s ease-in-out infinite alternate .24s}
-.wing-group{animation:gentleHover 4s ease-in-out infinite alternate;transform-origin:15px 85px}
+.brand-link:hover .lamassu-wing-logo .f5{animation:wingBeat .6s ease-in-out infinite alternate .32s}
+.wing-group{animation:gentleHover 4s ease-in-out infinite alternate;transform-origin:22px 64px}
 @keyframes gentleHover{0%{transform:rotate(0)}100%{transform:rotate(2deg)}}
-@keyframes wingBeat{0%{transform:rotate(0) scale(1);transform-origin:15px 85px}
-  100%{transform:rotate(-4deg) scale(1.02);transform-origin:15px 85px;filter:brightness(1.1)}}
+@keyframes wingBeat{0%{transform:rotate(0) scale(1);transform-origin:22px 64px}
+  100%{transform:rotate(-4deg) scale(1.02);transform-origin:22px 64px;filter:brightness(1.1)}}
 @media (prefers-reduced-motion:reduce){.wing-group,.brand-link:hover .lamassu-wing-logo .feather{animation:none}.brand-link:hover .lamassu-wing-logo{transform:none}}
