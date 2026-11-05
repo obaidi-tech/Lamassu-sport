@@ -45,5 +45,9 @@ check("getty: anything else is refused", _getty("<script>alert(1)</script>") == 
 from newsroom.posts import _lenient_meta  # noqa: E402
 m = _lenient_meta("title: عنوان: مع نقطتين\ngetty: |\n  " + code + "\nrelated:\n  - a.md")
 check("getty: works even when the header has a ':' in a value", _getty(m.get("getty")).get("item") == "2201234567" and m.get("related") == ["a.md"])
+from datetime import date  # noqa: E402
+from newsroom.live import _match_id  # noqa: E402
+check("live: match number read from Sofascore's embed code", _match_id('<iframe src="https://widgets.sofascore.com/en/embed/liveResult?id=16363919&widgetTheme=light">') == "16363919")
+check("live: anything else is refused", _match_id("<script>alert(1)</script>") == "" and _match_id("javascript:1") == "")
 print(f"\n{fails} failed" if fails else "\nall passed")
 sys.exit(1 if fails else 0)

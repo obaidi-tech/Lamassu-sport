@@ -7,7 +7,7 @@ name: review
 on:
   push:
     branches: [main]
-    paths: ["content/pending/**", "content/posts/**", "content/events.yaml", "templates/**", "site_assets/**", "config/**", "newsroom/**"]
+    paths: ["content/pending/**", "content/posts/**", "content/events.yaml", "content/live.yaml", "templates/**", "site_assets/**", "config/**", "newsroom/**"]
   workflow_dispatch: {}
 
 permissions:

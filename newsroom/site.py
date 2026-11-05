@@ -11,6 +11,7 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 from markupsafe import Markup
 
 from .events import upcoming
+from .live import load_live
 from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -369,6 +370,7 @@ class Builder:
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
                      edition_day=self.day_label(self.now), coming=coming[:6], **common,
+                     live=load_live(os.path.join(ROOT, "content", "live.yaml"), self.now.astimezone(ZoneInfo("Asia/Riyadh")).date()),
                      # the lead story's own photo fills the banner; the rotating photos are the fallback
                      lead_hero=None if (lead or {}).get("getty") else self._lead_hero(lead),
                      hero=[] if ((lead or {}).get("getty") or self._lead_hero(lead)) else self._hero(hero))

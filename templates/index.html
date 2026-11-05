@@ -65,6 +65,18 @@
 <section class="empty"><p>لا أخبار منشورة بعد. سيظهر أول عدد قريباً، وتجد طريقة اختيارنا للأخبار في <a href="{{ root }}about.html">سياسة الموقع</a>.</p></section>
 {% endif %}
 
+{% if live %}
+<section class="live" aria-labelledby="live-h">
+  <div class="section-head"><h2 id="live-h"><span class="live__dot" aria-hidden="true"></span>مباريات مباشرة</h2></div>
+  <div class="live__grid">{% for m in live %}
+    <figure class="live__item">
+      <iframe src="{{ m.src }}" title="{{ m.title or 'نتيجة مباشرة' }}" loading="lazy" scrolling="no" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+      <figcaption><a href="{{ m.page }}" target="_blank" rel="noopener noreferrer">{{ m.title ~ ' · ' if m.title }}النتيجة مباشرة من Sofascore</a></figcaption>
+    </figure>{% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if coming %}
 <section class="events" aria-labelledby="ev-h">
   <div class="section-head"><h2 id="ev-h">أحداث قادمة</h2><a href="{{ root }}events.html">كل الأحداث</a></div>
