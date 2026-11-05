@@ -106,7 +106,26 @@
   "Estadio Santiago Bernabeu exterior": "File:Estadio Santiago Bernabeu - vista exterior.jpg",
   "Fenerbahçe team photo": "File:Fenerbahçe 1910-II Team.jpg",
   "Fenerbahçe players 2025 match": "File:Fenerbahçe maç başlamadan önce (2021-22 Süper Lig Sezonu, Aralik 2021) (cropped).png",
-  "Şükrü Saracoğlu Stadium Fenerbahçe": "File:Kurbağalıdere and Fenerbahçe Şükrü Saraçoğlu Stadium.jpg"
+  "Şükrü Saracoğlu Stadium Fenerbahçe": "File:Kurbağalıdere and Fenerbahçe Şükrü Saraçoğlu Stadium.jpg",
+  "Anfield stadium interior panorama": "File:Panorama of Anfield with new main stand (29676137824).jpg",
+  "Emirates Stadium interior Arsenal": "File:Emirates Stadium Interior June 2006 3.jpg",
+  "Tottenham Hotspur Stadium interior": "File:Tottenham Hotspur v Cardiff City - geograph.org.uk - 5939467.jpg",
+  "Allianz Arena Munich exterior": "File:München — Allianz Arena — UV-Lampen.JPG",
+  "Westfalenstadion Signal Iduna Park interior": "File:BVB Fan Welt 05.jpg",
+  "Parc des Princes stadium interior": "File:Parc des Princes vu depuis la sortie des vestiaires.jpg",
+  "San Siro stadium Milan interior": "File:San siro museum.jpg",
+  "Stadio Diego Armando Maradona Naples": "File:Stadio Diego Armando Maradona (3).jpg",
+  "Kingdom Arena Riyadh stadium": "File:Kingdom Arena.jpg",
+  "Al-Awwal Park stadium Riyadh": "File:Entire King Saud University Stadium.jpg",
+  "King Abdullah Sports City stadium Jeddah": "File:Jawhara Stadium.jpg",
+  "King Fahd International Stadium Riyadh": "File:King Fahd International Stadium 2020s.jpg",
+  "Cairo International Stadium": "File:Cairo International Stadium-gate.JPG",
+  "Prince Moulay Abdellah Stadium Rabat": "File:Moulay Abdellah Stadium.jpg",
+  "Chase Center San Francisco arena interior": "File:Chase Arena May 2019 - 2.jpg",
+  "Crypto.com Arena Los Angeles interior basketball": "File:Lakers banners & retired jerseys 2022.jpg",
+  "Wimbledon Centre Court": "File:Wimbledon Centre Court (52205402762).jpg",
+  "Court Philippe-Chatrier Roland Garros": "File:Novak Djokovic - Roland-Garros - 28.05.2024 croped.jpg",
+  "Formula One race start grid": "File:Gábor Wéber at Hungaroring, Mogyoród.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -291,5 +310,149 @@
   "license": "CC0",
   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "local": "674317da430b.jpg"
+ },
+ "File:Panorama of Anfield with new main stand (29676137824).jpg": {
+  "title": "File:Panorama of Anfield with new main stand (29676137824).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Panorama_of_Anfield_with_new_main_stand_(29676137824).jpg",
+  "artist": "Ruaraidh Gillies",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "83b6532ea5a3.jpg"
+ },
+ "File:Emirates Stadium Interior June 2006 3.jpg": {
+  "title": "File:Emirates Stadium Interior June 2006 3.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Emirates_Stadium_Interior_June_2006_3.jpg",
+  "artist": "Murphyweb",
+  "license": "CC BY-SA 3.0",
+  "license_url": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "local": "36976b4a64af.jpg"
+ },
+ "File:Tottenham Hotspur v Cardiff City - geograph.org.uk - 5939467.jpg": {
+  "title": "File:Tottenham Hotspur v Cardiff City - geograph.org.uk - 5939467.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Tottenham_Hotspur_v_Cardiff_City_-_geograph.org.uk_-_5939467.jpg",
+  "artist": "Philip Halling",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "af6010f9edd7.jpg"
+ },
+ "File:München — Allianz Arena — UV-Lampen.JPG": {
+  "title": "File:München — Allianz Arena — UV-Lampen.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:M%C3%BCnchen_%E2%80%94_Allianz_Arena_%E2%80%94_UV-Lampen.JPG",
+  "artist": "User:Mattes",
+  "license": "CC BY 2.0 de",
+  "license_url": "https://creativecommons.org/licenses/by/2.0/de/deed.en",
+  "local": "bc4a69a94fdd.jpg"
+ },
+ "File:BVB Fan Welt 05.jpg": {
+  "title": "File:BVB Fan Welt 05.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:BVB_Fan_Welt_05.jpg",
+  "artist": "Joehawkins",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "39b29ecd9b09.jpg"
+ },
+ "File:Parc des Princes vu depuis la sortie des vestiaires.jpg": {
+  "title": "File:Parc des Princes vu depuis la sortie des vestiaires.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Parc_des_Princes_vu_depuis_la_sortie_des_vestiaires.jpg",
+  "artist": "Like tears in rain",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "ca0ed66656f1.jpg"
+ },
+ "File:San siro museum.jpg": {
+  "title": "File:San siro museum.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:San_siro_museum.jpg",
+  "artist": "Vasil Evlogiev",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "0ff8725ecd5b.jpg"
+ },
+ "File:Stadio Diego Armando Maradona (3).jpg": {
+  "title": "File:Stadio Diego Armando Maradona (3).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Stadio_Diego_Armando_Maradona_(3).jpg",
+  "artist": "Joris",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "5bf731f54e4a.jpg"
+ },
+ "File:Kingdom Arena.jpg": {
+  "title": "File:Kingdom Arena.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Kingdom_Arena.jpg",
+  "artist": "بندر الساري",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "local": "84c5563a6c55.jpg"
+ },
+ "File:Entire King Saud University Stadium.jpg": {
+  "title": "File:Entire King Saud University Stadium.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Entire_King_Saud_University_Stadium.jpg",
+  "artist": "Alina.chiorean",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "055ea27f8518.jpg"
+ },
+ "File:Jawhara Stadium.jpg": {
+  "title": "File:Jawhara Stadium.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Jawhara_Stadium.jpg",
+  "artist": "saudipics",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "dfcf33979ee7.jpg"
+ },
+ "File:Cairo International Stadium-gate.JPG": {
+  "title": "File:Cairo International Stadium-gate.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Cairo_International_Stadium-gate.JPG",
+  "artist": "Faris knight",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "local": "709048f8bd85.jpg"
+ },
+ "File:Moulay Abdellah Stadium.jpg": {
+  "title": "File:Moulay Abdellah Stadium.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Moulay_Abdellah_Stadium.jpg",
+  "artist": "Reda benkhadra",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "4e47a21ed08e.jpg"
+ },
+ "File:Chase Arena May 2019 - 2.jpg": {
+  "title": "File:Chase Arena May 2019 - 2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Chase_Arena_May_2019_-_2.jpg",
+  "artist": "Cullen328",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "local": "16ba6636f396.jpg"
+ },
+ "File:Lakers banners & retired jerseys 2022.jpg": {
+  "title": "File:Lakers banners & retired jerseys 2022.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Lakers_banners_%26_retired_jerseys_2022.jpg",
+  "artist": "Troutfarm27",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "b79562738487.jpg"
+ },
+ "File:Wimbledon Centre Court (52205402762).jpg": {
+  "title": "File:Wimbledon Centre Court (52205402762).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Wimbledon_Centre_Court_(52205402762).jpg",
+  "artist": "Peter Menzel",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "3b125bbe6267.jpg"
+ },
+ "File:Novak Djokovic - Roland-Garros - 28.05.2024 croped.jpg": {
+  "title": "File:Novak Djokovic - Roland-Garros - 28.05.2024 croped.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Novak_Djokovic_-_Roland-Garros_-_28.05.2024_croped.jpg",
+  "artist": "Kuberzog",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "local": "53f8a06b6835.jpg"
+ },
+ "File:Gábor Wéber at Hungaroring, Mogyoród.jpg": {
+  "title": "File:Gábor Wéber at Hungaroring, Mogyoród.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:G%C3%A1bor_W%C3%A9ber_at_Hungaroring,_Mogyor%C3%B3d.jpg",
+  "artist": "Gymate",
+  "license": "CC0",
+  "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "local": "1ae9a6cf0fc2.jpg"
  }
 }
