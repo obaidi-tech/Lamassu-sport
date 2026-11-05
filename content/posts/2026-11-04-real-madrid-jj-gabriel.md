@@ -11,6 +11,8 @@ image: images/transfer-tunnel-ai.jpg
 image_credit: Lamassu
 image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل اللاعب
 image_alt: لاعب ناشئ يمشي من نفق الملعب نحو أرضيته
+getty: |
+  <a id='CcFQ5ZngQXN2AQhJMdMRmA' class='gie-single' href='https://www.gettyimages.com/detail/2292852871' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'CcFQ5ZngQXN2AQhJMdMRmA',sig:'W6LkgOg3MgJvBRVl4HmIECmJ-jKlacbd8GrcAfz9wrU=',w:'594px',h:'396px',items:'2292852871',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-04-nadal-real-madrid-board.md
 ---
