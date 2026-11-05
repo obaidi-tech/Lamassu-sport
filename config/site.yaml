@@ -7,6 +7,7 @@ description: "Lamassu: أهم أخبار الرياضة العالمية يوم�
 site_url: "https://obaidi-tech.github.io/Lamassu-sport"
 contact_email: ""                                       # بريد التواصل وطلبات التصحيح (يظهر في صفحة "تواصل معنا")
 owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته
+goatcounter: "lamassu"   # عدّاد الزيارات (بلا كوكيز): اللوحة على https://lamassu.goatcounter.com
 linkedin_url: ""   # أُوقف مؤقتاً 5 نوفمبر 2026: تُرتَّب وسائل التواصل لاحقاً (كان: https://www.linkedin.com/in/al0baidi)
 contribute_form_url: ""          # رابط نموذج Google «شارك معنا». عند وضعه تظهر صفحة «شارك معنا» ورابطها تلقائياً
 google_site_verification: "XKPOWis_ohj3JA_Ij46o99p0IODwohHvgIWkCBJeIfA"                            # رمز Google Search Console (من وسم HTML)
