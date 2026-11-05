@@ -428,3 +428,18 @@ body:has(.hero) .edition__line{display:none}
 .live__item iframe{display:block;width:100%;height:460px;border:0}
 .live__item figcaption{font-size:.8rem;padding:6px 12px 8px;color:var(--ink-2)}
 .live__item figcaption a{color:inherit}
+
+/* ── «الجناح الحركي» (The Dynamic Wing): the owner's mark and motion, 6 Nov 2026 ── */
+.wordmark__mark--wing .feather{animation:none}             /* replaces the old feathers' unfold/lift */
+.lamassu-wing-logo{width:42px;height:42px;min-width:42px;display:block;transition:transform .3s ease}
+.lamassu-wing-logo .feather,.wing-group{transform-box:view-box}   /* origins below are in the 100×100 drawing */
+.brand-link:hover .lamassu-wing-logo{transform:translateY(-2px) scale(1.05)}
+.brand-link:hover .lamassu-wing-logo .f4{animation:wingBeat .6s ease-in-out infinite alternate}
+.brand-link:hover .lamassu-wing-logo .f3{animation:wingBeat .6s ease-in-out infinite alternate .08s}
+.brand-link:hover .lamassu-wing-logo .f2{animation:wingBeat .6s ease-in-out infinite alternate .16s}
+.brand-link:hover .lamassu-wing-logo .f1{animation:wingBeat .6s ease-in-out infinite alternate .24s}
+.wing-group{animation:gentleHover 4s ease-in-out infinite alternate;transform-origin:15px 85px}
+@keyframes gentleHover{0%{transform:rotate(0)}100%{transform:rotate(2deg)}}
+@keyframes wingBeat{0%{transform:rotate(0) scale(1);transform-origin:15px 85px}
+  100%{transform:rotate(-4deg) scale(1.02);transform-origin:15px 85px;filter:brightness(1.1)}}
+@media (prefers-reduced-motion:reduce){.wing-group,.brand-link:hover .lamassu-wing-logo .feather{animation:none}.brand-link:hover .lamassu-wing-logo{transform:none}}
