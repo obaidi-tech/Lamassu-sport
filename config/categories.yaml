@@ -21,7 +21,7 @@ categories:
     min_score: 2.5
     max_per_sub: 2          # sub = المنظمة
   top5:
-    name_ar: "الدوريات الكبرى"
+    name_ar: "كرة القدم"
     quota: 12
     min_score: 3
     max_per_sub: 3          # sub = الدوري
@@ -45,8 +45,8 @@ categories:
     quota: 3
     min_score: 2
     max_per_sub: 2
-  world:
-    name_ar: "كرة قدم"
+  world:                    # يُعرض ضمن قسم «كرة القدم» (top5) في الموقع
+    name_ar: "كرة القدم"
     quota: 10
     min_score: 3
     max_per_sub: 2          # sub = الدولة

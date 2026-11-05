@@ -20,13 +20,15 @@ MONTHS = {
     "levant": ["كانون الثاني", "شباط", "آذار", "نيسان", "أيار", "حزيران", "تموز", "آب", "أيلول",
                "تشرين الأول", "تشرين الثاني", "كانون الأول"],
 }
-DISPLAY_ORDER = ["top5", "orgs", "world", "other_sports", "nba", "para", "culture", "awareness"]
+DISPLAY_ORDER = ["top5", "orgs", "other_sports", "nba", "para", "culture", "awareness"]
+MERGED = {"world": "top5"}   # one football section: the rest-of-the-world football shows under top5 «كرة القدم»
 SEARCH_ALIASES = {        # extra words a reader may type for a section
     "para": "بارالمبي ذوي الإعاقة أصحاب الهمم paralympic",
     "culture": "ثقافة تاريخ فن",
     "nba": "كرة السلة nba",
     "orgs": "فيفا الاتحاد الدولي الاتحاد الآسيوي المنتخبات",
     "opinion": "رأي مقال",
+    "top5": "كرة قدم الدوريات الكبرى الدوري الإنجليزي الإسباني الإيطالي",
 }
 FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
@@ -305,6 +307,8 @@ class Builder:
 
     def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):
         os.makedirs(self.out, exist_ok=True)
+        for a in articles:                       # merged sections: old category keys show under the kept one
+            a["category"] = MERGED.get(a["category"], a["category"])
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
             shutil.copytree(os.path.join(ROOT, "site_root"), self.out, dirs_exist_ok=True)
@@ -372,6 +376,12 @@ class Builder:
             self._render("list.html", f"category/{cat}.html", 1, title=self.cats[cat]["name_ar"],
                          items=items, cat=cat, section_hero={"images": imgs, "sub": sh.get("sub", "")} if imgs else None,
                          **common)
+        for old, new in MERGED.items():          # old section links keep working
+            os.makedirs(os.path.join(self.out, "category"), exist_ok=True)
+            with open(os.path.join(self.out, "category", f"{old}.html"), "w", encoding="utf-8") as f:
+                f.write(f'<!doctype html><meta charset="utf-8"><title>{self.cats[new]["name_ar"]}</title>'
+                        f'<link rel="canonical" href="{new}.html"><meta http-equiv="refresh" content="0; url={new}.html">'
+                        f'<a href="{new}.html">{self.cats[new]["name_ar"]}</a>')
 
         by_day = {}
         for a in articles:

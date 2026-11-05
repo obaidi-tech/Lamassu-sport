@@ -74,7 +74,7 @@ section_heroes:
         alt: سباق السيدات على الكراسي المتحركة
   # صورة ثابتة واحدة لكل قسم (خفيفة)
   top5:
-    sub: أهم أخبار الدوريات الأوروبية الكبرى
+    sub: الدوريات الأوروبية الكبرى وكرة القدم حول العالم
     images:
       - unsplash: https://unsplash.com/photos/crowd-watching-a-sports-game-in-a-stadium-GKItuYGlOfk
         unsplash_image: https://images.unsplash.com/photo-1777715330440-025d52e54435
@@ -87,13 +87,6 @@ section_heroes:
         credit: Lamassu
         note: صورة توضيحية مولّدة بالذكاء الاصطناعي
         alt: قاعة اجتماعات بأعلام دول من قارات مختلفة أمام كرة أرضية
-  world:
-    sub: كرة القدم في بقية العالم، من آسيا والخليج إلى أفريقيا والأمريكتين
-    images:
-      - unsplash: https://unsplash.com/photos/white-and-black-soccer-ball-on-green-grass-adcyN9XhzwY
-        unsplash_image: https://images.unsplash.com/photo-1520804588595-ac2328f38c4a
-        photographer: Wuilmar Matias-Morales
-        alt: كرة قدم على العشب
   other_sports:
     sub: التنس وفورمولا 1 وألعاب القوى والراليات وبقية الرياضات
     images:
