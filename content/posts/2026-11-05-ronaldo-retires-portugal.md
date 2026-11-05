@@ -9,6 +9,7 @@ sources:
   - سي إن إن | https://www.cnn.com/2026/11/05/sport/cristiano-ronaldo-retires-portuguese-national-team
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/49266866/cristiano-ronaldo-retires-international-football
 commons: File:Portugal national football team World Cup 2018.jpg
+image_crop: 0 0 36 0
 image_alt: لاعبو منتخب البرتغال ومنهم كريستيانو رونالدو قبل مباراة في كأس العالم 2018
 ---
 
