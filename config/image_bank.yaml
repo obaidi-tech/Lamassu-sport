@@ -1,0 +1,146 @@
+# بنك الصور: صور حرة، عريضة وعالية الدقة، لأكثر الأندية والملاعب والبطولات ظهوراً في أخبارنا.
+# الخبر الذي ليست له صورة يأخذ صورة الاسم الذي يظهر أولاً في عنوانه، ثم في مقتطفه.
+# match: أسماء كاملة فقط (لا «سيتي» ولا «يونايتد» وحدهما)، و not: عبارات تمنع المطابقة.
+# commons: اسم ملف محدد، أو search:كلمات (يختار البحث أفضل صورة عريضة، ويُحفظ الاختيار).
+# كل صورة هنا راجعها المحرر بالعين قبل اعتمادها (انظر docs/image-bank.jpg).
+
+entries:
+  # ── أندية أوروبا ──
+  - id: real-madrid
+    match: ["ريال مدريد", "Real Madrid", "برنابيو"]
+    not: ["ريال مدريد كاستيا"]
+    commons: File:Estadio Santiago Bernabeu - vista exterior.jpg
+    alt: ملعب سانتياغو برنابيو معقل نادي ريال مدريد
+  - id: barcelona
+    match: ["برشلونة", "Barcelona", "كامب نو"]
+    commons: File:Camp_Nou_FC_Barcelona.JPG
+    alt: ملعب كامب نو في برشلونة
+  - id: atletico
+    match: ["أتلتيكو مدريد", "Atlético Madrid", "Atletico Madrid"]
+    commons: search:Metropolitano stadium Madrid interior
+    alt: ملعب ميتروبوليتانو معقل أتلتيكو مدريد
+  - id: man-united
+    match: ["مانشستر يونايتد", "Manchester United", "أولد ترافورد"]
+    commons: search:Old Trafford stadium interior panorama
+    alt: ملعب أولد ترافورد معقل مانشستر يونايتد
+  - id: man-city
+    match: ["مانشستر سيتي", "Manchester City"]
+    commons: search:Etihad Stadium Manchester interior
+    alt: ملعب الاتحاد معقل مانشستر سيتي
+  - id: liverpool
+    match: ["ليفربول", "Liverpool", "أنفيلد"]
+    commons: search:Anfield stadium interior panorama
+    alt: ملعب أنفيلد معقل ليفربول
+  - id: arsenal
+    match: ["أرسنال", "Arsenal"]
+    commons: search:Emirates Stadium interior Arsenal
+    alt: ملعب الإمارات معقل أرسنال في لندن
+  - id: chelsea
+    match: ["تشيلسي", "Chelsea"]
+    commons: search:Stamford Bridge stadium interior
+    alt: ملعب ستامفورد بريدج معقل تشيلسي
+  - id: tottenham
+    match: ["توتنهام", "Tottenham"]
+    commons: search:Tottenham Hotspur Stadium interior
+    alt: ملعب توتنهام هوتسبير في لندن
+  - id: bayern
+    match: ["بايرن ميونيخ", "بايرن ميونخ", "بايرن", "Bayern"]
+    commons: search:Allianz Arena Munich exterior
+    alt: ملعب أليانز أرينا معقل بايرن ميونيخ
+  - id: dortmund
+    match: ["دورتموند", "Dortmund"]
+    commons: search:Westfalenstadion Signal Iduna Park interior
+    alt: ملعب سيغنال إيدونا بارك معقل بوروسيا دورتموند
+  - id: psg
+    match: ["باريس سان جيرمان", "سان جيرمان", "Paris Saint-Germain", "PSG"]
+    commons: search:Parc des Princes stadium interior
+    alt: ملعب بارك دي برانس معقل باريس سان جيرمان
+  - id: juventus
+    match: ["يوفنتوس", "Juventus"]
+    commons: search:Allianz Stadium Turin Juventus interior
+    alt: ملعب يوفنتوس في تورينو
+  - id: san-siro
+    match: ["إنتر ميلان", "إنتر", "ميلان", "Inter Milan", "AC Milan", "سان سيرو"]
+    not: ["إنتر ميامي"]
+    commons: search:San Siro stadium Milan interior
+    alt: ملعب سان سيرو في ميلانو
+  - id: napoli
+    match: ["نابولي", "Napoli"]
+    commons: search:Stadio Diego Armando Maradona Naples
+    alt: ملعب دييغو أرماندو مارادونا في نابولي
+  - id: como
+    match: ["كومو", "Como 1907"]
+    commons: File:The Stadio Sinigaglia with Lago di Como in the background during a Serie B match between Como and Reggina in 1914 (2022).jpg
+    alt: ملعب سينيغاليا في مدينة كومو وخلفه بحيرة كومو
+  - id: fenerbahce
+    match: ["فنربهتشه", "فنربخشة", "Fenerbahçe", "Fenerbahce"]
+    commons: File:Fenerbahçe Stadium 20200925.jpg
+    alt: ملعب شكري صاراج أوغلو معقل فنربهتشه في إسطنبول
+  - id: galatasaray
+    match: ["غلطة سراي", "Galatasaray"]
+    commons: search:Rams Park Galatasaray stadium interior
+    alt: ملعب غلطة سراي في إسطنبول
+
+  # ── الخليج والعالم العربي ──
+  - id: al-hilal
+    match: ["الهلال السعودي", "الهلال", "Al-Hilal", "Al Hilal"]
+    not: ["الهلال الأحمر", "الهلال السوداني"]
+    commons: search:Kingdom Arena Riyadh stadium
+    alt: ملعب المملكة أرينا في الرياض
+  - id: al-nassr
+    match: ["النصر السعودي", "النصر", "Al-Nassr", "Al Nassr"]
+    commons: search:Al-Awwal Park stadium Riyadh
+    alt: ملعب الأول بارك في الرياض
+  - id: jeddah
+    match: ["اتحاد جدة", "الاتحاد السعودي", "الأهلي السعودي", "Al-Ittihad", "Al-Ahli"]
+    not: ["الاتحاد السعودي لكرة القدم"]
+    commons: search:King Abdullah Sports City stadium Jeddah
+    alt: مدينة الملك عبدالله الرياضية في جدة
+  - id: saudi-league
+    match: ["دوري روشن", "الدوري السعودي", "Saudi Pro League"]
+    commons: search:King Fahd International Stadium Riyadh
+    alt: استاد الملك فهد الدولي في الرياض
+  - id: qatar
+    match: ["الدوري القطري", "دوري نجوم قطر", "استاد لوسيل"]
+    commons: search:Lusail Stadium Qatar interior
+    alt: استاد لوسيل في قطر
+  - id: egypt
+    match: ["الأهلي المصري", "الزمالك", "الدوري المصري"]
+    commons: search:Cairo International Stadium
+    alt: استاد القاهرة الدولي
+  - id: morocco
+    match: ["المنتخب المغربي", "منتخب المغرب", "أسود الأطلس"]
+    commons: search:Prince Moulay Abdellah Stadium Rabat
+    alt: ملعب الأمير مولاي عبد الله في الرباط
+
+  # ── بطولات ──
+  - id: world-cup-2026
+    match: ["كأس العالم 2026", "مونديال 2026"]
+    commons: search:MetLife Stadium interior football
+    alt: ملعب ميتلايف الذي يستضيف نهائي كأس العالم 2026
+
+  # ── كرة السلة والتنس والفورمولا 1 ──
+  - id: warriors
+    match: ["ووريورز", "Warriors"]
+    commons: search:Chase Center San Francisco arena interior
+    alt: صالة تشيس سنتر معقل غولدن ستيت ووريورز
+  - id: lakers
+    match: ["ليكرز", "Lakers"]
+    commons: search:Crypto.com Arena Los Angeles interior basketball
+    alt: صالة كريبتو.كوم أرينا معقل لوس أنجلوس ليكرز
+  - id: nba
+    match: ["دوري كرة السلة الأمريكي", "NBA"]
+    commons: File:Partido NBA -i---i- (32286995525).jpg
+    alt: مباراة في دوري كرة السلة الأمريكي للمحترفين
+  - id: wimbledon
+    match: ["ويمبلدون", "Wimbledon"]
+    commons: search:Wimbledon Centre Court
+    alt: الملعب الرئيسي في بطولة ويمبلدون
+  - id: roland-garros
+    match: ["رولان غاروس", "بطولة فرنسا المفتوحة", "Roland Garros"]
+    commons: search:Court Philippe-Chatrier Roland Garros
+    alt: ملعب فيليب شاترييه في رولان غاروس
+  - id: f1
+    match: ["فورمولا 1", "فورمولا وان", "Formula 1", "F1"]
+    commons: search:Formula One race start grid
+    alt: انطلاق سباق في بطولة العالم لفورمولا 1

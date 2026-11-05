@@ -34,7 +34,11 @@ File format (edit it straight in GitHub's web editor):
       - 2026-11-04-best-reads-01.md
     Inside the text, [نص](https://...) becomes a link and **نص** becomes bold.
     A picture inside the text, on its own line:  ![التعليق](commons:File:اسم_الملف.jpg)
-    (or ![التعليق](commons:search:كلمات البحث) to take the first matching free picture on Commons).
+    (or ![التعليق](commons:search:كلمات البحث) to take the best wide, recent free picture on Commons;
+     commons:search-old:كلمات also accepts historic pictures, for history and culture pieces).
+    bank: real-madrid             (optional; a checked photo from config/image_bank.yaml. A news post with no picture
+                                   gets the bank photo of the first club/venue named in its title automatically;
+                                   no_image: true turns that off)
     ---
 
     فقرة أولى…
@@ -53,6 +57,7 @@ from zoneinfo import ZoneInfo
 import yaml
 
 from .commons import CommonsCache, RemoteImages
+from .bank import load_bank, pick as bank_pick
 
 FRONT = re.compile(r"^﻿?---\s*\n(.*?)\n---\s*\n(.*)$", re.S)
 
@@ -134,6 +139,10 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
     zone = ZoneInfo(tz)
     out = []
     cache = commons or CommonsCache(posts_dir)
+    bank = load_bank(os.path.join(posts_dir, "..", "..", "config", "image_bank.yaml"))
+    if bank and os.environ.get("CI"):          # on GitHub: fetch every bank photo once, so the editor can review them
+        for e in bank:
+            cache.resolve(e["commons"], log=lambda *_: None)
     remote = RemoteImages(posts_dir)
     for path in sorted(glob.glob(os.path.join(posts_dir, "*.md"))):
         name = os.path.basename(path)
@@ -221,6 +230,12 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             link = str(meta.get("original_url") or "").strip()
             srcs = [{"publisher": outlet, "title": "", "link": link if link.startswith("http") else "", "kind": "manual"}]
         excerpt = str(meta.get("excerpt") or (first[:180].rsplit(" ", 1)[0] + "…" if len(first) > 180 else first))
+        bank_alt = ""
+        if not cover and is_news and bank and not meta.get("no_image"):   # no picture of its own: the image bank
+            e = bank_pick(bank, str(meta["title"]), excerpt, want=str(meta.get("bank") or ""))
+            if e:
+                cover, credit = cache.resolve(e["commons"], log=log)
+                bank_alt = e["alt"] if cover else ""
         out.append({
             "id": "p" + hashlib.sha1(name.encode()).hexdigest()[:9],
             "title": str(meta["title"]).strip(),
@@ -241,7 +256,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "file": name,
             "cover_src": cover,
             "credit": credit,
-            "cover_alt": str(meta.get("image_alt") or ""),
+            "cover_alt": str(meta.get("image_alt") or bank_alt),
             "updates": updates,
             "figures": figures,
             "label": str(meta.get("label") or "").strip(),

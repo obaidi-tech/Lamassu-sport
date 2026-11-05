@@ -57,17 +57,60 @@ def fetch_info(title: str, width: int = 1600) -> dict:
     }
 
 
-def search_title(query: str) -> str:
-    """Find a picture on Commons by words (used when the exact file name is unknown). Returns 'File:…' or ''."""
-    r = requests.get(API, timeout=30, headers={"User-Agent": UA}, params={
-        "action": "query", "format": "json", "list": "search", "srsearch": query,
-        "srnamespace": 6, "srlimit": 10})
-    r.raise_for_status()
-    for hit in r.json().get("query", {}).get("search", []):
-        t = hit.get("title", "")
-        if re.search(r"\.(jpe?g|png|tiff?)$", t, re.I):
-            return t
+MIN_W, WIDE, OLDEST = 1200, 1.4, 1990     # a usable news photo: sharp, landscape, not a historic archive shot
+
+
+def _year(c: dict) -> int:
+    """The year the photo was taken: its EXIF/description date, else a year written in the file name."""
+    for s in (c.get("date", ""), c.get("title", "")):
+        m = re.search(r"(?<!\d)(18|19|20)\d{2}(?!\d)", s or "")
+        if m:
+            return int(m.group(0))
+    return 0
+
+
+def pick_best(candidates: list, old_ok: bool = False) -> str:
+    """Choose the best of several Commons search results for a news page.
+    Hard rules: a photo file, a free licence, at least 1200px wide, landscape (width ÷ height ≥ 1.4),
+    and taken in 1990 or later (unless old_ok, for history pieces). Among those that pass, prefer
+    banner-shaped (≈16:9), larger, newer photos, keeping a little weight on the search's own ranking.
+    If nothing passes, accept the best landscape photo of at least 1000px, else nothing at all."""
+    def ok(c, min_w, wide):
+        w, h = c.get("width") or 0, c.get("height") or 1
+        return (re.search(r"\.(jpe?g|png)$", c.get("title", ""), re.I) and FREE.match(c.get("license", ""))
+                and w >= min_w and w / h >= wide and (old_ok or not _year(c) or _year(c) >= OLDEST))
+
+    def score(c):
+        w, h = c["width"], c["height"] or 1
+        shape = -abs(w / h - 1.78)                       # closest to 16:9
+        size = min(w, 4000) / 4000
+        recent = (_year(c) - 2000) / 30 if _year(c) else 0
+        return shape * 2 + size + recent - c.get("rank", 0) * 0.08
+
+    for min_w, wide in ((MIN_W, WIDE), (1000, 1.25)):
+        good = [c for c in candidates if ok(c, min_w, wide)]
+        if good:
+            return max(good, key=score)["title"]
     return ""
+
+
+def search_title(query: str, old_ok: bool = False) -> str:
+    """Find a picture on Commons by words (used when the exact file name is unknown). Returns 'File:…' or ''.
+    Looks at the first 20 results with their size, licence and date, and picks the best (see pick_best)."""
+    r = requests.get(API, timeout=30, headers={"User-Agent": UA}, params={
+        "action": "query", "format": "json", "generator": "search", "gsrsearch": query,
+        "gsrnamespace": 6, "gsrlimit": 20, "prop": "imageinfo",
+        "iiprop": "size|extmetadata", "iiextmetadatafilter": "LicenseShortName|DateTimeOriginal"})
+    r.raise_for_status()
+    cands = []
+    for p in r.json().get("query", {}).get("pages", {}).values():
+        info = (p.get("imageinfo") or [{}])[0]
+        meta = info.get("extmetadata", {})
+        cands.append({"title": p.get("title", ""), "rank": p.get("index", 99),
+                      "width": info.get("width", 0), "height": info.get("height", 0),
+                      "license": _strip((meta.get("LicenseShortName") or {}).get("value", "")),
+                      "date": _strip((meta.get("DateTimeOriginal") or {}).get("value", ""))})
+    return pick_best(cands, old_ok=old_ok)
 
 
 class CommonsCache:
@@ -82,14 +125,16 @@ class CommonsCache:
 
     def resolve(self, raw: str, log=print, fetch=fetch_info, download=None):
         """Return (local_image_path, credit_dict) or (None, None). Never raises.
-        raw = 'File:Name.jpg' (or a Commons link), or 'search:words' to take the first matching picture."""
+        raw = 'File:Name.jpg' (or a Commons link), or 'search:words' to take the best matching picture
+        ('search-old:words' also accepts historic photos, for history and culture pieces)."""
         raw = str(raw).strip()
-        if raw.lower().startswith("search:"):
-            q = raw[7:].strip()
+        if raw.lower().startswith(("search:", "search-old:")):
+            old_ok = raw.lower().startswith("search-old:")
+            q = raw.split(":", 1)[1].strip()
             found = self.data.setdefault("_search", {}).get(q)
             if not found:
                 try:
-                    found = search_title(q)
+                    found = search_title(q, old_ok=old_ok)
                 except Exception as ex:
                     log(f"  ⚠ بحث صورة «{q}»: تعذر الوصول إلى Wikimedia ({type(ex).__name__})")
                     return None, None
