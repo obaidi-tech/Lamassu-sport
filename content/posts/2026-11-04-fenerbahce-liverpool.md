@@ -9,6 +9,8 @@ sources:
   - إي إس بي إن | https://www.espn.com/soccer/player-stats/_/gameId/401915382
 commons: File:Fenerbahçe Stadium 20200925.jpg
 image_alt: ملعب شكري صاراج أوغلو معقل فنربهتشه في إسطنبول
+getty: |
+  <a id='sJO_ZQ5lTUlXnbXBCtOBtQ' class='gie-single' href='https://www.gettyimages.com/detail/2303037923' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'sJO_ZQ5lTUlXnbXBCtOBtQ',sig:'RLbRfx2QIGl-0ldTEgueRhI0bFW91voPjtuxoaRUMYE=',w:'594px',h:'396px',items:'2303037923',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-04-ucl-matchday-4-tuesday.md
 ---
