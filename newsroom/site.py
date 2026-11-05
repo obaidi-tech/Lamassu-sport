@@ -20,15 +20,20 @@ MONTHS = {
     "levant": ["كانون الثاني", "شباط", "آذار", "نيسان", "أيار", "حزيران", "تموز", "آب", "أيلول",
                "تشرين الأول", "تشرين الثاني", "كانون الأول"],
 }
-DISPLAY_ORDER = ["top5", "orgs", "other_sports", "nba", "para", "culture", "awareness"]
-MERGED = {"world": "top5"}   # one football section: the rest-of-the-world football shows under top5 «كرة القدم»
+DISPLAY_ORDER = ["top5", "other_sports", "nba", "para", "culture", "awareness"]
+# Sections kept in the system but hidden for now; their stories show under another section.
+#   world → «كرة القدم» (one football section);  orgs «دولي وقاري» → hidden since 5 Nov 2026 at the owner's request:
+#   football bodies go to «كرة القدم», the rest (IOC, WADA, CAS, FIBA, athletics) to «رياضات عالمية».
+#   To bring «دولي وقاري» back: remove "orgs" here and put it back in DISPLAY_ORDER.
+MERGED = {"world": "top5", "orgs": "top5"}
+ORGS_ELSEWHERE = {"ioc", "wada", "cas", "fiba", "world_athletics"}
 SEARCH_ALIASES = {        # extra words a reader may type for a section
     "para": "بارالمبي ذوي الإعاقة أصحاب الهمم paralympic",
     "culture": "ثقافة تاريخ فن",
     "nba": "كرة السلة nba",
     "orgs": "فيفا الاتحاد الدولي الاتحاد الآسيوي المنتخبات",
     "opinion": "رأي مقال",
-    "top5": "كرة قدم الدوريات الكبرى الدوري الإنجليزي الإسباني الإيطالي",
+    "top5": "كرة قدم الدوريات الكبرى الدوري الإنجليزي الإسباني الإيطالي فيفا الاتحاد الآسيوي المنتخبات",
 }
 FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
@@ -310,7 +315,10 @@ class Builder:
     def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):
         os.makedirs(self.out, exist_ok=True)
         for a in articles:                       # merged sections: old category keys show under the kept one
-            a["category"] = MERGED.get(a["category"], a["category"])
+            if "orgs" in MERGED and a["category"] == "orgs" and a.get("sub") in ORGS_ELSEWHERE:
+                a["category"] = "other_sports"
+            else:
+                a["category"] = MERGED.get(a["category"], a["category"])
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
         if os.path.isdir(os.path.join(ROOT, "site_root")):      # files that must sit at the site root (e.g. Google verification)
             shutil.copytree(os.path.join(ROOT, "site_root"), self.out, dirs_exist_ok=True)
