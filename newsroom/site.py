@@ -356,7 +356,7 @@ class Builder:
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
                      edition_day=self.day_label(self.now), coming=coming[:6], **common,
                      # the lead story's own photo fills the banner; the rotating photos are the fallback
-                     lead_hero=self._lead_hero(lead))
+                     lead_hero=self._lead_hero(lead), hero=[] if self._lead_hero(lead) else self._hero(hero))
 
         for a in articles:
             same = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]

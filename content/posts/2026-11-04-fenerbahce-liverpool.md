@@ -7,9 +7,8 @@ sources:
   - ليفربول (الموقع الرسمي) | https://www.liverpoolfc.com/news/liverpool-fenerbahce-champions-league-match-report
   - تي إن تي سبورتس | https://www.tntsports.co.uk/football/champions-league/2026-2027/live-fenerbahce-liverpool_mtc21878647/live-commentary.shtml
   - إي إس بي إن | https://www.espn.com/soccer/player-stats/_/gameId/401915382
-commons: File:Vedat Muriqi Fenerbahçe 20260717 (9) (cropped).jpg
-image_crop: 0 0 48 0
-image_alt: الكوسوفي فيدات موريكي مهاجم فنربهتشه وصاحب هدف الفوز
+commons: File:Sidiki Chérif 26 Fenerbahçe 20260805 (4).JPG
+image_alt: لاعب فنربهتشه سيديكي شريف خلال مباراة للفريق هذا الموسم
 related:
   - 2026-11-04-ucl-matchday-4-tuesday.md
 ---

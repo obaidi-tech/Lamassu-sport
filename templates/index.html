@@ -20,7 +20,7 @@
   </div>
   {% if c.artist %}<p class="hero__credit">الصورة: <bdi dir="ltr">{{ c.artist }}{% if c.license %} / {{ c.source or 'Wikimedia Commons' }} ({{ c.license }}){% endif %}</bdi>{% if c.note %} — {{ c.note }}{% endif %}</p>{% endif %}
 </section>
-{% endif %}
+{% elif hero %}{{ hero_block(hero, root, '', label=site.site_name) }}{% endif %}
 {% endblock %}
 {% block main %}
 <section class="edition" aria-label="عدد اليوم">
