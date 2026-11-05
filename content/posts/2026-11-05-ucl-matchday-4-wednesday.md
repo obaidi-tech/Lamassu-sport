@@ -11,6 +11,8 @@ sources:
 commons: File:The Stadio Sinigaglia with Lago di Como in the background during a Serie B match between Como and Reggina in 1914 (2022).jpg
 image_crop: 32 0 0 0
 image_alt: ملعب سينيغاليا في مدينة كومو الإيطالية وخلفه بحيرة كومو
+getty: |
+  <a id='F3xLzSw_SwteTjN3hhVUXw' class='gie-single' href='https://www.gettyimages.com/detail/2294559570' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'F3xLzSw_SwteTjN3hhVUXw',sig:'EfWyEVW7VFWgxLo6E2QCa5I-CK5uUe_EbmD7rIFwg9c=',w:'594px',h:'382px',items:'2294559570',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-04-ucl-matchday-4-tuesday.md
   - 2026-11-04-fenerbahce-liverpool.md
