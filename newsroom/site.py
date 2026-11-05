@@ -1,4 +1,5 @@
 """Build the static website from content/ — no server, no database, free hosting (GitHub Pages)."""
+import hashlib
 import json
 import os
 import shutil
@@ -126,6 +127,8 @@ class Builder:
         self.env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "templates")),
                                autoescape=select_autoescape(["html", "xml"]), trim_blocks=True, lstrip_blocks=True)
         self.env.filters["day"] = self.day_label
+        with open(os.path.join(ROOT, "site_assets", "style.css"), "rb") as f:   # changes with every style update,
+            self.env.globals["css_v"] = hashlib.sha1(f.read()).hexdigest()[:10]  # so browsers never keep an old copy
         self.env.filters["time"] = lambda iso: self.local(iso).strftime("%H:%M")
         self.env.filters["ago"] = self.ago
         self.env.filters["sources"] = sources_label

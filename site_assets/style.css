@@ -433,6 +433,6 @@ body:has(.hero) .edition__line{display:none}
 .lamassu-wing-logo{width:42px;height:42px;display:block;flex:none;transition:transform .4s cubic-bezier(.25,1,.5,1),filter .4s ease}
 .brand-link:hover .lamassu-wing-logo,.brand-link:focus-visible .lamassu-wing-logo{transform:translateY(-2px) scale(1.08);filter:brightness(1.15)}
 /* a light, flowing idle sway around the wing's root (bottom right), like a slow wing-beat; hover adds the lift */
-.lamassu-wing-logo{transform-origin:86% 90%;animation:wingFloat 4.8s ease-in-out infinite alternate}
-@keyframes wingFloat{0%{rotate:0deg;translate:0 0}55%{rotate:-2.5deg;translate:0 -1px}100%{rotate:1deg;translate:0 0}}
+.lamassu-wing-logo{transform-origin:86% 90%;animation:wingFloat 3.6s ease-in-out infinite alternate}
+@keyframes wingFloat{0%{rotate:0deg;translate:0 0}50%{rotate:-5deg;translate:0 -2px}100%{rotate:1.5deg;translate:0 0}}
 @media (prefers-reduced-motion:reduce){.lamassu-wing-logo{transition:none;animation:none}.brand-link:hover .lamassu-wing-logo{transform:none}}
