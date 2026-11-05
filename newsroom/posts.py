@@ -193,7 +193,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
         body = _blocks(m.group(2))
         figures = []
         for i, b in enumerate(body):                     # ![تعليق](commons:File:… ) or ![تعليق](commons:search:كلمات)
-            fm = re.fullmatch(r"!\[([^\]]*)\]\(commons:([^)]+)\)", b.strip())
+            fm = re.fullmatch(r"!\[([^\]]*)\]\(commons:(.+)\)", b.strip())   # the name may itself contain ( )
             if not fm:
                 continue
             path, cr = cache.resolve(fm.group(2).strip(), log=log)
