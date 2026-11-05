@@ -1,4 +1,4 @@
-# المصادر المجانية. كلها عامة ولا تتطلب اشتراكاً أو امتيازاً.
+# المصادر المجانية. كلها عامة ولا تتطلب اشتراكاً أو امتيازاً (ذا أتلتيك: عناوينها المجانية فقط، انظر ملاحظتها أدناه).
 # الحقول:
 #   kind: official | agency | major_media | media | aggregator | opinion
 #   category: (اختياري) يفرض الفئة لكل أخبار المصدر
@@ -16,6 +16,10 @@ sources:
   - {id: wada_official,  name: "WADA",  kind: official, gnews: "site:wada-ama.org",      lang: en, category: awareness}
 
   # ── وكالات وصحف عامة (خلاصات RSS مفتوحة) ──
+  # ذا أتلتيك (نيويورك تايمز): موقعها مدفوع، فنأخذ عناوين أخبارها وانفراداتها فقط عبر أخبار جوجل،
+  # ونكتب الخبر بصياغتنا منسوباً إليها مع الرابط («بحسب ذا أتلتيك»). لا ننقل نص المقال أو أجزاء طويلة منه،
+  # ولا صورها، ولا نتجاوز الاشتراك. والانفراد يُتحقق منه من مصدر ثانٍ حين يتوفر.
+  - {id: athletic_news,  name: "The Athletic", kind: major_media, gnews: "site:nytimes.com athletic football OR soccer OR NBA OR transfer", lang: en}
   - {id: bbc_sport,      name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/rss.xml", lang: en}
   - {id: bbc_football,   name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/football/rss.xml", lang: en}
   - {id: bbc_tennis,     name: "BBC Sport", kind: major_media, url: "https://feeds.bbci.co.uk/sport/tennis/rss.xml", lang: en}
