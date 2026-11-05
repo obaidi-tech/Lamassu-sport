@@ -36,6 +36,9 @@ File format (edit it straight in GitHub's web editor):
     A picture inside the text, on its own line:  ![التعليق](commons:File:اسم_الملف.jpg)
     (or ![التعليق](commons:search:كلمات البحث) to take the best wide, recent free picture on Commons;
      commons:search-old:كلمات also accepts historic pictures, for history and culture pieces).
+    getty: |                      (optional; Getty Images' official embed code, pasted as is. The photo is shown at the top
+      <a id='…' class='gie-single' …   of the article in Getty's own viewer, with its credit. Editorial use only.
+                                   The home page, cards and sharing image keep using our free photo.)
     bank: real-madrid             (optional; a checked photo from config/image_bank.yaml. A news post with no picture
                                    gets the bank photo of the first club/venue named in its title automatically;
                                    no_image: true turns that off)
@@ -133,6 +136,21 @@ def _sources(raw) -> list:
                     else "لم نعثر على رابط المادة الأصلية")
         out.append({"publisher": name, "title": "", "link": link, "kind": "manual", "note": note})
     return out
+
+
+def _getty(raw) -> dict:
+    """Getty Images' official embed code (from the </> button on gettyimages.com) → its safe parts only.
+    The picture stays on Getty's servers and is shown in Getty's own viewer, with its credit and caption;
+    nothing of it is downloaded or stored here. Anything that is not a valid embed code is ignored."""
+    s = str(raw or "")
+    get = lambda k: (re.search(k + r"\s*:\s*'([^']*)'", s) or [None, ""])[1]   # noqa: E731
+    gid, sig, items = get("id"), get("sig"), get("items")
+    w = (re.search(r"\d+", get("w")) or [""])[0]
+    h = (re.search(r"\d+", get("h")) or [""])[0]
+    if not (re.fullmatch(r"[A-Za-z0-9_-]{6,40}", gid) and re.fullmatch(r"[A-Za-z0-9_=+/-]{20,120}", sig)
+            and re.fullmatch(r"\d{4,12}", items) and w and h):
+        return {}
+    return {"id": gid, "sig": sig, "item": items, "w": int(w), "h": int(h)}
 
 
 def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None) -> list:
@@ -257,6 +275,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "cover_src": cover,
             "credit": credit,
             "cover_alt": str(meta.get("image_alt") or bank_alt),
+            "getty": _getty(meta.get("getty")),
             "updates": updates,
             "figures": figures,
             "label": str(meta.get("label") or "").strip(),

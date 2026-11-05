@@ -401,3 +401,7 @@ body:has(.hero) .edition__line{display:none}
   .hero--lead .hero__text{order:3;padding-top:14px;padding-bottom:22px}
   .hero--lead .hero__title,.hero--lead .hero__sub{text-shadow:none}
   .hero--lead .hero__sub{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}
+
+/* ── Getty Images official embed (their viewer, their credit) ── */
+.story__getty{margin:0 0 24px}
+.story__getty iframe{display:block;width:100%!important;max-width:100%;height:auto!important;aspect-ratio:calc(var(--gw)/var(--gh));border:0}

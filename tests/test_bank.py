@@ -35,5 +35,12 @@ for t, want in cases.items():
 check("bank by id", (pick(bank, "أي عنوان", want="nba") or {}).get("id") == "nba")
 ids = [e["id"] for e in bank]
 check("bank ids are unique", len(ids) == len(set(ids)))
+from newsroom.posts import _getty  # noqa: E402
+code = ("<a id='Ab3dEf_9xQrStUvW' class='gie-single' href='http://www.gettyimages.com/detail/2201234567'>Embed from Getty Images</a>"
+        "<script>gie(function(){gie.widgets.load({id:'Ab3dEf_9xQrStUvW',sig:'kq1Zx0Yw9Vt8Us7Tr6Qp5On4Ml3Kj2Ih1Gf0Ed9Cb8A=',"
+        "w:'594px',h:'396px',items:'2201234567',caption: true ,tld:'com',is360: false })});</script>")
+g = _getty(code)
+check("getty: official embed code is read", g.get("item") == "2201234567" and g.get("w") == 594)
+check("getty: anything else is refused", _getty("<script>alert(1)</script>") == {} and _getty("id:'x\"><b>',sig:'y',items:'1'") == {})
 print(f"\n{fails} failed" if fails else "\nall passed")
 sys.exit(1 if fails else 0)

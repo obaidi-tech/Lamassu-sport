@@ -49,7 +49,14 @@
     {% if a.updated_at %}<span class="story__updated">آخر تحديث: <time datetime="{{ a.updated_at }}">{{ a.updated_at | day }}، {{ a.updated_at | time }}</time></span>{% endif %}
     {% if not own_op and a.n_sources %}{{ meter(a.n_sources, a.category, '#sources') }}{% endif %}
   </div>
-  {% if a.cover %}
+  {% if a.getty %}{% set g = a.getty %}
+  <figure class="story__figure story__getty" style="--gw: {{ g.w }}; --gh: {{ g.h }}">
+    <a id="{{ g.id }}" class="gie-single" href="https://www.gettyimages.com/detail/{{ g.item }}" target="_blank" rel="noopener" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;">Embed from Getty Images</a>
+    <script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'{{ g.id }}',sig:'{{ g.sig }}',w:'{{ g.w }}px',h:'{{ g.h }}px',items:'{{ g.item }}',caption: true ,tld:'com',is360: false })});</script>
+    <script src="https://embed-cdn.gettyimages.com/widgets.js" charset="utf-8" async></script>
+    <figcaption class="story__credit">الصورة معروضة عبر خدمة التضمين الرسمية من غيتي إيميجز، مع اسم المصوّر وحقوقه كما تعرضها غيتي.</figcaption>
+  </figure>
+  {% elif a.cover %}
   <figure class="story__figure">
     <img class="story__cover" src="{{ root }}{{ a.cover }}" alt="{{ a.cover_alt or a.title }}"{% if a.cover_w %} width="{{ a.cover_w }}" height="{{ a.cover_h }}"{% endif %} decoding="async">
     {% if a.credit %}<figcaption class="story__credit">الصورة: <bdi dir="ltr">{% if a.credit.page %}<a href="{{ a.credit.page }}" target="_blank" rel="noopener">{{ a.credit.artist }}</a>{% else %}{{ a.credit.artist }}{% endif %}{% if a.credit.license %} / {{ a.credit.source or 'Wikimedia Commons' }} ({% if a.credit.license_url %}<a href="{{ a.credit.license_url }}" target="_blank" rel="noopener license">{{ a.credit.license }}</a>{% else %}{{ a.credit.license }}{% endif %}){% endif %}</bdi>{% if a.credit.cropped %} — قُصّت أطراف الصورة{% endif %}{% if a.credit.note %} — {{ a.credit.note }}{% endif %}</figcaption>{% endif %}
