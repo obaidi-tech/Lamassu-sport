@@ -28,7 +28,7 @@
     {% elif a.own and a.category == 'opinion' %}<p class="byline">بقلم {{ a.author }}</p>
     {% elif a.category == 'opinion' and a.author %}<p class="byline">{{ a.author }} — {{ a.outlet }}</p>{% endif %}
     <p class="excerpt">{{ a.excerpt }}</p>
-    <div class="meta"><time datetime="{{ a.published_at }}">{{ a.published_at | ago }}</time>{% if a.own and a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif a.n_sources %}{{ meter(a.n_sources, a.category, root ~ 'article/' ~ a.id ~ '.html#sources') }}{% endif %}</div>
+    <div class="meta"><time datetime="{{ a.published_at }}" data-ago data-day="{{ a.published_at | day }}">{{ a.published_at | ago }}</time>{% if a.own and a.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif a.n_sources %}{{ meter(a.n_sources, a.category, root ~ 'article/' ~ a.id ~ '.html#sources') }}{% endif %}</div>
   </div>
 </article>
 {%- endmacro %}

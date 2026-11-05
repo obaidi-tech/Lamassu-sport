@@ -27,6 +27,7 @@ DISPLAY_ORDER = ["top5", "other_sports", "nba", "para", "culture", "awareness"]
 #   world → «كرة القدم» (one football section);  orgs «دولي وقاري» → hidden since 5 Nov 2026 at the owner's request:
 #   football bodies go to «كرة القدم», the rest (IOC, WADA, CAS, FIBA, athletics) to «رياضات عالمية».
 #   To bring «دولي وقاري» back: remove "orgs" here and put it back in DISPLAY_ORDER.
+ARCHIVE_DAYS = 30            # after this, a piece with no label of its own is marked «أرشيف»
 MERGED = {"world": "top5", "orgs": "top5"}
 ORGS_ELSEWHERE = {"ioc", "wada", "cas", "fiba", "world_athletics"}
 SEARCH_ALIASES = {        # extra words a reader may type for a section
@@ -127,6 +128,7 @@ class Builder:
         self.env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "templates")),
                                autoescape=select_autoescape(["html", "xml"]), trim_blocks=True, lstrip_blocks=True)
         self.env.filters["day"] = self.day_label
+        self.env.globals["day_names"], self.env.globals["month_names"] = DAYS, self.months   # for the live clock below
         with open(os.path.join(ROOT, "site_assets", "style.css"), "rb") as f:   # changes with every style update,
             self.env.globals["css_v"] = hashlib.sha1(f.read()).hexdigest()[:10]  # so browsers never keep an old copy
         self.env.filters["time"] = lambda iso: self.local(iso).strftime("%H:%M")
@@ -148,7 +150,7 @@ class Builder:
         return datetime.fromisoformat(iso).astimezone(self.tz)
 
     def day_label(self, iso_or_dt):
-        d = self.local(iso_or_dt) if isinstance(iso_or_dt, str) else iso_or_dt
+        d = self.local(iso_or_dt) if isinstance(iso_or_dt, str) else iso_or_dt.astimezone(self.tz)
         return f"{DAYS[d.weekday()]} {d.day} {self.months[d.month - 1]} {d.year}"
 
     def ago(self, iso):
@@ -318,6 +320,9 @@ class Builder:
 
     def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):
         os.makedirs(self.out, exist_ok=True)
+        for a in articles:                       # older pieces say so, so they are not mistaken for today's news
+            if not a.get("label") and (self.now - datetime.fromisoformat(a["published_at"])).days > ARCHIVE_DAYS:
+                a["label"] = "أرشيف"
         for a in articles:                       # merged sections: old category keys show under the kept one
             if "orgs" in MERGED and a["category"] == "orgs" and a.get("sub") in ORGS_ELSEWHERE:
                 a["category"] = "other_sports"
@@ -364,7 +369,7 @@ class Builder:
             used.add(lead["id"])
         sections = []
         for cat in DISPLAY_ORDER:
-            items = [a for a in news if a["category"] == cat and a["id"] not in used][:5]
+            items = [a for a in news if a["category"] == cat and a["id"] not in used][:3]
             if items:
                 sections.append((cat, items))
         today_key = self.now.astimezone(self.tz).date()
@@ -372,6 +377,7 @@ class Builder:
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
+                     last_update=max((a["published_at"] for a in news), default=""),
                      edition_day=self.day_label(self.now), coming=coming[:6], **common,
                      live=load_live(os.path.join(ROOT, "content", "live.yaml"), self.now.astimezone(ZoneInfo("Asia/Riyadh")).date()),
                      # the lead story's own photo fills the banner; the rotating photos are the fallback

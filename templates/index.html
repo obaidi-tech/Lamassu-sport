@@ -14,7 +14,7 @@
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
     <h1 class="glead__title"><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
     <p class="glead__excerpt">{{ lead.excerpt }}</p>
-    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
+    <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </div>
   <div class="glead__photo">{{ getty_embed(lead.getty) }}</div>
 </section>
@@ -26,7 +26,7 @@
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
     <h1 class="hero__title"><a class="hero__link" href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
     <p class="hero__sub">{{ lead.excerpt }}</p>
-    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
+    <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </div>
   {% if c.artist %}<p class="hero__credit">الصورة: <bdi dir="ltr">{{ c.artist }}{% if c.license %} / {{ c.source or 'Wikimedia Commons' }} ({{ c.license }}){% endif %}</bdi>{% if c.note %} — {{ c.note }}{% endif %}</p>{% endif %}
 </section>
@@ -34,8 +34,7 @@
 {% endblock %}
 {% block main %}
 <section class="edition" aria-label="أخبار اليوم">
-  <p class="edition__line">{{ edition_day }}
-</p>
+  <p class="edition__line">{% if today_count %}تغطية اليوم: <b>{{ today_count }}</b>{% if today_sources %} · مصادرها: <b>{{ today_sources }}</b>{% endif %}{% endif %}{% if last_update %}{% if today_count %} · {% endif %}آخر تحديث: <time datetime="{{ last_update }}" data-ago data-day="{{ last_update | day }}">{{ last_update | ago }}</time>{% endif %}</p>
   <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر.</p>
 </section>
 
@@ -46,7 +45,7 @@
     <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
     {% if lead.roundup %}<p class="lead__byline">إعداد: {{ lead.outlet }}</p>{% elif lead.own and lead.category == 'opinion' %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
     <p class="lead__excerpt">{{ lead.excerpt }}</p>
-    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.own and lead.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
+    <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.own and lead.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </article>{% endif %}
   {% if runners %}
   <div class="runners">
@@ -71,7 +70,8 @@
   <div class="live__grid">{% for m in live %}
     <figure class="live__item">
       <iframe src="{{ m.src }}" title="{{ m.title or 'نتيجة مباشرة' }}" loading="lazy" scrolling="no" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      <figcaption><a href="{{ m.page }}" target="_blank" rel="noopener noreferrer">{{ m.title ~ ' · ' if m.title }}النتيجة مباشرة من Sofascore</a></figcaption>
+      <figcaption>{% if m.title %}<b>{{ m.title }}</b>{% endif %}{% if m.when %}<span class="live__when">{{ m.when | day }} · {{ '%02d:%02d' % (m.when.hour, m.when.minute) }} بتوقيت الرياض</span>{% endif %}
+        <a href="{{ m.page }}" target="_blank" rel="noopener noreferrer">البيانات من Sofascore</a></figcaption>
     </figure>{% endfor %}
   </div>
 </section>
@@ -109,9 +109,10 @@
 {% endif %}
 
 {% for cat, items in sections %}
-<section class="section" aria-labelledby="h-{{ cat }}">
-  <div class="section-head" style="--cat: var(--c-{{ cat }})"><h2 id="h-{{ cat }}">{{ cats[cat].name_ar }}</h2><a href="{{ root }}category/{{ cat }}.html">المزيد</a></div>
+<section class="section section--home" aria-labelledby="h-{{ cat }}">
+  <div class="section-head" style="--cat: var(--c-{{ cat }})"><h2 id="h-{{ cat }}"><a href="{{ root }}category/{{ cat }}.html">{{ cats[cat].name_ar }}</a></h2></div>
   <div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=False) }}{% endfor %}</div>
+  <a class="section__more" href="{{ root }}category/{{ cat }}.html" style="--cat: var(--c-{{ cat }})">المزيد من {{ cats[cat].name_ar }}</a>
 </section>
 {% endfor %}
 {% endblock %}

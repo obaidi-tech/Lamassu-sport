@@ -86,6 +86,36 @@
   });
 })();
 </script>
+<script>
+/* The site is rebuilt every two hours, so the date in the header and phrases like «قبل ساعة» are kept
+   current here, in the reader's browser, on Riyadh time. */
+(function () {
+  var DAYS = {{ day_names | tojson }}, MONTHS = {{ month_names | tojson }};
+  function riyadhDate(t) {   // the calendar day in Riyadh for a moment in time
+    var p = new Intl.DateTimeFormat("en-CA", {timeZone: "Asia/Riyadh", year: "numeric", month: "2-digit", day: "2-digit"}).format(t).split("-");
+    return {y: +p[0], m: +p[1], d: +p[2], wd: (new Date(Date.UTC(+p[0], +p[1] - 1, +p[2])).getUTCDay() + 6) % 7};
+  }
+  function label(t) { var r = riyadhDate(t); return DAYS[r.wd] + " " + r.d + " " + MONTHS[r.m - 1] + " " + r.y; }
+  function ago(t) {
+    var m = Math.floor((Date.now() - t) / 60000);
+    if (m < 0) return null;
+    if (m < 60) return m < 10 ? "قبل دقائق" : "قبل " + m + " دقيقة";
+    if (m < 1440) { var h = Math.floor(m / 60); return h === 1 ? "قبل ساعة" : h === 2 ? "قبل ساعتين" : h <= 10 ? "قبل " + h + " ساعات" : "قبل " + h + " ساعة"; }
+    return "";
+  }
+  function tick() {
+    try {
+      var md = document.querySelector(".mast__date"); if (md) md.textContent = label(new Date());
+      document.querySelectorAll("time[data-ago]").forEach(function (e) {
+        var t = Date.parse(e.getAttribute("datetime")); if (isNaN(t)) return;
+        var s = ago(t); if (s === null) return;
+        e.textContent = s || e.getAttribute("data-day") || label(new Date(t));
+      });
+    } catch (err) { /* keep the text the build wrote */ }
+  }
+  tick(); setInterval(tick, 60000);
+})();
+</script>
 {% if site.goatcounter %}<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
 </body>
 </html>
