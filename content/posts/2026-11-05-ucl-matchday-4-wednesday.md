@@ -8,9 +8,8 @@ sources:
   - رويترز (العربية)
   - بي إن سبورتس | https://www.beinsports.com/en-mena/football/uefa-champions-league/articles-video/como-hit-nine-in-stunning-champions-league-win-at-lens-2026-11-04
   - ياهو سبورتس | https://sports.yahoo.com/articles/champions-league-round-como-smash-224252053.html
-commons: File:The Stadio Sinigaglia with Lago di Como in the background during a Serie B match between Como and Reggina in 1914 (2022).jpg
-image_crop: 32 0 0 0
-image_alt: ملعب سينيغاليا في مدينة كومو الإيطالية وخلفه بحيرة كومو
+commons: File:Como 1907 lineup 2025-26.jpg
+image_alt: تشكيلة فريق كومو الإيطالي قبل إحدى مبارياته
 related:
   - 2026-11-04-ucl-matchday-4-tuesday.md
   - 2026-11-04-fenerbahce-liverpool.md
