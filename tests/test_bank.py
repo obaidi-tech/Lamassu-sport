@@ -42,5 +42,8 @@ code = ("<a id='Ab3dEf_9xQrStUvW' class='gie-single' href='http://www.gettyimage
 g = _getty(code)
 check("getty: official embed code is read", g.get("item") == "2201234567" and g.get("w") == 594)
 check("getty: anything else is refused", _getty("<script>alert(1)</script>") == {} and _getty("id:'x\"><b>',sig:'y',items:'1'") == {})
+from newsroom.posts import _lenient_meta  # noqa: E402
+m = _lenient_meta("title: عنوان: مع نقطتين\ngetty: |\n  " + code + "\nrelated:\n  - a.md")
+check("getty: works even when the header has a ':' in a value", _getty(m.get("getty")).get("item") == "2201234567" and m.get("related") == ["a.md"])
 print(f"\n{fails} failed" if fails else "\nall passed")
 sys.exit(1 if fails else 0)

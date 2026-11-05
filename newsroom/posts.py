@@ -94,8 +94,13 @@ def _blocks(text: str) -> list:
 def _lenient_meta(text: str) -> dict:
     """Fallback when the header isn't strict YAML (e.g. a title with ':' or starting with quotes):
     'key: value' per line, the value is everything after the first ': '; '  - item' lines form a list."""
-    meta, last = {}, None
+    meta, last, block = {}, None, None
     for line in text.splitlines():
+        if block is not None:                           # 'key: |' — the indented lines that follow are its value
+            if line.startswith((" ", "\t")) or not line.strip():
+                meta[block] = (meta.get(block, "") + "\n" + line.strip()).strip()
+                continue
+            block = None
         if not line.strip() or line.lstrip().startswith("#"):
             continue
         stripped = line.strip()
@@ -108,6 +113,9 @@ def _lenient_meta(text: str) -> dict:
         if not sep or not re.fullmatch(r"[A-Za-z_]+", key.strip()):
             continue
         last, val = key.strip(), val.strip()
+        if val in ("|", ">", "|-", ">-"):
+            block, meta[last] = last, ""
+            continue
         if val.lower() in ("true", "false"):
             meta[last] = val.lower() == "true"
         elif val:
