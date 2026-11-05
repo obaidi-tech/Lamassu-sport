@@ -17,15 +17,15 @@ entries:
     alt: ملعب كامب نو في برشلونة
   - id: atletico
     match: ["أتلتيكو مدريد", "Atlético Madrid", "Atletico Madrid"]
-    commons: search:Metropolitano stadium Madrid interior
+    commons: File:Madrid - Estadio Wanda Metropolitano 25.jpg
     alt: ملعب ميتروبوليتانو معقل أتلتيكو مدريد
   - id: man-united
     match: ["مانشستر يونايتد", "Manchester United", "أولد ترافورد"]
-    commons: search:Old Trafford stadium interior panorama
+    commons: File:Old Trafford (interior), Manchester United.jpg
     alt: ملعب أولد ترافورد معقل مانشستر يونايتد
   - id: man-city
     match: ["مانشستر سيتي", "Manchester City"]
-    commons: search:Etihad Stadium Manchester interior
+    commons: File:Etihad Stadium, Manchester City Football Club (Ank Kumar, Infosys) 18.jpg
     alt: ملعب الاتحاد معقل مانشستر سيتي
   - id: liverpool
     match: ["ليفربول", "Liverpool", "أنفيلد"]
@@ -33,23 +33,23 @@ entries:
     alt: ملعب أنفيلد معقل ليفربول
   - id: arsenal
     match: ["أرسنال", "Arsenal"]
-    commons: search:Emirates Stadium interior Arsenal
+    commons: File:Inside the Emirates Stadium - Panorama.jpg
     alt: ملعب الإمارات معقل أرسنال في لندن
   - id: chelsea
     match: ["تشيلسي", "Chelsea"]
-    commons: search:Stamford Bridge stadium interior
+    commons: File:Stamford Bridge Stadium Football Pitch, 2.22.2013.jpg
     alt: ملعب ستامفورد بريدج معقل تشيلسي
   - id: tottenham
     match: ["توتنهام", "Tottenham"]
-    commons: search:Tottenham Hotspur Stadium interior
+    commons: File:View of North Stand in Tottenham Hotspur Stadium.jpg
     alt: ملعب توتنهام هوتسبير في لندن
   - id: bayern
     match: ["بايرن ميونيخ", "بايرن ميونخ", "بايرن", "Bayern"]
-    commons: search:Allianz Arena Munich exterior
+    commons: File:Allianz arena at night Richard Bartz.jpg
     alt: ملعب أليانز أرينا معقل بايرن ميونيخ
   - id: dortmund
     match: ["دورتموند", "Dortmund"]
-    commons: search:Westfalenstadion Signal Iduna Park interior
+    commons: File:Signal Iduna Park, Dortmund, Germany (Unsplash).jpg
     alt: ملعب سيغنال إيدونا بارك معقل بوروسيا دورتموند
   - id: psg
     match: ["باريس سان جيرمان", "سان جيرمان", "Paris Saint-Germain", "PSG"]
@@ -57,12 +57,12 @@ entries:
     alt: ملعب بارك دي برانس معقل باريس سان جيرمان
   - id: juventus
     match: ["يوفنتوس", "Juventus"]
-    commons: search:Allianz Stadium Turin Juventus interior
+    commons: File:Inside Juventus Stadium.jpg
     alt: ملعب يوفنتوس في تورينو
   - id: san-siro
     match: ["إنتر ميلان", "إنتر", "ميلان", "Inter Milan", "AC Milan", "سان سيرو"]
     not: ["إنتر ميامي"]
-    commons: search:San Siro stadium Milan interior
+    commons: File:San Siro Stadium (Meazza) panorama empty.jpg
     alt: ملعب سان سيرو في ميلانو
   - id: napoli
     match: ["نابولي", "Napoli"]
@@ -78,7 +78,7 @@ entries:
     alt: ملعب شكري صاراج أوغلو معقل فنربهتشه في إسطنبول
   - id: galatasaray
     match: ["غلطة سراي", "Galatasaray"]
-    commons: search:Rams Park Galatasaray stadium interior
+    commons: File:Galatasaray Nef Stadium before match 2022.jpg
     alt: ملعب غلطة سراي في إسطنبول
 
   # ── الخليج والعالم العربي ──
@@ -98,15 +98,15 @@ entries:
     alt: مدينة الملك عبدالله الرياضية في جدة
   - id: saudi-league
     match: ["دوري روشن", "الدوري السعودي", "Saudi Pro League"]
-    commons: search:King Fahd International Stadium Riyadh
+    commons: File:King Fahd International Stadium, Riyadh, Saudi Arabia, April 2014.jpg
     alt: استاد الملك فهد الدولي في الرياض
   - id: qatar
     match: ["الدوري القطري", "دوري نجوم قطر", "استاد لوسيل"]
-    commons: search:Lusail Stadium Qatar interior
+    commons: File:Lusail Iconic Stadium - 2022 FIFA WC.jpg
     alt: استاد لوسيل في قطر
   - id: egypt
     match: ["الأهلي المصري", "الزمالك", "الدوري المصري"]
-    commons: search:Cairo International Stadium
+    commons: File:Cairo stadium Egypt vs Senegal.jpg
     alt: استاد القاهرة الدولي
   - id: morocco
     match: ["المنتخب المغربي", "منتخب المغرب", "أسود الأطلس"]
@@ -116,13 +116,13 @@ entries:
   # ── بطولات ──
   - id: world-cup-2026
     match: ["كأس العالم 2026", "مونديال 2026"]
-    commons: search:MetLife Stadium interior football
+    commons: File:Interior view of the MetLife Stadium - ARG v CAN - 2024-07-09.jpg
     alt: ملعب ميتلايف الذي يستضيف نهائي كأس العالم 2026
 
   # ── كرة السلة والتنس والفورمولا 1 ──
   - id: warriors
     match: ["ووريورز", "Warriors"]
-    commons: search:Chase Center San Francisco arena interior
+    commons: File:Chase Center - Warriors.jpg
     alt: صالة تشيس سنتر معقل غولدن ستيت ووريورز
   - id: lakers
     match: ["ليكرز", "Lakers"]
@@ -138,9 +138,9 @@ entries:
     alt: الملعب الرئيسي في بطولة ويمبلدون
   - id: roland-garros
     match: ["رولان غاروس", "بطولة فرنسا المفتوحة", "Roland Garros"]
-    commons: search:Court Philippe-Chatrier Roland Garros
+    commons: File:Court Philippe Chatrier 001.jpg
     alt: ملعب فيليب شاترييه في رولان غاروس
   - id: f1
     match: ["فورمولا 1", "فورمولا وان", "Formula 1", "F1"]
-    commons: search:Formula One race start grid
+    commons: File:Singapore Grand Prix F1 Race (53185941249).jpg
     alt: انطلاق سباق في بطولة العالم لفورمولا 1
