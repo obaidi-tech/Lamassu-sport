@@ -33,8 +33,8 @@
 {% elif hero %}{{ hero_block(hero, root, '', label=site.site_name) }}{% endif %}
 {% endblock %}
 {% block main %}
-<section class="edition" aria-label="عدد اليوم">
-  <p class="edition__line">عدد {{ edition_day }}
+<section class="edition" aria-label="أخبار اليوم">
+  <p class="edition__line">{{ edition_day }}
 </p>
   <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر.</p>
 </section>

@@ -389,7 +389,7 @@ class Builder:
             by_day.setdefault(self.local(a["published_at"]).strftime("%Y-%m-%d"), []).append(a)
         for day, items in by_day.items():
             items.sort(key=lambda a: -a["score"])
-            self._render("list.html", f"day/{day}.html", 1, title=f"عدد {self.day_label(items[0]['published_at'])}",
+            self._render("list.html", f"day/{day}.html", 1, title=self.day_label(items[0]['published_at']),
                          items=items, cat=None, **common)
         self._render("archive.html", "archive.html", 0, days=[(d, self.day_label(v[0]["published_at"]), len(v))
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
