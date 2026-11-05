@@ -61,7 +61,8 @@
     {% for p in a.body %}
       {%- if p.startswith('### ') %}<h3>{{ p[4:] }}</h3>
       {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
-      {%- elif p.startswith('!fig:') %}{% set fg = a.figures[p[5:] | int] %}{% if fg.url %}
+      {%- elif p.startswith('!fig:') %}{% set fg = a.figures[p[5:] | int] %}{% if fg.getty %}
+      <figure class="story__fig story__getty">{{ getty_embed(fg.getty) }}</figure>{% elif fg.url %}
       <figure class="story__fig"><img src="{{ root }}{{ fg.url }}" alt="{{ fg.caption }}" width="{{ fg.w }}" height="{{ fg.h }}" loading="lazy" decoding="async">
         <figcaption>{{ fg.caption }}{% if fg.credit %} <span class="story__fig-credit">— <bdi dir="ltr">{% if fg.credit.page %}<a href="{{ fg.credit.page }}" target="_blank" rel="noopener">Wikimedia Commons</a>{% else %}Wikimedia Commons{% endif %}{% if fg.credit.license %} ({{ fg.credit.license }}){% endif %}</bdi></span>{% endif %}</figcaption></figure>{% endif %}
       {%- elif p.startswith('|') %}{{ p | table }}

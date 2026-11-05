@@ -184,6 +184,8 @@ class Builder:
         cutoff = self.now - timedelta(days=CARD_DAYS)
         for a in articles:
             for fg in a.get("figures") or []:            # pictures inside the text: light copies, loaded on scroll
+                if not fg.get("src"):                     # a Getty embed: nothing to copy
+                    continue
                 try:
                     import hashlib
                     from PIL import Image

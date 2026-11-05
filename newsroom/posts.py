@@ -36,6 +36,7 @@ File format (edit it straight in GitHub's web editor):
     A picture inside the text, on its own line:  ![التعليق](commons:File:اسم_الملف.jpg)
     (or ![التعليق](commons:search:كلمات البحث) to take the best wide, recent free picture on Commons;
      commons:search-old:كلمات also accepts historic pictures, for history and culture pieces).
+    (A Getty embed code pasted on its own line inside the text shows that photo there, in Getty's viewer.)
     getty: |                      (optional; Getty Images' official embed code, pasted as is. The photo is shown at the top
       <a id='…' class='gie-single' …   of the article in Getty's own viewer, with its credit. Editorial use only.
                                    The home page, cards and sharing image keep using our free photo.)
@@ -193,6 +194,15 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
         body = _blocks(m.group(2))
         figures = []
         for i, b in enumerate(body):                     # ![تعليق](commons:File:… ) or ![تعليق](commons:search:كلمات)
+            if "gie.widgets.load" in b:                  # a Getty Images embed code pasted on its own line
+                g = _getty(b)
+                if g:
+                    figures.append({"getty": g, "caption": ""})
+                    body[i] = f"!fig:{len(figures) - 1}"
+                else:
+                    log(f"  ⚠ {name}: كود تضمين غيتي غير صالح، فحُذف")
+                    body[i] = ""
+                continue
             fm = re.fullmatch(r"!\[([^\]]*)\]\(commons:(.+)\)", b.strip())   # the name may itself contain ( )
             if not fm:
                 continue
