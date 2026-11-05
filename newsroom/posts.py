@@ -117,6 +117,8 @@ def _lenient_meta(text: str) -> dict:
         if val in ("|", ">", "|-", ">-"):
             block, meta[last] = last, ""
             continue
+        if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":   # "a quoted value" → a quoted value
+            val = val[1:-1]
         if val.lower() in ("true", "false"):
             meta[last] = val.lower() == "true"
         elif val:
