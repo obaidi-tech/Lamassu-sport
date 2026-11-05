@@ -18,8 +18,6 @@ image_alt: فريق يوفنتوس عام 1899، في سنواته الأولى 
 
 وراء هذه الرموز التي يعرفها ملايين المشجعين حكايات تعود إلى أكثر من قرن، صنعتها المصادفات والظروف الاجتماعية والتحولات السياسية وتاريخ المدن، قبل أن تتحول إلى جزء راسخ من ثقافة الجماهير. وهذه حكايات 12 من أشهر أندية العالم.
 
-<a id='2SSG0h9yQcZZ-zgmwaCzwQ' class='gie-single' href='https://www.gettyimages.com/detail/2210216889' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'2SSG0h9yQcZZ-zgmwaCzwQ',sig:'DQzYk-8DMWvSeXWPmDSAEzcTLnGDaDGaZ-I9dqLFa-M=',w:'594px',h:'419px',items:'2210216889',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
-
 ## يوفنتوس.. القمصان الحمراء التي لم تصل
 
 حين أسس طلاب مدرسة «ماسيمو دازيليو» في تورينو نادي يوفنتوس عام 1897، اختاروا قمصاناً وردية فاتحة يرتديها اللاعبون مع ربطات عنق سوداء. لكن الوردي بهت مع كثرة الغسيل، فاستعان النادي عام 1903 بأحد أعضائه الإنجليز، توماس سافيدج، لجلب قمصان جديدة من إنجلترا.
@@ -35,6 +33,8 @@ image_alt: فريق يوفنتوس عام 1899، في سنواته الأولى 
 وفي مطلع القرن العشرين كاد النادي يختفي بسبب أزمة مالية، حتى أنقذه رجل الأعمال جون هنري ديفيس عام 1902. ومع تغيير اسمه إلى مانشستر يونايتد في العام نفسه، استقر على القميص الأحمر والسروال الأبيض والجوارب السوداء.
 
 أما لقب «الشياطين الحمر» فجاء بعد عقود، حين استعاره المدرب مات باسبي في الستينيات من فريق سالفورد للرغبي، الذي أطلقت عليه الصحافة الفرنسية هذا الاسم. ثم ظهر الشيطان الأحمر حاملاً رمحه الثلاثي في شعار النادي.
+
+<a id='2SSG0h9yQcZZ-zgmwaCzwQ' class='gie-single' href='https://www.gettyimages.com/detail/2210216889' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'2SSG0h9yQcZZ-zgmwaCzwQ',sig:'DQzYk-8DMWvSeXWPmDSAEzcTLnGDaDGaZ-I9dqLFa-M=',w:'594px',h:'419px',items:'2210216889',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 
 ## برشلونة.. ألوان من مدرسة إنجليزية وشعار من كتالونيا
 
