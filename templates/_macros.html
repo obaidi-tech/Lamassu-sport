@@ -77,3 +77,11 @@
 </script>
 {% endif %}
 {%- endmacro %}
+
+{% macro getty_embed(g) -%}
+<div class="getty" style="--gw: {{ g.w }}; --gh: {{ g.h }}">
+<a id="{{ g.id }}" class="gie-single" href="https://www.gettyimages.com/detail/{{ g.item }}" target="_blank" rel="noopener" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;">Embed from Getty Images</a>
+<script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'{{ g.id }}',sig:'{{ g.sig }}',w:'{{ g.w }}px',h:'{{ g.h }}px',items:'{{ g.item }}',caption: true ,tld:'com',is360: false })});</script>
+<script src="https://embed-cdn.gettyimages.com/widgets.js" charset="utf-8" async></script>
+</div>
+{%- endmacro %}
