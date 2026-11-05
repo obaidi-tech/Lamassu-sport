@@ -374,3 +374,30 @@ body:has(.hero) .edition__line{display:none}
 .hero__img:only-child,.hero__img:only-child.is-on{animation:none;transform:none}
 .hero--section .hero__shade{background:linear-gradient(to top,rgba(20,33,61,.78),rgba(20,33,61,.1) 60%,transparent)}
 .hero--section .hero__title,.hero--section .hero__sub{text-shadow:0 2px 14px rgba(0,0,0,.55),0 0 2px rgba(0,0,0,.5)}
+
+/* ── Home: the lead story's photo is the banner ── */
+.hero--lead{height:clamp(340px,42vw,520px)}
+.hero--lead .hero__img{animation:none;transform:none}
+.hero--lead .hero__shade{background:linear-gradient(to top,rgba(20,33,61,.95) 0%,rgba(20,33,61,.7) 38%,rgba(20,33,61,.15) 75%,transparent)}
+.hero--lead .hero__text{max-width:1180px}
+.hero--lead .lead__cat{margin-bottom:12px}
+.hero--lead .hero__title{font-size:clamp(1.5rem,3.6vw,2.7rem);max-width:24ch;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+.hero__link{color:#fff;text-decoration:none}
+.hero__link:hover{text-decoration:underline;text-underline-offset:.2em}
+.hero--lead .hero__sub{max-width:60ch;font-size:clamp(.95rem,1.6vw,1.1rem);margin:10px 0 12px;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+.hero--lead .meta{color:#C9D1DE}
+.hero--lead .meter__bars i{background:#3A4A6E}
+.hero--lead .meter__bars i.on{background:var(--amber)}
+.hero--lead a.meter{color:#C9D1DE}
+.top--runners{grid-template-columns:minmax(0,1fr)}
+.top--runners .runners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));column-gap:28px}
+.top--runners .runners__title{grid-column:1/-1}
+@media (max-width:900px){.top--runners .runners{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.top--runners .runners{grid-template-columns:minmax(0,1fr)}
+  .hero--lead{height:auto;display:flex;flex-direction:column}
+  .hero--lead .hero__slides{position:relative;inset:auto;aspect-ratio:16/9;order:1}
+  .hero--lead .hero__shade{display:none}
+  .hero--lead .hero__credit{position:static;order:2;padding:4px 16px 0;text-align:left}
+  .hero--lead .hero__text{order:3;padding-top:14px;padding-bottom:22px}
+  .hero--lead .hero__title,.hero--lead .hero__sub{text-shadow:none}
+  .hero--lead .hero__sub{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}}

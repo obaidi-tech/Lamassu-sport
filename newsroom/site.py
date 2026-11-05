@@ -289,6 +289,20 @@ class Builder:
                 print(f"  ⚠ صورة الترويسة {prefix} {i + 1}: {type(ex).__name__}")
         return out
 
+    def _lead_hero(self, lead):
+        """The lead story's own photo, cut to the banner's shape; None if it has no photo of its own."""
+        if not lead or not lead.get("cover"):
+            return None
+        w, h = lead.get("cover_w") or 0, lead.get("cover_h") or 0
+        if not h or w / h < 1.5:            # a portrait or square photo would turn into a giant close-up
+            return None
+        if lead.get("_lead_hero") is None:
+            credit = dict(lead.get("credit") or {"artist": "", "page": "", "license": "", "license_url": ""})
+            imgs = self._hero([{"src": os.path.join(self.out, lead["cover"]), "credit": credit,
+                                "alt": lead.get("cover_alt") or ""}], prefix=f"lead-{lead['id']}")
+            lead["_lead_hero"] = imgs[0] if imgs else False
+        return lead["_lead_hero"] or None
+
     def build(self, articles: list, pending_count: int = 0, banner: str = "", hero=None, events=None, section_heroes=None):
         os.makedirs(self.out, exist_ok=True)
         shutil.copytree(os.path.join(ROOT, "site_assets"), os.path.join(self.out, "assets"), dirs_exist_ok=True)
@@ -340,7 +354,9 @@ class Builder:
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
-                     edition_day=self.day_label(self.now), hero=self._hero(hero), coming=coming[:6], **common)
+                     edition_day=self.day_label(self.now), coming=coming[:6], **common,
+                     # the lead story's own photo fills the banner; the rotating photos are the fallback
+                     lead_hero=self._lead_hero(lead))
 
         for a in articles:
             same = [b for b in articles if b["category"] == a["category"] and b["id"] != a["id"]][:4]

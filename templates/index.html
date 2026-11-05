@@ -8,7 +8,19 @@
    "logo": site.site_url | trim('/') ~ '/icon-512.png', "slogan": site.tagline, "sameAs": ([site.linkedin] if site.linkedin else [])}
 ] | tojson_ar }}</script>{% endblock %}
 {% block hero %}
-{% if hero %}{{ hero_block(hero, root, 'أهم أخبار الرياضة العالمية', label=site.site_name) }}{% endif %}
+{% if lead_hero %}{% set h = lead_hero %}{% set c = lead.credit or {} %}
+<section class="hero hero--lead" style="--cat: var(--c-{{ lead.category }})" aria-label="الخبر الرئيسي">
+  <div class="hero__slides" aria-hidden="true"><img class="hero__img is-on" src="{{ root }}{{ h.src }}" srcset="{{ root }}{{ h.src_small }} 760w, {{ root }}{{ h.src }} 1400w" sizes="100vw" alt="" width="{{ h.w }}" height="{{ h.h }}" fetchpriority="high" decoding="async"></div>
+  <div class="hero__shade" aria-hidden="true"></div>
+  <div class="wrap hero__text">
+    <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
+    <h1 class="hero__title"><a class="hero__link" href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    <p class="hero__sub">{{ lead.excerpt }}</p>
+    <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
+  </div>
+  {% if c.artist %}<p class="hero__credit">الصورة: <bdi dir="ltr">{{ c.artist }}{% if c.license %} / {{ c.source or 'Wikimedia Commons' }} ({{ c.license }}){% endif %}</bdi>{% if c.note %} — {{ c.note }}{% endif %}</p>{% endif %}
+</section>
+{% endif %}
 {% endblock %}
 {% block main %}
 <section class="edition" aria-label="عدد اليوم">
@@ -18,14 +30,14 @@
 </section>
 
 {% if lead %}
-<section class="top">
-  <article class="lead" style="--cat: var(--c-{{ lead.category }})">
+<section class="top{% if lead_hero %} top--runners{% endif %}">
+  {% if not lead_hero %}<article class="lead" style="--cat: var(--c-{{ lead.category }})">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
     <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
     {% if lead.roundup %}<p class="lead__byline">إعداد: {{ lead.outlet }}</p>{% elif lead.own and lead.category == 'opinion' %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
     <p class="lead__excerpt">{{ lead.excerpt }}</p>
     <div class="meta"><time datetime="{{ lead.published_at }}">{{ lead.published_at | ago }}</time>{% if lead.own and lead.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
-  </article>
+  </article>{% endif %}
   {% if runners %}
   <div class="runners">
     <h2 class="runners__title">الأكثر تغطية</h2>
