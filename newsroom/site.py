@@ -497,9 +497,10 @@ class Builder:
                     months.append((e["month"], []))
                 months[-1][1].append(e)
             self._render("events.html", "events.html", 0, months=months, coming=coming, **common)
-        reads = [a for a in articles if a.get("roundup")]
-        if reads:
-            self._render("reads.html", "reads.html", 0, items=reads, **common)
+        with open(os.path.join(self.out, "reads.html"), "w", encoding="utf-8") as f:   # «أبرز ما كُتب» merged into opinion
+            f.write('<!doctype html><meta charset="utf-8"><title>رأي وقراءات</title>'
+                    '<link rel="canonical" href="category/opinion.html"><meta http-equiv="refresh" content="0; url=category/opinion.html">'
+                    '<a href="category/opinion.html">رأي وقراءات</a>')
         self._render("404.html", "404.html", 0, latest=[a for a in articles if a["category"] != "opinion"][:5], **common)
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
@@ -526,7 +527,7 @@ class Builder:
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
-        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/charter.html", None), (f"{base}/liability.html", None), (f"{base}/opportunities.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

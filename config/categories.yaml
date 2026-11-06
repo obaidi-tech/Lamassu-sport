@@ -7,12 +7,14 @@
 
 categories:
   opinion:
-    name_ar: "رأي"
+    name_ar: "رأي وقراءات"         # يضم مقالات الرأي وأعداد «أبرز ما كُتب» (دُمج القسمان 6 نوفمبر 2026)
+    nav_ar: "رأي وقراءات"
     quota: 2
     min_score: 0
     max_per_sub: 1          # sub = الكاتب
   nba:
     name_ar: "كرة السلة الأمريكية"
+    nav_ar: "السلة الأمريكية"
     quota: 2
     min_score: 4
     max_per_sub: 3
@@ -33,6 +35,7 @@ categories:
     max_per_sub: 2          # sub = الرياضة
   para:
     name_ar: "الرياضة البارالمبية"
+    nav_ar: "البارالمبية"
     quota: 1
     min_score: 2.5
     max_per_sub: 2          # sub = البطولة أو الرياضة

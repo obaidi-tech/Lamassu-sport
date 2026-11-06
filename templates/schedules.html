@@ -3,7 +3,7 @@
 {% block description %}روابط مباشرة إلى جداول الترتيب ومواعيد المباريات ونتائجها في الدوريات الكبرى والبطولات الأوروبية والآسيوية.{% endblock %}
 {% block main %}
 <div class="page-head"><h1>الجداول والمباريات</h1>
-  <p>روابط مباشرة إلى الترتيب ومواعيد المباريات ونتائجها، من المواقع الرسمية لكل مسابقة. تُفتح في نافذة جديدة.</p></div>
+  <p>روابط مباشرة إلى الترتيب ومواعيد المباريات ونتائجها، من المواقع الرسمية لكل مسابقة. تُفتح في نافذة جديدة.{% if has_events %} ولمواعيد البطولات والأحداث الكبرى: <a href="{{ root }}events.html">أحداث قادمة</a>.{% endif %}</p></div>
 {% for g in links.groups %}
 <section class="section sched" aria-labelledby="g{{ loop.index }}">
   <div class="section-head"><h2 id="g{{ loop.index }}">{{ g.title }}</h2></div>
