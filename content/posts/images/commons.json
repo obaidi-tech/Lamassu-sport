@@ -131,7 +131,8 @@
   "women's football Olympics 2024 final": "File:2 FINALE FOOTBALL FEMININ BRASIL-ESPAGNE by Eric Salard.jpg",
   "Autodromo Jose Carlos Pace Interlagos": "File:Vista aérea del Autódromo José Carlos Pace 02.jpg",
   "Estadio Monumental River Plate Buenos Aires": "File:River Plate FC Monumental Stadium panorama.jpg",
-  "television camera sports broadcast": "File:Alanna Rizzo and Nomar Garciaparra, Dodger Pregame Broadcast, Dodger Stadium, Los Angeles, California (14516459724).jpg"
+  "television camera sports broadcast": "File:Alanna Rizzo and Nomar Garciaparra, Dodger Pregame Broadcast, Dodger Stadium, Los Angeles, California (14516459724).jpg",
+  "tennis court": "File:Pörtschach Johannes-Brahms-Promenade Werzer-Tennis-Arena 27052017 8932.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -716,5 +717,13 @@
   "license": "CC BY-SA 2.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
   "local": "466046bc0b13.jpg"
+ },
+ "File:Pörtschach Johannes-Brahms-Promenade Werzer-Tennis-Arena 27052017 8932.jpg": {
+  "title": "File:Pörtschach Johannes-Brahms-Promenade Werzer-Tennis-Arena 27052017 8932.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:P%C3%B6rtschach_Johannes-Brahms-Promenade_Werzer-Tennis-Arena_27052017_8932.jpg",
+  "artist": "Johann Jaritz",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "80c924b3c851.jpg"
  }
 }
