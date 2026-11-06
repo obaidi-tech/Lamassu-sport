@@ -20,8 +20,8 @@ File format (edit it straight in GitHub's web editor):
     updates:                      editors only (never shown on the site): "2026-11-05 14:11 | تصحيح: ما تغيّر"
       - "2026-11-05 14:11 | تصحيح: …"  (quote it if it has ": "); the newest sets «آخر تحديث». List: tools/editor_log.py
     featured: true                (optional, for news) put it in the lead spot on the home page
-    lead: true                    (optional, any piece, even «أبرز ما كُتب») the home page lead for 30 hours
-                                  from publishing; then the newest story takes the spot again
+    lead: true                    (optional, any piece, even «أبرز ما كُتب») the home page lead for 12 hours
+                                  from publishing (or lead: 6 for 6 hours); then the newest story takes it again
     draft: true                   (optional; keeps the article off the site)
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
     original_url: https://...      our own summary under the writer's name, with a link to the original
@@ -131,6 +131,19 @@ def _lenient_meta(text: str) -> dict:
         elif val:
             meta[last] = val
     return meta
+
+
+LEAD_HOURS = 12
+
+
+def _lead_hours(v) -> int:
+    """`lead:` front matter → hours the piece holds the home page lead (0 = not pinned)."""
+    if v is True or str(v).strip().lower() in ("true", "yes", "نعم"):
+        return LEAD_HOURS
+    try:
+        return max(0, min(int(str(v).strip()), 48))
+    except (TypeError, ValueError):
+        return 0
 
 
 def _sources(raw) -> list:
@@ -296,7 +309,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "tags": meta.get("tags") or [],
             "category": category,
             "sub": "own",
-            "lead_pin": bool(meta.get("lead")),
+            "lead_pin": _lead_hours(meta.get("lead")),
             "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
             "n_sources": 0 if (external or meta.get("roundup")) else len(srcs),
             "sources": srcs,

@@ -384,8 +384,8 @@ class Builder:
         # the lead is always the newest story; the runners are the rest ranked by coverage
         lead = max(pool, key=lambda a: a["published_at"]) if pool else None
         pinned = [a for a in articles if a.get("lead_pin")
-                  and self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
-        if pinned:                        # an editor's choice (lead: true) beats "newest", for 30 hours
+                  and self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=a["lead_pin"])]
+        if pinned:                        # an editor's choice (lead: true / lead: N) beats "newest", for N hours
             lead = max(pinned, key=lambda a: a["published_at"])
             pool = [lead] + [a for a in pool if a is not lead]
         ranked = ([lead] if lead else []) + sorted([a for a in pool if a is not lead], key=lambda a: -a["score"])
