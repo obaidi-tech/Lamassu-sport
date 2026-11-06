@@ -76,20 +76,20 @@ def main():
     titles = [c["lead"]["title"] for c in ch]
     by = lambda cat: sum(1 for c in ch if c["category"] == cat)  # noqa: E731
     checks = {
-        "between 40 and 50 selected": 40 <= len(ch) <= 50,
-        "opinion quota = 3": by("opinion") == 3,
-        "nba quota = 3": by("nba") == 3,
-        "awareness quota = 3": by("awareness") == 3,
-        "one piece per columnist": len({c["sub"] for c in ch if c["category"] == "opinion"}) == 3,
+        "between 10 and 20 selected": 10 <= len(ch) <= 20,
+        "opinion quota = 2": by("opinion") == 2,
+        "nba within quota (2)": 1 <= by("nba") <= 2,
+        "awareness within quota (1)": by("awareness") <= 1,
+        "one piece per columnist": len({c["sub"] for c in ch if c["category"] == "opinion"}) == 2,
         "labels stripped": not any(re.match(r"(Report|Update|Watch):", t) for t in titles),
-        "Al-Hilal not duplicated": sum(("Al-Hilal" in t or "الهلال" in t) for t in titles) == 1,
+        "Al-Hilal not duplicated": sum(("Al-Hilal" in t or "الهلال" in t) for t in titles) <= 1,
         "single-source rumour excluded": not any("reportedly" in t for t in titles),
         "old item ignored": not any("Old story" in t for t in titles),
         "death story sent to review": all(c["problems"] for c in ch if "dies" in c["lead"]["title"]),
         "invented number caught": any("4" in p for c in ch if "Liverpool" in c["lead"]["title"] for p in c["problems"]),
         "every selected story sent": len(POSTS) == len(ch),
         "reviewed items are 'pending'": all(p["status"] == "pending" for p, c in zip(POSTS, ch) if c["problems"]),
-        "most items auto-scheduled (>=45)": sum(p["status"] == "future" for p in POSTS) >= 45,
+        "most items auto-scheduled": sum(p["status"] == "future" for p in POSTS) >= len(POSTS) - 5,
         "clean items are scheduled": all(p["status"] == "future" and p.get("date_gmt") for p, c in zip(POSTS, ch) if not c["problems"]),
         "every post has category + sources": all(p["categories"] and ("المصادر" in p["content"] or "الكاتب" in p["content"]) for p in POSTS),
         "opinion posts credit author + link": all("Test Columnist" in p["content"] and "href" in p["content"]
@@ -97,16 +97,16 @@ def main():
     }
     r2 = run(cfg_dir=cfg, sources_file="tests/fixtures/sources_test.yaml", out_dir=os.path.join(tmp, "out"),
              state_path=state, use_llm=True, publish=True, all_day=True, log=quiet)
-    checks["daily ceiling of 50 never exceeded"] = len(POSTS) <= 50
+    checks["daily ceiling of 20 never exceeded"] = len(POSTS) <= 20
     checks["nothing republished on re-run"] = not ({c["lead"]["title"] for c in r2["chosen"]} & set(titles))
 
     # quiet day: keep only weak (1–2 publisher) stories → far fewer than 50, no filler
     weak = [c for c in r["clusters"] if len(c["publishers"]) <= 2]
     from newsroom.select import select, targets
     cats = yaml.safe_load(open(os.path.join(cfg, "categories.yaml"), encoding="utf-8"))
-    tot, tg = targets(cats, 50, {"total": 0, "cats": {}, "subs": {}}, 1.0)
+    tot, tg = targets(cats, 20, {"total": 0, "cats": {}, "subs": {}}, 1.0)
     quiet_day = select(weak, cats, tot, tg, {"total": 0, "cats": {}, "subs": {}})
-    checks[f"quiet day publishes fewer ({len(quiet_day)} of {len(weak)} weak stories)"] = len(quiet_day) < 20
+    checks[f"quiet day publishes fewer ({len(quiet_day)} of {len(weak)} weak stories)"] = len(quiet_day) < 10
     checks["quiet day: nothing below its category floor"] = all(
         c["score"] >= cats["categories"][c["category"]]["min_score"] for c in quiet_day)
 

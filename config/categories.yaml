@@ -1,4 +1,5 @@
-# الحصص اليومية = سقف أعلى لا هدف إلزامي (المجموع 50). في الأيام الهادئة يُنشر أقل.
+# الحصص اليومية = سقف أعلى لا هدف إلزامي (المجموع 20). النوعية قبل الكمية: المتوقع 10 إلى 20 يومياً،
+# وفي الأيام الهادئة يُنشر أقل. أرقام مبدئية تُراجع بعد دراسة الوضع (6 نوفمبر 2026).
 # max_per_sub = أقصى عدد أخبار لكل دوري/رياضة/دولة داخل الفئة
 # min_score   = أدنى درجة أهمية مقبولة. القصة الأضعف لا تُنشر حتى لو بقيت الحصة ناقصة.
 #   للتقريب: ناشر كبير واحد حديث ≈ 2، ناشران موثوقان ≈ 4، خبر تغطيه 5 جهات ≈ 9
@@ -7,54 +8,53 @@
 categories:
   opinion:
     name_ar: "رأي"
-    quota: 3
+    quota: 2
     min_score: 0
     max_per_sub: 1          # sub = الكاتب
   nba:
     name_ar: "كرة السلة الأمريكية"
-    quota: 3
-    min_score: 3
+    quota: 2
+    min_score: 4
     max_per_sub: 3
   orgs:
     name_ar: "دولي وقاري"
-    quota: 5
-    min_score: 2.5
+    quota: 1
+    min_score: 3.5
     max_per_sub: 2          # sub = المنظمة
   top5:
     name_ar: "كرة القدم"
-    quota: 12
-    min_score: 3
+    quota: 5
+    min_score: 4
     max_per_sub: 3          # sub = الدوري
   other_sports:
     name_ar: "رياضات عالمية"
-    quota: 12
-    min_score: 3
+    quota: 4
+    min_score: 4
     max_per_sub: 2          # sub = الرياضة
   para:
     name_ar: "الرياضة البارالمبية"
-    quota: 3
-    min_score: 2
+    quota: 1
+    min_score: 2.5
     max_per_sub: 2          # sub = البطولة أو الرياضة
   culture:
     name_ar: "ثقافة وتاريخ"
-    quota: 2
+    quota: 1
     min_score: 2
     max_per_sub: 1
   awareness:
     name_ar: "أبحاث ودراسات"
-    quota: 3
+    quota: 1
     min_score: 2
     max_per_sub: 2
   world:                    # يُعرض ضمن قسم «كرة القدم» (top5) في الموقع
     name_ar: "كرة القدم"
-    quota: 10
-    min_score: 3
+    quota: 2
+    min_score: 4
     max_per_sub: 2          # sub = الدولة
   flex:
     name_ar: "الأبرز"
-    quota: 2                # تُملأ بأعلى الأخبار المتبقية من أي فئة
-    min_score: 5            # الحصة المرنة لا تُستخدم إلا لخبر قوي فعلاً
-    min_score: 5
+    quota: 1                # تُملأ بأعلى الأخبار المتبقية من أي فئة
+    min_score: 6            # الحصة المرنة لا تُستخدم إلا لخبر قوي فعلاً
 
 # مكافأة ترتيب حسب الفئة (تضاف لدرجة الأهمية)
 category_bonus:
