@@ -21,7 +21,7 @@
     {% endif %}
   </div>
   {% if not site.email and not site.linkedin %}
-  <p class="empty">تُضاف وسائل التواصل قريباً.</p>
+  {% if site.corrections_form %}<p>قناة التواصل الرسمية الوحيدة: <a href="{{ site.corrections_form }}" target="_blank" rel="noopener">نموذج التواصل</a> (طلب تصحيح أو توضيح تحريري، أو إبلاغ عن انتحال أو نشاط مالي مشبوه).</p>{% else %}<p class="empty">يُتاح قريباً نموذج التواصل الرسمي الوحيد. لا ينشر لاماسو بريداً شخصياً، وأي جهة تطلب مالاً باسمه منتحلة (<a href="{{ root }}liability.html">حدود المسؤولية</a>).</p>{% endif %}
   {% endif %}
 
   {% if site.email or site.linkedin %}

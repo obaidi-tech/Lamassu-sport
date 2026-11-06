@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}ميثاق التأسيس — {{ site.site_name }}{% endblock %}
+{% block description %}ميثاق التأسيس والتشغيل الاستراتيجي لـ{{ site.site_name }}: الرسالة، والمحاور التحريرية، والفصل بين التحرير والمبادرات، والسياسة المالية، والحوكمة، وسياسة الذكاء الاصطناعي.{% endblock %}
+{% block main %}
+<article class="story prose charter">
+  <h1>{{ charter_title }}</h1>
+  <div class="story__body">
+    {% for p in charter_body %}
+      {%- if p.startswith('### ') %}<h3>{{ p[4:] }}</h3>
+      {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
+      {%- elif p.startswith('|') %}{{ p | table }}
+      {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] | links }}</li>{% endfor %}</ul>
+      {%- else %}<p>{{ p | links }}</p>{% endif %}
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}

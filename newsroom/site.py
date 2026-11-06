@@ -124,7 +124,7 @@ class Builder:
         form = str(self.site.get("contribute_form_url") or "").strip()
         ok_form = form.startswith("https://") and any(h in form for h in ("docs.google.com/forms", "forms.gle/"))
         self.site["contribute"] = form if ok_form else ""
-        cform = str(self.site.get("corrections_form_url") or "").strip()
+        cform = str(self.site.get("contact_form_url") or self.site.get("corrections_form_url") or "").strip()
         self.site["corrections_form"] = cform if cform.startswith("https://") and any(
             h in cform for h in ("docs.google.com/forms", "forms.gle/")) else ""
         self.out = out_dir
@@ -451,6 +451,14 @@ class Builder:
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
+        self._render("liability.html", "liability.html", 0, **common)
+        charter = os.path.join(ROOT, "docs", "charter.md")
+        if os.path.exists(charter):
+            from .posts import _blocks
+            text = open(charter, encoding="utf-8").read()
+            title = text.splitlines()[0].lstrip("# ").strip()
+            body = _blocks(text.split("\n", 1)[1])
+            self._render("charter.html", "charter.html", 0, charter_title=title, charter_body=body, **common)
         contributions = [a for a in articles if a.get("contributor")]
         if self.site["contribute"]:          # the page goes live once the Google Form link is set
             self._render("contribute.html", "contribute.html", 0, contributions=contributions, **common)
@@ -516,7 +524,7 @@ class Builder:
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
         urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
-                (f"{base}/about.html", None), (f"{base}/contact.html", None)]
+                (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/charter.html", None), (f"{base}/liability.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]
             if items:

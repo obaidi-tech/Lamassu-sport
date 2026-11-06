@@ -475,3 +475,6 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 @media (max-width:700px){.files__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px}
   .file{flex:0 0 72%;scroll-snap-align:start}}
 .gie-single{color:var(--ink-2)!important}
+.liability__form{border-inline-start:3px solid var(--accent, #1F7A4D);padding:10px 14px;background:var(--card, rgba(0,0,0,.03))}
+.liability__ref,.charter .story__body table{font-size:.95rem}
+.charter .story__body table{display:block;overflow-x:auto}
