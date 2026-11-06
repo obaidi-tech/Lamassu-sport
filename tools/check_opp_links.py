@@ -1,6 +1,6 @@
 """Check every link in content/opportunities.yaml (run monthly by .github/workflows/opportunities-links.yml).
 Prints a Markdown report and exits 1 when a link is broken (404/410, DNS or connection failure).
-403/429 are reported as "could not check" (many sites refuse automated requests) but do not fail."""
+403/429 and timeouts are reported as "could not check" (many sites refuse automated requests) but do not fail."""
 import sys
 
 import requests
@@ -18,6 +18,8 @@ for o in data.get("opportunities") or []:
             broken.append((o["id"], url, str(r.status_code)))
         elif r.status_code >= 400:
             unsure.append((o["id"], url, str(r.status_code)))
+    except requests.Timeout as e:          # some big sites (olympics.com) stall automated requests
+        unsure.append((o["id"], url, type(e).__name__))
     except requests.RequestException as e:
         broken.append((o["id"], url, type(e).__name__))
 lines = ["## فحص روابط «الفرص والتطوير الرياضي»", ""]
