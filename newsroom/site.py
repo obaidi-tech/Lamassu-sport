@@ -383,6 +383,11 @@ class Builder:
         pool = recent or headline[:30]
         # the lead is always the newest story; the runners are the rest ranked by coverage
         lead = max(pool, key=lambda a: a["published_at"]) if pool else None
+        pinned = [a for a in articles if a.get("lead_pin")
+                  and self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
+        if pinned:                        # an editor's choice (lead: true) beats "newest", for 30 hours
+            lead = max(pinned, key=lambda a: a["published_at"])
+            pool = [lead] + [a for a in pool if a is not lead]
         ranked = ([lead] if lead else []) + sorted([a for a in pool if a is not lead], key=lambda a: -a["score"])
         runners = ranked[1:5]
         used = {a["id"] for a in ranked[:5]}
@@ -407,7 +412,7 @@ class Builder:
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used], files=files,
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
-                     last_update=max((a["published_at"] for a in news), default=""),
+                     last_update=max((a["published_at"] for a in news + ([lead] if lead else [])), default=""),
                      edition_day=self.day_label(self.now), coming=coming[:6], **common,
                      live=load_live(os.path.join(ROOT, "content", "live.yaml"), self.now.astimezone(ZoneInfo("Asia/Riyadh")).date()),
                      # the lead story's own photo fills the banner; the rotating photos are the fallback

@@ -20,6 +20,8 @@ File format (edit it straight in GitHub's web editor):
     updates:                      editors only (never shown on the site): "2026-11-05 14:11 | تصحيح: ما تغيّر"
       - "2026-11-05 14:11 | تصحيح: …"  (quote it if it has ": "); the newest sets «آخر تحديث». List: tools/editor_log.py
     featured: true                (optional, for news) put it in the lead spot on the home page
+    lead: true                    (optional, any piece, even «أبرز ما كُتب») the home page lead for 30 hours
+                                  from publishing; then the newest story takes the spot again
     draft: true                   (optional; keeps the article off the site)
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
     original_url: https://...      our own summary under the writer's name, with a link to the original
@@ -294,6 +296,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "tags": meta.get("tags") or [],
             "category": category,
             "sub": "own",
+            "lead_pin": bool(meta.get("lead")),
             "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
             "n_sources": 0 if (external or meta.get("roundup")) else len(srcs),
             "sources": srcs,
