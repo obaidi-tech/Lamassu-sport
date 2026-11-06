@@ -309,7 +309,7 @@ class Builder:
         if not lead or not lead.get("cover"):
             return None
         w, h = lead.get("cover_w") or 0, lead.get("cover_h") or 0
-        if not h or w / h < 1.5:            # a portrait or square photo would turn into a giant close-up
+        if not h or w / h < 1.45:           # a portrait or square photo would turn into a giant close-up (3:2 photos pass)
             return None
         if lead.get("_lead_hero") is None:
             credit = dict(lead.get("credit") or {"artist": "", "page": "", "license": "", "license_url": ""})
