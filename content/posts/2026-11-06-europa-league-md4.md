@@ -8,6 +8,8 @@ sources:
   - 101 غريت غولز | https://www.101greatgoals.com/football/europa-league/europa-league-round-up-ac-milan-juventus-celtic/
   - الاتحاد الأوروبي لكرة القدم (يويفا) | https://www.uefa.com/uefaeuropaleague/news/02a8-2174cafa5bb6-82bbc20c9b92-1000--2026-27-europa-league-all-the-league-phase-fixtures-and-re/
   - إي إس بي إن (تعيين أموريم) | https://www.espn.com/soccer/story/_/id/49070225/ruben-amorim-appointed-ac-milan-boss-leaving-man-united
+getty: |
+  <a id='ycuFmMzYTPV-Fx9-tbJrow' class='gie-single' href='https://www.gettyimages.com/detail/2302891067' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'ycuFmMzYTPV-Fx9-tbJrow',sig:'e54BZtg3CS7R0KvbtqLeEJ3xj92aUNi9PhxaiWNaVaA=',w:'594px',h:'396px',items:'2302891067',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-05-ucl-matchday-4-wednesday.md
 ---
