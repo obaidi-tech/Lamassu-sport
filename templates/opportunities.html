@@ -7,6 +7,7 @@
   <div class="opp__tags">
     <span class="badge opp__support opp__support--{{ o.support }}">{{ o.support_ar }}</span>
     <span class="opp__field">{{ o.field_ar }}</span>
+    {% if o.expected %}<span class="badge opp__expected">لم يُفتح التقديم</span>{% endif %}
     {% if o.closing %}<span class="badge opp__closing">يغلق خلال {{ o.days_left }} {{ 'يوم' if o.days_left in (1, 0) else 'أيام' if o.days_left <= 10 else 'يوماً' }}</span>{% endif %}
   </div>
   <h3>{{ o.title }}</h3>
@@ -15,7 +16,7 @@
     {% if o.status == 'open' %}<div><dt>آخر موعد</dt><dd><b>{{ dt(o.deadline) }}</b></dd></div>
     {% elif o.status == 'soon' %}<div><dt>التقديم</dt><dd><b>يفتح {{ dt(o.opens) }}</b>{% if o.deadline %} ويغلق {{ dt(o.deadline) }}{% endif %}</dd></div>
     {% elif o.status == 'closed' %}<div><dt>أُغلق</dt><dd>{{ dt(o.deadline) }}</dd></div>
-    {% elif o.when %}<div><dt>الموعد</dt><dd>{{ o.when }}</dd></div>{% endif %}
+    {% elif o.when %}<div><dt>{{ 'موعد متوقع' if o.expected else 'الموعد' }}</dt><dd>{{ o.when }}</dd></div>{% endif %}
     <div><dt>لمن</dt><dd>{{ o.audience }}</dd></div>
     <div><dt>الشروط</dt><dd>{{ o.eligibility }}</dd></div>
   </dl>
@@ -39,15 +40,15 @@
 
   {% if opps.open %}<section class="opps__group"><h2>التقديم مفتوح الآن</h2><div class="opps__grid">{% for o in opps.open %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
   {% if opps.soon %}<section class="opps__group"><h2>يفتح قريباً</h2><div class="opps__grid">{% for o in opps.soon %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
-  {% if opps.recurring %}<section class="opps__group"><h2>برامج دورية وعبر الجهات الوطنية</h2>
-    <p class="opps__note">برامج متاحة عبر الترشيح من اللجان الأولمبية أو الاتحادات الوطنية، أو برامج دورية لم يُعلن موعد دورتها التالية بعد.</p>
+  {% if opps.recurring %}<section class="opps__group"><h2>برامج دورية ومواعيد متوقعة</h2>
+    <p class="opps__note">برامج متاحة عبر الترشيح من اللجان الأولمبية أو الاتحادات الوطنية، وبرامج دورية لم يُفتح التقديم لدورتها التالية بعد. الموعد «المتوقع» تقدير من الدورات السابقة، لا موعد معلن، فراجع الصفحة الرسمية قبل التقديم.</p>
     <div class="opps__grid">{% for o in opps.recurring %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
   <p class="opps__empty" hidden>لا توجد فرص في هذا المجال حالياً. نضيف الجديد فور التحقق منه.</p>
 
   {% if opps.closed %}<details class="opps__archive"><summary>أرشيف الفرص المغلقة ({{ opps.closed | length }})</summary>
     <div class="opps__grid">{% for o in opps.closed %}{{ card(o) }}{% endfor %}</div></details>{% endif %}
 
-  <p class="opps__method">كيف نعمل: لا ننشر إلا ما وجدناه في الصفحة الرسمية للجهة المانحة، ونذكر ما لم تذكره صراحة. نسمّي البرامج المدفوعة «برنامجاً مدفوعاً» ولا نسمّيها منحاً. تنتقل الفرصة إلى الأرشيف تلقائياً بعد موعدها، وتُفحص الروابط شهرياً. وننصح دائماً بمراجعة الصفحة الرسمية قبل التقديم، فالشروط قد تتغير.</p>
+  <p class="opps__method">كيف نعمل: لا ننشر إلا ما وجدناه في الصفحة الرسمية للجهة المانحة، ونذكر ما لم تذكره صراحة. نصنّف التمويل بدقة: منحة كاملة، منحة جزئية، برنامج مجاني، برنامج مدفوع مع إمكانية الدعم، برنامج مدفوع، وتمويل مشروع. ونميّز الموعد المؤكد من الموعد المتوقع. تنتقل الفرصة إلى الأرشيف تلقائياً بعد موعدها، وتُفحص الروابط شهرياً. وننصح دائماً بمراجعة الصفحة الرسمية قبل التقديم، فالشروط قد تتغير.</p>
 </div>
 <script>
 (function () {

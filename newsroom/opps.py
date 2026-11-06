@@ -18,10 +18,12 @@ FIELDS = {
 }
 SUPPORT = {
     "full": "منحة كاملة",
-    "partial": "تمويل جزئي",
-    "free": "تدريب مجاني",
+    "partial": "منحة جزئية",
+    "free": "برنامج مجاني",
+    "paid_support": "برنامج مدفوع مع إمكانية الدعم",
     "paid": "برنامج مدفوع",
-    "project": "دعم مشروع",
+    "fees_unstated": "الرسوم غير معلنة",
+    "project": "تمويل مشروع",
     "nomination": "عبر ترشيح الجهات الوطنية",
 }
 SOON_DAYS = 14
@@ -50,7 +52,10 @@ def load(path: str, today: date) -> dict:
         o["field_ar"], o["support_ar"] = FIELDS[o["field"]], SUPPORT[o["support"]]
         opens, deadline = _d(o.get("opens")), _d(o.get("deadline"))
         o["opens"], o["deadline"], o["verified"] = opens, deadline, _d(o.get("verified"))
-        if deadline and deadline < today:
+        o["expected"] = bool(o.get("expected"))
+        if o["expected"]:              # a date we expect from past rounds, not one the official page confirms
+            o["status"] = "recurring"
+        elif deadline and deadline < today:
             o["status"] = "closed"
         elif opens and opens > today:
             o["status"] = "soon"

@@ -526,3 +526,13 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .hero--framed .hero__box{align-self:flex-start;border:1px solid rgba(232,184,74,.75);background:rgba(20,33,61,.45);
   padding:10px 18px 12px;border-radius:4px;backdrop-filter:blur(2px)}
 .hero--framed .hero__sub{margin-top:4px}
+.opp__support--paid_support{border-style:dashed;border-color:#7D6118;color:#7D6118}
+.opp__support--fees_unstated{border-style:dotted}
+.opp__expected{border-color:var(--ink-2);color:var(--ink-2)}
+.opp__support--paid_support{border-style:dashed;border-color:#7D6118;color:#7D6118}
+.opp__support--fees_unstated{border-style:dotted}
+.opp__expected{border-color:var(--ink-2);color:var(--ink-2)}
+/* single-image section banners drift slowly too, like the rotating para banner (calmer, endless) */
+.hero--section .hero__img:only-child.is-on{animation:hero-breathe 20s ease-in-out infinite alternate;transform-origin:60% 45%}
+@keyframes hero-breathe{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.1) translate3d(-1.2%,-1%,0)}}
+@media (prefers-reduced-motion: reduce){.hero--section .hero__img:only-child.is-on{animation:none;transform:none}}
