@@ -111,6 +111,14 @@
     <p>هذا ملخص بصياغتنا. الرأي لصاحبه، والنص الكامل في مصدره:</p>
     <p>{% if a.sources and a.sources[0].link %}<a href="{{ a.sources[0].link }}" rel="nofollow noopener" target="_blank">{{ a.original_title }}</a>{% else %}«{{ a.original_title }}»{% endif %} — {{ a.outlet }}</p>
   </section>
+  {% elif a.references and a.sources %}
+  <section class="sources" id="sources">
+    <h2>المراجع</h2>
+    <p class="sources__note">مادة أصيلة من إعداد لاماسو{% if a.label %} ({{ a.label }}){% endif %}، وليست تغطية لحدث إخباري، وتستند إلى المراجع التالية:</p>
+    <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
+      <span class="badge src-kind src-kind--reference">مرجع علمي</span>
+      {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% endif %}</li>{% endfor %}</ul>
+  </section>
   {% elif a.sources %}
   <section class="sources" id="sources">
     <h2>مصادر هذا الخبر</h2>

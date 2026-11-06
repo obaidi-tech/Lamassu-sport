@@ -6,6 +6,8 @@ excerpt: مدرب ريال مدريد جوزيه مورينيو يرى أن اع
 sources:
   - فرانس برس (عبر فلاش سكور) | https://www.flashscore.com/news/mourinho-believes-ronaldo-s-international-retirement-doesn-t-signal-end-of-career/M30SoKue/
 bank: real-madrid
+getty: |
+  <a id='WdWRl6YTRQRGBpyqsVYJ-g' class='gie-single' href='https://www.gettyimages.com/detail/1237929675' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WdWRl6YTRQRGBpyqsVYJ-g',sig:'mF7e3xgqM8SsCnm0zprY2PhAay-JJ73rRRbN0xT6Wzk=',w:'594px',h:'396px',items:'1237929675',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-05-ronaldo-retires-portugal.md
   - 2026-11-06-messi-ronaldo-last-line.md
