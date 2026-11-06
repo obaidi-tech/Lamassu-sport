@@ -2,7 +2,7 @@
 {% from "_macros.html" import row, hero_block %}
 {% block title %}{{ title }} — {{ site.site_name }}{% endblock %}
 {% block hero %}
-{% if section_hero %}{{ hero_block(section_hero.images, root, title, section_hero.sub, heading=True) }}{% endif %}
+{% if section_hero %}{{ hero_block(section_hero.images, root, title, section_hero.sub, heading=True, variant=section_hero.variant) }}{% endif %}
 {% endblock %}
 {% block main %}
 <div class="page-head{% if section_hero %} page-head--slim{% endif %}" {% if cat %}style="--cat: var(--c-{{ cat }})"{% endif %}>{% if not section_hero %}<h1>{{ title }}</h1>{% endif %}

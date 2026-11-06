@@ -45,17 +45,17 @@
 {%- endmacro %}
 
 
-{% macro hero_block(hero, root, title, sub='', heading=False, label='') -%}
+{% macro hero_block(hero, root, title, sub='', heading=False, label='', variant='') -%}
 {% set src_label = (hero[0].credit.source or 'Unsplash') ~ ((' (' ~ hero[0].credit.license ~ ')') if hero[0].credit.license and hero[0].credit.source != 'Unsplash' else '') %}
-<section class="hero{% if heading %} hero--section{% endif %}" aria-label="{{ label or title }}">
+<section class="hero{% if heading %} hero--section{% endif %}{% for v in (variant or '').split() %} hero--{{ v }}{% endfor %}" aria-label="{{ label or title }}">
   <div class="hero__slides" aria-hidden="true">
     {% for h in hero %}<img class="hero__img{% if loop.first %} is-on{% endif %}" src="{{ root }}{{ h.src }}"{% if h.src_small %} srcset="{{ root }}{{ h.src_small }} 760w, {{ root }}{{ h.src }} 1400w" sizes="100vw"{% endif %} alt="" width="{{ h.w }}" height="{{ h.h }}"{% if not loop.first %} loading="lazy"{% else %} fetchpriority="high"{% endif %} decoding="async" data-credit="{{ h.credit.artist }}" data-page="{{ h.credit.page }}" data-src="{{ h.credit.source or 'Unsplash' }}{% if h.credit.license and h.credit.source != 'Unsplash' %} ({{ h.credit.license }}){% endif %}" data-lic="{{ h.credit.license_url }}">{% endfor %}
   </div>
   <div class="hero__shade" aria-hidden="true"></div>
-  <div class="wrap hero__text">
+  <div class="wrap hero__text"><div class="hero__box">
     {% if heading %}<h1 class="hero__title">{{ title }}</h1>{% elif title %}<p class="hero__title">{{ title }}</p>{% endif %}
     {% if sub %}<p class="hero__sub">{{ sub }}</p>{% endif %}
-  </div>
+  </div></div>
   {% if hero[0].credit.note %}<p class="hero__credit">{{ hero[0].credit.note }} — {{ hero[0].credit.artist }}</p>
   {% else %}<p class="hero__credit">الصورة: <bdi dir="ltr"><a class="hero__who" href="{{ hero[0].credit.page }}" target="_blank" rel="noopener">{{ hero[0].credit.artist }}</a> / <a class="hero__src" href="{{ hero[0].credit.license_url }}" target="_blank" rel="noopener license">{{ src_label }}</a></bdi></p>{% endif %}
 </section>

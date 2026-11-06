@@ -91,6 +91,7 @@ section_heroes:
   # صورة ثابتة واحدة لكل قسم (خفيفة)
   top5:
     sub: الدوريات الأوروبية الكبرى وكرة القدم حول العالم
+    text: top framed        # العنوان في أعلى الترويسة داخل إطار (top = أعلى، framed = إطار)، حتى لا يغطي الكرة
     images:
       - image: images/football-banner-ai.jpg
         credit: Lamassu

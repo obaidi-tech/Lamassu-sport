@@ -45,7 +45,7 @@ def build_site(cfg_dir="config", content_dir="content", site_dir="public", banne
     for cat, cfg in (site.get("section_heroes") or {}).items():
         imgs = load_hero(os.path.join(content_dir, "posts"), (cfg or {}).get("images"), log=log)
         if imgs:
-            section_heroes[cat] = {"images": imgs, "sub": str((cfg or {}).get("sub") or "")}
+            section_heroes[cat] = {"images": imgs, "sub": str((cfg or {}).get("sub") or ""), "text": str((cfg or {}).get("text") or "")}
     res = Builder(site, cats, site_dir).build(articles, banner=banner, hero=hero, events=events,
                                               section_heroes=section_heroes)
     log(f"✔ الموقع: {res['articles']} مادة (منها {len(posts)} مقالاً خاصاً) في {res['days']} يوماً → {site_dir}/index.html")

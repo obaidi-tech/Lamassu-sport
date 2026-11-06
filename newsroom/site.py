@@ -432,7 +432,7 @@ class Builder:
             sh = (section_heroes or {}).get(cat)
             imgs = self._hero(sh["images"], prefix=f"hero-{cat}") if sh else []
             self._render("list.html", f"category/{cat}.html", 1, title=self.cats[cat]["name_ar"],
-                         items=items, cat=cat, section_hero={"images": imgs, "sub": sh.get("sub", "")} if imgs else None,
+                         items=items, cat=cat, section_hero={"images": imgs, "sub": sh.get("sub", ""), "variant": sh.get("text", "")} if imgs else None,
                          **common)
         for old, new in MERGED.items():          # old section links keep working
             os.makedirs(os.path.join(self.out, "category"), exist_ok=True)
