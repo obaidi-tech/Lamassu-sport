@@ -122,12 +122,6 @@
   </section>
   {% endif %}
 
-  {% if a.updates %}
-  <section class="updates" aria-labelledby="upd-h">
-    <h2 id="upd-h">سجل التحديث</h2>
-    <ul>{% for u in a.updates %}<li><time datetime="{{ u.at }}">{{ u.at | day }}، {{ u.at | time }}</time>: {{ u.note }}</li>{% endfor %}</ul>
-  </section>
-  {% endif %}
 
   <p class="story__note">
     {% if own_op %}مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="{% if site.email %}mailto:{{ site.email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}">راسلنا</a>.

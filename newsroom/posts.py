@@ -17,8 +17,8 @@ File format (edit it straight in GitHub's web editor):
       - الاتحاد الآسيوي | https://www.the-afc.com/...
       - موقع ما | https://... | ناقل   the type (رسمي / وكالة / صحيفة / ناقل / مرجع) is guessed from the
                                      link and the name (newsroom/srckind.py); a third field overrides it
-    updates:                      a line "2026-11-05 14:11 | تصحيح: ما تغيّر" (quoted if it has ": ") is
-      - "2026-11-05 14:11 | تصحيح: …"  shown under the story; notes starting with «تصحيح» also go to corrections.html
+    updates:                      editors only (never shown on the site): "2026-11-05 14:11 | تصحيح: ما تغيّر"
+      - "2026-11-05 14:11 | تصحيح: …"  (quote it if it has ": "); the newest sets «آخر تحديث». List: tools/editor_log.py
     featured: true                (optional, for news) put it in the lead spot on the home page
     draft: true                   (optional; keeps the article off the site)
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish

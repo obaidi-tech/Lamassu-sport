@@ -446,11 +446,6 @@ class Builder:
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
-        corrections = sorted(
-            ({"at": u["at"], "note": re.sub(r"^تصحيح\s*[:：]\s*", "", u["note"]), "a": a}
-             for a in articles for u in a.get("updates") or [] if u["note"].startswith("تصحيح")),
-            key=lambda c: c["at"], reverse=True)
-        self._render("corrections.html", "corrections.html", 0, corrections=corrections, **common)
         contributions = [a for a in articles if a.get("contributor")]
         if self.site["contribute"]:          # the page goes live once the Google Form link is set
             self._render("contribute.html", "contribute.html", 0, contributions=contributions, **common)
@@ -516,7 +511,7 @@ class Builder:
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
         urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
-                (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/corrections.html", None)]
+                (f"{base}/about.html", None), (f"{base}/contact.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]
             if items:
