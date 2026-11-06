@@ -478,3 +478,35 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .liability__form{border-inline-start:3px solid var(--accent, #1F7A4D);padding:10px 14px;background:var(--card, rgba(0,0,0,.03))}
 .liability__ref,.charter .story__body table{font-size:.95rem}
 .charter .story__body table{display:block;overflow-x:auto}
+/* الفرص والتطوير الرياضي */
+.opps{padding-block:24px 40px}
+.opps__kicker{font-family:var(--head);font-weight:700;color:var(--c-awareness);margin:0}
+.opps__head h1{margin:.1em 0 .3em}
+.opps__lede{max-width:70ch;color:var(--ink-2)}
+.opps__filters{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 8px}
+.chip{font:inherit;font-size:.88rem;border:1px solid var(--line);background:var(--card,#fff);color:var(--ink);border-radius:999px;padding:6px 12px;cursor:pointer}
+.chip.is-on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.opps__group h2{font-size:1.15rem;border-top:3px solid var(--ink);padding-top:10px;margin-top:28px}
+.opps__note{color:var(--ink-2);font-size:.92rem;margin-top:-4px}
+.opps__grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}
+.opp{border:1px solid var(--line);border-radius:6px;padding:14px 16px;background:var(--card,#fff);display:flex;flex-direction:column}
+.opp h3{font-size:1.05rem;line-height:1.45;margin:8px 0 2px}
+.opp__tags{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:.8rem}
+.opp__field{color:var(--ink-2)}
+.opp__support--full{border-color:#2f7d4f;color:#2f7d4f}
+.opp__support--paid{border-style:dashed}
+.opp__closing{border-color:#B23A2B;color:#B23A2B;font-weight:700}
+.opp__org{color:var(--ink-2);font-size:.9rem;margin:0 0 8px}
+.opp__facts{margin:0 0 8px;font-size:.92rem}
+.opp__facts div{display:flex;gap:8px;padding:3px 0}
+.opp__facts dt{flex:0 0 64px;color:var(--ink-2)}
+.opp__facts dd{margin:0}
+.opp__details{font-size:.9rem;color:var(--ink-2);margin:0 0 10px}
+.opp__foot{margin-top:auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;font-size:.86rem}
+.opp__link{font-weight:700}
+.opp__verified{color:var(--ink-2)}
+.opps__archive{margin-top:30px}
+.opps__archive summary{cursor:pointer;font-family:var(--head);font-weight:700}
+.opps__archive .opp{opacity:.75}
+.opps__method{margin-top:28px;font-size:.88rem;color:var(--ink-2);max-width:75ch}
+@media (max-width:700px){.opps__grid{grid-template-columns:1fr}.opps__filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{white-space:nowrap}}

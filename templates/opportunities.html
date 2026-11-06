@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}الفرص والتطوير الرياضي — {{ site.site_name }}{% endblock %}
+{% block description %}منح دراسية وبرامج تأهيل وتطوير مهني في الرياضة، من صفحاتها الرسمية مباشرة، مع الموعد النهائي ونوع الدعم وشروط المشاركة.{% endblock %}
+{% macro dt(d) %}{{ d.day }} {{ month_names[d.month - 1] }} {{ d.year }}{% endmacro %}
+{% macro card(o) %}
+<article class="opp opp--{{ o.status }}" data-field="{{ o.field }}" data-support="{{ o.support }}">
+  <div class="opp__tags">
+    <span class="badge opp__support opp__support--{{ o.support }}">{{ o.support_ar }}</span>
+    <span class="opp__field">{{ o.field_ar }}</span>
+    {% if o.closing %}<span class="badge opp__closing">يغلق خلال {{ o.days_left }} {{ 'يوم' if o.days_left in (1, 0) else 'أيام' if o.days_left <= 10 else 'يوماً' }}</span>{% endif %}
+  </div>
+  <h3>{{ o.title }}</h3>
+  <p class="opp__org">{{ o.org }} · {{ o.country }}</p>
+  <dl class="opp__facts">
+    {% if o.status == 'open' %}<div><dt>آخر موعد</dt><dd><b>{{ dt(o.deadline) }}</b></dd></div>
+    {% elif o.status == 'soon' %}<div><dt>التقديم</dt><dd><b>يفتح {{ dt(o.opens) }}</b>{% if o.deadline %} ويغلق {{ dt(o.deadline) }}{% endif %}</dd></div>
+    {% elif o.status == 'closed' %}<div><dt>أُغلق</dt><dd>{{ dt(o.deadline) }}</dd></div>
+    {% elif o.when %}<div><dt>الموعد</dt><dd>{{ o.when }}</dd></div>{% endif %}
+    <div><dt>لمن</dt><dd>{{ o.audience }}</dd></div>
+    <div><dt>الشروط</dt><dd>{{ o.eligibility }}</dd></div>
+  </dl>
+  <p class="opp__details">{{ o.details }}</p>
+  <p class="opp__foot"><a class="opp__link" href="{{ o.link }}" target="_blank" rel="noopener">الصفحة الرسمية <span dir="ltr">{{ o.link | domain }}</span></a>
+    {% if o.verified %}<span class="opp__verified">آخر تحقق: {{ dt(o.verified) }}</span>{% endif %}</p>
+</article>
+{% endmacro %}
+{% block main %}
+<div class="wrap opps">
+  <header class="opps__head">
+    <p class="opps__kicker">لاماسو</p>
+    <h1>الفرص والتطوير الرياضي</h1>
+    <p class="opps__lede">منح دراسية وبرامج تأهيل وتطوير مهني في الرياضة، نرصدها ونتحقق منها في صفحاتها الرسمية، ونحيل إليها مباشرة. التقديم يتم مع الجهة المانحة نفسها، ولا يتدخل لاماسو في القبول أو التمويل، ولا يطلب أي رسوم أو بيانات. <a href="{{ root }}liability.html">حدود المسؤولية</a>.</p>
+  </header>
+
+  <div class="opps__filters" role="group" aria-label="تصفية حسب المجال">
+    <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">كل المجالات</button>
+    {% for k, v in opps.fields.items() %}<button type="button" class="chip" data-filter="{{ k }}" aria-pressed="false">{{ v }}</button>{% endfor %}
+  </div>
+
+  {% if opps.open %}<section class="opps__group"><h2>التقديم مفتوح الآن</h2><div class="opps__grid">{% for o in opps.open %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
+  {% if opps.soon %}<section class="opps__group"><h2>يفتح قريباً</h2><div class="opps__grid">{% for o in opps.soon %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
+  {% if opps.recurring %}<section class="opps__group"><h2>برامج دورية وعبر الجهات الوطنية</h2>
+    <p class="opps__note">برامج متاحة عبر الترشيح من اللجان الأولمبية أو الاتحادات الوطنية، أو برامج دورية لم يُعلن موعد دورتها التالية بعد.</p>
+    <div class="opps__grid">{% for o in opps.recurring %}{{ card(o) }}{% endfor %}</div></section>{% endif %}
+  <p class="opps__empty" hidden>لا توجد فرص في هذا المجال حالياً. نضيف الجديد فور التحقق منه.</p>
+
+  {% if opps.closed %}<details class="opps__archive"><summary>أرشيف الفرص المغلقة ({{ opps.closed | length }})</summary>
+    <div class="opps__grid">{% for o in opps.closed %}{{ card(o) }}{% endfor %}</div></details>{% endif %}
+
+  <p class="opps__method">كيف نعمل: لا ننشر إلا ما وجدناه في الصفحة الرسمية للجهة المانحة، ونذكر ما لم تذكره صراحة. نسمّي البرامج المدفوعة «برنامجاً مدفوعاً» ولا نسمّيها منحاً. تنتقل الفرصة إلى الأرشيف تلقائياً بعد موعدها، وتُفحص الروابط شهرياً. وننصح دائماً بمراجعة الصفحة الرسمية قبل التقديم، فالشروط قد تتغير.</p>
+</div>
+<script>
+(function () {
+  var chips = document.querySelectorAll('.opps__filters .chip'), cards = document.querySelectorAll('.opp'),
+      groups = document.querySelectorAll('.opps__group'), empty = document.querySelector('.opps__empty');
+  chips.forEach(function (c) { c.addEventListener('click', function () {
+    var f = c.getAttribute('data-filter'), shown = 0;
+    chips.forEach(function (x) { var on = x === c; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+    cards.forEach(function (k) { var ok = f === 'all' || k.getAttribute('data-field') === f; k.hidden = !ok; });
+    groups.forEach(function (g) { var n = g.querySelectorAll('.opp:not([hidden])').length; g.hidden = n === 0; shown += n; });
+    if (empty) empty.hidden = shown > 0;
+  }); });
+})();
+</script>
+{% endblock %}

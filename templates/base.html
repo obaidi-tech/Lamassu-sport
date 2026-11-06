@@ -49,6 +49,7 @@
       {% for c in nav %}<a href="{{ root }}category/{{ c }}.html" style="--cat: var(--c-{{ c }})"{% if path == 'category/' ~ c ~ '.html' %} aria-current="page"{% endif %}>{{ cats[c].name_ar }}</a>{% endfor %}
       {% if has_reads %}<a href="{{ root }}reads.html" style="--cat: var(--c-opinion)"{% if path == 'reads.html' %} aria-current="page"{% endif %}>أبرز ما كُتب</a>{% endif %}
       {% if has_events %}<a href="{{ root }}events.html"{% if path == 'events.html' %} aria-current="page"{% endif %}>أحداث قادمة</a>{% endif %}
+      <a href="{{ root }}opportunities.html"{% if path == 'opportunities.html' %} aria-current="page"{% endif %}>الفرص</a>
       <a href="{{ root }}schedules.html"{% if path == 'schedules.html' %} aria-current="page"{% endif %}>الجداول والمباريات</a>
       {% if site.contribute %}<a href="{{ root }}contribute.html"{% if path == 'contribute.html' %} aria-current="page"{% endif %}>شارك معنا</a>{% endif %}
     </div>

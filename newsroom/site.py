@@ -14,6 +14,7 @@ from markupsafe import Markup
 
 from .events import upcoming
 from .live import load_live
+from . import opps as _opps
 from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -452,6 +453,8 @@ class Builder:
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
         self._render("liability.html", "liability.html", 0, **common)
+        opportunities = _opps.load(os.path.join(ROOT, "content", "opportunities.yaml"), self.now.astimezone(self.tz).date())
+        self._render("opportunities.html", "opportunities.html", 0, opps=opportunities, **common)
         charter = os.path.join(ROOT, "docs", "charter.md")
         if os.path.exists(charter):
             from .posts import _blocks
@@ -524,7 +527,7 @@ class Builder:
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
         urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
-                (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/charter.html", None), (f"{base}/liability.html", None)]
+                (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/charter.html", None), (f"{base}/liability.html", None), (f"{base}/opportunities.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]
             if items:
