@@ -12,7 +12,7 @@
 <section class="glead wrap" style="--cat: var(--c-{{ lead.category }})" aria-label="الخبر الرئيسي">
   <div class="glead__text">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
-    <h1 class="glead__title"><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    <h1 class="glead__title"><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title | replace('أبرز ما كُتب: ', '') if lead.roundup else lead.title }}</a></h1>
     <p class="glead__excerpt">{{ lead.excerpt }}</p>
     <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </div>
@@ -24,7 +24,7 @@
   <div class="hero__shade" aria-hidden="true"></div>
   <div class="wrap hero__text">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
-    <h1 class="hero__title"><a class="hero__link" href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    <h1 class="hero__title"><a class="hero__link" href="{{ root }}article/{{ lead.id }}.html">{{ lead.title | replace('أبرز ما كُتب: ', '') if lead.roundup else lead.title }}</a></h1>
     <p class="hero__sub">{{ lead.excerpt }}</p>
     <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
   </div>
@@ -42,7 +42,7 @@
 <section class="top{% if lead_hero or lead.getty %} top--runners{% endif %}">
   {% if not lead_hero and not lead.getty %}<article class="lead" style="--cat: var(--c-{{ lead.category }})">
     <a class="lead__cat" href="{{ root }}category/{{ lead.category }}.html">{{ cats[lead.category].name_ar }}</a>
-    <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title }}</a></h1>
+    <h1><a href="{{ root }}article/{{ lead.id }}.html">{{ lead.title | replace('أبرز ما كُتب: ', '') if lead.roundup else lead.title }}</a></h1>
     {% if lead.roundup %}<p class="lead__byline">إعداد: {{ lead.outlet }}</p>{% elif lead.own and lead.category == 'opinion' %}<p class="lead__byline">بقلم {{ lead.author }}</p>{% endif %}
     <p class="lead__excerpt">{{ lead.excerpt }}</p>
     <div class="meta"><time datetime="{{ lead.published_at }}" data-ago data-day="{{ lead.published_at | day }}">{{ lead.published_at | ago }}</time>{% if lead.own and lead.category == 'opinion' %}{{ meter(0, 'opinion') }}{% elif lead.n_sources %}{{ meter(lead.n_sources, lead.category, root ~ 'article/' ~ lead.id ~ '.html#sources') }}{% endif %}</div>
