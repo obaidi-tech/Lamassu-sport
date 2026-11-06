@@ -122,8 +122,7 @@
 {% endif %}
 
 {% if sections %}
-<section class="tour" aria-labelledby="tour-h">
-  <div class="section-head"><h2 id="tour-h">من الأقسام</h2></div>
+<section class="tour" aria-label="أحدث ما في الأقسام">
   <div class="tour__grid">{% for cat, items in sections %}{% set a = items[0] %}
     <article class="tour__item" style="--cat: var(--c-{{ cat }})">
       <a class="tour__cat" href="{{ root }}category/{{ cat }}.html">{{ cats[cat].nav_ar or cats[cat].name_ar }}</a>

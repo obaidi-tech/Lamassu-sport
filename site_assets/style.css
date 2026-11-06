@@ -511,7 +511,7 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .opps__method{margin-top:28px;font-size:.88rem;color:var(--ink-2);max-width:75ch}
 @media (max-width:700px){.opps__grid{grid-template-columns:1fr}.opps__filters{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px}.chip{white-space:nowrap}}
 /* «من الأقسام»: one latest headline per section instead of full lists */
-.tour{margin:28px 0 36px}
+.tour{margin:32px 0 36px}
 .tour__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 24px}
 .tour__item{border-top:3px solid var(--cat);padding:10px 0 14px;display:flex;flex-direction:column}
 .tour__cat{font-family:var(--head);font-weight:700;font-size:.85rem;color:var(--cat)}
