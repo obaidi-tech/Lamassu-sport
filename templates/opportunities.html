@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "_macros.html" import hero_block %}
 {% block title %}الفرص والتطوير الرياضي — {{ site.site_name }}{% endblock %}
 {% block description %}منح دراسية وبرامج تأهيل وتطوير مهني في الرياضة، من صفحاتها الرسمية مباشرة، مع الموعد النهائي ونوع الدعم وشروط المشاركة.{% endblock %}
 {% macro dt(d) %}{{ d.day }} {{ month_names[d.month - 1] }} {{ d.year }}{% endmacro %}
@@ -25,11 +26,12 @@
     {% if o.verified %}<span class="opp__verified">آخر تحقق: {{ dt(o.verified) }}</span>{% endif %}</p>
 </article>
 {% endmacro %}
+{% block hero %}
+{{ hero_block([{"src": "assets/banners/opportunities-1600.jpg", "src_small": "assets/banners/opportunities-760.jpg", "w": 1600, "h": 533, "credit": {"note": "صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل أشخاصاً حقيقيين", "artist": "Lamassu"}}], root, "الفرص والتطوير الرياضي", "منح وتأهيل وتطوير مهني في الرياضة", heading=True, variant="opps") }}
+{% endblock %}
 {% block main %}
 <div class="wrap opps">
   <header class="opps__head">
-    <p class="opps__kicker">لاماسو</p>
-    <h1>الفرص والتطوير الرياضي</h1>
     <p class="opps__lede">منح دراسية وبرامج تأهيل وتطوير مهني في الرياضة، نرصدها ونتحقق منها في صفحاتها الرسمية، ونحيل إليها مباشرة. التقديم يتم مع الجهة المانحة نفسها، ولا يتدخل لاماسو في القبول أو التمويل، ولا يطلب أي رسوم أو بيانات. <a href="{{ root }}liability.html">حدود المسؤولية</a>.</p>
   </header>
 

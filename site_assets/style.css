@@ -536,3 +536,5 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .hero--section .hero__img:only-child.is-on{animation:hero-breathe 20s ease-in-out infinite alternate;transform-origin:60% 45%}
 @keyframes hero-breathe{from{transform:scale(1.02) translate3d(0,0,0)}to{transform:scale(1.1) translate3d(-1.2%,-1%,0)}}
 @media (prefers-reduced-motion: reduce){.hero--section .hero__img:only-child.is-on{animation:none;transform:none}}
+.hero--opps{height:clamp(190px,24vw,320px)}
+.hero--opps .hero__img:only-child{object-position:50% 40%}
