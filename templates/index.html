@@ -121,11 +121,16 @@
 </section>
 {% endif %}
 
-{% for cat, items in sections %}
-<section class="section section--home" aria-labelledby="h-{{ cat }}">
-  <div class="section-head" style="--cat: var(--c-{{ cat }})"><h2 id="h-{{ cat }}"><a href="{{ root }}category/{{ cat }}.html">{{ cats[cat].name_ar }}</a></h2></div>
-  <div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=False) }}{% endfor %}</div>
-  <a class="section__more" href="{{ root }}category/{{ cat }}.html" style="--cat: var(--c-{{ cat }})">المزيد من {{ cats[cat].name_ar }}</a>
+{% if sections %}
+<section class="tour" aria-labelledby="tour-h">
+  <div class="section-head"><h2 id="tour-h">من الأقسام</h2></div>
+  <div class="tour__grid">{% for cat, items in sections %}{% set a = items[0] %}
+    <article class="tour__item" style="--cat: var(--c-{{ cat }})">
+      <a class="tour__cat" href="{{ root }}category/{{ cat }}.html">{{ cats[cat].nav_ar or cats[cat].name_ar }}</a>
+      <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
+      <a class="tour__more" href="{{ root }}category/{{ cat }}.html">المزيد<span class="visually-hidden"> من {{ cats[cat].name_ar }}</span></a>
+    </article>{% endfor %}
+  </div>
 </section>
-{% endfor %}
+{% endif %}
 {% endblock %}
