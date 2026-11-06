@@ -7,8 +7,7 @@ excerpt: بث محادثة خاصة للاعبة التنس جيسيكا بيغ�
 sources:
   - د ب أ (عبر ياهو سبورتس) | https://sports.yahoo.com/articles/wta-apologizes-recording-aired-pegula-190335406.html
   - رابطة الصحفيين المحترفين، ميثاق الأخلاقيات | https://www.spj.org/ethicscode.asp
-commons: search:television camera sports broadcast
-image_alt: كاميرا بث تلفزيوني في حدث رياضي
+no_image: true
 related:
   - 2026-11-06-wta-apology-practice-audio.md
 ---

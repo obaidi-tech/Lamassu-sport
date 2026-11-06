@@ -6,7 +6,7 @@ excerpt: ميكروفونات البث المباشر لتدريبات بطول�
 sources:
   - د ب أ (عبر ياهو سبورتس) | https://sports.yahoo.com/articles/wta-apologizes-recording-aired-pegula-190335406.html
   - ذا صنداي غارديان | https://sundayguardianlive.com/sports/jessica-pegula-mirra-andreeva-controversy-wta-apologises-after-players-private-practice-conversations-are-live-streamed-318028
-commons: search:tennis practice court empty
+commons: search:tennis court
 image_alt: ملعب تنس خالٍ
 related:
   - 2026-11-06-sports-media-ethics-private-audio.md
