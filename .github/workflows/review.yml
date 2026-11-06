@@ -32,6 +32,8 @@ jobs:
       - run: sudo apt-get update -q && sudo apt-get install -y -q libfribidi0 libharfbuzz0b   # Arabic text shaping for image cards
       - run: pip install -r requirements.txt
       - run: python run.py --build-only
+      - name: Technical check (internal links, alt text, titles, page weight)
+        run: python tools/site_check.py public
       - name: Save decisions
         run: |
           git config user.name "newsroom-bot"

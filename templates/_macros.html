@@ -1,6 +1,6 @@
 {% macro meter(n, cat, href=None) -%}
 {% if cat == 'opinion' or n is none %}<span class="meter meter--opinion">مقال رأي</span>
-{%- else %}<{{ 'a' if href else 'span' }} class="meter"{% if href %} href="{{ href }}"{% endif %} title="عدد الجهات المستقلة التي تناولت الحدث، وليس تقييماً لصحة الخبر">
+{%- else %}<{{ 'a' if href else 'span' }} class="meter"{% if href %} href="{{ href }}"{% endif %} title="عدد الجهات التي تناولت الحدث: مؤشر انتشار، لا دليل صحة">
   <span class="meter__bars" aria-hidden="true">{% for i in range(8) %}<i{% if i < n %} class="on"{% endif %}></i>{% endfor %}</span>
   <span class="meter__label">{{ n | covered }}</span></{{ 'a' if href else 'span' }}>
 {%- endif %}

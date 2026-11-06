@@ -6,8 +6,8 @@
 :root{
   --navy:#14213D; --navy-2:#1D2D50; --paper:#F4F6F5; --card:#FFFFFF; --ink:#16202F; --ink-2:#4A5568;
   --line:#D9DEE3; --amber:#F2A900; --off:#D3D8DE;
-  --c-top5:#1F7A4D; --c-orgs:#2F5AA8; --c-nba:#C8553D; --c-other_sports:#7A4FA0; --c-world:#0F7F81;
-  --c-opinion:#8C6D1F; --c-awareness:#A23B72; --c-flex:#1F7A4D; --c-para:#007A99; --c-culture:#8B5A2B;
+  --c-top5:#1F7A4D; --c-orgs:#2F5AA8; --c-nba:#B44A33; --c-other_sports:#7A4FA0; --c-world:#0C7274;
+  --c-opinion:#7D6118; --c-awareness:#A23B72; --c-flex:#1F7A4D; --c-para:#006D8A; --c-culture:#8B5A2B;
   --head:"Cairo","Segoe UI",Tahoma,sans-serif; --body:"Naskh","Noto Naskh Arabic","Cairo","Segoe UI",Tahoma,sans-serif;
 }
 @media (prefers-color-scheme:dark){:root{
@@ -453,3 +453,25 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .live__item figcaption b{color:var(--ink);font-size:.86rem}
 .live__item figcaption a{margin-inline-start:auto;opacity:.8}
 .live__when{color:var(--ink-2)}
+.src-kind--official{border-color:#2f7d4f;color:#2f7d4f}
+.src-kind--agency{border-color:#2b5f9e;color:#2b5f9e}
+.src-kind--relay,.src-kind--reference{border-style:dashed}
+.corrections__list{list-style:none;padding:0}
+.corrections__list li{border-top:1px solid var(--line);padding:14px 0}
+.corrections__list time{display:block;font-size:.85rem;color:var(--ink-2)}
+.corrections__list a{font-family:var(--head);font-weight:700}
+.corrections__list p{margin:6px 0 0}
+.corrections__by{color:var(--ink-2);font-size:.9rem}
+.files{margin:28px 0}
+.files__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.file{border-top:3px solid var(--cat)}
+.file__pic{display:block;aspect-ratio:16/9;background:var(--line);overflow:hidden}
+.file__pic img{width:100%;height:100%;object-fit:cover;display:block}
+.file__kind{font-family:var(--head);font-size:.78rem;font-weight:700;color:var(--cat);margin:8px 0 2px}
+.file h3{font-size:1rem;line-height:1.45;margin:0}
+.file h3 a{color:inherit;text-decoration:none}
+.file h3 a:hover{text-decoration:underline}
+@media (max-width:900px){.files__grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:700px){.files__grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding-bottom:6px}
+  .file{flex:0 0 72%;scroll-snap-align:start}}
+.gie-single{color:var(--ink-2)!important}

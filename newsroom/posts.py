@@ -15,6 +15,10 @@ File format (edit it straight in GitHub's web editor):
     update_note: سبب التحديث       … and why — shown at the end of the story
     sources:                      (optional, for news) one line per source: "الاسم | الرابط"
       - الاتحاد الآسيوي | https://www.the-afc.com/...
+      - موقع ما | https://... | ناقل   the type (رسمي / وكالة / صحيفة / ناقل / مرجع) is guessed from the
+                                     link and the name (newsroom/srckind.py); a third field overrides it
+    updates:                      a line "2026-11-05 14:11 | تصحيح: ما تغيّر" (quoted if it has ": ") is
+      - "2026-11-05 14:11 | تصحيح: …"  shown under the story; notes starting with «تصحيح» also go to corrections.html
     featured: true                (optional, for news) put it in the lead spot on the home page
     draft: true                   (optional; keeps the article off the site)
     outlet: جريدة فوز              (optional, opinion only) the piece first appeared elsewhere: we publish
@@ -62,6 +66,7 @@ import yaml
 
 from .commons import CommonsCache, RemoteImages
 from .bank import load_bank, pick as bank_pick
+from . import srckind
 
 FRONT = re.compile(r"^﻿?---\s*\n(.*?)\n---\s*\n(.*)$", re.S)
 
@@ -142,10 +147,17 @@ def _sources(raw) -> list:
         if not name:
             continue
         link = link if link.startswith("http") else ""
+        kind = srckind.override(note)
+        if kind:
+            note = ""
+        if not kind and isinstance(item, dict) and item.get("type"):
+            kind = srckind.override(str(item["type"]))
+        kind = kind or srckind.classify(name, link)
         if not link and not note:
             note = ("لم تُحدَّد الوكالة في المادة الأصلية" if re.search(r"وكالات|agencies", name, re.I)
                     else "لم نعثر على رابط المادة الأصلية")
-        out.append({"publisher": name, "title": "", "link": link, "kind": "manual", "note": note})
+        out.append({"publisher": name, "title": "", "link": link, "kind": kind,
+                    "kind_ar": srckind.LABELS[kind], "note": note})
     return out
 
 
@@ -248,7 +260,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
         if meta.get("updated"):
             raw_upd = [f"{meta['updated']} | {meta.get('update_note') or 'تحديث'}"] + list(raw_upd)
         for u in raw_upd:
-            d, _, note = str(u).partition("|")
+            d, _, note = str(u).strip().strip("\"'").partition("|")
             try:
                 at = datetime.fromisoformat(d.strip())
             except ValueError:

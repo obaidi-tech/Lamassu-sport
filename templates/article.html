@@ -72,61 +72,61 @@
   </div>
 
   {% if a.linked %}
-  <aside class="linked" aria-labelledby="lnk-h" style="--cat: var(--c-{{ a.linked[0].category }})">
+  <section class="linked" aria-labelledby="lnk-h" style="--cat: var(--c-{{ a.linked[0].category }})">
     <h2 id="lnk-h">{% if a.category == 'opinion' %}الخبر المرتبط{% else %}قراءة مرتبطة{% endif %}</h2>
     <ul>{% for b in a.linked %}<li><a href="{{ root }}article/{{ b.id }}.html">{{ b.title }}</a>
       <span class="linked__kind">{% if b.roundup %}أبرز ما كُتب{% elif b.category == 'opinion' %}{% if b.own %}مقال رأي{% else %}رأي — {{ b.outlet }}{% endif %}{% else %}{{ cats[b.category].name_ar }}{% endif %}</span></li>{% endfor %}</ul>
-  </aside>
+  </section>
   {% endif %}
 
   {% if a.contributor %}
-  <aside class="contrib-box">
+  <section class="contrib-box">
     <p class="contrib-box__tag">مشاركة تطوعية</p>
     <p class="contrib-box__name">{% if a.author_link %}<a href="{{ a.author_link }}" target="_blank" rel="noopener">{{ a.author }}</a>{% else %}{{ a.author }}{% endif %}</p>
     {% if a.author_bio %}<p class="contrib-box__bio">{{ a.author_bio }}</p>{% endif %}
     {% if site.contribute %}<p class="contrib-box__cta">لديك مقال أو صور أو بحث في الشأن الرياضي؟ <a href="{{ root }}contribute.html">شارك معنا</a></p>{% endif %}
-  </aside>
+  </section>
   {% endif %}
 
   {{ share(page_url, a.title) }}
 
-  {% set correct_link %}{% if site.email %}mailto:{{ site.email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}{% endset %}
+  {% set correct_link %}{% if site.corrections_form %}{{ site.corrections_form }}{% elif site.email %}mailto:{{ site.email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}{% endset %}
   {% if own_op %}
   {% if is_owner %}
-  <aside class="author-box">
+  <section class="author-box">
     <p class="author-box__name">{{ a.author }}</p>
     <p class="author-box__links"><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">الصفحة الشخصية على لينكدإن</a>{% if site.email %} · <a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a>{% endif %}</p>
-  </aside>
+  </section>
   {% endif %}
   {% elif a.roundup %}
-  <aside class="sources" id="sources">
+  <section class="sources" id="sources">
     <h2>المقالات الأصلية</h2>
     <p class="sources__note">ملخصات بصياغتنا، والآراء لأصحابها. النصوص الكاملة في مصادرها:</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
       {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% elif s.note %}<span class="src-note">{{ s.note }}</span>{% endif %}</li>{% endfor %}</ul>
-  </aside>
+  </section>
   {% elif a.category == 'opinion' %}
-  <aside class="sources" id="sources">
+  <section class="sources" id="sources">
     <h2>المقال الأصلي</h2>
     <p>هذا ملخص بصياغتنا. الرأي لصاحبه، والنص الكامل في مصدره:</p>
     <p>{% if a.sources and a.sources[0].link %}<a href="{{ a.sources[0].link }}" rel="nofollow noopener" target="_blank">{{ a.original_title }}</a>{% else %}«{{ a.original_title }}»{% endif %} — {{ a.outlet }}</p>
-  </aside>
+  </section>
   {% elif a.sources %}
-  <aside class="sources" id="sources">
+  <section class="sources" id="sources">
     <h2>مصادر هذا الخبر</h2>
-    <p class="sources__note">يبيّن مؤشر التغطية عدد الجهات المستقلة التي تناولت الحدث ({{ a.n_sources | sources }})، وليس تقييماً لصحة الخبر.{% if not own_news %} صيغ النص من الوقائع الواردة فيها.{% endif %}</p>
+    <p class="sources__note">يبيّن مؤشر التغطية عدد الجهات التي تناولت الحدث ({{ a.n_sources | sources }}): مؤشر انتشار، لا دليل صحة.{% if not own_news %} صيغ النص من الوقائع الواردة فيها.{% endif %}</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
-      {% if s.kind == 'official' %}<span class="badge">جهة رسمية</span>{% elif s.kind == 'agency' %}<span class="badge">وكالة</span>{% endif %}
+      {% if s.kind_ar %}<span class="badge src-kind src-kind--{{ s.kind }}">{{ s.kind_ar }}</span>{% elif s.kind == 'official' %}<span class="badge">جهة رسمية</span>{% elif s.kind == 'agency' %}<span class="badge">وكالة</span>{% endif %}
       {% if s.title %}<span class="src-title" dir="auto">{{ s.title }}</span>{% endif %}
       {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% elif s.note %}<span class="src-note">{{ s.note }}</span>{% endif %}</li>{% endfor %}</ul>
-  </aside>
+  </section>
   {% endif %}
 
   {% if a.updates %}
-  <aside class="updates" aria-labelledby="upd-h">
+  <section class="updates" aria-labelledby="upd-h">
     <h2 id="upd-h">سجل التحديث</h2>
     <ul>{% for u in a.updates %}<li><time datetime="{{ u.at }}">{{ u.at | day }}، {{ u.at | time }}</time>: {{ u.note }}</li>{% endfor %}</ul>
-  </aside>
+  </section>
   {% endif %}
 
   <p class="story__note">

@@ -9,6 +9,9 @@ contact_email: ""                                       # بريد التواص�
 owner_name: "محمد العبيدي"                              # صاحب الموقع: يُربط اسمه بلينكدإن تحت مقالاته
 goatcounter: "lamassu"   # عدّاد الزيارات (بلا كوكيز): اللوحة على https://lamassu.goatcounter.com
 linkedin_url: ""   # أُوقف مؤقتاً 5 نوفمبر 2026: تُرتَّب وسائل التواصل لاحقاً (كان: https://www.linkedin.com/in/al0baidi)
+corrections_form_url: ""        # رابط نموذج Google «طلب تصحيح». عند وضعه تشير إليه روابط «أرسل طلب تصحيح» في كل خبر
+editor_name: "محمد العبيدي"       # المسؤول عن التحرير، يظهر في سياسة الموقع وسجل التصحيحات
+editor_role: "المؤسس ورئيس التحرير"
 contribute_form_url: ""          # رابط نموذج Google «شارك معنا». عند وضعه تظهر صفحة «شارك معنا» ورابطها تلقائياً
 google_site_verification: "XKPOWis_ohj3JA_Ij46o99p0IODwohHvgIWkCBJeIfA"                            # رمز Google Search Console (من وسم HTML)
 month_names: gulf                                       # gulf = نوفمبر | levant = تشرين الثاني

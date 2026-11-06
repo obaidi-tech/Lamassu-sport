@@ -1,5 +1,6 @@
 """Build the static website from content/ — no server, no database, free hosting (GitHub Pages)."""
 import hashlib
+import re
 import json
 import os
 import shutil
@@ -39,6 +40,7 @@ SEARCH_ALIASES = {        # extra words a reader may type for a section
     "top5": "كرة قدم الدوريات الكبرى الدوري الإنجليزي الإسباني الإيطالي فيفا الاتحاد الآسيوي المنتخبات",
 }
 FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
+FILE_LABELS = {"تقرير مرجعي", "قراءة تحليلية", "ملف", "تقرير", "دراسة", "تحقيق"}
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
@@ -122,6 +124,9 @@ class Builder:
         form = str(self.site.get("contribute_form_url") or "").strip()
         ok_form = form.startswith("https://") and any(h in form for h in ("docs.google.com/forms", "forms.gle/"))
         self.site["contribute"] = form if ok_form else ""
+        cform = str(self.site.get("corrections_form_url") or "").strip()
+        self.site["corrections_form"] = cform if cform.startswith("https://") and any(
+            h in cform for h in ("docs.google.com/forms", "forms.gle/")) else ""
         self.out = out_dir
         self.tz = ZoneInfo(site["timezone"])
         self.months = MONTHS.get(site.get("month_names", "gulf"), MONTHS["gulf"])
@@ -148,6 +153,24 @@ class Builder:
     # ── helpers ────────────────────────────────────────────────────────
     def local(self, iso):
         return datetime.fromisoformat(iso).astimezone(self.tz)
+
+    def _thumb(self, a):
+        """A 16:9 card picture (640px) from the piece's cover, or "" when it has none."""
+        if not a.get("cover"):
+            return ""
+        try:
+            from PIL import Image
+            rel = f"img/th-{a['id']}.jpg"
+            with Image.open(os.path.join(self.out, a["cover"])) as im:
+                im = im.convert("RGB")
+                w, h = im.size
+                tw, th = (w, round(w * 9 / 16)) if w / h < 16 / 9 else (round(h * 16 / 9), h)
+                x, y = (w - tw) // 2, max(0, (h - th) // 3)
+                im = im.crop((x, y, x + tw, y + th)).resize((640, 360), Image.LANCZOS)
+                im.save(os.path.join(self.out, rel), "JPEG", quality=74, optimize=True, progressive=True)
+            return rel
+        except Exception:
+            return ""
 
     def day_label(self, iso_or_dt):
         d = self.local(iso_or_dt) if isinstance(iso_or_dt, str) else iso_or_dt.astimezone(self.tz)
@@ -367,6 +390,13 @@ class Builder:
         if lead is None and own:          # no news yet: our own newest article takes the lead spot
             lead = own[0]
             used.add(lead["id"])
+        # «ملفات لاماسو»: our own longer pieces (culture, awareness, labelled reports) get one band
+        # with pictures; they then leave the plain section lists below, so nothing shows twice
+        files = [a for a in news if a["id"] not in used and a.get("own")
+                 and (a["category"] in FEATURE_CATS or a.get("label") in FILE_LABELS)][:4]
+        for a in files:
+            a["thumb"] = self._thumb(a)
+            used.add(a["id"])
         sections = []
         for cat in DISPLAY_ORDER:
             items = [a for a in news if a["category"] == cat and a["id"] not in used][:3]
@@ -375,7 +405,7 @@ class Builder:
         today_key = self.now.astimezone(self.tz).date()
         today = [a for a in news if self.local(a["published_at"]).date() == today_key]
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
-                     opinions=[a for a in self._opinion_band(articles) if a["id"] not in used],
+                     opinions=[a for a in self._opinion_band(articles) if a["id"] not in used], files=files,
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
                      last_update=max((a["published_at"] for a in news), default=""),
                      edition_day=self.day_label(self.now), coming=coming[:6], **common,
@@ -416,6 +446,11 @@ class Builder:
                                                                for d, v in sorted(by_day.items(), reverse=True)], **common)
         self._render("about.html", "about.html", 0, **common)
         self._render("contact.html", "contact.html", 0, **common)
+        corrections = sorted(
+            ({"at": u["at"], "note": re.sub(r"^تصحيح\s*[:：]\s*", "", u["note"]), "a": a}
+             for a in articles for u in a.get("updates") or [] if u["note"].startswith("تصحيح")),
+            key=lambda c: c["at"], reverse=True)
+        self._render("corrections.html", "corrections.html", 0, corrections=corrections, **common)
         contributions = [a for a in articles if a.get("contributor")]
         if self.site["contribute"]:          # the page goes live once the Google Form link is set
             self._render("contribute.html", "contribute.html", 0, contributions=contributions, **common)
@@ -481,7 +516,7 @@ class Builder:
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
         urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + ([(f"{base}/reads.html", reads[0]["published_at"][:10])] if reads else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
-                (f"{base}/about.html", None), (f"{base}/contact.html", None)]
+                (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/corrections.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]
             if items:

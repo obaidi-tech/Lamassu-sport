@@ -62,8 +62,8 @@
   <div class="wrap foot__inner">
     <p class="foot__name">{{ site.site_name }}{% if site.site_name_en %} <span lang="en">| {{ site.site_name_en }}</span>{% endif %}</p>
     <p class="foot__tag">{{ site.tagline }}{% if site.tagline_en %} <span lang="en">{{ site.tagline_en }}</span>{% endif %}</p>
-    <p>نذكر مصادر كل خبر، ويظهر بجانبه عدد الجهات المستقلة التي تناولته.</p>
-    <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.contribute %}<li><a href="{{ root }}contribute.html">شارك معنا</a></li>{% endif %}{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
+    <p>نذكر مصادر كل خبر ونوع كل مصدر، ويظهر بجانبه عدد الجهات التي تناولته.</p>
+    <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}corrections.html">سجل التصحيحات</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.contribute %}<li><a href="{{ root }}contribute.html">شارك معنا</a></li>{% endif %}{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
 </footer>
 <script>

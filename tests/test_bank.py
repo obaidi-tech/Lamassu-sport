@@ -49,5 +49,13 @@ from datetime import date  # noqa: E402
 from newsroom.live import _match_id  # noqa: E402
 check("live: match number read from Sofascore's embed code", _match_id('<iframe src="https://widgets.sofascore.com/en/embed/liveResult?id=16363919&widgetTheme=light">') == "16363919")
 check("live: anything else is refused", _match_id("<script>alert(1)</script>") == "" and _match_id("javascript:1") == "")
+from newsroom import srckind  # noqa: E402
+from newsroom.posts import _sources  # noqa: E402
+check("source type: agency by name, not «قناة»", srckind.classify("رويترز") == "agency" and srckind.classify("قناة العربية") == "media")
+check("source type: club site is official", srckind.classify("ليفربول", "https://www.liverpoolfc.com/news/x") == "official")
+check("source type: 'via' is a relay", srckind.classify("ذا أتلتيك (عبر ياهو سبورتس)", "https://sports.yahoo.com/a") == "relay")
+check("source type: Wikipedia is a reference", srckind.classify("ويكيبيديا", "https://en.wikipedia.org/wiki/X") == "reference")
+s1 = _sources(["موقع ما | https://example.com/x | ناقل"])[0]
+check("source type: manual override wins and is not shown as a note", s1["kind"] == "relay" and s1["note"] == "")
 print(f"\n{fails} failed" if fails else "\nall passed")
 sys.exit(1 if fails else 0)
