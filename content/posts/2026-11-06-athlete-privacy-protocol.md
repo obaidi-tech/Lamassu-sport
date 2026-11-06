@@ -8,7 +8,10 @@ sources:
   - كيفن ديكسون، Content Leakage (سبرينغر نيتشر، 2026) | https://doi.org/10.1007/978-3-032-17822-0_3
   - ديفيد كاسيلو، Sport in Society (2019) | https://doi.org/10.1080/17430437.2019.1634692
 references: true
-no_image: true
+image: images/athlete-privacy-protocol-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل شخصاً حقيقياً
+image_alt: لوح بروتوكول عليه درع حماية وقائمة تحقق، وبجانبه كاميرا بث وميكروفون وبطاقة اعتماد إعلامي ومطرقة قاضٍ، وفي الخلفية لاعب يدخل غرفة الملابس تحت علامة منع التصوير
 related:
   - 2026-11-06-athlete-privacy-two-studies.md
   - 2026-11-06-wta-apology-practice-audio.md
