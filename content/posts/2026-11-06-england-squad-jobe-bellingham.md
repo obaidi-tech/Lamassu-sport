@@ -8,6 +8,8 @@ sources:
   - بي إن سبورتس | https://www.beinsports.com/en-au/football/uefa-nations-league/articles/palmer-left-out-by-england-as-jobe-bellingham-and-king-earn-maiden-call-ups-2026-11-06
 commons: search:Wembley Stadium
 image_alt: ملعب ويمبلي في لندن، معقل منتخب إنجلترا
+getty: |
+  <a id='hhmG2wAUR2t3AKLib5gkIQ' class='gie-single' href='https://www.gettyimages.com/detail/2284812794' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'hhmG2wAUR2t3AKLib5gkIQ',sig:'VFyHc13y4sk_eGLReNIPzjThCTzfUfCW5Q0tAJFGReo=',w:'594px',h:'394px',items:'2284812794',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-05-kane-bayern-2029.md
 ---
