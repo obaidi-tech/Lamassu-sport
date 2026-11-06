@@ -1,7 +1,7 @@
 ---
 title: أستراليا تستعين بمايك هاسي لمعالجة أزمة الضرب قبل سلسلة آشز 2027
 category: other_sports
-date: 2026-11-06 16:55
+date: 2026-11-06 16:40
 excerpt: الاتحاد الأسترالي للكريكيت يعيّن نجمه السابق مايك هاسي مستشاراً للمنتخب على المدى الطويل، بعد الخسارة 2-1 في سلسلة الاختبارات بجنوب أفريقيا.
 sources:
   - فرانس برس (عبر الجزيرة) | https://www.aljazeera.com/sports/2026/11/6/mike-hussey-australia-cricket-batting-consultant-ashes-world-cup

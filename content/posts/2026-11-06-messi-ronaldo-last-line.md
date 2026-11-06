@@ -2,7 +2,7 @@
 title: رونالدو وميسي.. كيف اختلف السطر الأخير؟
 category: top5
 label: قراءة تحليلية
-date: 2026-11-06 17:35
+date: 2026-11-06 17:00
 excerpt: بفارق شهر واحد أسدل الأسطورتان الستار على مسيرتيهما الدوليتين: ميسي في احتفال أمام 80 ألف متفرج في بوينس آيرس، ورونالدو بمقطع مصوّر بعد خلاف مع مدربه.
 sources:
   - الجزيرة | https://www.aljazeera.com/sports/2026/9/16/lionel-messi-set-for-argentina-farewell-in-oct-6-friendly-against-benin

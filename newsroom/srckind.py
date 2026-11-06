@@ -41,7 +41,8 @@ _AGENCY_NAMES = ("رويترز", "reuters", "فرانس برس", "فرانس پ�
 _RELAY_DOMAINS = ("sports.yahoo.com", "news.yahoo.com", "msn.com", "news.google.com", "flipboard.com")
 _REFERENCE_DOMAINS = ("wikipedia.org", "wikimedia.org", "britannica.com", "topendsports.com",
                       "transfermarkt", "worldfootball.net", "rsssf.org", "artuk.org", "museum",
-                      "artsandculture.google.com", "footballheritage")
+                      "artsandculture.google.com", "footballheritage", "doi.org", "springer.com",
+                      "tandfonline.com", "jstor.org", "sciencedirect.com")
 
 
 def _host(link: str) -> str:

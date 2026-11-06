@@ -1,7 +1,7 @@
 ---
 title: جوب بيلينغهام يتلقى أول استدعاء لمنتخب إنجلترا واستبعاد كول بالمر
 category: top5
-date: 2026-11-06 17:55
+date: 2026-11-06 17:10
 excerpt: توخيل يضم لاعب دورتموند جوب بيلينغهام إلى المنتخب الأول للمرة الأولى قبل مباراتي كرواتيا وإسبانيا في دوري الأمم، ويستبعد كول بالمر مجدداً.
 sources:
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/50397863/jobe-bellingham-england-squad-cole-palmer-thomas-tuchel

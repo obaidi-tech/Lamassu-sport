@@ -1,7 +1,7 @@
 ---
 title: "مورينيو يعلق على اعتزال رونالدو: «ليست نهاية مسيرته»"
 category: top5
-date: 2026-11-06 17:25
+date: 2026-11-06 16:55
 excerpt: مدرب ريال مدريد جوزيه مورينيو يرى أن اعتزال كريستيانو رونالدو اللعب الدولي لا يعني نهاية مسيرته، ويتمنى له وداعاً مختلفاً حين يعتزل نهائياً.
 sources:
   - فرانس برس (عبر فلاش سكور) | https://www.flashscore.com/news/mourinho-believes-ronaldo-s-international-retirement-doesn-t-signal-end-of-career/M30SoKue/

@@ -1,7 +1,7 @@
 ---
 title: بيان رسمي.. لهذا السبب قرر إنريكي استبعاد حكيمي من مباراة تروا
 category: top5
-date: 2026-11-06 17:15
+date: 2026-11-06 16:50
 excerpt: باريس سان جيرمان يعلن إراحة أشرف حكيمي حتى بداية التوقف الدولي، فيغيب عن مواجهة تروا السبت في الدوري الفرنسي.
 sources:
   - باريس سان جيرمان (بيان رسمي، عبر بي إن سبورتس) | https://www.beinsports.com/en-us/soccer/ligue-1/articles/luis-enrique-stuns-psg-with-decision-to-leave-achraf-hakimi-out-2026-11-06
