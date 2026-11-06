@@ -78,6 +78,18 @@ def run(cfg_dir="config", sources_file=None, out_dir="out", state_path="state/st
 
     fraction = 1.0 if all_day else run_fraction(site["run_hours"], local.hour)
     run_total, cat_targets = targets(cats, site["daily_total"], used, fraction)
+    if site.get("max_per_run") and not all_day:
+        run_total = min(run_total, int(site["max_per_run"]))
+    # monthly API budget: stop writing (nothing is published as a raw draft) once the cap is reached
+    from . import writer as _w
+    month = local.strftime("%Y-%m")
+    spend = state.data.setdefault("spend", {})
+    budget = float(site["llm"].get("monthly_budget_usd") or 0)
+    _w.SPENT.update(usd=0.0, calls=0)
+    _w.BUDGET["left"] = (budget - spend.get(month, 0.0)) if budget else None
+    if use_llm and budget and spend.get(month, 0.0) >= budget:
+        log(f"⚠ بلغ إنفاق {month} الحد الشهري ({budget}$): لا كتابة ولا نشر آلي حتى بداية الشهر القادم")
+        run_total = 0
     chosen = select(fresh, cats, run_total, cat_targets, used)
     chosen = dedupe(chosen, fresh, site, use_llm, log=log)
     log(f"▶ هذا التشغيل: {len(chosen)} من {run_total} مستهدفاً (منشور اليوم حتى الآن: {used['total']})")
@@ -105,7 +117,9 @@ def run(cfg_dir="config", sources_file=None, out_dir="out", state_path="state/st
                 else:
                     store.hold(rec)
                 state.record(day_key, c, rec["id"])
+            spend[month] = round(spend.get(month, 0.0) + _w.SPENT["usd"], 4)
             state.save()
+            log(f"▶ تكلفة هذا التشغيل ≈ {_w.SPENT['usd']:.4f}$ ({_w.SPENT['calls']} طلباً)، وإنفاق {month} ≈ {spend[month]:.2f}$ من {budget or '—'}$")
             held = sum(1 for c, _ in records if not c["live"])
             log(f"▶ نُشر {len(posted)} خبراً، و{held} في قائمة المراجعة (content/pending)")
         if build:

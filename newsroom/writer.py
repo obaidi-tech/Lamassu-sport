@@ -58,10 +58,27 @@ def _parse_json(text: str) -> dict:
     return json.loads(text[s:e + 1])
 
 
+# API spend of this run, in US dollars (estimated from the token counts the API returns).
+# pipeline.run() sets BUDGET["left"] from the monthly cap; a call that would start past it is refused.
+SPENT = {"usd": 0.0, "calls": 0}
+BUDGET = {"left": None}
+
+
+class BudgetExceeded(RuntimeError):
+    pass
+
+
+def _cost(usage: dict, cfg: dict) -> float:
+    return (usage.get("input_tokens", 0) * cfg.get("price_in_per_mtok", 1.0)
+            + usage.get("output_tokens", 0) * cfg.get("price_out_per_mtok", 5.0)) / 1e6
+
+
 def call_claude(system: str, prompt: str, cfg: dict) -> str:
     key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
         raise RuntimeError("ANTHROPIC_API_KEY is not set")
+    if BUDGET["left"] is not None and SPENT["usd"] >= BUDGET["left"]:
+        raise BudgetExceeded("بلغ الإنفاق الحد الشهري")
     r = requests.post(API_URL, timeout=90, headers={
         "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json",
     }, json={
@@ -70,6 +87,8 @@ def call_claude(system: str, prompt: str, cfg: dict) -> str:
         "messages": [{"role": "user", "content": prompt}],
     })
     r.raise_for_status()
+    SPENT["usd"] += _cost(r.json().get("usage") or {}, cfg)
+    SPENT["calls"] += 1
     return "".join(b.get("text", "") for b in r.json()["content"] if b.get("type") == "text")
 
 

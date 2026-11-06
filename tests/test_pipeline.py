@@ -2,6 +2,8 @@
 Run:  python tests/make_fixtures.py && python tests/test_pipeline.py"""
 import json
 import os
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 import re
 import shutil
 import sys
@@ -98,6 +100,19 @@ def main():
     r2 = run(cfg_dir=cfg, sources_file="tests/fixtures/sources_test.yaml", out_dir=os.path.join(tmp, "out"),
              state_path=state, use_llm=True, publish=True, all_day=True, log=quiet)
     checks["daily ceiling of 20 never exceeded"] = len(POSTS) <= 20
+    # monthly API budget reached → nothing is written or published this run
+    import json as _json
+    st = _json.load(open(state))
+    st.setdefault("spend", {})[datetime.now(timezone.utc).astimezone(ZoneInfo(site["timezone"])).strftime("%Y-%m")] = 999
+    bstate = os.path.join(tmp, "state_budget.json")
+    _json.dump(st, open(bstate, "w"))
+    r3 = run(cfg_dir=cfg, sources_file="tests/fixtures/sources_test.yaml", out_dir=os.path.join(tmp, "out"),
+             state_path=bstate, use_llm=True, publish=False, all_day=True, log=quiet, build=False)
+    checks["monthly budget reached: nothing written"] = r3["chosen"] == []
+    from newsroom.writer import _cost
+    checks["cost estimate: 1M in + 1M out tokens = in + out price"] = abs(
+        _cost({"input_tokens": 1_000_000, "output_tokens": 1_000_000}, site["llm"])
+        - site["llm"]["price_in_per_mtok"] - site["llm"]["price_out_per_mtok"]) < 1e-9
     checks["nothing republished on re-run"] = not ({c["lead"]["title"] for c in r2["chosen"]} & set(titles))
 
     # quiet day: keep only weak (1–2 publisher) stories → far fewer than 50, no filler
@@ -119,7 +134,6 @@ def main():
              content_dir=content, site_dir=public)
     from newsroom.pipeline import build_site
     from newsroom.store import Store
-    from datetime import datetime, timezone
     st = Store(content)
     live, pend = st.all_articles(), st.pending()
     pages = os.listdir(os.path.join(public, "article"))
