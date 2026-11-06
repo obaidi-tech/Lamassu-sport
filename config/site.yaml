@@ -92,10 +92,11 @@ section_heroes:
   top5:
     sub: الدوريات الأوروبية الكبرى وكرة القدم حول العالم
     images:
-      - unsplash: https://unsplash.com/photos/crowd-watching-a-sports-game-in-a-stadium-GKItuYGlOfk
-        unsplash_image: https://images.unsplash.com/photo-1777715330440-025d52e54435
-        photographer: T
-        alt: جمهور في ملعب ويمبلي
+      - image: images/football-banner-ai.jpg
+        credit: Lamassu
+        note: صورة توضيحية مولّدة بالذكاء الاصطناعي
+        alt: كرة قدم بلونين أبيض وكحلي مع خطوط ذهبية على عشب ملعب مضاء ليلاً، ولاعبون يركضون في الخلفية
+      # السابقة (7 نوفمبر 2026): Unsplash photo-1777715330440-025d52e54435 (T)، جمهور في ملعب ويمبلي
   orgs:
     sub: الاتحادات الدولية والقارية، والمنتخبات، والبطولات الكبرى
     images:
