@@ -8,6 +8,8 @@ sources:
   - ذا صنداي غارديان | https://sundayguardianlive.com/sports/jessica-pegula-mirra-andreeva-controversy-wta-apologises-after-players-private-practice-conversations-are-live-streamed-318028
 commons: search:tennis court
 image_alt: ملعب تنس خالٍ
+getty: |
+  <a id='7S2l8aX0RJZ4ufrjIE9_UQ' class='gie-single' href='https://www.gettyimages.com/detail/2232769404' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7S2l8aX0RJZ4ufrjIE9_UQ',sig:'m1ZX43I6j_W_QA8iUpvIB4Gw4Z7h6m-KLQby8AVokZY=',w:'594px',h:'396px',items:'2232769404',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-06-athlete-privacy-two-studies.md
   - 2026-11-06-athlete-privacy-protocol.md

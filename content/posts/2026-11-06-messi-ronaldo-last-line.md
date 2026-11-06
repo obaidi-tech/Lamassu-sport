@@ -11,6 +11,8 @@ sources:
   - فيرست فور سبورتس (عبر ياهو سبورتس) | https://sports.yahoo.com/articles/cristiano-ronaldo-retires-fallout-coach-155352522.html
 commons: search-old:Estadio Monumental River Plate Buenos Aires
 image_alt: ملعب المونومنتال في بوينس آيرس، حيث ودّع ميسي منتخب الأرجنتين
+getty: |
+  <a id='WQXociEWS35ZSOfseM9JUg' class='gie-single' href='https://www.gettyimages.com/detail/461440006' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WQXociEWS35ZSOfseM9JUg',sig:'7YhirB8GCGO8r_lwMsRf78zi7YocuGdiFehK4z8LWXE=',w:'594px',h:'396px',items:'461440006',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-05-ronaldo-retires-portugal.md
   - 2026-11-06-mourinho-ronaldo-retirement.md
