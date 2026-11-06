@@ -10,6 +10,7 @@
       {%- elif p.startswith('## ') %}<h2>{{ p[3:] }}</h2>
       {%- elif p.startswith('|') %}{{ p | table }}
       {%- elif p.startswith('- ') %}<ul>{% for li in p.split('\n') %}<li>{{ li[2:] | links }}</li>{% endfor %}</ul>
+      {%- elif p.startswith('---') %}<hr>
       {%- else %}<p>{{ p | links }}</p>{% endif %}
     {% endfor %}
   </div>
