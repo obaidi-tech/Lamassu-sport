@@ -45,7 +45,6 @@
   <nav class="nav" id="site-nav" aria-label="الأقسام">
     <div class="wrap nav__inner">
       <a href="{{ root }}index.html"{% if path == 'index.html' %} aria-current="page"{% endif %}>الرئيسية</a>
-      <a href="{{ root }}latest.html"{% if path == 'latest.html' %} aria-current="page"{% endif %}>آخر الأخبار</a>
       {% for c in nav %}<a href="{{ root }}category/{{ c }}.html" style="--cat: var(--c-{{ c }})"{% if path == 'category/' ~ c ~ '.html' %} aria-current="page"{% endif %}>{{ cats[c].nav_ar or cats[c].name_ar }}</a>{% endfor %}
       <a href="{{ root }}opportunities.html"{% if path == 'opportunities.html' %} aria-current="page"{% endif %}>الفرص</a>
       <a href="{{ root }}schedules.html"{% if path in ('schedules.html', 'events.html') %} aria-current="page"{% endif %}>المواعيد</a>
@@ -62,7 +61,7 @@
     <p class="foot__name">{{ site.site_name }}{% if site.site_name_en %} <span lang="en">| {{ site.site_name_en }}</span>{% endif %}</p>
     <p class="foot__tag">{{ site.tagline }}{% if site.tagline_en %} <span lang="en">{{ site.tagline_en }}</span>{% endif %}</p>
     <p>نذكر مصادر كل خبر ونوع كل مصدر، ويظهر بجانبه عدد الجهات التي تناولته.</p>
-    <ul class="foot__links"><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}charter.html">ميثاق التأسيس</a></li><li><a href="{{ root }}liability.html">حدود المسؤولية</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.contribute %}<li><a href="{{ root }}contribute.html">شارك معنا</a></li>{% endif %}{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
+    <ul class="foot__links"><li><a href="{{ root }}latest.html">آخر الأخبار</a></li><li><a href="{{ root }}about.html">سياسة الموقع</a></li><li><a href="{{ root }}charter.html">ميثاق التأسيس</a></li><li><a href="{{ root }}liability.html">حدود المسؤولية</a></li><li><a href="{{ root }}archive.html">الأرشيف</a></li><li><a href="{{ root }}feed.xml">خلاصة RSS</a></li><li><a href="{{ root }}contact.html">تواصل معنا</a></li>{% if site.contribute %}<li><a href="{{ root }}contribute.html">شارك معنا</a></li>{% endif %}{% if site.email %}<li><a href="mailto:{{ site.email }}" dir="ltr">{{ site.email }}</a></li>{% endif %}{% if site.linkedin %}<li><a href="{{ site.linkedin }}" target="_blank" rel="noopener me">لينكدإن</a></li>{% endif %}</ul>
   </div>
 </footer>
 <script>
