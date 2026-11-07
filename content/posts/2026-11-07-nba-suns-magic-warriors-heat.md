@@ -5,7 +5,8 @@ date: 2026-11-07 12:30
 excerpt: بوكر يسجل 30 نقطة في فوز فينكس على أورلاندو 117-104 منهياً أربع هزائم متتالية، وكري يحرز 22 من نقاطه الـ29 في الشوط الثاني أمام ميامي.
 sources:
   - رويترز
-bank: warriors
+commons: search:Stephen Curry Golden State Warriors
+image_alt: ستيفن كري لاعب غولدن ستيت ووريورز
 related:
   - 2026-11-05-wembanyama-52.md
 ---
