@@ -7,6 +7,8 @@ sources:
   - الجزيرة نت
   - وكالة الأنباء الألمانية
 no_image: true
+getty: |
+  <a id='m2ZNv7qwQDF3gPZDWCRvMA' class='gie-single' href='https://www.gettyimages.com/detail/2241500221' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'m2ZNv7qwQDF3gPZDWCRvMA',sig:'OgF534YSGS8-BBLba72Y0_dVqn5Y8Ts1oYO1fL3oIdo=',w:'594px',h:'475px',items:'2241500221',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 يخوض اتحاد الجزائر، حامل لقب كأس الكونفدرالية الأفريقية، مواجهة كأس السوبر الأفريقي أمام ماميلودي صن داونز الجنوب أفريقي، بطل دوري الأبطال، الأحد في بريتوريا، ساعياً إلى لقبه الثاني في المسابقة بعد تتويجه بها عام 2023.
