@@ -135,7 +135,8 @@
   "tennis court": "File:Pörtschach Johannes-Brahms-Promenade Werzer-Tennis-Arena 27052017 8932.jpg",
   "Paris La Defense Arena": "File:Enseignes Naming Plenitude Arena.jpg",
   "Loftus Versfeld Stadium Pretoria": "File:U.S. Fan Club, Sam’s Army, Walks to U.S. vs. Algeria World Cup Match.jpg",
-  "Estadio Urbano Caldeira Vila Belmiro Santos": "File:Vila Belmiro pre-match Santos vs Grêmio 2021.jpg"
+  "Estadio Urbano Caldeira Vila Belmiro Santos": "File:Vila Belmiro pre-match Santos vs Grêmio 2021.jpg",
+  "Lusail International Circuit": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -760,5 +761,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "b96b23a49493.jpg"
+ },
+ "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg": {
+  "title": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Qatar_GP_2021._Pol_Espargaro_y_Stefan_Bradl_en_carrera_-_51079776027.jpg",
+  "artist": "Box Repsol",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "local": "acc7b23845f8.jpg"
  }
 }
