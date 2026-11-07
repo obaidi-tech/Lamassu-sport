@@ -6,6 +6,8 @@ excerpt: تحقيق إعلامي فرنسي رصد 12 حساباً توقعت ا
 sources:
   - الغارديان
 no_image: true
+getty: |
+  <a id='6Qsx8R3PReV9i2EV47xUcg' class='gie-single' href='https://www.gettyimages.com/detail/104717820' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'6Qsx8R3PReV9i2EV47xUcg',sig:'WEngbSYpP9HEhHUH5wwW6Fn7Ph7t3k6NuZ_BEJhMB2Q=',w:'594px',h:'361px',items:'104717820',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 فتحت مجلة «فرانس فوتبول»، منظمة جائزة الكرة الذهبية، تحقيقاً في سلسلة رهانات مشبوهة توقعت بدقة الترتيب النهائي للمراكز الخمسة الأولى في نسخة 2026، وأخطرت الشرطة الفرنسية بالواقعة، بحسب صحيفة «الغارديان» البريطانية.
