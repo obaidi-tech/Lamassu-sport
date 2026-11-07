@@ -6,7 +6,10 @@ date: 2026-11-07 22:05
 excerpt: مهاجم الأهلي السابق وبطل أفريقيا 2001، تدرج في قطاع الناشئين قبل أن يصنع اسمه مع أندية صاعدة، ويحرز لقبين في كأس الرابطة، آخرهما مع سيراميكا كليوباترا.
 sources:
   - شبكة تواصل الإخبارية | https://twaslnews1.twaslnews.com/
-no_image: true
+image: images/ali-maher-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل شخصاً حقيقياً
+image_alt: مدرب من الخلف على خط ملعب ليلي، أمامه لوح تكتيك وكأسان وخريطة أفريقيا مضيئة
 related:
   - 2026-11-07-egypt-hossam-hassan-ali-maher.md
 ---
