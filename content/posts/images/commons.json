@@ -136,7 +136,8 @@
   "Paris La Defense Arena": "File:Enseignes Naming Plenitude Arena.jpg",
   "Loftus Versfeld Stadium Pretoria": "File:U.S. Fan Club, Sam’s Army, Walks to U.S. vs. Algeria World Cup Match.jpg",
   "Estadio Urbano Caldeira Vila Belmiro Santos": "File:Vila Belmiro pre-match Santos vs Grêmio 2021.jpg",
-  "Lusail International Circuit": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg"
+  "Lusail International Circuit": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg",
+  "Luka Doncic Los Angeles Lakers": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -769,5 +770,13 @@
   "license": "CC BY 2.0",
   "license_url": "https://creativecommons.org/licenses/by/2.0",
   "local": "acc7b23845f8.jpg"
+ },
+ "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg": {
+  "title": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Luka_Doncic_Lakers_Jarrett_Allen_Donovan_Mitchell_Cavaliers_Jan_2026.jpg",
+  "artist": "Erik Drost",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "local": "0c8f31215690.jpg"
  }
 }
