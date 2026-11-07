@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import hero_block %}
+{% from "_macros.html" import hero_block, share %}
 {% block title %}الفرص والتطوير الرياضي — {{ site.site_name }}{% endblock %}
 {% block description %}منح دراسية وبرامج تأهيل وتطوير مهني في الرياضة، من صفحاتها الرسمية مباشرة، مع الموعد النهائي ونوع الدعم وشروط المشاركة.{% endblock %}
 {% macro dt(d) %}{{ d.day }} {{ month_names[d.month - 1] }} {{ d.year }}{% endmacro %}
@@ -51,6 +51,7 @@
     <div class="opps__grid">{% for o in opps.closed %}{{ card(o) }}{% endfor %}</div></details>{% endif %}
 
   <p class="opps__method">كيف نعمل: لا ننشر إلا ما وجدناه في الصفحة الرسمية للجهة المانحة، ونذكر ما لم تذكره صراحة. نصنّف التمويل بدقة: منحة كاملة، منحة جزئية، برنامج مجاني، برنامج مدفوع مع إمكانية الدعم، برنامج مدفوع، وتمويل مشروع. ونميّز الموعد المؤكد من الموعد المتوقع. تنتقل الفرصة إلى الأرشيف تلقائياً بعد موعدها، وتُفحص الروابط شهرياً. وننصح دائماً بمراجعة الصفحة الرسمية قبل التقديم، فالشروط قد تتغير.</p>
+  {{ share(site.site_url | trim('/') ~ '/opportunities.html', 'لاماسو | الفرص والتطوير الرياضي: منح وتأهيل وتطوير مهني في الرياضة', 'مشاركة صفحة الفرص') }}
 </div>
 <script>
 (function () {

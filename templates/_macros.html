@@ -6,9 +6,9 @@
 {%- endif %}
 {%- endmacro %}
 
-{% macro share(url, title) -%}
+{% macro share(url, title, label='مشاركة الخبر') -%}
 {% set u = url | urlencode %}{% set t = title | urlencode %}
-<div class="share" aria-label="مشاركة الخبر">
+<div class="share" aria-label="{{ label }}">
   <span class="share__label">مشاركة:</span>
   <a href="https://wa.me/?text={{ t }}%20{{ u }}" target="_blank" rel="noopener">واتساب</a>
   <a href="https://twitter.com/intent/tweet?url={{ u }}&text={{ t }}" target="_blank" rel="noopener">إكس</a>
