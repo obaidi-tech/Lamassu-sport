@@ -5,8 +5,8 @@ date: 2026-11-07 12:10
 excerpt: سائق مرسيدس يتصدر الحصة الثانية في إنترلاغوس أمام نوريس وفيرستابن، ومرسيدس قد يحسم لقب الصانعين الأحد، وسط توقعات بالأمطار.
 sources:
   - رويترز
-commons: search:Interlagos circuit grandstand Sao Paulo
-image_alt: حلبة إنترلاغوس في ساو باولو
+commons: File:Vista aérea del Autódromo José Carlos Pace 02.jpg
+image_alt: منظر جوي لحلبة إنترلاغوس في ساو باولو
 related:
   - 2026-11-06-hamilton-400th-race.md
 ---
