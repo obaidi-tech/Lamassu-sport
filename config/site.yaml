@@ -82,6 +82,11 @@ hero:
 section_heroes:
   para:
     images:
+      - image: images/para-banner-ai.jpg
+        credit: Lamassu
+        note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل أشخاصاً حقيقيين
+        alt: متسابقون على الكراسي المتحركة في سباق ليلي على مضمار ألعاب القوى
+        # قُصّ منها شعار اللجنة البارالمبية الدولية (علامة محمية)
       - commons: File:Wheelchair racers Los Angeles Marathon.jpg
         alt: متسابقون على الكراسي المتحركة
       - commons: File:2013 Warrior Games Wheelchair Basketball 130414-N-DT940-550.jpg
