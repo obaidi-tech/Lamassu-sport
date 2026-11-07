@@ -538,3 +538,10 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 @media (prefers-reduced-motion: reduce){.hero--section .hero__img:only-child.is-on{animation:none;transform:none}}
 .hero--opps{height:clamp(190px,24vw,320px)}
 .hero--opps .hero__img:only-child{object-position:50% 40%}
+/* text: whole — the banner keeps its own proportions (no cropping); the slow drift is anchored to the top
+   edge so heads near the top never leave the frame */
+.hero.hero--section.hero--whole,.hero.hero--section.hero--whole:has(.hero__img:only-child){width:100%;height:auto;min-height:0;max-height:none;aspect-ratio:3/1}
+.hero--whole .hero__img:only-child{object-position:50% 0}
+.hero--whole .hero__img:only-child.is-on{animation:hero-breathe-top 22s ease-in-out infinite alternate;transform-origin:50% 0}
+@keyframes hero-breathe-top{from{transform:scale(1)}to{transform:scale(1.035)}}
+@media (prefers-reduced-motion: reduce){.hero--whole .hero__img:only-child.is-on{animation:none;transform:none}}
