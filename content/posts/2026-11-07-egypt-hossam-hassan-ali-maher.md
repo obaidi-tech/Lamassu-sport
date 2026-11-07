@@ -8,6 +8,8 @@ sources:
   - رويترز
 commons: File:Hossam Hassan.png
 image_alt: حسام حسن، المدرب السابق لمنتخب مصر
+getty: |
+  <a id='SoqrUKAFTRhPczxnRZaXNA' class='gie-single' href='https://www.gettyimages.com/detail/2284543962' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'SoqrUKAFTRhPczxnRZaXNA',sig:'GUseRCrXSVJAJ9qxKk9HgFspoQPL3NO9-JEfCIz_UA4=',w:'594px',h:'396px',items:'2284543962',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-07-ali-maher-profile.md
 ---
