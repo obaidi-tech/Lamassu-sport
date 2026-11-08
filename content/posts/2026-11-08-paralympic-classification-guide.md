@@ -9,7 +9,10 @@ sources:
   - اللجنة البارالمبية الدولية، برنامج منافسات لوس أنجلوس 2028 | https://www.paralympic.org/news/la28-paralympic-medal-event-programme-athlete-quotas | جهة رسمية
   - سي بي سي | https://www.cbc.ca/lite/story/1.7307320 | صحيفة
   - ذا سكوتسمان | https://www.scotsman.com/sport/other-sport/paralympics-athletics-2024-categories-and-impairments-explained-what-do-the-letters-and-numbers-mean-4753221 | صحيفة
-no_image: true
+image: images/paralympic-classification-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل شخصاً حقيقياً
+image_alt: عدّاء بساقين صناعيتين يحمل رقم الفئة T62، ومتسابق على كرسي متحرك بفئة T54، وسبّاح، مع لوحة تشرح فئات ألعاب القوى والسباحة وتنس الطاولة وكرة السلة على الكراسي
 ---
 
 حين تتابع سباقاً بارالمبياً، تجد بجانب كل رياضي رمزاً مثل T54 أو S9. هذا الرمز هو «الفئة الرياضية»، وهو مفتاح فهم المنافسة كلها: فالهدف من التصنيف أن يتنافس الرياضيون مع من لديهم قدر مماثل من تأثير الإعاقة على أداء الرياضة نفسها، فيكون الفوز للأمهر والأكثر تدريباً، لا للأقل تأثراً بالإعاقة.
