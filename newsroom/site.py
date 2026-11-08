@@ -537,8 +537,18 @@ class Builder:
         sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                    + "".join(f"<url><loc>{u}</loc>{f'<lastmod>{d}</lastmod>' if d else ''}</url>\n" for u, d in urls)
                    + "</urlset>\n")
-        for name, body in [("feed.xml", rss), ("sitemap.xml", sitemap),
-                           ("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n"),
+        # Google News sitemap: only stories from the last 48 hours (Google ignores older entries), max 1000.
+        cutoff = self.now - timedelta(hours=48)
+        fresh = [a for a in articles if datetime.fromisoformat(a["published_at"]) >= cutoff][:1000]
+        news = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+                'xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">\n'
+                + "".join(f"<url><loc>{base}/article/{a['id']}.html</loc><news:news><news:publication>"
+                          f"<news:name>{escape(self.site['site_name'])}</news:name><news:language>ar</news:language>"
+                          f"</news:publication><news:publication_date>{a['published_at']}</news:publication_date>"
+                          f"<news:title>{escape(a['title'])}</news:title></news:news></url>\n" for a in fresh)
+                + "</urlset>\n")
+        for name, body in [("feed.xml", rss), ("sitemap.xml", sitemap), ("news-sitemap.xml", news),
+                           ("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\nSitemap: {base}/news-sitemap.xml\n"),
                            (".nojekyll", "")]:
             with open(os.path.join(self.out, name), "w", encoding="utf-8") as f:
                 f.write(body)
