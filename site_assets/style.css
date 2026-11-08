@@ -545,3 +545,7 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .hero--whole .hero__img:only-child.is-on{animation:hero-breathe-top 22s ease-in-out infinite alternate;transform-origin:50% 0}
 @keyframes hero-breathe-top{from{transform:scale(1)}to{transform:scale(1.035)}}
 @media (prefers-reduced-motion: reduce){.hero--whole .hero__img:only-child.is-on{animation:none;transform:none}}
+.tags{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:18px 0 10px}
+.tags__label{font-family:var(--head);font-weight:700;font-size:.85rem;color:var(--ink-2)}
+.tags__item{font-family:var(--head);font-weight:600;font-size:.82rem;padding:3px 12px;border:1px solid var(--line);border-radius:999px;color:var(--ink);text-decoration:none}
+.tags__item:hover,.tags__item:focus-visible{border-color:var(--cat);color:var(--cat)}

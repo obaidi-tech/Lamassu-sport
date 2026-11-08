@@ -15,6 +15,7 @@ from markupsafe import Markup
 from .events import upcoming
 from .live import load_live
 from . import opps as _opps
+from . import tags as _tags
 from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -347,6 +348,8 @@ class Builder:
         for a in articles:                       # older pieces say so, so they are not mistaken for today's news
             if not a.get("label") and (self.now - datetime.fromisoformat(a["published_at"])).days > ARCHIVE_DAYS:
                 a["label"] = "أرشيف"
+        self.tag_pages = _tags.assign(articles, _tags.load_tags(os.path.join(ROOT, "config", "tags.yaml")))
+        self.tag_names = {t["slug"]: t["name"] for a in articles for t in a["tags"]}
         for a in articles:                       # merged sections: old category keys show under the kept one
             if "orgs" in MERGED and a["category"] == "orgs" and a.get("sub") in ORGS_ELSEWHERE:
                 a["category"] = "other_sports"
@@ -434,6 +437,9 @@ class Builder:
             self._render("list.html", f"category/{cat}.html", 1, title=self.cats[cat]["name_ar"],
                          items=items, cat=cat, section_hero={"images": imgs, "sub": sh.get("sub", ""), "variant": sh.get("text", "")} if imgs else None,
                          **common)
+        for slug, items in self.tag_pages.items():
+            self._render("list.html", f"tag/{slug}.html", 1, title=self.tag_names[slug], items=items[:80], cat=None,
+                         sub=f"كل ما نشرته لاماسو عن {self.tag_names[slug]}، الأحدث أولاً", **common)
         for old, new in MERGED.items():          # old section links keep working
             os.makedirs(os.path.join(self.out, "category"), exist_ok=True)
             with open(os.path.join(self.out, "category", f"{old}.html"), "w", encoding="utf-8") as f:
@@ -533,6 +539,7 @@ class Builder:
             items = [a for a in articles if a["category"] == c]
             if items:
                 urls.append((f"{base}/category/{c}.html", items[0]["published_at"][:10]))
+        urls += [(f"{base}/tag/{slug}.html", items[0]["published_at"][:10]) for slug, items in getattr(self, "tag_pages", {}).items()]
         urls += [(f"{base}/article/{a['id']}.html", a["published_at"][:10]) for a in articles]
         sitemap = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                    + "".join(f"<url><loc>{u}</loc>{f'<lastmod>{d}</lastmod>' if d else ''}</url>\n" for u, d in urls)

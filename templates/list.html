@@ -6,7 +6,7 @@
 {% endblock %}
 {% block main %}
 <div class="page-head{% if section_hero %} page-head--slim{% endif %}" {% if cat %}style="--cat: var(--c-{{ cat }})"{% endif %}>{% if not section_hero %}<h1>{{ title }}</h1>{% endif %}
-  <p>{% if cat %}الأحدث أولاً{% else %}مرتبة حسب حجم التغطية{% endif %}</p></div>
+  <p>{% if sub %}{{ sub }}{% elif cat %}الأحدث أولاً{% else %}مرتبة حسب حجم التغطية{% endif %}</p></div>
 {% if items %}
 <h2 class="visually-hidden">المواد</h2>
 <div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=not cat) }}{% endfor %}</div>

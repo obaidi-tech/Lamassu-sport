@@ -7,6 +7,7 @@ const axe = fs.readFileSync(require.resolve('axe-core/axe.min.js', { paths: [pro
 const root = path.resolve(process.argv[2] || 'public');
 const pages = ['index.html', 'latest.html', 'about.html', 'contact.html', 'opportunities.html', 'charter.html', 'liability.html', 'archive.html', 'search.html',
   ...fs.readdirSync(path.join(root, 'category')).map(f => 'category/' + f),
+  ...(fs.existsSync(path.join(root, 'tag')) ? fs.readdirSync(path.join(root, 'tag')).slice(0, 3).map(f => 'tag/' + f) : []),
   ...fs.readdirSync(path.join(root, 'article')).slice(0, 12).map(f => 'article/' + f)];
 const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml' };
 const srv = http.createServer((q, r) => {

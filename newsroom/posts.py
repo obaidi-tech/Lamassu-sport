@@ -22,6 +22,7 @@ File format (edit it straight in GitHub's web editor):
     featured: true                (optional, for news) put it in the lead spot on the home page
     references: true              (optional) an original guide or study reading, not news: the sources are
                                   shown as «المراجع» without the coverage meter
+    tags: [ريال مدريد, الدوري الإسباني]   (optional) hand-picked tags from config/tags.yaml; others come from the headline
     lead: true                    (optional, any piece, even «أبرز ما كُتب») the home page lead for 12 hours
                                   from publishing (or lead: 6 for 6 hours); then the newest story takes it again
     draft: true                   (optional; keeps the article off the site)
@@ -330,6 +331,8 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "updates": updates,
             "figures": figures,
             "label": str(meta.get("label") or "").strip(),
+            "manual_tags": [str(x).strip() for x in meta.get("tags")] if isinstance(meta.get("tags"), list)
+                           else [x.strip() for x in str(meta.get("tags") or "").replace("،", ",").split(",") if x.strip()],
             "crop": [float(x) for x in str(meta.get("image_crop") or "").replace(",", " ").split()][:4],
             "related_files": [str(x).strip() for x in (meta.get("related") or []) if str(x).strip()]
                              if isinstance(meta.get("related"), list) else

@@ -28,6 +28,7 @@
   "author": ({"@type": "Person", "name": a.author, "url": site.linkedin} if is_owner else ({"@type": "Person", "name": a.author} if (a.author and a.category == 'opinion') else {"@type": "Organization", "name": site.site_name, "url": site.site_url})),
   "publisher": {"@type": "Organization", "name": site.site_name, "url": site.site_url,
                 "logo": {"@type": "ImageObject", "url": site.site_url | trim('/') ~ '/icon-512.png', "width": 512, "height": 512}},
+  "keywords": (a.tags | map(attribute='name') | list),
   "isBasedOn": (a.sources | selectattr('link') | map(attribute='link') | list)
 } | tojson_ar }}</script>{% endblock %}
 {% block main %}
@@ -130,6 +131,7 @@
   </section>
   {% endif %}
 
+  {% if a.tags %}<nav class="tags" aria-label="وسوم الخبر"><span class="tags__label">وسوم:</span>{% for t in a.tags %}<a class="tags__item" href="{{ root }}tag/{{ t.slug }}.html">{{ t.name }}</a>{% endfor %}</nav>{% endif %}
 
   <p class="story__note">
     {% if own_op %}مقال رأي يعبّر عن كاتبه. للتعليق أو طلب تصحيح: <a href="{% if site.email %}mailto:{{ site.email }}?subject={{ ('تعليق: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}">راسلنا</a>.
