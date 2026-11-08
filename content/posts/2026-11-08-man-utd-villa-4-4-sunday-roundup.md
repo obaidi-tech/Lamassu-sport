@@ -8,6 +8,8 @@ sources:
   - غول | https://www.goal.com/en-za/news/zirkzee-helps-manchester-united-to-astonishing-draw-with-stoppage-time-goal/blt79a2638ff0f6096f | صحيفة
   - بالس | https://www.pulse.ng/story/man-utd-vs-aston-villa-dorgu-hits-97th-minute-equaliser-to-save-carricks-job-2026110818342076467 | صحيفة
 no_image: true
+getty: |
+  <a id='T6mkiW9uSEhA7KiJ1Ci0iw' class='gie-single' href='https://www.gettyimages.com/detail/2300816453' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'T6mkiW9uSEhA7KiJ1Ci0iw',sig:'HhyVdrBWhK48fwsECe1JpcEBetFvIv-Jqc6N-tcE0lg=',w:'594px',h:'407px',items:'2300816453',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 خطف مانشستر يونايتد تعادلاً مثيراً من ضيفه أستون فيلا 4-4 على ملعب أولد ترافورد، الأحد، في أبرز مباريات الجولة من الدوري الإنجليزي الممتاز، بعدما عاد من تأخره بهدفين في مناسبتين.
