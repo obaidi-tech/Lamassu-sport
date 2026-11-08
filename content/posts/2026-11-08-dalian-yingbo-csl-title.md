@@ -6,7 +6,7 @@ excerpt: داليان يفوز على تيانجين 3-1 ويستفيد من خ�
 sources:
   - سي جي تي إن | https://news.cgtn.com/news/2026-10-25/Chengdu-s-title-hopes-suffer-setback-as-Dalian-wins-1-0-in-CSL-1RwxpnoFB5u/p.html | صحيفة
   - ذا ستار | https://www.thestar.com.my/news/world/2026/10/24/dalian-stuns-chengdu-to-prolong-csl-title-race-wuhan-relegated | صحيفة
-no_image: true
+commons: File:Dalian Yingbo vs Beijing Guoan 2025-05-05.jpg
 ---
 
 تُوّج داليان ينغبو بلقب الدوري الصيني الممتاز لكرة القدم للمرة الأولى في تاريخه، بعد فوزه على تيانجين تايغر 3-1 الأحد، بالتزامن مع خسارة منافسه المباشر تشنغدو رونغتشنغ أمام شاندونغ تايشان 2-3 في الجولة الأخيرة.
