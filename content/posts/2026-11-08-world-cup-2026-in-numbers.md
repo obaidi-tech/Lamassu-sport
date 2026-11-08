@@ -8,7 +8,8 @@ sources:
   - غلف نيوز | https://gulfnews.com/sport/football/world-cup/kylian-mbappe-wins-2026-world-cup-golden-boot-beats-messi-again-full-list-of-all-awards-1.500613609 | صحيفة
   - كرونيكل لوكسمبورغ | https://chronicle.lu/category/football/62484-spain-defeat-argentina-to-win-second-world-cup-title | صحيفة
   - أول أفريكا | https://allafrica.com/stories/202607210766.html | ناقل
-no_image: true
+commons: File:Trionda 2026Fifa World Cup Football Championship Official Ball at Bic Camera Namba.jpg
+image_alt: كرة «تريوندا» الرسمية لكأس العالم 2026 معروضة في متجر
 related:
   - 2026-11-07-argentina-cas-fifa-sanctions.md
 ---
