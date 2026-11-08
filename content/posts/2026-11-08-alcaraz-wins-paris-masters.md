@@ -5,7 +5,7 @@ date: 2026-11-08 21:40
 excerpt: الإسباني يفوز 7-6 و7-5 ويثأر من خسارته أمام الأمريكي في ربع نهائي أمريكا المفتوحة، محققاً لقبه التاسع في بطولات الألف نقطة، وأول لقب إسباني في باريس منذ دافيد فيرير 2012.
 sources:
   - رويترز
-commons: File:Carlos Alcaraz, Basel 2022.jpg
+commons: File:Carlos Alcaraz (2026 US Open) - 09.jpg
 related:
   - 2026-11-07-alcaraz-shelton-paris-final.md
 ---
