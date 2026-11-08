@@ -6,7 +6,7 @@ excerpt: قائد إنتر ميامي ينهي الموسم المنتظم بر�
 sources:
   - غلف نيوز | https://gulfnews.com/sport/football/lionel-messi-set-to-become-first-player-to-retain-mls-golden-boot-since-2005-1.500732201 | صحيفة
   - رابطة الدوري الأمريكي | https://www.mlssoccer.com/news/mls-golden-boot-tracker-2026-season-top-scorer | جهة رسمية
-no_image: true
+commons: File:Lionel Messi NE Revolution Inter Miami 7.9.25-178 (cropped 2).jpg
 ---
 
 توّج الأرجنتيني ليونيل ميسي، قائد إنتر ميامي، بجائزة الحذاء الذهبي لهداف الدوري الأمريكي لكرة القدم للموسم الثاني على التوالي، مع ختام الموسم المنتظم.
