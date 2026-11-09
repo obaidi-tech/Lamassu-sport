@@ -7,6 +7,8 @@ sources:
   - وكالة فرانس برس
   - فرانس 24 | https://www.france24.com/en/france/20261109-french-judo-star-teddy-riner-announces-bid-for-presidency | صحيفة
 no_image: true
+getty: |
+  <a id='Tn2Wt50rRG5jzZ5pljOtpQ' class='gie-single' href='https://www.gettyimages.com/detail/2165077186' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'Tn2Wt50rRG5jzZ5pljOtpQ',sig:'VigVd1QjQshr9_pvXstIz4_iYq-KxB7eZF1iOncQVs0=',w:'594px',h:'396px',items:'2165077186',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 أعلن الفرنسي تيدي رينر، أكثر لاعبي الجودو تتويجاً في تاريخ الألعاب الأولمبية، ترشحه للانتخابات الرئاسية الفرنسية المقررة في 2027، في مقطع فيديو نشره الاثنين على وسائل التواصل الاجتماعي، وأطلق في اليوم نفسه حزباً سياسياً باسم «فرنسا التي نريد».
