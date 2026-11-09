@@ -6,7 +6,8 @@ excerpt: مدافع برشلونة يتوّج عاماً استثنائياً ق
 sources:
   - رويترز
   - توتوسبورت
-no_image: true
+commons: File:Pau Cubarsi Argentina v Spain 19 July 2026-142.jpg
+image_alt: باو كوبارسي خلال نهائي كأس العالم بين إسبانيا والأرجنتين في 19 يوليو 2026
 related:
   - 2026-11-08-world-cup-2026-in-numbers.md
 ---
