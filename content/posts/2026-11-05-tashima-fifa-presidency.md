@@ -13,6 +13,7 @@ getty: |
   <a id='joKFU9PKTj5dakD7yK84-Q' class='gie-single' href='https://www.gettyimages.com/detail/1148960372' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'joKFU9PKTj5dakD7yK84-Q',sig:'nRbwW3hLlGVFJcqAGzG1YSQ6RYZyu79WqZYIC5b1MFw=',w:'594px',h:'424px',items:'1148960372',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-04-infantino-article-33.md
+story_id: fifa-election-2027
 ---
 
 أعلن الياباني كوزو تاشيما، عضو مجلس الاتحاد الدولي لكرة القدم (فيفا) والرئيس السابق للاتحاد الياباني، أنه سيترشح لرئاسة الفيفا في الانتخابات المقررة في مارس المقبل، ليصبح أول منافس جدي للرئيس الحالي جياني إنفانتينو.

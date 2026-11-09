@@ -9,6 +9,8 @@ commons: File:Carlos Alcaraz, Basel 2022.jpg
 image_alt: الإسباني كارلوس ألكاراز
 related:
   - 2026-11-07-alcaraz-fritz-paris-masters.md
+story_id: paris-masters-2026
+follows: 2026-11-07-alcaraz-fritz-paris-masters.md
 ---
 
 تفوق الإسباني كارلوس ألكاراز على النرويجي كاسبر رود 6-4 و6-4، السبت، ليبلغ نهائي بطولة باريس للأساتذة للمرة الأولى في مسيرته، حيث يلتقي الأمريكي بن شيلتون، الذي تجاوز بداية بطيئة ليفوز على الفرنسي لوكا فان آسشي 5-7 و6-3 و6-4.

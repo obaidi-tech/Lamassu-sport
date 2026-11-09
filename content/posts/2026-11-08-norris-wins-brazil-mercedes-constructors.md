@@ -9,6 +9,8 @@ commons: File:Vista aérea del Autódromo José Carlos Pace 02.jpg
 related:
   - 2026-11-07-antonelli-fp2-brazil.md
   - 2026-11-06-hamilton-400th-race.md
+story_id: f1-2026-brazil
+follows: 2026-11-07-antonelli-fp2-brazil.md
 ---
 
 أحرز فريق مرسيدس لقب الصانعين في بطولة العالم لسباقات فورمولا 1 للمرة التاسعة في تاريخه، والأولى منذ 2021، بعد سباق جائزة ساو باولو الكبرى الأحد، الذي فاز به البريطاني لاندو نوريس، سائق مكلارين، من مركز الانطلاق الأول للعام الثاني على التوالي.

@@ -8,6 +8,7 @@ sources:
   - بيزنس داي | https://www.businessday.co.za/motoring/2026-11-06-lewis-hamilton-celebrates-400th-f1-race-in-brazil/
 commons: search:Autodromo Jose Carlos Pace Interlagos
 image_alt: حلبة إنترلاغوس في ساو باولو، مضمار جائزة البرازيل الكبرى
+story_id: f1-2026-brazil
 ---
 
 يخوض البريطاني لويس هاميلتون، سائق فيراري، سباقه رقم 400 في بطولة العالم للفورمولا 1 هذا الأسبوع في جائزة ساو باولو الكبرى بالبرازيل، ليصبح ثاني سائق يبلغ هذا الرقم بعد الإسباني فرناندو ألونسو، سائق أستون مارتن، الذي يقترب من 450 سباقاً.

@@ -11,6 +11,7 @@ getty: |
 related:
   - 2026-11-05-ronaldo-retires-portugal.md
   - 2026-11-06-messi-ronaldo-last-line.md
+story_id: ronaldo-international-retirement
 ---
 
 علّق جوزيه مورينيو، مدرب ريال مدريد، على إعلان مواطنه كريستيانو رونالدو اعتزال اللعب الدولي مع منتخب البرتغال، مؤكداً أن القرار لا يعني نهاية مسيرة اللاعب.

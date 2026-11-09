@@ -11,6 +11,7 @@ related:
   - 2026-11-05-ronaldo-retires-portugal.md
   - 2026-11-06-mourinho-ronaldo-retirement.md
   - 2026-11-06-messi-ronaldo-last-line.md
+story_id: ronaldo-international-retirement
 ---
 
 تعهد الاتحاد البرتغالي لكرة القدم بتكريم قائده السابق كريستيانو رونالدو بعد إعلانه اعتزال اللعب الدولي، فيما واجه مدرب المنتخب جورجي جيسوس سيلاً من الأسئلة عن خلافه مع النجم البرتغالي ودوره في قرار الاعتزال.

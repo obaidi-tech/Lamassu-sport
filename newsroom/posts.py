@@ -22,6 +22,8 @@ File format (edit it straight in GitHub's web editor):
     featured: true                (optional, for news) put it in the lead spot on the home page
     references: true              (optional) an original guide or study reading, not news: the sources are
                                   shown as «المراجع» without the coverage meter
+    story_id: f1-2026-brazil      (optional) the same id on every post of one developing story
+    follows: 2026-11-07-x.md      (optional) the earlier post this one is a major development of
     tags: [ريال مدريد, الدوري الإسباني]   (optional) hand-picked tags from config/tags.yaml; others come from the headline
     lead: true                    (optional, any piece, even «أبرز ما كُتب») the home page lead for 12 hours
                                   from publishing (or lead: 6 for 6 hours); then the newest story takes it again
@@ -331,6 +333,8 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "updates": updates,
             "figures": figures,
             "label": str(meta.get("label") or "").strip(),
+            "story_id": str(meta.get("story_id") or "").strip(),      # one id shared by every post of one story
+            "follows": str(meta.get("follows") or "").strip(),        # the post file this one develops
             "manual_tags": [str(x).strip() for x in meta.get("tags")] if isinstance(meta.get("tags"), list)
                            else [x.strip() for x in str(meta.get("tags") or "").replace("،", ",").split(",") if x.strip()],
             "crop": [float(x) for x in str(meta.get("image_crop") or "").replace(",", " ").split()][:4],

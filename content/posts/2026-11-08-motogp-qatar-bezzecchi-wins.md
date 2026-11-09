@@ -9,6 +9,8 @@ commons: search:Lusail International Circuit
 image_alt: حلبة لوسيل الدولية في قطر
 related:
   - 2026-11-07-motogp-qatar-bezzecchi-pole.md
+story_id: motogp-qatar-2026
+follows: 2026-11-07-motogp-qatar-bezzecchi-pole.md
 ---
 
 فاز الإيطالي ماركو بتسيكي، متسابق أبريليا، بسباق جائزة قطر الكبرى للدراجات النارية للفئة الأولى (موتو جي بي)، الأحد، بعدما تصدره من البداية حتى النهاية تحت الأضواء على حلبة لوسيل الدولية، ليؤجل تتويج الإسباني مارك ماركيز، متسابق دوكاتي، الذي حلّ ثانياً.

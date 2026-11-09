@@ -8,6 +8,8 @@ sources:
 commons: File:Carlos Alcaraz (2026 US Open) - 09.jpg
 related:
   - 2026-11-07-alcaraz-shelton-paris-final.md
+story_id: paris-masters-2026
+follows: 2026-11-07-alcaraz-shelton-paris-final.md
 ---
 
 أحرز الإسباني كارلوس ألكاراز، المصنف الثالث عالمياً، لقب بطولة باريس لأساتذة التنس للمرة الأولى، بفوزه على الأمريكي بن شيلتون، المصنف الرابع، 7-6 و7-5 الأحد، بحسب وكالة رويترز.

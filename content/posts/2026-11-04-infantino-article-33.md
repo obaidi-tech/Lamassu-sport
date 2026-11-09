@@ -9,6 +9,7 @@ sources:
   - ذا ناشونال | https://www.thenationalnews.com/sport/football/2026/10/23/asian-football-chief-backs-gianni-infantinos-fifa-presidency-bid/
 commons: search:FIFA headquarters Zurich Home of FIFA
 image_alt: مقر الاتحاد الدولي لكرة القدم في زيورخ
+story_id: fifa-election-2027
 ---
 
 قال البرتغالي ميغيل مادورو، الرئيس السابق للجنة الحوكمة في الاتحاد الدولي لكرة القدم (فيفا)، إن جياني إنفانتينو لا يحق له الترشح لولاية رابعة في انتخابات رئاسة الاتحاد المقررة في مارس 2027، استناداً إلى لوائح فيفا نفسها.

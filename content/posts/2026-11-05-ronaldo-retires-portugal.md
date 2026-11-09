@@ -15,6 +15,7 @@ sources:
 commons: File:Portugal national football team World Cup 2018.jpg
 image_crop: 0 0 36 0
 image_alt: لاعبو منتخب البرتغال ومنهم كريستيانو رونالدو قبل مباراة في كأس العالم 2018
+story_id: ronaldo-international-retirement
 ---
 
 أعلن كريستيانو رونالدو، الخميس، اعتزاله اللعب الدولي مع منتخب البرتغال، في منشور على وسائل التواصل الاجتماعي، واضعاً حداً لواحدة من ألمع المسيرات الدولية في تاريخ كرة القدم.

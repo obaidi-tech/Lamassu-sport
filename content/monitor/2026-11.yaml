@@ -1,0 +1,72 @@
+# سجل الرصد الموحد، نوفمبر 2026. للمحررين فقط، ولا يظهر في الموقع.
+# الحالات: جديد / تطور جوهري / تحديث / مكرر. الشرح والحقول في tools/monitor.py.
+# القاعدة: ليست كل معلومة جديدة تطوراً جوهرياً، والمعيار مقدار تأثيرها على فهم الحدث لا مجرد حداثتها.
+# الإدخالات قبل 9 نوفمبر مصنفة بأثر رجعي عند اعتماد السجل.
+entries:
+  - id: M-2026-11-08-01
+    date: 2026-11-08 15:16
+    title: تاشيما يعلن ملامح برنامجه ويقدّر فرصه بين 20 و30 بالمئة
+    source: رويترز عن سبورتس نيبون
+    status: تحديث
+    story_id: fifa-election-2027
+    follows: 2026-11-05-tashima-fifa-presidency.md
+    test: [إضافة]
+    verified: true
+    archive_checked: true
+    note: لا التزام محدداً ولا تغيير في مسار الانتخابات، والتقدير شخصي، فهو تحديث وفق الضابط الجديد. نُشر خبراً مستقلاً (2026-11-08-tashima-fifa-governance-bid.md) قبل اعتماد الضابط.
+  - id: M-2026-11-08-02
+    date: 2026-11-08 19:35
+    title: اتحاد العاصمة يتوج بكأس السوبر الأفريقي على حساب صن داونز
+    source: رويترز، الأهرام
+    status: تطور جوهري
+    story_id: caf-super-cup-2026
+    follows: 2026-11-07-caf-super-cup-usma-sundowns.md
+    test: [نتيجة, قرار]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-08-usma-wins-caf-super-cup.md
+  - id: M-2026-11-08-03
+    date: 2026-11-08 21:32
+    title: ألكاراز يحرز لقب باريس للأساتذة
+    source: رويترز
+    status: تطور جوهري
+    story_id: paris-masters-2026
+    follows: 2026-11-07-alcaraz-shelton-paris-final.md
+    test: [نتيجة, قرار]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-08-alcaraz-wins-paris-masters.md
+  - id: M-2026-11-08-04
+    date: 2026-11-08 22:18
+    title: بتسيكي يفوز في قطر ويؤجل تتويج ماركيز
+    source: رويترز
+    status: تطور جوهري
+    story_id: motogp-qatar-2026
+    follows: 2026-11-07-motogp-qatar-bezzecchi-pole.md
+    test: [نتيجة]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-08-motogp-qatar-bezzecchi-wins.md
+  - id: M-2026-11-08-05
+    date: 2026-11-08 22:22
+    title: نوريس يفوز في البرازيل ومرسيدس يحسم لقب الصانعين
+    source: رويترز
+    status: تطور جوهري
+    story_id: f1-2026-brazil
+    follows: 2026-11-07-antonelli-fp2-brazil.md
+    test: [نتيجة, قرار]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-08-norris-wins-brazil-mercedes-constructors.md
+  - id: M-2026-11-09-01
+    date: 2026-11-09 10:34
+    title: برشلونة يقلب تأخره أمام أتلتيكو مدريد ويعزز صدارته
+    source: رويترز عبر ذا ستار وسي إن إيه
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-09-barcelona-comeback-at-atletico.md
