@@ -8,6 +8,8 @@ sources:
   - ذا ستار | https://www.thestar.com.my/sport/football/2026/11/09/soccer-fermin-double-gives-laliga-leaders-barca-2-1-win-at-atletico | ناقل
   - سي إن إيه | https://www.channelnewsasia.com/sport/fermin-double-gives-laliga-leaders-barca-2-1-win-atletico-6534746 | ناقل
 no_image: true
+getty: |
+  <a id='ynEzA6t_Sn5By-VDvUCLnw' class='gie-single' href='https://www.gettyimages.com/detail/2304180498' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'ynEzA6t_Sn5By-VDvUCLnw',sig:'IUXo2ZL3E6yPecipwdtUdxTY1QJWzKbPEXGDlCgu65s=',w:'594px',h:'396px',items:'2304180498',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 عزز برشلونة صدارته للدوري الإسباني لكرة القدم، بعدما قلب تأخره أمام مضيفه أتلتيكو مدريد إلى فوز 2-1، الأحد على ملعب ميتروبوليتانو في الجولة الثانية عشرة، بثنائية من فيرمين لوبيز.
