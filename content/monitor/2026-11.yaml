@@ -70,3 +70,12 @@ entries:
     verified: true
     archive_checked: true
     post: 2026-11-09-barcelona-comeback-at-atletico.md
+  - id: M-2026-11-09-02
+    date: 2026-11-09 11:10
+    title: ريفز يسجل 43 نقطة ويقود ليكرز للفوز على بيستونز
+    source: رويترز
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-09-reaves-43-lakers-beat-pistons.md
+    note: "غياب دونتشيتش للإصابة معلومة جديدة، لكنها جزء من خبر المباراة لا قصة مستقلة. «14 من 27 رمية ثنائية» في النص الأصلي صُححت إلى «محاولة تسديد»، لأن المجموع يشمل الثلاثيات."
