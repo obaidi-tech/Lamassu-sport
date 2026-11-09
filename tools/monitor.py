@@ -132,7 +132,8 @@ def check(title: str, excerpt: str = "", story: str = ""):
         ptags = {t["slug"] for t in p.get("tags") or []} | _all_tags(ptext)
         score = 0.5 * _jac(w, pw) + 0.3 * _jac(tg, ptags) + 0.2 * _jac(g, _grams(ptext))
         shared = sorted(w & pw)
-        scored.append((score, p, shared))
+        if shared or (tg & ptags and _jac(g, _grams(ptext)) > 0.25):   # a shared tag alone is not similarity
+            scored.append((score, p, shared))
     scored.sort(key=lambda x: -x[0])
 
     def show(rows):
