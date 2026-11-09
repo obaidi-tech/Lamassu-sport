@@ -6,7 +6,8 @@ excerpt: قرابة 20 ألف لاعب محترف يختارون التشكيل�
 sources:
   - غول | https://www.goal.com/en/news/harry-kane-snubbed-fifpro-world-11-lionel-messi-lamine-yamal/blteb7de65a246a19dc | صحيفة
   - تي يو دي إن (القائمة المختصرة) | https://www.tudn.com/futbol/fifpro-da-a-conocer-lsita-de-26-futbolistas-finalistas-al-mejor-11-del-2026 | صحيفة
-no_image: true
+commons: File:Achraf Hakimi France v Morocco 9 July 2026-145.jpg
+image_alt: أشرف حكيمي خلال مباراة فرنسا والمغرب في كأس العالم 2026
 related:
   - 2026-11-09-cubarsi-golden-boy.md
 ---
