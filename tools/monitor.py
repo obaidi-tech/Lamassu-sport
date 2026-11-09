@@ -107,7 +107,13 @@ def _all_tags(text: str) -> set:
 def _load_log():
     rows = []
     for f in sorted(glob.glob(os.path.join(ROOT, "content", "monitor", "*.yaml"))):
-        data = yaml.safe_load(open(f, encoding="utf-8")) or {}
+        try:
+            data = yaml.safe_load(open(f, encoding="utf-8")) or {}
+        except yaml.YAMLError as err:
+            mark = getattr(err, "problem_mark", None)
+            print(f"✗ {os.path.basename(f)}: خطأ في الصياغة" + (f" في السطر {mark.line + 1}" if mark else "")
+                  + " (غالباً نقطتان «: » داخل نص غير محاط بعلامتي تنصيص)")
+            continue
         for e in data.get("entries") or []:
             e["_file"] = os.path.basename(f)
             rows.append(e)
