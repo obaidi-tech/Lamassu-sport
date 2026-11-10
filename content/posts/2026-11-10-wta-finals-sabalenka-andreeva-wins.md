@@ -7,7 +7,7 @@ sources:
   - رويترز
   - ESPN | https://www.espn.com/tennis/story/_/id/50437046/aryna-sabalenka-mirra-andreeva-win-wta-finals | صحيفة
   - عرب نيوز | https://www.arabnews.com/tennis/sabalenka-andreeva-make-winning-starts-at-wta-finals-3010864 | صحيفة
-commons: search:Aryna Sabalenka
+commons: File:Aryna Sabalenka US Open Final 2024.jpg
 image_alt: لاعبة التنس البيلاروسية أرينا سبالينكا
 ---
 
