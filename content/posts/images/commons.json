@@ -137,7 +137,8 @@
   "Loftus Versfeld Stadium Pretoria": "File:U.S. Fan Club, Sam’s Army, Walks to U.S. vs. Algeria World Cup Match.jpg",
   "Estadio Urbano Caldeira Vila Belmiro Santos": "File:Vila Belmiro pre-match Santos vs Grêmio 2021.jpg",
   "Lusail International Circuit": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg",
-  "Luka Doncic Los Angeles Lakers": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg"
+  "Luka Doncic Los Angeles Lakers": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg",
+  "Aryna Sabalenka": "File:Aryna Sabalenka at 2025 Miami Open 04.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -858,5 +859,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "7097c8e404f0.jpg"
+ },
+ "File:Aryna Sabalenka at 2025 Miami Open 04.jpg": {
+  "title": "File:Aryna Sabalenka at 2025 Miami Open 04.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Aryna_Sabalenka_at_2025_Miami_Open_04.jpg",
+  "artist": "Vbrunophotog",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "ce7571fc35b4.jpg"
  }
 }
