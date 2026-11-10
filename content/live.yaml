@@ -9,6 +9,9 @@ matches:
   - sofascore: 15534030
     title: إيطاليا - فرنسا
     until: 2026-11-19
+  - sofascore: 15534086
+    title: التشيك - إسبانيا
+    until: 2026-11-19
   - sofascore: 16418312
     title: ساباديل - ريال سوسيداد ب
     until: 2026-11-10
