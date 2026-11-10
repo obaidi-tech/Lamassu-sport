@@ -10,7 +10,9 @@ sources:
   - طهران تايمز | https://www.tehrantimes.com/news/531923/Iran-s-Yousefi-claims-silver-in-2026-World-Weightlifting-Championships | صحيفة
   - شفق نيوز | https://shafaq.com/en/sport/Iraqi-weightlifter-breaks-snatch-world-record | صحيفة
   - اتحاد رفع الأثقال الأمريكي | https://www.usaweightlifting.org/news/2026/october/20/u-s-ready-for-senior-world-championships-start-of-olympic-qualifying | جهة رسمية
-no_image: true
+image: images/ali-ammar-ningbo-podium.jpg
+image_credit: وكالة الأنباء العراقية (واع)
+image_alt: علي عمار يسر على منصة التتويج في بطولة العالم لرفع الأثقال في نينغبو 2026، يتوسط الإيراني علي رضا يوسفي والأرميني فارازدات لالايان
 ---
 
 اختُتمت بطولة العالم لرفع الأثقال في 8 نوفمبر 2026 في مدينة نينغبو الصينية، بعد منافسات استمرت 13 يوماً منذ 27 أكتوبر في مركز نينغبو الأولمبي. وكان أبرز ما حمله يومها الختامي تتويج الرباع العراقي علي عمار يسر بلقب وزن فوق 110 كغم، وهو إنجاز وصفه الاتحاد الدولي لرفع الأثقال بأنه يجعل منه أول بطل عالم للعراق في أي رياضة أولمبية.
