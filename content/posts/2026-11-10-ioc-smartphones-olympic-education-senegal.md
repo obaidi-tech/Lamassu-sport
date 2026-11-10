@@ -5,7 +5,9 @@ date: 2026-11-10 19:55
 excerpt: الأجهزة تُسلَّم إلى اللجنة المنظمة لداكار 2026 لتوزيعها على شبكة المعلمين المسؤولين عن نشر القيم الأولمبية والتربية المدنية، ضمن إرث أول دورة أولمبية تستضيفها أفريقيا.
 sources:
   - اللجنة الأولمبية الدولية | https://www.olympics.com/ioc/news/ioc-donates-samsung-smartphones-to-support-olympic-education-in-senegal | جهة رسمية
-no_image: true
+image: images/ioc-smartphones-senegal.jpg
+image_credit: اللجنة الأولمبية الدولية (IOC)
+image_alt: رئيسة اللجنة الأولمبية الدولية كيرستي كوفنتري مع مسؤولين ومعلمين سنغاليين يحملون الهواتف الذكية المقدَّمة في داكار
 related:
   - 2026-11-10-dakar-2026-100m-gulf-medals.md
 ---
