@@ -9,6 +9,8 @@ sources:
   - بولس نيجيريا | https://www.pulse.ng/story/nigeria-youth-olympics-2026-dakar-breakout-stars-2026111006313541409 | صحيفة
   - ويكيبيديا (أولمبياد الشباب 2026) | https://en.wikipedia.org/wiki/2026_Summer_Youth_Olympics | ناقل
 no_image: true
+getty: |
+  <a id='SDXGAJ0VRuJ2CPToS6SKXw' class='gie-single' href='https://www.gettyimages.com/detail/2303737792' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'SDXGAJ0VRuJ2CPToS6SKXw',sig:'0-h7Gq8CJp0LvknhRRvy-yVvhyzWcP_d2OgtTX8wi4A=',w:'594px',h:'397px',items:'2303737792',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-07-zein-hesham-third-gold-dakar.md
 ---
