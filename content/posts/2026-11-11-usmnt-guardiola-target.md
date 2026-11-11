@@ -5,7 +5,7 @@ date: 2026-11-11 22:40
 excerpt: موقع «ذا أتلتيك» ينقل عن مصادر أن الاتحاد الأمريكي لكرة القدم يضع المدرب الإسباني، الذي غادر مانشستر سيتي الصيف الماضي، هدفاً أول لخلافة بوكيتينو.
 label: تقارير غير مؤكدة رسمياً
 sources:
-  - ذا أتلتيك
+  - ذا أتلتيك | https://www.nytimes.com/athletic/7773820/2026/11/11/pep-guardiola-pochettino-manchester-united-usmnt-coach-candidate/ | صحيفة
   - ذا سكور، أسوشيتد برس (رحيل غوارديولا عن سيتي) | https://thescore.com/topsn/news/3543985 | ناقل
 no_image: true
 story_id: man-utd-head-coach-2026
