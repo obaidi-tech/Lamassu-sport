@@ -200,4 +200,13 @@ entries:
     verified: true
     archive_checked: true
     note: "أضيف إلى الخبر القائم بطلب المالك، مع توزيع المنتخبات على 12 مجموعة."
+  - id: M-2026-11-11-09
+    date: 2026-11-11 21:28
+    title: بيمينوف يحرز ذهبية البندقية 50 متراً في مونديال الرماية بالدوحة
+    source: رصد المالك
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-11-pimenov-shooting-worlds-doha.md
+    note: "ذُكر العلم المحايد كما ورد دون تعليق على سببه، التزاماً بالحياد في الميثاق."
 
