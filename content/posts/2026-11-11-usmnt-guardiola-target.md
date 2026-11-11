@@ -7,7 +7,8 @@ label: تقارير غير مؤكدة رسمياً
 sources:
   - ذا أتلتيك | https://www.nytimes.com/athletic/7773820/2026/11/11/pep-guardiola-pochettino-manchester-united-usmnt-coach-candidate/ | صحيفة
   - ذا سكور، أسوشيتد برس (رحيل غوارديولا عن سيتي) | https://thescore.com/topsn/news/3543985 | ناقل
-no_image: true
+commons: File:Pep Guardiola reacting to the UCL draw Man City vs Real Madrid 2025.jpg
+image_alt: بيب غوارديولا مدرباً لمانشستر سيتي
 story_id: man-utd-head-coach-2026
 related:
   - 2026-11-11-man-utd-pochettino-agreement.md
