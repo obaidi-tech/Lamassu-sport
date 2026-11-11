@@ -8,7 +8,8 @@ sources:
   - سكاي سبورتس
   - الغارديان (عبر آيريش تايمز) | https://www.irishtimes.com/sport/soccer/2026/11/11/manchester-united-reach-framework-deal-with-mauricio-pochettino-before-settling-michael-carricks-fate/ | ناقل
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/50451384/michael-carrick-mauricio-pochettino-man-united | صحيفة
-no_image: true
+commons: File:Mauricio Pochettino Australia v USA 19 June 2026-266.jpg
+image_alt: ماوريسيو بوكيتينو مدرباً لمنتخب الولايات المتحدة خلال مباراته أمام أستراليا في كأس العالم 2026
 story_id: man-utd-head-coach-2026
 related:
   - 2026-11-08-man-utd-villa-4-4-sunday-roundup.md
