@@ -7,7 +7,8 @@ label: مقترحات قيد الدراسة
 sources:
   - الغارديان
   - سوانزي باي نيوز (قواعد الإنفاق المعتمدة) | https://swanseabaynews.com/championship-clubs-scrap-financial-loss-rules-replacing-them-with-a-new-system-that-could-reshape-how-swansea-city-and-rivals-spend/ | صحيفة
-no_image: true
+commons: File:Krystian Bielik of Birmingham City, holding the League One Championship trophy.jpg
+image_alt: كريستيان بيليك لاعب برمنغهام سيتي يحمل كأس دوري الدرجة الثالثة الإنجليزي
 ---
 
 تبحث أندية دوري الدرجة الثالثة الإنجليزي (ليغ وان) فرض ضوابط مالية إضافية للحد من ارتفاع الإنفاق والخسائر التشغيلية، وسط مخاوف متزايدة بشأن استدامة الأندية واعتمادها المستمر على أموال ملاكها، بحسب صحيفة الغارديان الأربعاء.
