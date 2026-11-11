@@ -6,7 +6,8 @@ excerpt: المصنف الأول يهزم البريطاني كاميرون نو
 sources:
   - تنس ميجورز | https://www.tennismajors.com/atp/fritz-beats-norrie-in-stockholm-for-fourth-quarter-final-in-four-weeks-866669.html | صحيفة
   - رابطة محترفي التنس | https://www.atptour.com/en/news/stockholm-2026-scouting-report | جهة رسمية
-no_image: true
+commons: File:Taylor Fritz, photo impressions, Swiss Indoors 2025 in Basel.jpg
+image_alt: الأمريكي تايلور فريتز خلال بطولة بازل الداخلية 2025
 related:
   - 2026-11-07-alcaraz-fritz-paris-masters.md
 ---
