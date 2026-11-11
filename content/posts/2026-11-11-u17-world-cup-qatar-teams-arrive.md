@@ -6,6 +6,8 @@ excerpt: البطولة تُقام من 19 نوفمبر إلى 13 ديسمبر �
 sources:
   - الاتحاد الدولي لكرة القدم (فيفا)، بيان صحفي
 no_image: true
+getty: |
+  <a id='G37AGH3aRvVEG2pCb4_RZQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'G37AGH3aRvVEG2pCb4_RZQ',sig:'0g5xc3iJFeRAegwHJSTnrTjoYERt5PDAuUu-FT6_jVc=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 بدأت المنتخبات المشاركة في كأس العالم تحت 17 سنة، قطر 2026، الوصول إلى الدوحة استعداداً للبطولة التي تجمع 48 منتخباً في 104 مباريات، من 19 نوفمبر إلى 13 ديسمبر.
