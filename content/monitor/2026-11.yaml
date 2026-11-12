@@ -283,4 +283,15 @@ entries:
     archive_checked: true
     post: 2026-11-12-andreeva-wta-finals-semis.md
     note: "حُذفت كلمة «غداً» قبل الجمعة لأن نشر الخبر يوم الخميس يجعلها ملتبسة."
+  - id: M-2026-11-12-06
+    date: 2026-11-12 12:17
+    title: كاريك في كارينغتون مجدداً، وكلفة إنهاء عقد بوكيتينو مع الاتحاد الأمريكي
+    source: سكاي سبورتس، الغارديان، إن بي سي سبورتس، غلف نيوز
+    status: تحديث
+    story_id: man-utd-head-coach-2026
+    follows: 2026-11-11-man-utd-pochettino-agreement.md
+    test: [إضافة]
+    verified: true
+    archive_checked: true
+    note: "تقييم المالك: تحديث لا خبر مستقل. حضور كاريك صيغ دون الإيحاء ببقائه. وخبر غوارديولا (غلف نيوز عن ذا أتلتيك) منشور سابقاً، فلم يُكرر."
 

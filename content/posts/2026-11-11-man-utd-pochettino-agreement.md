@@ -5,9 +5,11 @@ date: 2026-11-11 18:15
 excerpt: تقارير بريطانية تفيد بأن النادي اتفق مع مدرب منتخب الولايات المتحدة على تولي المهمة إذا أُقيل مايكل كاريك، ومجلس الإدارة يجتمع لحسم مصير المدرب، دون إعلان رسمي حتى الآن.
 label: تقارير غير مؤكدة رسمياً
 sources:
-  - سكاي سبورتس
+  - سكاي سبورتس | https://www.skysports.com/football/video/13611311/manchester-utd-manager-latest-michael-carrick-arrives-at-carrington-training-ground | صحيفة
   - الغارديان (عبر آيريش تايمز) | https://www.irishtimes.com/sport/soccer/2026/11/11/manchester-united-reach-framework-deal-with-mauricio-pochettino-before-settling-michael-carricks-fate/ | ناقل
   - صامويل لوكهيرست، ذا صن (منصة إكس)
+  - الغارديان | https://www.theguardian.com/football/2026/nov/11/manchester-united-close-mauricio-pochettino-deal-michael-carrick | صحيفة
+  - إن بي سي سبورتس | https://www.nbcsports.com/soccer/news/usmnts-mauricio-pochettino-reportedly-reaches-verbal-agreement-with-manchester-united-whats-next | صحيفة
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/50451384/michael-carrick-mauricio-pochettino-man-united | صحيفة
 commons: File:Mauricio Pochettino Australia v USA 19 June 2026-266.jpg
 image_alt: ماوريسيو بوكيتينو مدرباً لمنتخب الولايات المتحدة خلال مباراته أمام أستراليا في كأس العالم 2026
@@ -21,6 +23,8 @@ related:
 ولم يصدر حتى الآن أي إعلان رسمي من النادي يؤكد إنهاء عقد كاريك أو التعاقد مع بوكيتينو.
 
 **تحديث مساء الأربعاء:** كتب صامويل لوكهيرست، مراسل صحيفة «ذا صن» المختص بأخبار يونايتد، على منصة إكس أن صفقة بوكيتينو «أُنجزت»، بعد أن صادق عليها الرئيس المشارك أفرام غليزر. ولم يؤكد النادي ذلك رسمياً حتى الآن.
+
+**تحديث الخميس 12 نوفمبر:** وصل كاريك صباح الخميس إلى مركز التدريبات في كارينغتون، بحسب سكاي سبورتس، دون أن يحسم ذلك مستقبله. وذكرت الغارديان أن كلفة إنهاء ارتباط بوكيتينو بالاتحاد الأمريكي قد تتجاوز الشرط الجزائي إذا اصطحب جهازه الفني، ولم يتأكد اتفاق نهائي مع الاتحاد. ولم يصدر حتى ظهر الخميس أي إعلان رسمي.
 
 ## ما الذي نعرفه؟
 
