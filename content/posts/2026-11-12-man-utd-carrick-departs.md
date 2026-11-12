@@ -4,7 +4,8 @@ category: top5
 date: 2026-11-12 13:55
 excerpt: النادي يؤكد في بيان رسمي إنهاء مهمة المدرب بعد بداية مخيبة للموسم وضعته في منطقة الهبوط، ويعتزم تعيين خليفة دائم في أسرع وقت، فيما تشير التقارير إلى اقتراب التعاقد مع بوكيتينو.
 sources:
-  - بيان نادي مانشستر يونايتد، عبر سبورت بايبل | https://www.sportbible.com/football/football-news/man-utd/michael-carrick-sacked-man-utd-statement-179128-20261026 | ناقل
+  - نادي مانشستر يونايتد، البيان الرسمي | https://www.manutd.com/en/news/club-statement-on-michael-carrick-departure | جهة رسمية
+  - سبورت بايبل | https://www.sportbible.com/football/football-news/man-utd/michael-carrick-sacked-man-utd-statement-179128-20261026 | ناقل
   - ذا بيبولز بيرسون (سجل كاريك) | https://thepeoplesperson.com/2026/11/12/man-united-confirm-michael-carrick-sacking-in-statement-322049/ | صحيفة
 no_image: true
 story_id: man-utd-head-coach-2026
