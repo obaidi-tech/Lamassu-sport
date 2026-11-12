@@ -294,4 +294,17 @@ entries:
     verified: true
     archive_checked: true
     note: "تقييم المالك: تحديث لا خبر مستقل. حضور كاريك صيغ دون الإيحاء ببقائه. وخبر غوارديولا (غلف نيوز عن ذا أتلتيك) منشور سابقاً، فلم يُكرر."
+  - id: M-2026-11-12-07
+    date: 2026-11-12 13:45
+    title: مانشستر يونايتد يعلن رسمياً رحيل كاريك
+    source: بيان النادي (عبر سبورت بايبل)، ذا بيبولز بيرسون، غول
+    status: تطور جوهري
+    story_id: man-utd-head-coach-2026
+    follows: 2026-11-11-man-utd-pochettino-agreement.md
+    test: [قرار, نتيجة]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-12-man-utd-carrick-departs.md
+    note: "قرار رسمي يحسم سؤالاً مفتوحاً، فهو تطور جوهري. تعيين بوكيتينو لم يُعلن بعد، وإعلانه سيكون التطور الجوهري التالي."
 
