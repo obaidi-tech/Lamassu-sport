@@ -7,8 +7,9 @@ sources:
   - نادي مانشستر يونايتد، البيان الرسمي | https://www.manutd.com/en/news/club-statement-on-michael-carrick-departure | جهة رسمية
   - سبورت بايبل | https://www.sportbible.com/football/football-news/man-utd/michael-carrick-sacked-man-utd-statement-179128-20261026 | ناقل
   - ذا بيبولز بيرسون (سجل كاريك) | https://thepeoplesperson.com/2026/11/12/man-united-confirm-michael-carrick-sacking-in-statement-322049/ | صحيفة
-commons: File:Michael Carrick cropped.jpg
-image_alt: مايكل كاريك
+no_image: true
+getty: |
+  <a id='T6mkiW9uSEhA7KiJ1Ci0iw' class='gie-single' href='https://www.gettyimages.com/detail/2300816453' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'T6mkiW9uSEhA7KiJ1Ci0iw',sig:'HhyVdrBWhK48fwsECe1JpcEBetFvIv-Jqc6N-tcE0lg=',w:'594px',h:'407px',items:'2300816453',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 story_id: man-utd-head-coach-2026
 follows: 2026-11-11-man-utd-pochettino-agreement.md
 related:
