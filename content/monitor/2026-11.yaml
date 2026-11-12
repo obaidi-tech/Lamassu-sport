@@ -265,4 +265,13 @@ entries:
     archive_checked: true
     post: 2026-11-12-de-la-fuente-yamal-no-privileges.md
     note: "صُحح «اميتزات» إلى «امتيازات»، وكُتب «لامين يامال» توحيداً مع الأرشيف بدل «لامين جمال»."
+  - id: M-2026-11-12-04
+    date: 2026-11-12 10:00
+    title: تير شتيغن يتحدث لبيلد عن برشلونة والمنتخب وكأس العالم
+    source: الجزيرة نت عن بيلد
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-12-ter-stegen-bild-interview.md
+    note: "أعيدت صياغة نص الجزيرة كاملاً بأسلوب لاماسو، وحُذف رقم «13 مباراة دولية متتالية» لتعذر التحقق منه."
 
