@@ -245,3 +245,15 @@ entries:
     verified: true
     archive_checked: true
     post: 2026-11-12-ons-jabeur-comeback-2027.md
+  - id: M-2026-11-12-02
+    date: 2026-11-12 09:49
+    title: تفاصيل إضافية عن ترشيح غوارديولا للمنتخب الأمريكي
+    source: الصحافة الأمريكية (نص المالك)، إي إس بي إن
+    status: تحديث
+    story_id: man-utd-head-coach-2026
+    follows: 2026-11-11-usmnt-guardiola-target.md
+    test: [إضافة]
+    verified: true
+    archive_checked: true
+    note: "لا تغيير في الحالة الرسمية، فأضيف إلى الخبر القائم ونُقل إلى قسم كرة القدم بطلب المالك. تصريح غوارديولا من سبتمبر 2024 (إي إس بي إن). وصُحح موعد إقامته في نيويورك: كانت بين برشلونة وبايرن، لا بين بايرن وسيتي."
+
