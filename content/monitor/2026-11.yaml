@@ -326,3 +326,13 @@ entries:
     archive_checked: true
     post: 2026-11-13-gauff-beats-kostyuk-wta-finals.md
     note: "مكان البطولة (إنديان ويلز) وتاريخها جرى التحقق منهما من موقع رابطة المحترفات. لا تشابه في الأرشيف سوى الخبر نفسه."
+  - id: M-2026-11-13-03
+    date: 2026-11-13 05:25
+    title: نيفيل يهاجم إدارة مانشستر يونايتد بسبب طريقة رحيل كاريك
+    source: سكاي سبورتس عبر الصحافة البريطانية، سكاي نيوز عربية
+    status: جديد
+    story_id: man-utd-head-coach-2026
+    verified: true
+    archive_checked: true
+    post: 2026-11-13-neville-criticises-man-utd-carrick-exit.md
+    note: "ردّ فعل لا يغيّر حالة القصة، فلم يُصنّف تطوراً جوهرياً. نُشر خبراً مستقلاً ضمن القصة نفسها دون follows. خسارة بورنموث 0-3 (25 أكتوبر) تم التحقق منها."
