@@ -145,7 +145,8 @@
   "trap shooting shotgun competition": "File:Competition fast, friendly at station biannual skeet shoot 120414-M-EY704-709.jpg",
   "Lamine Yamal Argentina v Spain 19 July 2026": "File:Lamine Yamal Argentina v Spain 19 July 2026-133.jpg",
   "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg",
-  "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg"
+  "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg",
+  "Vinícius Júnior Brazil 2026 World Cup": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1026,5 +1027,13 @@
   "license": "CC BY-SA 2.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
   "local": "e0ac5fd7cdda.jpg"
+ },
+ "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg": {
+  "title": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Brahim_Diaz_Vinicius_Junior_Brazil_V_Morocco_13_June_2026-128.jpg",
+  "artist": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "7c45cf1f99c5.jpg"
  }
 }
