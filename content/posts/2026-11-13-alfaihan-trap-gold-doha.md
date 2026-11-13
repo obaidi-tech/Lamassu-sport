@@ -7,7 +7,7 @@ sources:
   - الاتحاد الدولي للرماية (منافسات الرجال) | https://www.issf-sports.org/news/5336 | رسمي
   - الاتحاد الدولي للرماية (منافسات السيدات) | https://www.issf-sports.org/news/5335 | رسمي
 commons: search:trap shooting shotgun competition
-image_alt: رامٍ يطلق النار في منافسة للرماية على الأطباق
+image_alt: أطباق الرماية البرتقالية مرصوصة في آلة القذف
 tags: [الرماية]
 related:
   - 2026-11-11-pimenov-shooting-worlds-doha.md
