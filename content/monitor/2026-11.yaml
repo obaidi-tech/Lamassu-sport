@@ -466,8 +466,19 @@ entries:
     status: تطور جوهري
     story_id: man-utd-head-coach-2026
     follows: 2026-11-11-man-utd-pochettino-agreement.md
+    test: [قرار]
     verified: true
     archive_checked: true
     approved_by: محمد العبيدي
     post: 2026-11-13-man-utd-appoint-pochettino.md
     note: "التعيين الرسمي بعد التقارير. تحقق من بيان النادي على manutd.com. أُزيل وسم «تقارير غير مؤكدة» من خبر الاتفاق وأُضيف إليه تحديث يحيل إلى الخبر الجديد. العقد حتى 2029 والشرط الجزائي ما زالا من التقارير لا من البيان."
+  - id: M-2026-11-13-18
+    date: 2026-11-13 16:10
+    title: كاريك يودّع جماهير مانشستر يونايتد برسالة مؤثرة
+    source: إنستغرام كاريك عبر ذي إندبندنت وبي إن سبورتس وذا 42
+    status: جديد
+    story_id: man-utd-head-coach-2026
+    verified: true
+    archive_checked: true
+    post: 2026-11-13-carrick-farewell-letter.md
+    note: "رسالة وداع لا تغيّر حالة القصة، فنُشرت خبراً مستقلاً ضمنها. النص المرسل تُحقق منه في عدة مصادر، وصيغ بأسلوبنا مع اقتباسات قصيرة فقط."
