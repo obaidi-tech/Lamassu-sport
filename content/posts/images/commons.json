@@ -155,7 +155,8 @@
   "Charles Leclerc Ferrari 2025": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg",
   "Salem Al-Dawsari": "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg",
   "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg",
-  "Charles Leclerc 2024": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg"
+  "Charles Leclerc 2024": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg",
+  "Aspire Zone Doha": "File:Aerial view of Aspetar Hospital in Baaya.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1124,5 +1125,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "d07021cff013.jpg"
+ },
+ "File:Aerial view of Aspetar Hospital in Baaya.jpg": {
+  "title": "File:Aerial view of Aspetar Hospital in Baaya.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Aerial_view_of_Aspetar_Hospital_in_Baaya.jpg",
+  "artist": "km2bp @ Mapillary.com",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "afac60c9536b.jpg"
  }
 }
