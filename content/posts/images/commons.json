@@ -144,7 +144,8 @@
   "soccer header": "File:Lugano in a header duel with Nobre (5th Matchday of the 2010-11 Süper Lig).png",
   "trap shooting shotgun competition": "File:Competition fast, friendly at station biannual skeet shoot 120414-M-EY704-709.jpg",
   "Lamine Yamal Argentina v Spain 19 July 2026": "File:Lamine Yamal Argentina v Spain 19 July 2026-133.jpg",
-  "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg"
+  "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg",
+  "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1017,5 +1018,13 @@
   "license": "CC BY-SA 2.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
   "local": "15d778b858ff.jpg"
+ },
+ "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg": {
+  "title": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2025_04_26_Final_de_la_Copa_del_Rey_-_54482387776.jpg",
+  "artist": "Junta de Andalucía",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "e0ac5fd7cdda.jpg"
  }
 }
