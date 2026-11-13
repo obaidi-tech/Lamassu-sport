@@ -7,8 +7,8 @@ label: تحليل
 sources:
   - سوفاسكور (ديفيد فيسلياك، 13 نوفمبر) | https://www.sofascore.com/news/author/david-veseljak | موقع
   - سوفاسكور (جائزة الموسم الماضي) | https://www.sofascore.com/news/barcelonas-dribble-engine/ | موقع
-commons: search:Lamine Yamal Argentina v Spain 19 July 2026
-image_alt: لامين يامال خلال نهائي كأس العالم 2026 بين إسبانيا والأرجنتين
+commons: File:Lamine Yamal France v Spain 7.24.26-092.jpg
+image_alt: لامين يامال خلال مباراة إسبانيا وفرنسا في يوليو 2026
 tags: [برشلونة]
 related:
   - 2026-11-09-barcelona-comeback-at-atletico.md
