@@ -148,7 +148,8 @@
   "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg",
   "Vinícius Júnior Brazil 2026 World Cup": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg",
   "Wembley Stadium exterior": "File:Wembley The FA Logo.jpg",
-  "Wembley Stadium arch London": "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg"
+  "Wembley Stadium arch London": "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg",
+  "Santiago Bernabéu Stadium Madrid": "File:Estadio Santiago Bernabéu Madrid.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1061,5 +1062,13 @@
   "license": "CC BY-SA 2.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
   "local": "96154158ae0f.jpg"
+ },
+ "File:Estadio Santiago Bernabéu Madrid.jpg": {
+  "title": "File:Estadio Santiago Bernabéu Madrid.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Estadio_Santiago_Bernab%C3%A9u_Madrid.jpg",
+  "artist": "Zoser",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "local": "de9450a1361a.jpg"
  }
 }
