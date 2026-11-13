@@ -154,7 +154,8 @@
   "Harry Kane England 2026": "File:Harry Kane England v Ghana 23 June 2026-220.jpg",
   "Charles Leclerc Ferrari 2025": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg",
   "Salem Al-Dawsari": "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg",
-  "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg"
+  "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg",
+  "Charles Leclerc 2024": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1115,5 +1116,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "df9ebc485ceb.jpg"
+ },
+ "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg": {
+  "title": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Leclerc_%26_Sainz_on_the_grid_-_2024_Chinese_GP.jpg",
+  "artist": "Liauzh",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "d07021cff013.jpg"
  }
 }
