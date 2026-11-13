@@ -143,7 +143,8 @@
   "Old Trafford stadium Manchester United": "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg",
   "soccer header": "File:Lugano in a header duel with Nobre (5th Matchday of the 2010-11 Süper Lig).png",
   "trap shooting shotgun competition": "File:Competition fast, friendly at station biannual skeet shoot 120414-M-EY704-709.jpg",
-  "Lamine Yamal Argentina v Spain 19 July 2026": "File:Lamine Yamal Argentina v Spain 19 July 2026-133.jpg"
+  "Lamine Yamal Argentina v Spain 19 July 2026": "File:Lamine Yamal Argentina v Spain 19 July 2026-133.jpg",
+  "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1008,5 +1009,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "614abc5554f8.jpg"
+ },
+ "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg": {
+  "title": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Cade_Cunningham_charging_against_T._J._McConnell,_2024-11-29_(cropped).jpg",
+  "artist": "Navin75",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "15d778b858ff.jpg"
  }
 }
