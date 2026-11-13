@@ -138,7 +138,9 @@
   "Estadio Urbano Caldeira Vila Belmiro Santos": "File:Vila Belmiro pre-match Santos vs Grêmio 2021.jpg",
   "Lusail International Circuit": "File:Qatar GP 2021. Pol Espargaro y Stefan Bradl en carrera - 51079776027.jpg",
   "Luka Doncic Los Angeles Lakers": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg",
-  "Aryna Sabalenka": "File:Aryna Sabalenka at 2025 Miami Open 04.jpg"
+  "Aryna Sabalenka": "File:Aryna Sabalenka at 2025 Miami Open 04.jpg",
+  "American football helmet": "File:Vinnytsia Wolves helmet 2016 G2.jpg",
+  "Old Trafford stadium Manchester United": "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -955,5 +957,21 @@
   "license": "CC BY 2.0",
   "license_url": "https://creativecommons.org/licenses/by/2.0",
   "local": "9cb0bc5a9fbc.jpg"
+ },
+ "File:Vinnytsia Wolves helmet 2016 G2.jpg": {
+  "title": "File:Vinnytsia Wolves helmet 2016 G2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Vinnytsia_Wolves_helmet_2016_G2.jpg",
+  "artist": "George Chernilevsky",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "6e35130acb01.jpg"
+ },
+ "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg": {
+  "title": "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Manchester_,_Trafford_-_Old_Trafford_Stadium_-_geograph.org.uk_-_3724146.jpg",
+  "artist": "Lewis Clarke",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "12dfc0104b0f.jpg"
  }
 }
