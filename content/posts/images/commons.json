@@ -152,7 +152,9 @@
   "Santiago Bernabéu Stadium Madrid": "File:Estadio Santiago Bernabéu Madrid.jpg",
   "Bernabéu facade Paseo de la Castellana": "File:Estadio Santiago Bernabéu 15.jpg",
   "Harry Kane England 2026": "File:Harry Kane England v Ghana 23 June 2026-220.jpg",
-  "Charles Leclerc Ferrari 2025": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg"
+  "Charles Leclerc Ferrari 2025": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg",
+  "Salem Al-Dawsari": "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg",
+  "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1097,5 +1099,21 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "d4fb31ec51e5.jpg"
+ },
+ "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg": {
+  "title": "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Saudi_National_Team_Players_(Saudi_Arabia_v_Uruguay,_June_2026).jpg",
+  "artist": "Unknown authorUnknown author",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "4e8c96a03d6c.jpg"
+ },
+ "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg": {
+  "title": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Charles_Leclerc_and_Alexandra_Leclerc_at_the_2026_Cannes_Film_Festival.jpg",
+  "artist": "Gabriel Hutchinson",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "df9ebc485ceb.jpg"
  }
 }
