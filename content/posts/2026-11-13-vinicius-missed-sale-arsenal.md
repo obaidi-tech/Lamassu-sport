@@ -6,8 +6,8 @@ excerpt: مراسل «ذا أتلتيك» في مدريد يرى أن تجديد
 label: تحليل
 sources:
   - ذا أتلتيك (ديرموت كوريغان، 13 نوفمبر)
-commons: search:Vinícius Júnior Brazil 2026 World Cup
-image_alt: فينيسيوس جونيور يلتحم مع المغربي إبراهيم دياز في مباراة البرازيل والمغرب بكأس العالم 2026
+commons: File:Vinícius Júnior - Real Madrid CF (2024-25).jpg
+image_alt: فينيسيوس جونيور بقميص ريال مدريد في موسم 2024-2025
 tags: [ريال مدريد]
 related:
   - 2026-11-13-real-madrid-tiers-guler-vinicius.md

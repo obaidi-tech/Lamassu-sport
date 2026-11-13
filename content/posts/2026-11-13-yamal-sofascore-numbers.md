@@ -4,6 +4,7 @@ category: top5
 date: 2026-11-13 13:15
 excerpt: 25 مساهمة تهديفية في 16 مباراة وأعلى تقييم في الدوري الإسباني: قراءة في أرقام سوفاسكور التي تضع جناح برشلونة في صدارة السباق على لقب أفضل لاعب في الموسم.
 label: تحليل
+lead: 8
 sources:
   - سوفاسكور (ديفيد فيسلياك، 13 نوفمبر) | https://www.sofascore.com/news/author/david-veseljak | موقع
   - سوفاسكور (جائزة الموسم الماضي) | https://www.sofascore.com/news/barcelonas-dribble-engine/ | موقع
