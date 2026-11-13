@@ -7,8 +7,7 @@ sources:
   - الاتحاد الآسيوي لكرة القدم | https://www.the-afc.com/en/about_afc/afc_annual_awards.html/news/afc-awards-bangkok-2026-crown-continent%E2%80%99s-best | رسمي
   - الاتحاد الآسيوي (قائمة المرشحين) | https://www.the-afc.com/en/more/content/3197642 | رسمي
   - دكا تريبيون (مكان الحفل) | https://www.dhakatribune.com/sport/football/422300/bff-nominated-in-two-categories-for-afc-awards | صحيفة
-commons: search:Salem Aldawsari
-image_alt: سالم الدوسري لاعب الهلال ومنتخب السعودية
+no_image: true
 ---
 
 تستضيف العاصمة التايلاندية بانكوك، الخميس المقبل 19 نوفمبر، حفل جوائز الاتحاد الآسيوي لكرة القدم في نسخته الثلاثين، والذي يعود إلى المدينة بعد أن استضافه للمرة الأولى عام 2017. ويقام الحفل على مسرح «أكسرا كينغ باور» في السابعة مساءً بالتوقيت المحلي (الثالثة عصراً بتوقيت مكة المكرمة)، ويُبث عبر منصات الاتحاد الآسيوي الرقمية، ويكرّم الفائزين في 19 فئة.

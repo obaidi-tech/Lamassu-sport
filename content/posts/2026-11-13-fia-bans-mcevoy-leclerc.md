@@ -6,7 +6,7 @@ excerpt: جوناثان ماكإيفوي من «ديلي ميل» ممنوع م�
 sources:
   - ذا أتلتيك (دان شيلدون، 13 نوفمبر)
 commons: search:Charles Leclerc 2024
-image_alt: سائق فيراري شارل لوكلير
+image_alt: سيارتا فيراري لشارل لوكلير وكارلوس ساينز على خط الانطلاق في جائزة الصين الكبرى 2024
 related:
   - 2026-11-08-norris-wins-brazil-mercedes-constructors.md
 ---
