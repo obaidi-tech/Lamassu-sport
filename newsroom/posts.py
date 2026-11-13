@@ -173,9 +173,6 @@ def _sources(raw) -> list:
         if not kind and isinstance(item, dict) and item.get("type"):
             kind = srckind.override(str(item["type"]))
         kind = kind or srckind.classify(name, link)
-        if not link and not note:
-            note = ("لم تُحدَّد الوكالة في المادة الأصلية" if re.search(r"وكالات|agencies", name, re.I)
-                    else "لم نعثر على رابط المادة الأصلية")
         out.append({"publisher": name, "title": "", "link": link, "kind": kind,
                     "kind_ar": srckind.LABELS[kind], "note": note})
     return out
