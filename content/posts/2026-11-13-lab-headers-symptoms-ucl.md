@@ -7,7 +7,8 @@ label: من المختبر
 tags: [من المختبر]
 sources:
   - المجلة الأوروبية لعلوم الرياضة (الدراسة) | https://onlinelibrary.wiley.com/doi/10.1002/ejsc.70251 | دراسة
-no_image: true
+commons: search:football heading header ball duel
+image_alt: لاعبان يتنافسان على كرة عالية بضربة رأس
 related:
   - 2026-11-13-lab-cte-nfl-boston.md
 ---

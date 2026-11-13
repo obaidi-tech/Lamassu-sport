@@ -9,7 +9,8 @@ sources:
   - جاما نتورك أوبن (الدراسة) | https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2855918 | دراسة
   - جامعة بوسطن | https://www.bu.edu/articles/2026/nfl-brain-disease-boston-study/ | جامعة
   - إن بي سي بوسطن | https://www.nbcboston.com/news/sports/aiming-to-make-the-game-safer-new-bu-study-shines-light-on-cte-in-football/4039581/ | صحيفة
-no_image: true
+commons: search:American football helmet
+image_alt: خوذة كرة القدم الأمريكية
 related:
   - 2026-11-13-lab-headers-symptoms-ucl.md
 ---
