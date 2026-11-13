@@ -146,7 +146,8 @@
   "Lamine Yamal Argentina v Spain 19 July 2026": "File:Lamine Yamal Argentina v Spain 19 July 2026-133.jpg",
   "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg",
   "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg",
-  "Vinícius Júnior Brazil 2026 World Cup": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg"
+  "Vinícius Júnior Brazil 2026 World Cup": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg",
+  "Wembley Stadium exterior": "File:Wembley The FA Logo.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1043,5 +1044,13 @@
   "license": "CC0",
   "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
   "local": "c74236714b0f.jpg"
+ },
+ "File:Wembley The FA Logo.jpg": {
+  "title": "File:Wembley The FA Logo.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Wembley_The_FA_Logo.jpg",
+  "artist": "Reubentg http://students.washington.edu/rtg2/global_travel_blog_map_details.html",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "local": "f16ff14a9f2d.jpg"
  }
 }
