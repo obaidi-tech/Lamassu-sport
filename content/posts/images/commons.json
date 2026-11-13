@@ -151,7 +151,8 @@
   "Wembley Stadium arch London": "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg",
   "Santiago Bernabéu Stadium Madrid": "File:Estadio Santiago Bernabéu Madrid.jpg",
   "Bernabéu facade Paseo de la Castellana": "File:Estadio Santiago Bernabéu 15.jpg",
-  "Harry Kane England 2026": "File:Harry Kane England v Ghana 23 June 2026-220.jpg"
+  "Harry Kane England 2026": "File:Harry Kane England v Ghana 23 June 2026-220.jpg",
+  "Charles Leclerc Ferrari 2025": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1088,5 +1089,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "6d89eedfeb5f.jpg"
+ },
+ "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg": {
+  "title": "File:2025 Singapore GP - Ferrari - Charles Leclerc - FP2.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:2025_Singapore_GP_-_Ferrari_-_Charles_Leclerc_-_FP2.jpg",
+  "artist": "Liauzh",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "d4fb31ec51e5.jpg"
  }
 }
