@@ -5,7 +5,7 @@ date: 2026-11-13 22:40
 excerpt: جوناثان ماكإيفوي من «ديلي ميل» ممنوع من تغطية السباقات الثلاثة الأخيرة في الموسم، ومنها جائزة قطر الكبرى، والصحيفة تصف القرار بأنه «اعتداء غير مسبوق» على حرية الصحافة.
 sources:
   - ذا أتلتيك (دان شيلدون، 13 نوفمبر)
-commons: search:Charles Leclerc Ferrari 2025
+commons: search:Charles Leclerc portrait
 image_alt: سائق فيراري شارل لوكلير
 related:
   - 2026-11-08-norris-wins-brazil-mercedes-constructors.md
