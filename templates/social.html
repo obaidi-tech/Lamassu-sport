@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}بطاقات إنستغرام | {{ site.site_name }}{% endblock %}
+{% block description %}صفحة تحرير داخلية: بطاقات أبرز الأخبار جاهزة للنشر مع النص المرافق.{% endblock %}
+{% block head_extra %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% block main %}
+<div class="page-head"><h1>بطاقات إنستغرام</h1><p>صفحة تحرير داخلية غير مرتبطة بالموقع. حمّل البطاقة، وانسخ النص المرافق، وضع في الملف الشخصي الرابط الثابت: <bdi dir="ltr">{{ site.site_url | trim('/') }}/today.html</bdi></p></div>
+{% if items %}
+<div class="social">
+  {% for it in items %}{% set a = it.a %}
+  <section class="social__item" aria-label="{{ a.title }}">
+    <a href="{{ root }}{{ it.img }}" download="{{ it.name }}"><img src="{{ root }}{{ it.img }}" width="270" height="338" loading="lazy" alt="بطاقة الخبر: {{ a.title }}"></a>
+    <div class="social__body">
+      <p class="social__meta">{{ a.published_at | day }} {{ a.published_at | time }} · <a href="{{ root }}article/{{ a.id }}.html">صفحة الخبر</a></p>
+      <label for="cap-{{ loop.index }}">النص المرافق</label>
+      <textarea id="cap-{{ loop.index }}" rows="9" readonly>{{ it.caption }}</textarea>
+      <p class="social__actions"><a class="btn" href="{{ root }}{{ it.img }}" download="{{ it.name }}">تحميل البطاقة</a> <button type="button" class="btn" data-copy="cap-{{ loop.index }}">نسخ النص</button></p>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+<script>
+document.querySelectorAll("[data-copy]").forEach(function (b) {
+  b.addEventListener("click", function () {
+    var t = document.getElementById(b.dataset.copy), done = function () { b.textContent = "نُسخ ✓"; setTimeout(function () { b.textContent = "نسخ النص"; }, 2000); };
+    if (navigator.clipboard) { navigator.clipboard.writeText(t.value).then(done, function () { t.select(); document.execCommand("copy"); done(); }); }
+    else { t.select(); document.execCommand("copy"); done(); }
+  });
+});
+</script>
+{% else %}
+<p class="empty">لا بطاقات الآن: لم يُنشر خبر بارز في الساعات الـ36 الأخيرة.</p>
+{% endif %}
+{% endblock %}

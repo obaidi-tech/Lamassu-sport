@@ -330,6 +330,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "updates": updates,
             "figures": figures,
             "label": str(meta.get("label") or "").strip(),
+            "social": meta.get("social") if isinstance(meta.get("social"), bool) else None,   # Instagram card: force in/out
             "story_id": str(meta.get("story_id") or "").strip(),      # one id shared by every post of one story
             "follows": str(meta.get("follows") or "").strip(),        # the post file this one develops
             "manual_tags": [str(x).strip() for x in meta.get("tags")] if isinstance(meta.get("tags"), list)

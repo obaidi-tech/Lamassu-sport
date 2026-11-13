@@ -51,7 +51,8 @@ def sources_label(n: int) -> str:
 
 
 def _font(weight: str, size: int):
-    name = {"heavy": "Cairo_800ExtraBold.ttf", "semi": "Cairo_600SemiBold.ttf", "regular": "Cairo_400Regular.ttf"}[weight]
+    name = {"heavy": "Cairo_800ExtraBold.ttf", "semi": "Cairo_600SemiBold.ttf", "regular": "Cairo_400Regular.ttf",
+            "naskh": "NotoNaskhArabic_400Regular.ttf", "naskh-bold": "NotoNaskhArabic_700Bold.ttf"}[weight]
     return ImageFont.truetype(os.path.join(FONTS, name), size, layout_engine=ImageFont.Layout.RAQM)
 
 
@@ -195,4 +196,100 @@ def make_brand_card(path: str, name: str, tagline: str, tagline_en: str = ""):
         d.text((pad_r - f.getlength(tagline_en), y_rule + 120), tagline_en, font=f, fill=(184, 194, 211))
     os.makedirs(os.path.dirname(path), exist_ok=True)
     img.save(path, "JPEG", quality=88, optimize=True, progressive=True)
+    return path
+
+
+# ── Instagram card (1080×1350, portrait 4:5) ────────────────────────────
+# Text only, in the site's colours: no agency or Getty photos, which may not be re-posted outside the site.
+IG_W, IG_H = 1080, 1350
+
+
+def _fit(text: str, weight: str, sizes, max_w: int, max_lines: int):
+    for size in sizes:
+        f = _font(weight, size)
+        lines = _wrap(text, f, max_w)
+        if len(lines) <= max_lines:
+            return f, lines, size
+    size = sizes[-1]
+    f = _font(weight, size)
+    lines = _wrap(text, f, max_w)[:max_lines]
+    lines[-1] = lines[-1].rstrip("،.") + " …"
+    return f, lines, size
+
+
+def make_social_card(path: str, title: str, excerpt: str, category: str, cat_name: str,
+                     site_name: str, date_label: str, label: str = "", footer: str = ""):
+    accent = CAT_COLORS.get(category, CAT_COLORS["top5"])
+    img = Image.new("RGB", (IG_W, IG_H), INK)
+    d = ImageDraw.Draw(img)
+    for r in range(300, 1700, 120):                       # stadium-bowl arcs, low on the far edge
+        d.ellipse((-r + 140, IG_H - r // 2, r + 140, IG_H + r * 1.4),
+                  outline=tuple(int(a * 0.16 + b * 0.84) for a, b in zip(accent, INK)), width=3)
+    d.rectangle((IG_W - 20, 0, IG_W, IG_H), fill=accent)   # category stripe on the reading edge
+    pad_r, pad_l = IG_W - 90, 90
+    width = pad_r - pad_l
+
+    # masthead: wing + name (right), date (left)
+    name_f = _font("heavy", 46)
+    nw = _len(name_f, site_name)
+    _rtl(d, pad_r, 62, site_name, name_f, PAPER)
+    wing_png = os.path.join(ROOT, "site_assets", "brand", "lamassu-wing.png")
+    if os.path.exists(wing_png):
+        wing = Image.open(wing_png).convert("RGBA").resize((64, 64), Image.LANCZOS)
+        img.paste(wing, (int(pad_r - nw - 18 - 64), 70), wing)
+    else:
+        _draw_wing(d, pad_r - nw - 18, 78, scale=1.5)
+    if date_label:
+        small = _font("semi", 28)
+        d.text((pad_l, 78), date_label, font=small, fill=(150, 160, 180), direction="rtl", language="ar")
+    d.line((pad_l, 150, pad_r, 150), fill=(52, 66, 96), width=2)
+
+    # category pill (+ a label such as «تقارير غير مؤكدة رسمياً»)
+    y = 190
+    tag_font = _font("semi", 32)
+    tw = _len(tag_font, cat_name)
+    d.rounded_rectangle((pad_r - tw - 40, y, pad_r, y + 56), radius=28, fill=accent)
+    _rtl(d, pad_r - 20, y - 3, cat_name, tag_font, (255, 255, 255))
+    if label:
+        lw = _len(tag_font, label)
+        x_r = pad_r - tw - 40 - 18
+        d.rounded_rectangle((x_r - lw - 40, y, x_r, y + 56), radius=28, outline=AMBER, width=3)
+        _rtl(d, x_r - 20, y - 3, label, tag_font, AMBER)
+
+    # headline + amber rule + summary, as one block placed a little above the middle of the free space
+    if label and title.startswith(label):                 # «من المختبر: …» already shows as the label
+        title = title[len(label):].lstrip(" :：،")
+    top, bottom = 290, IG_H - 190
+    f, lines, size = _fit(title, "heavy", (84, 78, 72, 66, 60, 56, 52), width, 6)
+    lh = int(size * 1.42)
+    head_h = lh * len(lines)
+    elines, ef, elh = [], None, 0
+    if excerpt:
+        ef, elines, esize = _fit(excerpt, "naskh", (42, 40, 38, 36), width, 6)
+        elh = int(esize * 1.7)
+        room = bottom - top - head_h - 82
+        keep = max(0, room // elh)
+        if keep < len(elines):
+            elines = elines[:keep]
+            if elines:
+                elines[-1] = elines[-1].rstrip("،.") + " …"
+    block = head_h + (82 + elh * len(elines) if elines else 0)
+    y = top + max(0, (bottom - top - block) // 3)
+    for line in lines:
+        _rtl(d, pad_r, y, line, f, PAPER)
+        y += lh
+    if elines:
+        y += 26
+        d.rectangle((pad_r - 140, y, pad_r, y + 6), fill=AMBER)
+        y += 56
+        for line in elines:
+            _rtl(d, pad_r, y, line, ef, (206, 213, 225))
+            y += elh
+
+    # footer
+    d.line((pad_l, IG_H - 150, pad_r, IG_H - 150), fill=(52, 66, 96), width=2)
+    _rtl(d, pad_r, IG_H - 122, footer or "التفاصيل والمصادر: الرابط في الملف الشخصي", _font("semi", 34), AMBER)
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    img.save(path, "JPEG", quality=90, optimize=True, progressive=True)
     return path

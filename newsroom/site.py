@@ -16,7 +16,7 @@ from .events import upcoming
 from .live import load_live
 from . import opps as _opps
 from . import tags as _tags
-from .cards import covered_label, make_brand_card, make_card, news_label, sources_label
+from .cards import covered_label, make_brand_card, make_card, make_social_card, news_label, sources_label
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DAYS = ["الاثنين", "الثلاثاء", "الأربعاء", "الخميس", "الجمعة", "السبت", "الأحد"]
@@ -413,6 +413,7 @@ class Builder:
                 sections.append((cat, items))
         today_key = self.now.astimezone(self.tz).date()
         today = [a for a in news if self.local(a["published_at"]).date() == today_key]
+        self._social(ranked[:5], articles, common)
         self._render("index.html", "index.html", 0, lead=lead, runners=runners, sections=sections,
                      opinions=[a for a in self._opinion_band(articles) if a["id"] not in used], files=files,
                      today_count=len(today), today_sources=sum(a["n_sources"] for a in today),
@@ -511,6 +512,44 @@ class Builder:
         self._feeds(articles)
         return {"articles": len(articles), "days": len(by_day), "out": self.out}
 
+    # ── Instagram: cards, captions and the «أخبار اليوم» link-in-bio page ──────────
+    SOCIAL_HOURS = 36
+    SOCIAL_MAX = 8
+
+    def _social_caption(self, a):
+        cat_tag = {"top5": "#كرة_القدم", "nba": "#كرة_السلة", "para": "#الرياضة_البارالمبية"}.get(a["category"])
+        tags = (["#لاماسو"] + ["#" + t["name"].replace(" ", "_") for t in a.get("tags") or []]
+                + ([cat_tag] if cat_tag else []) + ["#رياضة"])
+        lines = [a["title"]]
+        if a.get("label") and a["label"] not in a["title"]:
+            lines[0] = f"[{a['label']}] " + lines[0]
+        if a.get("excerpt"):
+            lines += ["", a["excerpt"]]
+        lines += ["", "التفاصيل والمصادر في لاماسو، الرابط في الملف الشخصي.", "", " ".join(dict.fromkeys(tags))]
+        return "\n".join(lines)
+
+    def _social(self, top, articles, common):
+        """Cards (1080×1350) for the home page's top stories of the last 36 hours, plus any post marked
+        «social: true»; «social: false» keeps a post out. Text only: no agency or Getty photos leave the site."""
+        fresh = lambda a: self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=self.SOCIAL_HOURS)  # noqa: E731
+        picked = [a for a in top if a and fresh(a) and a.get("social") is not False and a["category"] != "opinion"]
+        picked += [a for a in articles if a.get("social") is True and fresh(a) and a not in picked]
+        picked = picked[:self.SOCIAL_MAX]
+        items = []
+        for n, a in enumerate(picked, 1):
+            rel = f"social/{a['id']}.jpg"
+            try:
+                make_social_card(os.path.join(self.out, rel), a["title"], a.get("excerpt", ""), a["category"],
+                                 self.cats[a["category"]]["name_ar"], self.site["site_name"],
+                                 self.day_label(a["published_at"]), a.get("label") if a.get("label") != "أرشيف" else "")
+            except Exception as ex:                  # a card is a convenience; never block publishing
+                print(f"  ⚠ بطاقة إنستغرام {a.get('file') or a['id']}: {type(ex).__name__}: {ex}")
+                continue
+            day = self.local(a["published_at"]).strftime("%Y%m%d")
+            items.append({"a": a, "img": rel, "name": f"lamassu-{day}-{n}.jpg", "caption": self._social_caption(a)})
+        self._render("today.html", "today.html", 0, items=items, **common)
+        self._render("social.html", "social.html", 0, items=items, **common)
+
     @staticmethod
     def _opinion_band(articles):
         """Home-page opinion band: the newest piece by our own writers first, then the latest others."""
@@ -533,7 +572,7 @@ class Builder:
                + "".join(items) + "</channel></rss>")
         newest = articles[0]["published_at"][:10] if articles else self.now.date().isoformat()
         reads = [a for a in articles if a.get("roundup")]
-        urls = [(f"{base}/", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
+        urls = [(f"{base}/", newest), (f"{base}/today.html", newest), (f"{base}/latest.html", newest)] + ([(f"{base}/contribute.html", None)] if self.site.get("contribute") else []) + ([(f"{base}/events.html", None)] if getattr(self, "has_events", False) else []) + [ (f"{base}/schedules.html", newest), (f"{base}/archive.html", newest),
                 (f"{base}/about.html", None), (f"{base}/contact.html", None), (f"{base}/charter.html", None), (f"{base}/liability.html", None), (f"{base}/opportunities.html", None)]
         for c in DISPLAY_ORDER + ["opinion"]:                      # only sections that have content
             items = [a for a in articles if a["category"] == c]

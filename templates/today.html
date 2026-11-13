@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}أخبار اليوم | {{ site.site_name }}{% endblock %}
+{% block description %}أبرز الأخبار الرياضية في {{ site.site_name }} اليوم، بصياغتنا ومع مصادر كل خبر.{% endblock %}
+{% block main %}
+<div class="page-head"><h1>أخبار اليوم</h1><p>أبرز ما نشرته {{ site.site_name }} خلال الساعات الأخيرة. اضغط على أي خبر لقراءة التفاصيل والمصادر.</p></div>
+{% if items %}
+<ol class="today">
+  {% for it in items %}{% set a = it.a %}
+  <li class="today__item" style="--cat: var(--c-{{ a.category }})">
+    <a class="today__link" href="{{ root }}article/{{ a.id }}.html">
+      <span class="today__cat">{{ cats[a.category].name_ar }}{% if a.label and a.label != 'أرشيف' %} · {{ a.label }}{% endif %}</span>
+      <h2 class="today__title">{{ a.title }}</h2>
+      {% if a.excerpt %}<p class="today__ex">{{ a.excerpt }}</p>{% endif %}
+      <time datetime="{{ a.published_at }}">{{ a.published_at | day }} {{ a.published_at | time }}</time>
+    </a>
+  </li>
+  {% endfor %}
+</ol>
+{% else %}
+<p class="empty">لا أخبار جديدة في الساعات الأخيرة.</p>
+{% endif %}
+<p class="story__note">لكل ما نُشر بترتيب زمني: <a href="{{ root }}latest.html">آخر الأخبار</a>.</p>
+{% endblock %}
