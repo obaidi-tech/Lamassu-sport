@@ -7,7 +7,7 @@ sources:
   - الاتحاد الآسيوي لكرة القدم | https://www.the-afc.com/en/about_afc/afc_annual_awards.html/news/afc-awards-bangkok-2026-crown-continent%E2%80%99s-best | رسمي
   - الاتحاد الآسيوي (قائمة المرشحين) | https://www.the-afc.com/en/more/content/3197642 | رسمي
   - دكا تريبيون (مكان الحفل) | https://www.dhakatribune.com/sport/football/422300/bff-nominated-in-two-categories-for-afc-awards | صحيفة
-commons: search:Salem Al-Dawsari
+commons: search:Salem Al-Dawsari Al-Hilal
 image_alt: سالم الدوسري لاعب الهلال ومنتخب السعودية
 ---
 
