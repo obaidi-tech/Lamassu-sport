@@ -6,8 +6,9 @@ excerpt: عبد الرحمن الفيحان يتفوق على الهندي في�
 sources:
   - الاتحاد الدولي للرماية (منافسات الرجال) | https://www.issf-sports.org/news/5336 | رسمي
   - الاتحاد الدولي للرماية (منافسات السيدات) | https://www.issf-sports.org/news/5335 | رسمي
-commons: search:trap shooting shotgun competition
-image_alt: أطباق الرماية البرتقالية مرصوصة في آلة القذف
+no_image: true
+getty: |
+  <a id='Hid4jUsHQFRs5I4V9BI0Wg' class='gie-single' href='https://www.gettyimages.com/detail/1331013246' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'Hid4jUsHQFRs5I4V9BI0Wg',sig:'O2VzmOXl-sARjEeZclZIMFcZ2GpLVGhLqhc-XHJ7uqI=',w:'594px',h:'396px',items:'1331013246',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الرماية]
 related:
   - 2026-11-11-pimenov-shooting-worlds-doha.md
