@@ -8,6 +8,8 @@ sources:
   - الاتحاد الآسيوي (قائمة المرشحين) | https://www.the-afc.com/en/more/content/3197642 | رسمي
   - دكا تريبيون (مكان الحفل) | https://www.dhakatribune.com/sport/football/422300/bff-nominated-in-two-categories-for-afc-awards | صحيفة
 no_image: true
+getty: |
+  <a id='gaFXVCr3QuZN9uf97Dw-LA' class='gie-single' href='https://www.gettyimages.com/detail/1186007240' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'gaFXVCr3QuZN9uf97Dw-LA',sig:'n5NwTUayx13ufp2w9r1CCWQTx2dx-JUyDohwuFR5Zso=',w:'594px',h:'396px',items:'1186007240',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 تستضيف العاصمة التايلاندية بانكوك، الخميس المقبل 19 نوفمبر، حفل جوائز الاتحاد الآسيوي لكرة القدم في نسخته الثلاثين، والذي يعود إلى المدينة بعد أن استضافه للمرة الأولى عام 2017. ويقام الحفل على مسرح «أكسرا كينغ باور» في السابعة مساءً بالتوقيت المحلي (الثالثة عصراً بتوقيت مكة المكرمة)، ويُبث عبر منصات الاتحاد الآسيوي الرقمية، ويكرّم الفائزين في 19 فئة.
