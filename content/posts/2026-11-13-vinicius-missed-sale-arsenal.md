@@ -7,7 +7,7 @@ label: تحليل
 sources:
   - ذا أتلتيك (ديرموت كوريغان، 13 نوفمبر)
 commons: search:Vinícius Júnior Brazil 2026 World Cup
-image_alt: فينيسيوس جونيور لاعب ريال مدريد
+image_alt: فينيسيوس جونيور يلتحم مع المغربي إبراهيم دياز في مباراة البرازيل والمغرب بكأس العالم 2026
 tags: [ريال مدريد]
 related:
   - 2026-11-13-real-madrid-tiers-guler-vinicius.md
