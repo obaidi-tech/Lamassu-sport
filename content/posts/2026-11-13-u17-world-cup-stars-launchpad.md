@@ -5,8 +5,9 @@ date: 2026-11-13 23:10
 excerpt: قبل أيام من انطلاق النسخة الحادية والعشرين في الدوحة، نستعيد نجوماً كتبوا أولى صفحات تألقهم في البطولة، من نيمار وأوسيمين إلى فابريغاس وكروس.
 sources:
   - وكالة الأنباء القطرية (قنا)
-commons: search:Aspire Zone Doha
-image_alt: منظر جوي لمستشفى أسبيتار في منطقة أسباير زون بالدوحة، حيث تقام معظم مباريات كأس العالم تحت 17 سنة
+no_image: true
+getty: |
+  <a id='-KL05v0uQFVyCz3IjYbgWA' class='gie-single' href='https://www.gettyimages.com/detail/2097716411' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-KL05v0uQFVyCz3IjYbgWA',sig:'LxLPeaiENBXuRBiQNYCku5QE4FHlvhu0xAGM7cXxgCk=',w:'594px',h:'397px',items:'2097716411',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-11-u17-world-cup-qatar-teams-arrive.md
 ---
