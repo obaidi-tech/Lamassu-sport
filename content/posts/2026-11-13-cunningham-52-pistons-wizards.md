@@ -6,7 +6,7 @@ excerpt: نجم ديترويت يجمع 52 نقطة و11 تمريرة حاسمة
 sources:
   - سوفاسكور | https://www.sofascore.com/basketball/match/washington-wizards-detroit-pistons/ztbsGtb#id:16824862 | موقع
 commons: search:Cade Cunningham Pistons
-image_alt: كيد كننغهام لاعب ديترويت بيستونز
+image_alt: كيد كننغهام يتقدم بالكرة أمام تي جي ماكونيل لاعب إنديانا عام 2024
 related:
   - 2026-11-09-reaves-43-lakers-beat-pistons.md
 ---
