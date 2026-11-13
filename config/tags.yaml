@@ -37,3 +37,5 @@ tags:
   - {name: ميسي, slug: messi, match: [ليونيل ميسي]}
   - {name: ألكاراز, slug: alcaraz}
   - {name: إنفانتينو, slug: infantino}
+  # الأركان الثابتة
+  - {name: من المختبر, slug: from-the-lab}

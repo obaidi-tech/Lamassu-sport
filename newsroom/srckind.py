@@ -7,6 +7,7 @@ Types (the label shown is in LABELS):
   media      صحيفة أو موقع أو قناة
   relay      ناقل: موقع أعاد نشر خبر جهة أخرى (مثل «ذا أتلتيك عبر ياهو»)
   reference  مرجع: موسوعة أو قاعدة بيانات أو متحف
+  study      دراسة محكّمة: بحث منشور في دورية علمية (ركن «من المختبر»)
 
 The type is guessed from the link's domain and the name; a manual override wins:
   - ذا أتلتيك | https://... | ناقل        (the third field is one of the Arabic labels or a key above)
@@ -15,11 +16,12 @@ import re
 from urllib.parse import urlparse
 
 LABELS = {"official": "جهة رسمية", "agency": "وكالة أنباء", "media": "صحيفة أو موقع",
-          "relay": "ناقل", "reference": "مرجع"}
+          "relay": "ناقل", "reference": "مرجع", "study": "دراسة محكّمة"}
 _OVERRIDE = {"رسمي": "official", "رسمية": "official", "جهة رسمية": "official", "أصلي": "official",
              "وكالة": "agency", "وكالة أنباء": "agency",
              "صحيفة": "media", "صحفي": "media", "موقع": "media", "صحيفة أو موقع": "media", "قناة": "media",
-             "ناقل": "relay", "مرجع": "reference", **{k: k for k in LABELS}}
+             "ناقل": "relay", "مرجع": "reference",
+             "دراسة": "study", "دراسة محكّمة": "study", "جامعة": "official", **{k: k for k in LABELS}}
 
 _OFFICIAL_DOMAINS = (
     "uefa.com", "fifa.com", "the-afc.com", "cafonline.com", "concacaf.com", "conmebol.com",
