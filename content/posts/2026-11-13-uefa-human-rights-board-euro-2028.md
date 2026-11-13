@@ -6,7 +6,7 @@ excerpt: المجلس يقدم مشورة مستقلة خلال التحضير �
 sources:
   - رويترز (عبر ديف ديسكورس) | https://www.devdiscourse.com/article/international/4006710-soccer-uefa-sets-up-human-rights-board-for-euro-2028 | ناقل
   - الاتحاد الأوروبي لكرة القدم | https://www.uefa.com/news-media/news/02ab-220b7f5e1e8a-e8b966553c96-1000--uefa-and-centre-for-sport-and-human-rights-strengthen-cooper/ | رسمي
-commons: search:Wembley Stadium exterior
+commons: search:Wembley Stadium arch London
 image_alt: ملعب ويمبلي في لندن، أحد ملاعب يورو 2028
 ---
 
