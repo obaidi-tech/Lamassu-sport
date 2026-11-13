@@ -140,7 +140,8 @@
   "Luka Doncic Los Angeles Lakers": "File:Luka Doncic Lakers Jarrett Allen Donovan Mitchell Cavaliers Jan 2026.jpg",
   "Aryna Sabalenka": "File:Aryna Sabalenka at 2025 Miami Open 04.jpg",
   "American football helmet": "File:Vinnytsia Wolves helmet 2016 G2.jpg",
-  "Old Trafford stadium Manchester United": "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg"
+  "Old Trafford stadium Manchester United": "File:Manchester , Trafford - Old Trafford Stadium - geograph.org.uk - 3724146.jpg",
+  "soccer header": "File:Lugano in a header duel with Nobre (5th Matchday of the 2010-11 Süper Lig).png"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -973,5 +974,13 @@
   "license": "CC BY-SA 2.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
   "local": "12dfc0104b0f.jpg"
+ },
+ "File:Lugano in a header duel with Nobre (5th Matchday of the 2010-11 Süper Lig).png": {
+  "title": "File:Lugano in a header duel with Nobre (5th Matchday of the 2010-11 Süper Lig).png",
+  "page": "https://commons.wikimedia.org/wiki/File:Lugano_in_a_header_duel_with_Nobre_(5th_Matchday_of_the_2010-11_S%C3%BCper_Lig).png",
+  "artist": "beIN SPORTS Türkiye",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "local": "1c5a72af05aa.jpg"
  }
 }
