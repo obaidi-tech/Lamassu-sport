@@ -336,3 +336,12 @@ entries:
     archive_checked: true
     post: 2026-11-13-neville-criticises-man-utd-carrick-exit.md
     note: "ردّ فعل لا يغيّر حالة القصة، فلم يُصنّف تطوراً جوهرياً. نُشر خبراً مستقلاً ضمن القصة نفسها دون follows. خسارة بورنموث 0-3 (25 أكتوبر) تم التحقق منها."
+  - id: M-2026-11-13-04
+    date: 2026-11-13 05:35
+    title: سكالوني يمدد عقده مع الأرجنتين حتى 2030
+    source: رويترز
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-13-scaloni-extends-argentina-2030.md
+    note: "لا خبر سابق عن المفاوضات في الأرشيف. انتهاء العقد السابق في ديسمبر 2026 ومسار المفاوضات جرى التحقق منهما من بوينس آيرس تايمز."
