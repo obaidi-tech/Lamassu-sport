@@ -7,7 +7,7 @@ label: تحليل
 sources:
   - ذا أتلتيك (مايكل كوكس، 13 نوفمبر)
 commons: search:Harry Kane England 2026
-image_alt: هاري كين قائد منتخب إنجلترا
+image_alt: هاري كين قائد منتخب إنجلترا خلال مباراة غانا في كأس العالم 2026
 related:
   - 2026-11-13-national-teams-thursday-roundup.md
   - 2026-11-13-uefa-human-rights-board-euro-2028.md
