@@ -6,7 +6,7 @@ excerpt: مراسل «ذا أتلتيك» في مدريد يرى أن تجديد
 label: تحليل
 sources:
   - ذا أتلتيك (ديرموت كوريغان، 13 نوفمبر)
-commons: search:Vinícius Júnior Real Madrid 2025
+commons: search:Vinícius Júnior Brazil 2026 World Cup
 image_alt: فينيسيوس جونيور لاعب ريال مدريد
 tags: [ريال مدريد]
 related:
