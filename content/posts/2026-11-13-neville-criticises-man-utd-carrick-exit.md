@@ -6,7 +6,7 @@ excerpt: قائد يونايتد السابق ومحلل «سكاي سبورتس
 sources:
   - سكاي سبورتس (عبر الصحافة البريطانية)
   - سكاي نيوز عربية
-  - ذا أتلتيك (عمود نيك ميلر، 12 نوفمبر)
+  - ذا أتلتيك (عمود نيك ميلر) | https://www.nytimes.com/athletic/7772967/2026/11/11/manchester-united-treatment-michael-carrick/ | صحيفة
 no_image: true
 getty: |
   <a id='EebDz1KdRYBe55HnvaPe4w' class='gie-single' href='https://www.gettyimages.com/detail/2230768223' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'EebDz1KdRYBe55HnvaPe4w',sig:'SoEDelMLB6ggx40_PM-HfYwDMjbq-LihRXOHxqqqvqw=',w:'594px',h:'396px',items:'2230768223',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
