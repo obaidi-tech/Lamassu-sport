@@ -8,7 +8,7 @@ sources:
   - ماركا (عبر العربي الجديد) | https://www.aajeg.com/sport/%D9%86%D9%87%D8%A7%D8%A6%D9%8A-%D9%85%D9%88%D9%86%D8%AF%D9%8A%D8%A7%D9%84-2030-%D8%A8%D9%8A%D9%86-%D8%A7%D9%84%D9%85%D8%BA%D8%B1%D8%A8-%D9%88%D8%A5%D8%B3%D8%A8%D8%A7%D9%86%D9%8A%D8%A7-%D8%B1%D9%8A%D8%A7%D9%84-%D9%85%D8%AF%D8%B1%D9%8A%D8%AF-%D9%8A%D8%AF%D8%AE%D9%84-%D8%B9%D9%84%D9%89-%D8%A7%D9%84%D8%AE%D8%B7 | ناقل
   - موروكو وورلد نيوز | https://www.moroccoworldnews.com/2026/09/338216/spains-as-claims-bernabeu-remains-favorite-to-host-2030-world-cup-final/ | صحيفة
 commons: search:Bernabéu facade Paseo de la Castellana
-image_alt: الواجهة الخارجية لملعب سانتياغو برنابيو في مدريد
+image_alt: الواجهة الخارجية لملعب سانتياغو برنابيو في مدريد قبل مشروع تجديده
 related:
   - 2026-11-13-uefa-human-rights-board-euro-2028.md
 ---
