@@ -8,7 +8,7 @@ tags: [من المختبر]
 sources:
   - المجلة الأوروبية لعلوم الرياضة (الدراسة) | https://onlinelibrary.wiley.com/doi/10.1002/ejsc.70251 | دراسة
 commons: search:soccer header
-image_alt: لاعبان يتنافسان على كرة عالية بضربة رأس
+image_alt: الأوروغوياني دييغو لوغانو يحوّل الكرة برأسه في مباراة بالدوري التركي عام 2010
 related:
   - 2026-11-13-lab-cte-nfl-boston.md
 ---
