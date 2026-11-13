@@ -7,6 +7,8 @@ sources:
   - سكاي سبورتس (عبر الصحافة البريطانية)
   - سكاي نيوز عربية
 no_image: true
+getty: |
+  <a id='EebDz1KdRYBe55HnvaPe4w' class='gie-single' href='https://www.gettyimages.com/detail/2230768223' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'EebDz1KdRYBe55HnvaPe4w',sig:'SoEDelMLB6ggx40_PM-HfYwDMjbq-LihRXOHxqqqvqw=',w:'594px',h:'396px',items:'2230768223',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 story_id: man-utd-head-coach-2026
 related:
   - 2026-11-12-man-utd-carrick-departs.md
