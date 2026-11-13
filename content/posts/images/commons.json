@@ -147,7 +147,8 @@
   "Cade Cunningham Pistons": "File:Cade Cunningham charging against T. J. McConnell, 2024-11-29 (cropped).jpg",
   "Vinícius Júnior Real Madrid 2025": "File:2025 04 26 Final de la Copa del Rey - 54482387776.jpg",
   "Vinícius Júnior Brazil 2026 World Cup": "File:Brahim Diaz Vinicius Junior Brazil V Morocco 13 June 2026-128.jpg",
-  "Wembley Stadium exterior": "File:Wembley The FA Logo.jpg"
+  "Wembley Stadium exterior": "File:Wembley The FA Logo.jpg",
+  "Wembley Stadium arch London": "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1052,5 +1053,13 @@
   "license": "CC BY-SA 3.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
   "local": "f16ff14a9f2d.jpg"
+ },
+ "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg": {
+  "title": "File:View of the Wembley Stadium arch from the stadium walkway - geograph.org.uk - 5968025.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:View_of_the_Wembley_Stadium_arch_from_the_stadium_walkway_-_geograph.org.uk_-_5968025.jpg",
+  "artist": "Robert Lamb",
+  "license": "CC BY-SA 2.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+  "local": "96154158ae0f.jpg"
  }
 }
