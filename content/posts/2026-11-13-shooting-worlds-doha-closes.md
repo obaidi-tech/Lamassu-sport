@@ -6,6 +6,8 @@ excerpt: إيطاليا تحسم آخر ذهبيات البطولة في الت�
 sources:
   - وكالة الأنباء القطرية (قنا)
 no_image: true
+getty: |
+  <a id='mrSudws1TxVwW-aaH8UV9w' class='gie-single' href='https://www.gettyimages.com/detail/2304204087' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'mrSudws1TxVwW-aaH8UV9w',sig:'GhZirGlw8MRsplDZY4eRAQTifZUC4pvnktnOOR1xxKo=',w:'594px',h:'447px',items:'2304204087',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-alfaihan-trap-gold-doha.md
   - 2026-11-11-pimenov-shooting-worlds-doha.md
