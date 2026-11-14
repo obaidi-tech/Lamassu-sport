@@ -7,7 +7,7 @@ sources:
   - سوفاسكور (إغناسيو زوريلا) | https://www.sofascore.com/news/heat-133-121-cavaliers-bam-and-giannis-own-the-paint | موقع
   - أسوشيتد برس (عبر إي إس بي إن) | https://www.espn.com/nba/recap?gameId=401909298 | ناقل
   - تي إس إن | https://www.tsn.ca/nba/article/giannis-adebayo-help-showcase-heats-potential-in-win-over-cavs-n1-50477867/ | صحيفة
-commons: search:Bam Adebayo Miami Heat
+commons: search:Bam Adebayo 2024
 image_alt: بام أديبايو لاعب ميامي هيت
 related:
   - 2026-11-13-cunningham-52-pistons-wizards.md
