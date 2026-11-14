@@ -9,7 +9,7 @@ sources:
   - في الجول (عبر ديلي نيوز إيجبت) | https://africa.dailynewsegypt.com/egypt-v-malawi-salah-record/ | ناقل
   - ديلي سبورتس (ترتيب هدافي أفريقيا) | https://dailysports.net/news/mohamed-salah-dethrones-hossam-hassan-and-sets-a-new-record/ | صحيفة
 commons: search:Mohamed Salah Egypt 2026 World Cup
-image_alt: محمد صلاح قائد منتخب مصر
+image_alt: محمد صلاح قائد منتخب مصر بالرقم 10 خلال مباراة الأرجنتين في كأس العالم 2026
 related:
   - 2026-11-14-national-teams-friday-roundup.md
 ---
