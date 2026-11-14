@@ -62,8 +62,13 @@ def _table(block: str) -> Markup:
     num = lambda c: bool(re.fullmatch(r"[\d٠-٩.,+\-–% ]+", c))  # noqa: E731
     th = "".join(f'<th scope="col">{_inline_links(c)}</th>' for c in head)
     trs = []
+    # A score cell such as «0-3» beside «قطر – أستراليا»: numbers would otherwise run left-to-right, putting the
+    # home side's goals on the left, under the away team. RLM marks keep each number under its own team.
+    score = lambda c: re.fullmatch(r"(\d{1,3})\s*[-–]\s*(\d{1,3})", c)  # noqa: E731
+    cell = lambda c: (Markup(f"{score(c).group(1)}&rlm;-&rlm;{score(c).group(2)}") if score(c)  # noqa: E731
+                      else _inline_links(c))
     for r in body:
-        tds = "".join(f'<td{" class=num" if num(c) else ""}>{_inline_links(c)}</td>' for c in r)
+        tds = "".join(f'<td{" class=num" if num(c) else ""}>{cell(c)}</td>' for c in r)
         trs.append(f"<tr>{tds}</tr>")
     return Markup(f'<div class="table-wrap" tabindex="0"><table><thead><tr>{th}</tr></thead>'
                   f'<tbody>{"".join(trs)}</tbody></table></div>')
