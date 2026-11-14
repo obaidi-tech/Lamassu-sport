@@ -9,7 +9,7 @@ sources:
   - زد دي إف (سياق السباق) | https://www.zdfheute.de/sport/fussball-fifa-infantino-wenger-erwaegt-kandidatur-100.html | صحيفة
   - فلاش سكور (موعد الانتخاب وشروط الترشح) | https://flashscore.de/news/der-kampf-um-die-macht-wer-fordert-fifa-prasident-infantino-heraus/lGimjlZp/ | صحيفة
 commons: search:Arsène Wenger
-image_alt: المدرب الفرنسي السابق أرسين فينغر
+image_alt: أرسين فينغر يتابع من خط التماس خلال فترة تدريبه أرسنال
 story_id: fifa-election-2027
 related:
   - 2026-11-05-tashima-fifa-presidency.md
