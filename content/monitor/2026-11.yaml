@@ -641,3 +641,15 @@ entries:
     archive_checked: true
     post: 2026-11-14-heat-beat-cavaliers-adebayo-giannis.md
     note: "المالك أرسل العنوان فقط، فاستُكملت التفاصيل من مقال سوفاسكور وتقرير أسوشيتد برس. سجل هيت 6-6 من أسوشيتد برس وتي إس إن، لا من سوفاسكور (4-6 قديم)."
+  - id: M-2026-11-14-10
+    date: 2026-11-14 20:55
+    title: فريتز يتوج بلقب ستوكهولم بعد نهائي صعب أمام تيرانتي
+    source: وكالات عبر الصحافة العربية
+    status: تطور جوهري
+    follows: 2026-11-11-fritz-stockholm-quarterfinal.md
+    test: [نتيجة]
+    verified: true
+    archive_checked: true
+    approved_by: محمد العبيدي
+    post: 2026-11-14-fritz-wins-stockholm.md
+    note: "نتيجة النهائي من نص المالك. خسارة نهائيات الموسم (رابطة المحترفين وبونتو دي بريك) والمواجهة السابقة في كندا (تينيس أبستراكت) تُحقق منها."
