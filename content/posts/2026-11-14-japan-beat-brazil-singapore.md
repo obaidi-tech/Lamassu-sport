@@ -8,6 +8,8 @@ sources:
   - الشرق الأوسط | https://aawsat.com/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9/%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9-%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9/5341173-%D8%A8%D8%AA%D8%B4%D9%83%D9%8A%D9%84%D8%A9-%D8%B4%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D8%B2%D9%8A%D9%84-%D8%AA%D8%B3%D9%82%D8%B7-%D8%A3%D9%85%D8%A7%D9%85-%D8%A7%D9%84%D9%8A%D8%A7%D8%A8%D8%A7%D9%86-%D9%88%D8%AF%D9%8A%D8%A7%D9%8B-%D9%81%D9%8A-%D8%B3%D9%86%D8%BA%D8%A7%D9%81%D9%88%D8%B1%D8%A9 | صحيفة
   - وكالة الأنباء السورية (سانا) | https://sana.sy/sport/2634997/ | ناقل
 no_image: true
+getty: |
+  <a id='QhWkInhyTrxwdBjZVs-H8w' class='gie-single' href='https://www.gettyimages.com/detail/2283345586' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'QhWkInhyTrxwdBjZVs-H8w',sig:'WhwLJ-trWFtyA-VbLjoB27p96lJcn5nfktdE4CAfP-w=',w:'594px',h:'417px',items:'2283345586',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-vinicius-missed-sale-arsenal.md
   - 2026-11-14-national-teams-friday-roundup.md
