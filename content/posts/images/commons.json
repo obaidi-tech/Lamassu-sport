@@ -156,7 +156,8 @@
   "Salem Al-Dawsari": "File:Saudi National Team Players (Saudi Arabia v Uruguay, June 2026).jpg",
   "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg",
   "Charles Leclerc 2024": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg",
-  "Aspire Zone Doha": "File:Aerial view of Aspetar Hospital in Baaya.jpg"
+  "Aspire Zone Doha": "File:Aerial view of Aspetar Hospital in Baaya.jpg",
+  "Mohamed Salah Egypt 2026 World Cup": "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1133,5 +1134,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "afac60c9536b.jpg"
+ },
+ "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg": {
+  "title": "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Mohamed_Salah_Argentina_v_Egypt_7_July_2026-277.jpg",
+  "artist": "Bryan Berlin",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "e012bded1c6e.jpg"
  }
 }
