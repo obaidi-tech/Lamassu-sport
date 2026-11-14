@@ -10,6 +10,7 @@ commons: File:Taylor Fritz, photo impressions, Swiss Indoors 2025 in Basel.jpg
 image_alt: الأمريكي تايلور فريتز خلال بطولة بازل الداخلية 2025
 related:
   - 2026-11-07-alcaraz-fritz-paris-masters.md
+story_id: fritz-stockholm-2026
 ---
 
 تأهل الأمريكي تايلور فريتز، المصنف الأول في بطولة ستوكهولم المفتوحة للتنس، إلى الدور ربع النهائي بفوزه على البريطاني كاميرون نوري 7-5 و6-3 الأربعاء، في دور الستة عشر.

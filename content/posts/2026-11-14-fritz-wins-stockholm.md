@@ -8,6 +8,8 @@ sources:
   - رابطة محترفي التنس (مشوار فريتز في البطولة) | https://www.atptour.com/en/news/stockholm-2026-wednesday-report | رسمي
 commons: File:Taylor Fritz, photo impressions, Swiss Indoors 2025 in Basel.jpg
 image_alt: الأمريكي تايلور فريتز خلال بطولة بازل الداخلية 2025
+story_id: fritz-stockholm-2026
+follows: 2026-11-11-fritz-stockholm-quarterfinal.md
 related:
   - 2026-11-11-fritz-stockholm-quarterfinal.md
 ---
