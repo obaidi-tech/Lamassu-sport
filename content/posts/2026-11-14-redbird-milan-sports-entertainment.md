@@ -7,8 +7,9 @@ sources:
   - رويترز (عبر إنفستنغ) | https://www.investing.com/news/stock-market-news/redbird-launches-milan-sports-holding-company-names-brett-yormark-ceo-5025940 | ناقل
   - البيان الرسمي (عبر غول) | https://www.goal.com/en/news/official-statement-redbird-capital-partners-launches-milan-sports-and-entertainment-mse-and-appoints-brett-yormark-ceo/blt31a809a2d8ee8dfb | رسمي
   - إل سولي 24 أوري | https://ilsole24ore.com/art/nasce-milan-sports-entertainment-l-annuncio-redbird-capital-partners-AJSY3TFC | صحيفة
-commons: File:Coreografia Curva Sud Banditi.jpg
-image_alt: لوحة جماهيرية لمشجعي ميلان تملأ مدرجات سان سيرو قبل مباراة في دوري أبطال أوروبا
+no_image: true
+getty: |
+  <a id='6DzkMAp5TcpSy8Yy_sNnPQ' class='gie-single' href='https://www.gettyimages.com/detail/2285073779' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'6DzkMAp5TcpSy8Yy_sNnPQ',sig:'t4UbNiH9EbZgE57ULeVpXno76CCZMdNF7kuwmu2LhdY=',w:'594px',h:'396px',items:'2285073779',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-why-america-buys-premier-league.md
 ---
