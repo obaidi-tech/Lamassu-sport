@@ -157,7 +157,8 @@
   "Charles Leclerc portrait": "File:Charles Leclerc and Alexandra Leclerc at the 2026 Cannes Film Festival.jpg",
   "Charles Leclerc 2024": "File:Leclerc & Sainz on the grid - 2024 Chinese GP.jpg",
   "Aspire Zone Doha": "File:Aerial view of Aspetar Hospital in Baaya.jpg",
-  "Mohamed Salah Egypt 2026 World Cup": "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg"
+  "Mohamed Salah Egypt 2026 World Cup": "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg",
+  "Arsène Wenger": "File:Arsène Wenger (15339559916).jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1150,5 +1151,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "72ac9bda8563.jpg"
+ },
+ "File:Arsène Wenger (15339559916).jpg": {
+  "title": "File:Arsène Wenger (15339559916).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Ars%C3%A8ne_Wenger_(15339559916).jpg",
+  "artist": "Ronnie Macdonald from Chelmsford and Largs, United Kingdom",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "local": "fc6fc261b568.jpg"
  }
 }
