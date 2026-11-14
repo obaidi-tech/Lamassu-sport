@@ -8,6 +8,8 @@ sources:
   - أسوشيتد برس (عبر إي إس بي إن) | https://www.espn.com/nba/recap?gameId=401909298 | ناقل
   - تي إس إن | https://www.tsn.ca/nba/article/giannis-adebayo-help-showcase-heats-potential-in-win-over-cavs-n1-50477867/ | صحيفة
 no_image: true
+getty: |
+  <a id='TkKpkQfaTOxVe7IxRUGAgg' class='gie-single' href='https://www.gettyimages.com/detail/2164068358' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'TkKpkQfaTOxVe7IxRUGAgg',sig:'7-S71gkMtHe1LkC_8-1jfsiv7Xw2u6KD8-rqcCOZ7rA=',w:'594px',h:'396px',items:'2164068358',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-cunningham-52-pistons-wizards.md
 ---
