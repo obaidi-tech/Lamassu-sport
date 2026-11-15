@@ -12,7 +12,7 @@ sources:
   - نادي برشلونة، اتفاق الـ10% مع سيكسث ستريت (30 يونيو 2022) | https://www.fcbarcelona.es/es/noticias/2662883/el-fc-barcelona-y-sixth-street-llegan-a-un-acuerdo-para-la-adquisicion-de-un-10-de-los-derechos-de-television-del-club-de-laliga | رسمي
   - نادي برشلونة، الاتفاق الإضافي (15%) | https://www.fcbarcelona.com/en/club/news/2686108/fc-barcelona-and-sixth-street-reach-agreement-for-the-acquisition-of-an-additional-15-share-of-the-clubs-laliga-broadcasting-rights | رسمي
   - رويترز عبر تي بي إس نيوز (قيمة الشريحة الثانية) | https://www.tbsnews.net/node/463534 | ناقل
-commons: search:Stadio Giuseppe Meazza exterior towers
+commons: search:San Siro stadium exterior
 image_alt: الواجهة الخارجية لملعب سان سيرو في ميلانو، الذي يتقاسمه ميلان وإنتر
 tags: [برشلونة, رأس المال الرياضي]
 related:
