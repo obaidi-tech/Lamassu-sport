@@ -160,7 +160,8 @@
   "Mohamed Salah Egypt 2026 World Cup": "File:Mohamed Salah Argentina v Egypt 7 July 2026-277.jpg",
   "Arsène Wenger": "File:Arsène Wenger (15339559916).jpg",
   "Bam Adebayo Miami Heat": "File:Wizards Davis Bertans deep.jpg",
-  "San Siro stadium Milan": "File:San Siro Stadium 24.jpg"
+  "San Siro stadium Milan": "File:San Siro Stadium 24.jpg",
+  "San Siro stadium exterior": "File:San Siro (15817752319).jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1177,5 +1178,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "aa871266e7ca.jpg"
+ },
+ "File:San Siro (15817752319).jpg": {
+  "title": "File:San Siro (15817752319).jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:San_Siro_(15817752319).jpg",
+  "artist": "Jose Hidalgo from Punta Arenas y South Lake Tahoe, Chile y California",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "1ccd08993fe0.jpg"
  }
 }
