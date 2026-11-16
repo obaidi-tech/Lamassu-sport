@@ -18,6 +18,8 @@ sources:
   - فاشن نتورك عن وكالة الصحافة الفرنسية (فرنسا ونايكي) | https://in.fashionnetwork.com/news/Nike-extends-kit-sponsorship-of-France-national-football-team-in-record-deal,762705.html | ناقل
   - إنسايد وورلد فوتبول (فرنسا وإنجلترا) | https://insideworldfootball.com/?p=97640 | موقع
 no_image: true
+getty: |
+  <a id='WU6nJZlXSkRfyAhHZq7ikA' class='gie-single' href='https://www.gettyimages.com/detail/2112324974' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WU6nJZlXSkRfyAhHZq7ikA',sig:'hPse6btNiYu5stq2ogxTQmHu9uomC_G6EdSdqesRc5Y=',w:'594px',h:'396px',items:'2112324974',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-17-germany-thrash-netherlands-berlin.md
   - 2026-11-15-three-models-capital-football.md
