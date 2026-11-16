@@ -8,7 +8,8 @@ sources:
   - القدس | https://alquds.com/ar/posts/274489-iraq-coach-arnold-new-generation-iran-match | صحيفة
   - الشرق الأوسط (العراق ولبنان) | https://aawsat.com/%D8%A7%D9%84%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9/%D8%B1%D9%8A%D8%A7%D8%B6%D8%A9-%D8%B9%D8%B1%D8%A8%D9%8A%D8%A9/5340919-%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82-%D9%88%D9%84%D8%A8%D9%86%D8%A7%D9%86-%D9%8A%D8%AA%D8%B9%D8%A7%D8%AF%D9%84%D8%A7%D9%86-%D8%B3%D9%84%D8%A8%D8%A7%D9%8B-%D9%81%D9%8A-%D8%A7%D9%81%D8%AA%D8%AA%D8%A7%D8%AD-%D8%A8%D8%B7%D9%88%D9%84%D8%A9-%D8%A7%D9%84%D8%A8%D8%B5%D8%B1%D8%A9-%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D8%A9 | صحيفة
   - إن بي سي سبورتس (تأجيل كأس آسيا) | https://www.nbcsports.com/soccer/news/2027-asian-cup-postponed-moved-back-11-months-due-to-current-exceptional-circumstances-in-the-region | موقع
-no_image: true
+commons: File:Graham Arnold 2026.jpg
+image_alt: غراهام أرنولد مدرب منتخب العراق
 ---
 
 قال الأسترالي غراهام أرنولد، مدرب منتخب العراق، إن تأجيل كأس آسيا إلى ديسمبر 2027 يمنحه وقتاً أطول لبناء جيل جديد من اللاعبين. وجاء كلامه في مؤتمر صحفي اليوم الاثنين، قبل مواجهة إيران يوم الثلاثاء في ختام بطولة البصرة الرباعية الودية.
