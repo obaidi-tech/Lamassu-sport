@@ -3,13 +3,12 @@ title: استاد جاسم بن حمد يحتضن ديربي الأمريكيت�
 category: top5
 date: 2026-11-16 09:30
 excerpt: تولوكا يلاقي بطل ليبرتادوريس في 9 ديسمبر، والفائز يواجه صن داونز في 12 ديسمبر، قبل نهائي 16 ديسمبر أمام باريس سان جيرمان.
+no_image: true
 sources:
   - الاتحاد الدولي لكرة القدم | https://inside.fifa.com/organisation/news/qatar-host-final-matches-intercontinental-cup-2026 | رسمي
   - الاتحاد الدولي لكرة القدم، المباريات | https://www.fifa.com/en/tournaments/mens/intercontinentalcup/2026/scores-fixtures | رسمي
   - وكالة الأنباء القطرية | https://qna.org.qa/en/News-Area/News/2026-10/22/qatar-to-host-final-three-matches-of-fifa-intercontinental-cup-for-third-consecutive-year | رسمي
   - إل غرافيكو (نهائي ليبرتادوريس) | https://elgrafico.com.ar/articulo/1065/103668/todo-confirmado-cuando-donde-y-a-que-hora-se-jugara-la-final-de-la-libertadores | صحيفة
-commons: search:Jassim bin Hamad Stadium
-image_alt: استاد جاسم بن حمد في الدوحة
 ---
 
 تستضيف قطر للعام الثالث على التوالي المباريات الثلاث الأخيرة من كأس القارات للأندية (كأس إنتركونتيننتال)، وتُلعب أيام 9 و12 و16 ديسمبر.
