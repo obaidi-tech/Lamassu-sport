@@ -9,6 +9,8 @@ sources:
   - سيرفيميديا عبر دياريو سيغلو 21 | https://www.diariosigloxxi.com/texto-s/mostrar/683858/rfef-prepara-presupuestos-altos-historia-2027 | ناقل
   - كوبي | https://www.cope.es/programas/tiempo-de-juego/noticias/rfef-prepara-presupuestos-altos-historia-2027-20261116_3476199.html | إذاعة
 no_image: true
+getty: |
+  <a id='34TpHRI_ReZoGIG9p4iFkg' class='gie-single' href='https://www.gettyimages.com/detail/2282977190' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'34TpHRI_ReZoGIG9p4iFkg',sig:'p1B4M_wuBb8RY_QVZT3noInwupaZ39xWdpDIrjizkqQ=',w:'594px',h:'415px',items:'2282977190',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 عقد مجلس إدارة الاتحاد الإسباني لكرة القدم اجتماعه يوم الاثنين في مدينة كرة القدم بلاس روزاس، برئاسة رافائيل لوزان. وأعلن الاتحاد بعده تطورين: الأول عن ميزانيته المقبلة، والثاني عن حكم قضائي صدر ضده.
