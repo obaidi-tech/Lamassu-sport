@@ -164,7 +164,8 @@
   "San Siro stadium exterior": "File:San Siro (15817752319).jpg",
   "Metropolitano stadium Madrid": "File:Wanda-Metropolitano.jpg",
   "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg",
-  "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg"
+  "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg",
+  "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1213,5 +1214,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "2781b58c9baf.jpg"
+ },
+ "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg": {
+  "title": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Khalifa_Turky_Al_Subaai_Mosque_on_Ahmed_Bin_Taymiya_Street_in_Fereej_Al_Soudan.jpg",
+  "artist": "ansaricool786 @ YouTube",
+  "license": "CC BY 3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0",
+  "local": "6f4ec778b8aa.jpg"
  }
 }
