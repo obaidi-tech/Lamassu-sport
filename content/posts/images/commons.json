@@ -163,7 +163,8 @@
   "San Siro stadium Milan": "File:San Siro Stadium 24.jpg",
   "San Siro stadium exterior": "File:San Siro (15817752319).jpg",
   "Metropolitano stadium Madrid": "File:Wanda-Metropolitano.jpg",
-  "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg"
+  "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg",
+  "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1204,5 +1205,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "17b974c26bb4.jpg"
+ },
+ "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg": {
+  "title": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Qatar_open_2017_SF,_Murray_vs_Berdych1181.jpg",
+  "artist": "Preacher lad",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "2781b58c9baf.jpg"
  }
 }
