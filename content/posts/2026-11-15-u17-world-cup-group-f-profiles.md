@@ -1,5 +1,5 @@
 ---
-title: "مونديال الناشئين في الدوحة: السنغال وكرواتيا وكوبا وطاجيكستان في المجموعة السادسة"
+title: "مونديال الناشئين: قراءة في المجموعة السادسة"
 category: top5
 date: 2026-11-15 18:10
 excerpt: بطلة أفريقيا تفتتح مشوارها أمام كرواتيا وهدّاف بطولة أوروبا ياكوف ديديتش، فيما تعود كوبا إلى البطولة لأول مرة منذ 1991.
@@ -9,6 +9,8 @@ sources:
   - الاتحاد الأوروبي لكرة القدم، هداف بطولة أوروبا تحت 17 سنة | https://www.uefa.com/under17/news/02a6-20c5643abaa0-29eb3b18c7fd-1000--2026-under-17-euro-top-scorer-jakov-dedic-finishes-first-w/ | رسمي
   - دازن (مواعيد المجموعة) | https://www.dazn.com/en-US/news/soccer/fifa-u-17-world-cup-2026-schedule-teams-how-to-watch-live-free/plbt9xv803zf1mzs54qnykul9 | موقع
 no_image: true
+getty: |
+  <a id='G37AGH3aRvVEG2pCb4_RZQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'G37AGH3aRvVEG2pCb4_RZQ',sig:'0g5xc3iJFeRAegwHJSTnrTjoYERt5PDAuUu-FT6_jVc=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-u17-world-cup-stars-launchpad.md
 ---
