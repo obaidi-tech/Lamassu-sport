@@ -3,7 +3,7 @@ title: "من يملك النادي ولمن مستقبله؟ ثلاث صفقات
 category: top5
 date: 2026-11-15 14:15
 excerpt: ميلان وإنتر وبرشلونة دخلها المال الأمريكي بثلاث طرق مختلفة. صفقة شراء، وقرض تحوّل إلى ملكية، وبيع ربع حقوق البث لـ25 عاماً.
-label: تحليل
+label: قراءة تحليلية
 sources:
   - وكالة الصحافة الفرنسية عبر ماي ميل (صفقة ميلان) | https://www.malaymail.com/news/sports/2022/08/31/us-investment-fund-redbird-completes-12b-ac-milan-takeover/25789 | ناقل
   - وكالة الصحافة الفرنسية عبر فري ماليزيا توداي (الحصة ومقاعد المجلس) | https://fmtv5.freemalaysiatoday.com/category/sports/2022/08/31/us-investment-fund-redbird-completes-e1-2-bil-ac-milan-takeover | ناقل
