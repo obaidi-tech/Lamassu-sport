@@ -10,6 +10,7 @@ sources:
   - بوندسليغا.كوم | https://bundesliga.com/de/bundesliga/news/deutschland-niederlande-nations-league-berlin-klopp-40002 | موقع
 no_image: true
 related:
+  - 2026-11-17-greece-beat-serbia-volos.md
   - 2026-11-16-nations-league-england-end-spain-run.md
 ---
 
