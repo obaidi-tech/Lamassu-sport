@@ -9,6 +9,8 @@ sources:
   - تريبونا (الطاقم المساعد) | https://tribuna.com/en/news/2026-11-16-crystal-palace-confirm-thomas-frank-as-new-manager/ | موقع
   - ذي إندبندنت عبر ياهو سبورتس | https://sports.yahoo.com/articles/thomas-frank-appointed-crystal-palace-171511889.html | صحيفة
 no_image: true
+getty: |
+  <a id='S23MBUroSKJANOkhkZm_uQ' class='gie-single' href='https://www.gettyimages.com/detail/2256767638' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'S23MBUroSKJANOkhkZm_uQ',sig:'Pxd11-9hfUn2M7qh8rV0yhI_qofPz2XqvDoEPoACLG0=',w:'594px',h:'384px',items:'2256767638',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 أعلن كريستال بالاس، اليوم الاثنين، تعيين الدنماركي توماس فرانك مدرباً لفريقه الأول بعقد يمتد حتى يونيو 2029. ويخلف فرانك الفرنسي بيير ساج، الذي أُقيل الأسبوع الماضي بعد خمسة أشهر فقط من توليه المهمة، والفريق في قاع الدوري الإنجليزي الممتاز.
