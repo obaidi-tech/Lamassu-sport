@@ -3,13 +3,12 @@ title: وفد الاتحاد الدولي لكرة السلة يتفقد صال�
 category: other_sports
 date: 2026-11-16 18:15
 excerpt: زيارة ميدانية استمرت أربعة أيام شملت صالات لوسيل والجنوب والعطية والدحيل، قبل تسعة أشهر ونصف من انطلاق البطولة في 27 أغسطس.
+no_image: true
 sources:
   - اللجنة المحلية المنظمة لكأس العالم لكرة السلة قطر 2027 (بيان صحفي) | | رسمي
   - اللجنة الأولمبية القطرية (افتتاح صالة الجنوب) | https://www.olympic.qa/media-center/al-janoub-arena-opens-new-configuration-front-capacity-crowd-8200 | رسمي
   - الاتحاد الدولي لكرة السلة، صالات البطولة | https://www.fiba.basketball/en/events/fiba-basketball-world-cup-2027/event-guide/venues | رسمي
   - يورونيوز (عدد المباريات) | https://www.euronews.com/2026/08/20/one-year-to-go-qatar-counts-down-to-2027-fiba-basketball-world-cup | صحيفة
-commons: search:Lusail Sports Arena handball
-image_alt: صالة لوسيل الرياضية، التي تستضيف المرحلة النهائية من كأس العالم لكرة السلة 2027
 ---
 
 استقبلت اللجنة المحلية المنظمة لكأس العالم لكرة السلة «قطر 2027» وفداً من الاتحاد الدولي لكرة السلة (فيبا) في زيارة ميدانية إلى الدوحة، استمرت أربعة أيام من 9 إلى 12 نوفمبر. وتضمنت الزيارة جولات تفقدية واجتماعات عمل لمتابعة الاستعدادات للبطولة التي تنطلق في 27 أغسطس 2027.
