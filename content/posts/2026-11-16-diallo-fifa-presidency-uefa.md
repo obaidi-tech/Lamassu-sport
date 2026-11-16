@@ -12,8 +12,7 @@ sources:
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/50501932/fifa-uefa-gianni-infantino-philippe-diallo-fff | موقع
   - أسوشيتد برس عبر فوكس سبورتس | https://www.foxsports.com/articles/soccer/european-soccer-body-uefa-proposes-philippe-diallo-as-fifa-presidential-election-candidate | ناقل
   - يورونيوز | https://www.euronews.com/2026/11/16/french-football-chief-diallo-set-to-run-against-infantino-for-fifa-presidency | صحيفة
-commons: File:Philippe Diallo.png
-image_alt: فيليب ديالو، رئيس الاتحاد الفرنسي لكرة القدم
+no_image: true
 related:
   - 2026-11-14-watzke-wenger-fifa-presidency.md
   - 2026-11-05-tashima-fifa-presidency.md
