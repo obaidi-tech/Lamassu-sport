@@ -165,7 +165,8 @@
   "Metropolitano stadium Madrid": "File:Wanda-Metropolitano.jpg",
   "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg",
   "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg",
-  "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg"
+  "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg",
+  "Human brain lateral view illustration": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1222,5 +1223,13 @@
   "license": "CC BY 3.0",
   "license_url": "https://creativecommons.org/licenses/by/3.0",
   "local": "6f4ec778b8aa.jpg"
+ },
+ "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg": {
+  "title": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Brain,_lesion_of_right_hemisphere._Wellcome_L0001993.jpg",
+  "artist": "https://wellcomeimages.org/indexplus/obf_images/dc/23/4a488c261408d9df99aad4e13aeb.jpg Gallery: https://wellcomeimages.org/indexplus/image/L0001993.html Wellcome Collection gallery (2018-03-24): https://wellcomecollection.org/works/msntdnez CC-BY-4.0",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "local": "7329e616f80b.jpg"
  }
 }
