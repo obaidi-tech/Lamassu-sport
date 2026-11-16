@@ -9,6 +9,8 @@ sources:
   - سويدن هيرالد (سجل كلوب وأول أهداف شيرهانت) | https://swedenherald.com/article/germany-thrash-the-netherlands-5-0-to-win-nations-league-group-under-jurgen-klopp | موقع
   - بوندسليغا.كوم | https://bundesliga.com/de/bundesliga/news/deutschland-niederlande-nations-league-berlin-klopp-40002 | موقع
 no_image: true
+getty: |
+  <a id='WbihE9HTSuNfFZ3xjw6ixw' class='gie-single' href='https://www.gettyimages.com/detail/2296324805' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WbihE9HTSuNfFZ3xjw6ixw',sig:'Vb_lFWkvjyVK0foCZG7loTpN_ZNopcr1zMPYGjqmQjg=',w:'594px',h:'396px',items:'2296324805',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-17-greece-beat-serbia-volos.md
   - 2026-11-16-nations-league-england-end-spain-run.md
