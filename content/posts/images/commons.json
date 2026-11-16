@@ -162,7 +162,8 @@
   "Bam Adebayo Miami Heat": "File:Wizards Davis Bertans deep.jpg",
   "San Siro stadium Milan": "File:San Siro Stadium 24.jpg",
   "San Siro stadium exterior": "File:San Siro (15817752319).jpg",
-  "Metropolitano stadium Madrid": "File:Wanda-Metropolitano.jpg"
+  "Metropolitano stadium Madrid": "File:Wanda-Metropolitano.jpg",
+  "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1195,5 +1196,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "7bc2a0824265.jpg"
+ },
+ "File:Hanson K Joseph Khalifa Stadium.jpg": {
+  "title": "File:Hanson K Joseph Khalifa Stadium.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Hanson_K_Joseph_Khalifa_Stadium.jpg",
+  "artist": "Hanson K Joseph",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "17b974c26bb4.jpg"
  }
 }
