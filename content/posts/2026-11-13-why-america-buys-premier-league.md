@@ -3,14 +3,14 @@ title: لماذا يشتري الأمريكيون الدوري الإنجليز�
 category: top5
 date: 2026-11-13 12:50
 excerpt: قراءة في تحليل أكاديميين بريطانيين لأسباب تدفق المال الأمريكي على أندية الدوري الممتاز، من صفقة غليزر في 2005 إلى نصف أندية الدوري اليوم.
-label: تحليل
+label: قراءة تحليلية
 sources:
   - كيران ماغواير وكريستينا فيليبو، ذا كونفرسيشن (أكتوبر 2024) | https://theconversation.com/why-america-is-buying-up-the-premier-league-and-what-it-means-for-the-future-of-football-240695 | صحيفة
   - جامعة ليفربول، كلية الإدارة (إعادة نشر) | https://www.liverpool.ac.uk/management/research/centres/sports-business/news/stories/title%2C1493874%2Cen.php | جامعة
   - بريكينغ ذا لاينز (الملكية في موسم 2026-27) | https://breakingthelines.com/@btl/half-the-premier-league-is-now-american-owned-the-2026-transfer-window-shows-two-different-strategies | صحيفة
 commons: search:Old Trafford stadium Manchester United
 image_alt: ملعب أولد ترافورد، معقل مانشستر يونايتد
-tags: [مانشستر يونايتد]
+tags: [مانشستر يونايتد, رأس المال الرياضي]
 related:
   - 2026-11-13-neville-criticises-man-utd-carrick-exit.md
 ---
