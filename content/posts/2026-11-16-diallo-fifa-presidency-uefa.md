@@ -13,6 +13,8 @@ sources:
   - أسوشيتد برس عبر فوكس سبورتس | https://www.foxsports.com/articles/soccer/european-soccer-body-uefa-proposes-philippe-diallo-as-fifa-presidential-election-candidate | ناقل
   - يورونيوز | https://www.euronews.com/2026/11/16/french-football-chief-diallo-set-to-run-against-infantino-for-fifa-presidency | صحيفة
 no_image: true
+getty: |
+  <a id='6x8xBmHoTHdY5iKoNTeodg' class='gie-single' href='https://www.gettyimages.com/detail/2283558968' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'6x8xBmHoTHdY5iKoNTeodg',sig:'oLTDsri7k0GZsSyJh1ddkk00ncXx2nhm4LvDPOX4Ucs=',w:'594px',h:'396px',items:'2283558968',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-14-watzke-wenger-fifa-presidency.md
   - 2026-11-05-tashima-fifa-presidency.md
