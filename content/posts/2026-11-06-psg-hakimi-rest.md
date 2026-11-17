@@ -12,7 +12,7 @@ getty: |
   <a id='q76DHWM2QCxiEEW0wX025w' class='gie-single' href='https://www.gettyimages.com/detail/2262362260' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'q76DHWM2QCxiEEW0wX025w',sig:'8NW6u1fW9nui8af1NyoGENYXfEeYNcFvCglo0DdyTXo=',w:'594px',h:'396px',items:'2262362260',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
-أعلن نادي باريس سان جيرمان في بيان رسمي أن ظهيره المغربي أشرف حكيمي سيخلد إلى الراحة حتى بداية فترة التوقف الدولي، فيغيب عن مواجهة تروا السبت على ملعب حديقة الأمراء، في الجولة العاشرة من الدوري الفرنسي.
+أعلن نادي باريس سان جيرمان في بيان رسمي أن ظهيره المغربي أشرف حكيمي سيخلد إلى الراحة حتى بداية فترة التوقف الدولي، فيغيب عن مواجهة تروا السبت في ملعب حديقة الأمراء، في الجولة العاشرة من الدوري الفرنسي.
 
 وأوضح البيان أن القرار اتُّخذ بالاتفاق بين المدرب لويس إنريكي والإدارة الرياضية للنادي، أي أنه إراحة لا إصابة.
 
