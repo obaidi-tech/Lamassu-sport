@@ -70,7 +70,7 @@
   <div class="live__grid">{% for m in live %}
     <figure class="live__item">
       <iframe src="{{ m.src }}" title="{{ m.title or 'نتيجة مباشرة' }}" loading="lazy" scrolling="no" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-      <figcaption>{% if m.title %}<b>{{ m.title }}</b>{% endif %}{% if m.when %}<span class="live__when">{{ m.when | day }} · {{ '%02d:%02d' % (m.when.hour, m.when.minute) }} بتوقيت الرياض</span>{% endif %}
+      <figcaption>{% if m.title %}<b>{{ m.title }}</b>{% endif %}{% if m.when %}<span class="live__when">{{ m.when | day }} · {{ '%02d:%02d' % (m.when.hour, m.when.minute) }} بتوقيت مكة المكرمة</span>{% endif %}
         <a href="{{ m.page }}" target="_blank" rel="noopener noreferrer">البيانات من Sofascore</a></figcaption>
     </figure>{% endfor %}
   </div>
