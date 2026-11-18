@@ -576,3 +576,13 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .rows>[hidden],.latest-day[hidden]{display:none!important}
 /* a Getty photo as the cover of a «ملفات لاماسو» card */
 .file__pic--getty{aspect-ratio:auto;background:none;overflow:visible}
+
+/* sources folded under one heading; the list opens on tap */
+.sources--fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.sources--fold>summary::-webkit-details-marker{display:none}
+.sources--fold>summary h2{margin:0}
+.sources--fold>summary::after{content:"▾";display:inline-block;color:var(--cat);font-size:1.2rem;line-height:1;transition:transform .2s;flex:none}
+.sources--fold[open]>summary::after{transform:rotate(180deg)}
+.sources--fold[open]>summary{margin-bottom:10px}
+.sources__count{font-weight:400;color:var(--ink-2);font-size:.9em}
+.sources .badge{white-space:nowrap}

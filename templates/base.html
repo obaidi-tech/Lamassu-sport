@@ -86,6 +86,14 @@
 })();
 </script>
 <script>
+/* The sources box is folded; a link to #sources (the coverage meter) opens it. */
+(function () {
+  function openSources() { if (location.hash === "#sources") { var d = document.getElementById("sources"); if (d && d.tagName === "DETAILS") { d.open = true; d.scrollIntoView(); } } }
+  window.addEventListener("hashchange", openSources); openSources();
+  document.addEventListener("click", function (e) { var a = e.target.closest && e.target.closest('a[href="#sources"]'); if (a) { var d = document.getElementById("sources"); if (d) d.open = true; } });
+})();
+</script>
+<script>
 /* Long lists (latest news, sections) show 20 items, then «عرض المزيد» adds 20 more. Everything stays in the
    page, so links, search engines and readers without JavaScript still get the whole list. On the latest-news
    page whole days are shown or hidden together, so a day is never cut in half. */

@@ -100,12 +100,12 @@
   </section>
   {% endif %}
   {% elif a.roundup %}
-  <section class="sources" id="sources">
-    <h2>المقالات الأصلية</h2>
+  <details class="sources sources--fold" id="sources">
+    <summary><h2>المقالات الأصلية <span class="sources__count">({{ a.sources | length }})</span></h2></summary>
     <p class="sources__note">ملخصات بصياغتنا، والآراء لأصحابها. النصوص الكاملة في مصادرها:</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
       {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% elif s.note %}<span class="src-note">{{ s.note }}</span>{% endif %}</li>{% endfor %}</ul>
-  </section>
+  </details>
   {% elif a.category == 'opinion' %}
   <section class="sources" id="sources">
     <h2>المقال الأصلي</h2>
@@ -113,22 +113,22 @@
     <p>{% if a.sources and a.sources[0].link %}<a href="{{ a.sources[0].link }}" rel="nofollow noopener" target="_blank">{{ a.original_title }}</a>{% else %}«{{ a.original_title }}»{% endif %} — {{ a.outlet }}</p>
   </section>
   {% elif a.references and a.sources %}
-  <section class="sources" id="sources">
-    <h2>المراجع</h2>
+  <details class="sources sources--fold" id="sources">
+    <summary><h2>المراجع <span class="sources__count">({{ a.sources | length }})</span></h2></summary>
     <p class="sources__note">مادة أصيلة من إعداد لاماسو{% if a.label %} ({{ a.label }}){% endif %}، وليست تغطية لحدث إخباري، وتستند إلى المراجع التالية:</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
       <span class="badge src-kind src-kind--reference">مرجع علمي</span>
       {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% endif %}</li>{% endfor %}</ul>
-  </section>
+  </details>
   {% elif a.sources %}
-  <section class="sources" id="sources">
-    <h2>مصادر هذا الخبر</h2>
+  <details class="sources sources--fold" id="sources">
+    <summary><h2>مصادر الخبر <span class="sources__count">({{ a.sources | length }})</span></h2></summary>
     <p class="sources__note">يبيّن مؤشر التغطية عدد الجهات التي تناولت الحدث ({{ a.n_sources | sources }}): مؤشر انتشار، لا دليل صحة.{% if not own_news %} صيغ النص من الوقائع الواردة فيها.{% endif %}</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
       {% if s.kind_ar %}<span class="badge src-kind src-kind--{{ s.kind }}">{{ s.kind_ar }}</span>{% elif s.kind == 'official' %}<span class="badge">جهة رسمية</span>{% elif s.kind == 'agency' %}<span class="badge">وكالة</span>{% endif %}
       {% if s.title %}<span class="src-title" dir="auto">{{ s.title }}</span>{% endif %}
       {% if s.link %}<span class="src-url" dir="ltr">{{ s.link | domain }}</span>{% elif s.note %}<span class="src-note">{{ s.note }}</span>{% endif %}</li>{% endfor %}</ul>
-  </section>
+  </details>
   {% endif %}
 
   {% if a.tags %}<nav class="tags" aria-label="وسوم الخبر"><span class="tags__label">وسوم:</span>{% for t in a.tags %}<a class="tags__item" href="{{ root }}tag/{{ t.slug }}.html">{{ t.name }}</a>{% endfor %}</nav>{% endif %}
