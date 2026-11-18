@@ -5,7 +5,7 @@ date: 2026-11-18 21:55
 excerpt: «أسود الأطلس» يتقدمون مركزين متجاوزين البرتغال والبرازيل، ليصبحوا أول منتخب عربي يبلغ المركز الخامس، وثاني منتخب أفريقي بعد نيجيريا في 1994.
 sources:
   - الفيفا (التصنيف العالمي، نوفمبر 2026) | https://inside.fifa.com/fifa-rankings/world-ranking/men/news/coca-cola-mens-world-rankings-november-2026-morocco-canada | رسمي
-  - رويترز (نص من المالك) | https://www.reuters.com/ar/sports/IRB3FNHELFKZ5KKSIMXS3BIUKE-2026-11-18/ | ناقل
+  - رويترز | https://www.reuters.com/ar/sports/IRB3FNHELFKZ5KKSIMXS3BIUKE-2026-11-18/ | ناقل
   - غول | https://www.goal.com/en/news/fifa-rankings-morocco-make-history-as-egypt-slip/blt4cd739e07b733aef | موقع
   - أفريكا سوكر | https://africasoccer.com/morocco-join-nigeria-in-rare-african-achievement-in-fifa-rankings/ | موقع
 commons: https://commons.wikimedia.org/wiki/File:Moroccan_national_team_vs_Paraguay.jpg_(cropped).jpg

@@ -5,7 +5,7 @@ date: 2026-11-17 01:40
 excerpt: برنامج «إل تشيرينغيتو» يقول إن وكيل اللاعب البالغ 16 عاماً في فالديبيباس لإتمام الصفقة، فيما يعتزم يونايتد الدفاع عن حقوقه. لا تأكيد رسمياً من أي طرف.
 label: تقارير غير مؤكدة رسمياً
 sources:
-  - سبورت الإسبانية نقلاً عن «إل تشيرينغيتو» (نص من المالك) | | صحيفة
+  - سبورت الإسبانية نقلاً عن «إل تشيرينغيتو» | | صحيفة
   - غول | https://www.goal.com/en-in/news/his-agent-is-at-valdebebas-now-real-madrid-deal-barcelona-a-knockout-blow-and-snatch-manchester-united-player/blt737689dddb014fb5 | موقع
   - ياهو سبورتس (انضمامه إلى وكالة إيبك سبورتس) | https://sports.yahoo.com/articles/man-united-wantaway-prodigy-signs-194000139.html | موقع
 no_image: true

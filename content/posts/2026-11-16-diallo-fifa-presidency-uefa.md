@@ -11,7 +11,7 @@ updates:
   - "2026-11-17 22:00 | أُضيف رامون فيغا إلى قائمة الطامحين، وموقف الاتحادات القارية، وصندوق الـ25 مليون دولار، وبرامج المنافسين، والجدول الزمني بعد إغلاق الترشح."
 sources:
   - الاتحاد الأوروبي لكرة القدم (بيان، 16 نوفمبر 2026) | | رسمي
-  - رويترز (نص من المالك) | https://www.reuters.com/sports/soccer/ | ناقل
+  - رويترز | https://www.reuters.com/sports/soccer/ | ناقل
   - إي إس بي إن | https://www.espn.com/soccer/story/_/id/50501932/fifa-uefa-gianni-infantino-philippe-diallo-fff | موقع
   - أسوشيتد برس عبر فوكس سبورتس | https://www.foxsports.com/articles/soccer/european-soccer-body-uefa-proposes-philippe-diallo-as-fifa-presidential-election-candidate | ناقل
   - يورونيوز | https://www.euronews.com/2026/11/16/french-football-chief-diallo-set-to-run-against-infantino-for-fifa-presidency | صحيفة
@@ -19,7 +19,7 @@ sources:
   - الاتحاد الفرنسي لكرة القدم (سحب الدعم، 10 سبتمبر 2026) | https://www.fff.fr/article/17302-la-fff-retire-son-soutien-a-gianni-infantino.html | رسمي
   - أسوشيتد برس عبر ياهو سبورتس (إحصاء الاتحادات) | https://sports.yahoo.com/articles/gianni-infantino-gets-election-boost-195030975.html | ناقل
   - تاس (نص لائحة التصويت في الفيفا) | https://tass.com/sports/859271 | ناقل
-  - رويترز، تقرير «من يترشح لرئاسة الفيفا؟» (نص من المالك، 17 نوفمبر) | | ناقل
+  - رويترز، تقرير «من يترشح لرئاسة الفيفا؟» | | ناقل
   - إنسايدر سبورت (إعلان فيغا) | https://insidersport.com/2026/10/08/vega-fifa-presidency-bid-infantino/ | موقع
   - أسوشيتد برس عبر يورونيوز (صندوق التطوير) | https://www.euronews.com/2026/10/14/fifa-proposes-55bn-football-development-fund-amid-infantino-scrutiny | صحيفة
 no_image: true

@@ -4,7 +4,7 @@ category: orgs
 date: 2026-11-18 16:40
 excerpt: الرئيس الفخري للاتحاد الياباني يضع الحوكمة والشفافية أولوية أولى، ويقرّ بأنه لا يدخل السباق من موقع قوي، قبل ساعات من إغلاق باب الترشح.
 sources:
-  - رويترز (نص من المالك) | https://www.reuters.com/sports/soccer/ | ناقل
+  - رويترز | https://www.reuters.com/sports/soccer/ | ناقل
   - الاتحاد الياباني لكرة القدم (بيان، 18 نوفمبر 2026) | | رسمي
 no_image: true
 story_id: fifa-election-2027

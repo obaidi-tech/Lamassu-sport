@@ -4,7 +4,7 @@ category: other_sports
 date: 2026-11-18 22:30
 excerpt: رؤساء الاتحادات الرياضية الآسيوية والموفدون الفنيون يناقشون البرنامج الرياضي والمتطلبات التنظيمية، ويزورون أسباير ولوسيل ومجمع خليفة للتنس والإسكواش.
 sources:
-  - وكالة الأنباء القطرية (نص من المالك) | | رسمي
+  - وكالة الأنباء القطرية | | رسمي
 no_image: true
 getty: |
   <a id='9uiOjjGJThdwSctZ7_Jnww' class='gie-single' href='https://www.gettyimages.com/detail/2298508887' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'9uiOjjGJThdwSctZ7_Jnww',sig:'m4Zy-6CsnOgxv_Zy9_khE6885BdX0jOF2Mag9PSUmTs=',w:'594px',h:'396px',items:'2298508887',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>

@@ -4,7 +4,7 @@ category: other_sports
 date: 2026-11-18 22:10
 excerpt: الإسباني يفوز 6-2 و6-4 في 72 دقيقة دون أن يواجه أي فرصة كسر، رغم تلقيه علاجاً في فخذه اليسرى، ويرفع سلسلة انتصاراته إلى 11.
 sources:
-  - رويترز (عنوان من المالك)
+  - رويترز
   - رابطة محترفي التنس | https://www.atptour.com/en/news/alcaraz-medvedev-nitto-atp-finals-2026-wednesday | رسمي
   - أسوشيتد برس عبر إيه بي سي نيوز | https://abcnews.com/Sports/wireStory/alcaraz-beats-medvedev-atp-finals-despite-physical-issue-138250385 | ناقل
 no_image: true

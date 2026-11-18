@@ -9,7 +9,6 @@ sources:
   - أسوشيتد برس عبر سي بي إس سبورتس (نيكس ورابتورز) | https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261117_NY@TOR/ | ناقل
   - أسوشيتد برس عبر سي بي إس سبورتس (ليكرز وهورنتس) | https://www.cbssports.com/nba/gametracker/boxscore/NBA_20261117_CHA@LAL/ | ناقل
   - جي إم إيه نيوز (نتائج الليلة) | https://www.gmanetwork.com/news/sports/basketball/1009911/nba-scores-today-pistons-vs-spurs-lakers-vs-hornets-and-other-games/story/ | موقع
-  - نص من المالك | | ناقل
 no_image: true
 related:
   - 2026-11-16-spurs-12-straight-lakers-8.md

@@ -4,7 +4,7 @@ category: orgs
 date: 2026-11-18 22:05
 excerpt: نويندورف يقول إن ألمانيا تدعم رئيس الاتحاد الفرنسي «بقناعة كبيرة»، وواتسكه يرى أن لديه فرصة واقعية أمام إنفانتينو.
 sources:
-  - رويترز (نص من المالك)
+  - رويترز
   - غول عن وكالة سيد | https://www.goal.com/en/news/we-back-him-with-great-conviction-dfb-takes-a-stand-in-fifa-election-campaign/bltca904f499ab7a3f9 | موقع
 no_image: true
 story_id: fifa-election-2027
