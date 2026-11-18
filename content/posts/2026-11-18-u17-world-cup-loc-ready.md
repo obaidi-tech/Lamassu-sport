@@ -6,6 +6,8 @@ excerpt: 104 مباريات بمشاركة 48 منتخباً، أغلبها في
 sources:
   - اللجنة المحلية المنظمة لكأس العالم تحت 17 سنة قطر 2026 (بيان صحفي) | | رسمي
 no_image: true
+getty: |
+  <a id='wytmFDINTUVkKoihRu6CaQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'wytmFDINTUVkKoihRu6CaQ',sig:'zY4pOs7cO1t-T7ypB4gZ8WCXc3Wie0F4ow1844VxPyk=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-16-infantino-u17-world-cup-festival.md
   - 2026-11-11-u17-world-cup-qatar-teams-arrive.md
