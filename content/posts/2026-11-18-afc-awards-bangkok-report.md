@@ -8,6 +8,7 @@ sources:
   - الاتحاد الآسيوي (كل ما تحتاج معرفته عن الحفل) | https://www.the-afc.com/en/about_afc/afc_annual_awards.html/news/afc-awards-bangkok-2026-all-you-need-know | رسمي
   - الاتحاد الآسيوي (قائمة المرشحين) | https://www.the-afc.com/en/about_afc/afc_annual_awards.html/news/afc-awards-bangkok-2026-asias-finest-vie-player-of-year-glory | رسمي
   - الاتحاد الآسيوي (بيان تأجيل كأس آسيا) | https://www.the-afc.com/en/national/afc_asian_cup.html/news/important-update-afc-asian-cup-saudi-arabia-2027%E2%84%A2%EF%B8%8F | رسمي
+  - الاتحاد الآسيوي (بيان اجتماع اللجنة التنفيذية) | https://www.the-afc.com/en/about_afc/committees/executive_committee.html/news/shaikh-salman-asian-resilience-blueprint-for-biggest-triumphs | رسمي
   - وكالة أنباء الإمارات عبر الإمارات اليوم (اجتماع اللجنة التنفيذية) | https://www.emaratalyoum.com/sports/arab-and-international/2026-11-18-1.2104071 | ناقل
   - العُمانية عبر تواصل (اجتماع اللجنة التنفيذية) | https://twaslnews1.twaslnews.com/7890600/ | ناقل
   - ذا ناشيونال (إنجازات المرشحين) | https://www.thenationalnews.com/sport/football/2026/11/18/who-are-the-nominees-for-asian-player-of-the-year-and-when-will-it-be-announced/ | صحيفة
