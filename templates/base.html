@@ -86,6 +86,34 @@
 })();
 </script>
 <script>
+/* Long lists (latest news, sections) show 20 items, then «عرض المزيد» adds 20 more. Everything stays in the
+   page, so links, search engines and readers without JavaScript still get the whole list. On the latest-news
+   page whole days are shown or hidden together, so a day is never cut in half. */
+(function () {
+  try {
+    document.querySelectorAll("[data-more]").forEach(function (box) {
+      var step = +box.getAttribute("data-more") || 20, unitSel = box.getAttribute("data-unit"), itemSel = box.getAttribute("data-item");
+      var units = unitSel ? [].slice.call(box.querySelectorAll(unitSel)) : [].slice.call(box.children);
+      var size = function (u) { return itemSel ? u.querySelectorAll(itemSel).length : 1; };
+      var total = units.reduce(function (n, u) { return n + size(u); }, 0);
+      if (total <= step) return;
+      var shown = 0, i = 0;
+      function reveal() {
+        var goal = shown + step;
+        while (i < units.length && (shown < goal)) { units[i].hidden = false; shown += size(units[i]); i++; }
+        if (i >= units.length) btn.remove();
+      }
+      units.forEach(function (u) { u.hidden = true; });
+      var btn = document.createElement("button");
+      btn.type = "button"; btn.className = "more-btn"; btn.textContent = "عرض المزيد";
+      btn.addEventListener("click", reveal);
+      box.after(btn);
+      reveal();
+    });
+  } catch (err) { document.querySelectorAll("[data-more] [hidden]").forEach(function (e) { e.hidden = false; }); }
+})();
+</script>
+<script>
 /* The site is rebuilt every two hours, so the date in the header and phrases like «قبل ساعة» are kept
    current here, in the reader's browser, on Riyadh time. */
 (function () {

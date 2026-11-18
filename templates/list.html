@@ -9,7 +9,7 @@
   <p>{% if sub %}{{ sub }}{% elif cat %}الأحدث أولاً{% else %}مرتبة حسب حجم التغطية{% endif %}</p></div>
 {% if items %}
 <h2 class="visually-hidden">المواد</h2>
-<div class="rows">{% for a in items %}{{ row(a, root, cats, show_cat=not cat) }}{% endfor %}</div>
+<div class="rows" data-more="20">{% for a in items %}{{ row(a, root, cats, show_cat=not cat) }}{% endfor %}</div>
 {% else %}
 <p class="empty">لا أخبار في هذا القسم بعد.</p>
 {% endif %}

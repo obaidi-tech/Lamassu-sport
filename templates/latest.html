@@ -5,6 +5,7 @@
 {% block main %}
 <div class="page-head"><h1>آخر الأخبار</h1><p>كل ما نُشر بترتيب زمني، الأحدث أولاً.</p></div>
 {% if days %}
+<div data-more="20" data-unit=".latest-day" data-item=".latest__item">
 {% for label, items in days %}
 <section class="latest-day" aria-label="{{ label }}">
   <h2 class="latest-day__h">{{ label }}</h2>
@@ -22,6 +23,7 @@
   </ol>
 </section>
 {% endfor %}
+</div>
 {% if more %}<p class="story__note">تجد الأخبار الأقدم في <a href="{{ root }}archive.html">الأرشيف</a>.</p>{% endif %}
 {% else %}
 <p class="empty">لا أخبار منشورة بعد.</p>

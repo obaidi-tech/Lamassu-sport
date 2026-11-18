@@ -569,3 +569,10 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .social__actions{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 0}
 .social .btn{display:inline-block;font:inherit;font-family:var(--head);font-weight:600;padding:8px 16px;border-radius:6px;border:2px solid var(--amber);background:var(--amber);color:#1a1300;cursor:pointer;text-decoration:none}
 .social button.btn{background:transparent;color:inherit}
+
+/* «عرض المزيد» under long lists */
+.more-btn{display:block;margin:22px auto 6px;font:inherit;font-family:var(--head);font-weight:600;padding:10px 26px;border-radius:6px;border:2px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.more-btn:hover,.more-btn:focus-visible{background:var(--ink);color:var(--paper,#fff)}
+.rows>[hidden],.latest-day[hidden]{display:none!important}
+/* a Getty photo as the cover of a «ملفات لاماسو» card */
+.file__pic--getty{aspect-ratio:auto;background:none;overflow:visible}
