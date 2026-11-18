@@ -8,6 +8,8 @@ sources:
   - الغارديان (أول من نشر الخبر) | https://www.theguardian.com/football | صحيفة
   - إنسايد ورلد فوتبول (طرح حقوق 2030 و2034) | https://www.insideworldfootball.com/2026/10/23/fifa-goes-to-market-with-us-media-rights-for-2030-and-2034-world-cups/ | موقع
 no_image: true
+getty: |
+  <a id='up5OWA22TJpi4IjBKBRJQQ' class='gie-single' href='https://www.gettyimages.com/detail/2281728536' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'up5OWA22TJpi4IjBKBRJQQ',sig:'G1AqmPdMA8NxKB_PYAyuEeXqFQTE3ibnXXxdmUME68A=',w:'594px',h:'396px',items:'2281728536',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-13-real-madrid-2030-final-bid.md
 ---
