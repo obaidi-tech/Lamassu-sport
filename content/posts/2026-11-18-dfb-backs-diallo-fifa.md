@@ -7,6 +7,8 @@ sources:
   - رويترز
   - غول عن وكالة سيد | https://www.goal.com/en/news/we-back-him-with-great-conviction-dfb-takes-a-stand-in-fifa-election-campaign/bltca904f499ab7a3f9 | موقع
 no_image: true
+getty: |
+  <a id='u8veNDMQQiZW34-qUVMpaQ' class='gie-single' href='https://www.gettyimages.com/detail/2239590289' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'u8veNDMQQiZW34-qUVMpaQ',sig:'18AXxvhCglHuuA6fW5L4EYG2dOhlVJZ0yYHqxAVMozk=',w:'594px',h:'396px',items:'2239590289',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 story_id: fifa-election-2027
 follows: 2026-11-18-tashima-submits-fifa-candidacy.md
 related:
