@@ -4,7 +4,7 @@ category: opinion
 author: هنري بوشنيل
 outlet: ذا أثلتيك
 original_url:
-original_title: How the Pochettino era changed the USMNT head coach job forever
+original_title: كيف غيّرت حقبة ماوريسيو بوتشيتينو منصب المدير الفني للمنتخب الأمريكي لكرة القدم إلى الأبد (ترجمة النص المرسل)
 date: 2026-11-19 22:30
 excerpt: رحل بوكيتينو بفوز على هايتي ودون لقب، لكن هنري بوشنيل يرى في ذا أثلتيك أن إرثه الأهم أنه أقنع الاتحاد الأمريكي بأن خليفته يجب أن يكون مدرباً دولياً من الطراز الرفيع.
 sources:
