@@ -18,7 +18,7 @@ sources:
   - الاتحاد الآسيوي (يو جونغ هيانغ في كأس آسيا تحت 17) | https://www.the-afc.com/en/national/afc_u17_womens_asian_cup.html/news/u17wac-japan-reaction-1 | رسمي
 no_image: true
 getty: |
-  <a id='gaFXVCr3QuZN9uf97Dw-LA' class='gie-single' href='https://www.gettyimages.com/detail/1186007240' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'gaFXVCr3QuZN9uf97Dw-LA',sig:'n5NwTUayx13ufp2w9r1CCWQTx2dx-JUyDohwuFR5Zso=',w:'594px',h:'396px',items:'1186007240',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='RilN7b1cTBFKkn1S96mQPA' class='gie-single' href='https://www.gettyimages.com/detail/2305192130' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'RilN7b1cTBFKkn1S96mQPA',sig:'JpWy80mgYdP016zBtKur0nZ22sOQG02Pl8P4JTv7cfU=',w:'594px',h:'305px',items:'2305192130',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 updates:
   - "2026-11-19 23:40 | إضافة القائمة الكاملة من الاتحاد الآسيوي: أفضل لاعبة شابة، وأفضل اتحاد إقليمي، وجوائز الرئيس، وأرقام الفائزين"
 related:
