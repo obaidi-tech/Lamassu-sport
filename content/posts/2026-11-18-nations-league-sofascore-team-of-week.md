@@ -8,7 +8,7 @@ sources:
   - سوفاسكور (تشكيلة الأسبوع) | https://www.sofascore.com/news/ | موقع
   - فلاش سكور (فنلندا وسان مارينو) | https://www.flashscore.com/news/soccer-uefa-nations-league-finland-put-seven-past-san-marino-again-in-nations-league-dead-rubber/v1fpHqPO/ | موقع
   - ماسبيرو (لاتفيا وأرمينيا) | https://www.maspero.eg/sport/2026/11/16/1005916/تعادل-سلبي-بين-لاتفيا-وأرمينيا-في-ختام-دوري-الأمم-الأوروبية | موقع
-no_image: true
+commons: File:Florian Wirtz Ecuador v Germany 25 June 2026-181.jpg
 related:
   - 2026-11-17-germany-thrash-netherlands-berlin.md
   - 2026-11-17-greece-beat-serbia-volos.md
