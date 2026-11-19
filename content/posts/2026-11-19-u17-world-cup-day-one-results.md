@@ -12,7 +12,7 @@ sources:
   - نص من المالك | | ناقل
 no_image: true
 getty: |
-  <a id='wytmFDINTUVkKoihRu6CaQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'wytmFDINTUVkKoihRu6CaQ',sig:'zY4pOs7cO1t-T7ypB4gZ8WCXc3Wie0F4ow1844VxPyk=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='VkDV1LEBS0dHTavdZrBnzw' class='gie-single' href='https://www.gettyimages.com/detail/2305928332' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'VkDV1LEBS0dHTavdZrBnzw',sig:'LbHSK9hFmfPXRCkFOqgu6rfiUX_CEZHolOytZ16040U=',w:'594px',h:'396px',items:'2305928332',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-19-u17-world-cup-opening-day.md
   - 2026-11-18-u17-world-cup-loc-ready.md
