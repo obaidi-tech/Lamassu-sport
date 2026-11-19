@@ -5,7 +5,7 @@ label: قراءة تحليلية
 date: 2026-11-19 23:15
 excerpt: دفاع مهتز، وقائد فقد مستواه، ووسط ملعب بلا شريك ثابت لماينو، وجماهير غاضبة من الملاك. قراءة في الملفات التي تنتظر بوكيتينو قبل أول اختباراته في أنفيلد.
 sources:
-  - بي بي سي سبورت (قراءة في تحديات بوكيتينو) |  | موقع
+  - بي بي سي سبورت (أولويات بوكيتينو) | https://www.bbc.com/sport/football/articles/cxlylzyg38l8o | موقع
   - الجزيرة (كومو 4-1 مانشستر يونايتد) | https://aljazeera.com/sports/2026/10/21/man-united-captain-fernandes-slams-carricks-tactics-after-como-hammering | موقع
   - سكاي سبورتس (أتلتيكو 2-0 مانشستر يونايتد) | https://www.skysports.com/football/a-madrid-vs-man-utd/report/577616 | صحيفة
   - سبورتس مول (انتقاد مارتينيز وصفقات الصيف) | https://www.sportsmole.co.uk/football/man-utd/champions-league/news/i-have-to-control-myself-a-lot-martinez-goes-nuclear-after-latest-man-united-loss_606850.html | موقع
