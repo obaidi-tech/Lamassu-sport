@@ -10,8 +10,7 @@ sources:
   - وكالة فرانس برس عبر إيه آر واي (أرض الذهاب) | https://arynews.tv/spain-face-france-england-take-on-norway-in-nations-league-quarters | وكالة
   - أسوشيتد برس عبر إيه أو إل (مواجهات كأس العالم) | https://www.aol.com/articles/nations-league-draw-offers-world-115141000.html | وكالة
   - إيفنينغ ستاندرد عبر ياهو | https://sports.yahoo.com/articles/nations-league-draw-full-england-112901030.html | صحيفة
-commons: search:UEFA Nations League trophy
-image_alt: كأس دوري الأمم الأوروبية
+no_image: true
 related:
   - 2026-11-16-nations-league-england-end-spain-run.md
   - 2026-11-15-nations-league-final-night-preview.md
