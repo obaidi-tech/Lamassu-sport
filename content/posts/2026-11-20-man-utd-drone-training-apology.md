@@ -9,7 +9,8 @@ sources:
   - سكاي سبورتس | https://www.skysports.com/football/news/13614271/manchester-united-drone-operator-removes-training-footage-of-mauricio-pochettinos-first-training-session-and-apologises | صحيفة
   - رويترز | | ناقل
   - نص من فريق تحرير لاماسو | | ناقل
-no_image: true
+commons: File:Manchester United Old Trafford (cropped).jpg
+image_alt: ملعب أولد ترافورد معقل مانشستر يونايتد
 related:
   - 2026-11-19-pochettino-man-utd-in-tray.md
   - 2026-11-13-man-utd-appoint-pochettino.md
