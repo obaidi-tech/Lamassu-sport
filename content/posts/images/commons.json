@@ -166,7 +166,8 @@
   "Khalifa International Stadium Doha": "File:Hanson K Joseph Khalifa Stadium.jpg",
   "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg",
   "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg",
-  "Human brain lateral view illustration": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg"
+  "Human brain lateral view illustration": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg",
+  "Cristiano Ronaldo Real Madrid 2013": "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1271,5 +1272,13 @@
   "license": "CC BY-SA 4.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
   "local": "2b171ae9d42e.jpg"
+ },
+ "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG": {
+  "title": "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG",
+  "page": "https://commons.wikimedia.org/wiki/File:Real_Madrid_vs._Atl%C3%A9tico_Madrid_28_September_2013_a.JPG",
+  "artist": "LauraHale",
+  "license": "CC BY-SA 3.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+  "local": "aab4a83fc018.jpg"
  }
 }
