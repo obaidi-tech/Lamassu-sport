@@ -8,7 +8,7 @@ sources:
   - كيج سايد برس | https://cagesidepress.com/2026/11/19/ufc-flyweight-manon-fiorot-former-title-challenger-suspended-for-doping-violation/ | موقع
   - إم إم إيه إنسايت (نتيجة النزال) | https://mmainsight.com/news/manon-fiorot-suspended-for-three-months-after-positive-drug-test | موقع
   - نص من فريق تحرير لاماسو | | ناقل
-commons: search:doping control urine sample bottles
+commons: search:doping control
 image_alt: عبوات عينات فحص المنشطات
 ---
 
