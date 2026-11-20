@@ -167,7 +167,8 @@
   "Khalifa International Tennis and Squash Complex": "File:Qatar open 2017 SF, Murray vs Berdych1181.jpg",
   "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg",
   "Human brain lateral view illustration": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg",
-  "Cristiano Ronaldo Real Madrid 2013": "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG"
+  "Cristiano Ronaldo Real Madrid 2013": "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG",
+  "UFC octagon cage": "File:Chris Weidman knock out Anderson Silva at UFC 162..jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1280,5 +1281,13 @@
   "license": "CC BY-SA 3.0",
   "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
   "local": "aab4a83fc018.jpg"
+ },
+ "File:Chris Weidman knock out Anderson Silva at UFC 162..jpg": {
+  "title": "File:Chris Weidman knock out Anderson Silva at UFC 162..jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:Chris_Weidman_knock_out_Anderson_Silva_at_UFC_162..jpg",
+  "artist": "Kevlar",
+  "license": "Public domain",
+  "license_url": "",
+  "local": "93a485a34ff9.jpg"
  }
 }
