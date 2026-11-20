@@ -163,7 +163,7 @@
   function key(kind) { return "react-" + kind + "/" + page; }
   function seen(kind) { try { return localStorage.getItem("lm:" + key(kind)) === "1"; } catch (e) { return false; } }
   function remember(kind) { try { localStorage.setItem("lm:" + key(kind), "1"); } catch (e) {} }
-  function setN(btn, n) { var el = btn.querySelector(".react__n"); el.textContent = n > 0 ? n.toLocaleString("ar-EG") : ""; btn.setAttribute("data-n", n); }
+  function setN(btn, n) { var el = btn.querySelector(".react__n"); el.textContent = n > 0 ? String(n) : ""; btn.setAttribute("data-n", n); }
   function send(kind) {
     var path = key(kind), title = "تفاعل: " + kind + " | " + document.title;
     if (window.goatcounter && window.goatcounter.count) { window.goatcounter.count({path: path, title: title, event: true}); return; }
