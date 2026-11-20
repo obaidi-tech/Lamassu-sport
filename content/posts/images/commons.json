@@ -168,7 +168,8 @@
   "Jassim bin Hamad Stadium": "File:Khalifa Turky Al Subaai Mosque on Ahmed Bin Taymiya Street in Fereej Al Soudan.jpg",
   "Human brain lateral view illustration": "File:Brain, lesion of right hemisphere. Wellcome L0001993.jpg",
   "Cristiano Ronaldo Real Madrid 2013": "File:Real Madrid vs. Atlético Madrid 28 September 2013 a.JPG",
-  "UFC octagon cage": "File:Chris Weidman knock out Anderson Silva at UFC 162..jpg"
+  "UFC octagon cage": "File:Chris Weidman knock out Anderson Silva at UFC 162..jpg",
+  "doping control": "File:WFC2022 Australia vs Philippines 64.jpg"
  },
  "File:Painting of Cuju by Huang Shen.jpg": {
   "title": "File:Painting of Cuju by Huang Shen.jpg",
@@ -1297,5 +1298,13 @@
   "license": "Public domain",
   "license_url": "",
   "local": "e78024e70f79.jpg"
+ },
+ "File:WFC2022 Australia vs Philippines 64.jpg": {
+  "title": "File:WFC2022 Australia vs Philippines 64.jpg",
+  "page": "https://commons.wikimedia.org/wiki/File:WFC2022_Australia_vs_Philippines_64.jpg",
+  "artist": "Albinfo",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "local": "31c489516b50.jpg"
  }
 }
