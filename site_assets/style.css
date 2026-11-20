@@ -586,3 +586,13 @@ a.meter:hover{color:var(--ink);text-decoration:none}
 .sources--fold[open]>summary{margin-bottom:10px}
 .sources__count{font-weight:400;color:var(--ink-2);font-size:.9em}
 .sources .badge{white-space:nowrap}
+
+/* reader reactions */
+.react{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:26px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.react__label{font-family:var(--head);font-weight:800;font-size:.92rem;margin-left:4px}
+.react__btn{font:inherit;font-size:.9rem;display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:transparent;color:inherit;cursor:pointer}
+.react__btn:hover,.react__btn:focus-visible{border-color:var(--ink)}
+.react__btn.is-on{border-color:var(--ink);background:var(--ink);color:var(--paper,#fff);cursor:default}
+.react__n:empty{display:none}
+.react__n{font-weight:700}
+.react + .share{margin-top:12px}

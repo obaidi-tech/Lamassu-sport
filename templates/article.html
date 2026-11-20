@@ -89,6 +89,14 @@
   </section>
   {% endif %}
 
+  {% if site.goatcounter %}
+  <section class="react" aria-label="تفاعل القراء مع الخبر" hidden>
+    <span class="react__label">ما رأيك؟</span>
+    <button type="button" class="react__btn" data-kind="like" aria-pressed="false"><span aria-hidden="true">👍</span> أعجبني <span class="react__n"></span></button>
+    <button type="button" class="react__btn" data-kind="useful" aria-pressed="false"><span aria-hidden="true">💡</span> مفيد <span class="react__n"></span></button>
+    <button type="button" class="react__btn" data-kind="unclear" aria-pressed="false"><span aria-hidden="true">🤔</span> يحتاج توضيحاً <span class="react__n"></span></button>
+  </section>
+  {% endif %}
   {{ share(page_url, a.title) }}
 
   {% set correct_link %}{% if site.corrections_form %}{{ site.corrections_form }}{% elif site.email %}mailto:{{ site.email }}?subject={{ ('تصحيح: ' ~ a.title) | urlencode }}{% else %}{{ root }}contact.html{% endif %}{% endset %}

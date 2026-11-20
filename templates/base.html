@@ -151,6 +151,46 @@
   tick(); setInterval(tick, 60000);
 })();
 </script>
+{% if site.goatcounter %}<script>
+/* Reader reactions (👍 💡 🤔) under each story. Each click is sent to GoatCounter as an event named
+   react-<kind>/<page>; no cookies and no login. A reader's own choice is remembered in this browser only, so a
+   second click on the same button does nothing. The totals come from GoatCounter's public counter, which
+   updates with a delay; until the owner allows public counts in GoatCounter, the buttons work without numbers. */
+(function () {
+  var box = document.querySelector(".react"); if (!box) return;
+  var GC = "https://{{ site.goatcounter }}.goatcounter.com";
+  var page = location.pathname.split("/").pop().replace(/\.html$/, "") || "index";
+  function key(kind) { return "react-" + kind + "/" + page; }
+  function seen(kind) { try { return localStorage.getItem("lm:" + key(kind)) === "1"; } catch (e) { return false; } }
+  function remember(kind) { try { localStorage.setItem("lm:" + key(kind), "1"); } catch (e) {} }
+  function setN(btn, n) { var el = btn.querySelector(".react__n"); el.textContent = n > 0 ? n.toLocaleString("ar-EG") : ""; btn.setAttribute("data-n", n); }
+  function send(kind) {
+    var path = key(kind), title = "تفاعل: " + kind + " | " + document.title;
+    if (window.goatcounter && window.goatcounter.count) { window.goatcounter.count({path: path, title: title, event: true}); return; }
+    var img = new Image(); img.src = GC + "/count?e=true&p=" + encodeURIComponent(path) + "&t=" + encodeURIComponent(title) + "&rnd=" + Math.random().toString(36).slice(2);
+  }
+  box.hidden = false;
+  box.querySelectorAll(".react__btn").forEach(function (btn) {
+    var kind = btn.getAttribute("data-kind");
+    if (seen(kind)) { btn.classList.add("is-on"); btn.setAttribute("aria-pressed", "true"); }
+    setN(btn, 0);
+    try {
+      fetch(GC + "/counter/" + encodeURIComponent(key(kind)) + ".json").then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+        if (!d) return;
+        var n = parseInt(String(d.count || "0").replace(/[^0-9]/g, ""), 10) || 0;
+        if (seen(kind) && n < 1) n = 1;
+        setN(btn, n);
+      }).catch(function () {});
+    } catch (e) {}
+    btn.addEventListener("click", function () {
+      if (seen(kind)) return;
+      remember(kind); send(kind);
+      btn.classList.add("is-on"); btn.setAttribute("aria-pressed", "true");
+      setN(btn, (+btn.getAttribute("data-n") || 0) + 1);
+    });
+  });
+})();
+</script>{% endif %}
 {% if site.goatcounter %}<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>{% endif %}
 </body>
 </html>
