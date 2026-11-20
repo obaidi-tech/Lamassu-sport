@@ -8,7 +8,8 @@ sources:
   - كيج سايد برس | https://cagesidepress.com/2026/11/19/ufc-flyweight-manon-fiorot-former-title-challenger-suspended-for-doping-violation/ | موقع
   - إم إم إيه إنسايت (نتيجة النزال) | https://mmainsight.com/news/manon-fiorot-suspended-for-three-months-after-positive-drug-test | موقع
   - نص من فريق تحرير لاماسو | | ناقل
-no_image: true
+commons: search:UFC octagon cage
+image_alt: قفص النزالات الثماني في بطولة يو إف سي
 ---
 
 أُوقفت المقاتلة الفرنسية مانون فيوروت (36 عاماً)، الرابعة في تصنيف وزن الذبابة للسيدات في يو إف سي، ثلاثة أشهر لمخالفتها سياسة مكافحة المنشطات. وقبلت فيوروت العقوبة بعد أن رُصدت في عينتها كميات ضئيلة من مادة الأوستارين المحظورة.
