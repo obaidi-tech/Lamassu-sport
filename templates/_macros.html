@@ -78,6 +78,16 @@
 {% endif %}
 {%- endmacro %}
 
+{# A second copy of a Getty picture on the same page (e.g. the files band on the front page). Getty's widget
+   needs a unique element id, but its signature is bound to the original embed id, so changing the id breaks it
+   ("Incorrect or invalid URL"). This draws the same frame the widget would draw, with the original id and
+   signature untouched, so any number of copies can share a page. #}
+{% macro getty_frame(g) -%}
+<div class="getty getty--frame" style="--gw: {{ g.w }}; --gh: {{ g.h }}">
+<iframe src="https://embed.gettyimages.com/embed/{{ g.item }}?et={{ g.id }}&amp;tld=com&amp;sig={{ g.sig }}&amp;caption=true&amp;ver=1" width="{{ g.w }}" height="{{ g.h }}" scrolling="no" frameborder="0" loading="lazy" title="صورة من غيتي إيماجز" style="display:block;width:100%;height:auto;aspect-ratio:{{ g.w }}/{{ g.h }};border:0"></iframe>
+</div>
+{%- endmacro %}
+
 {% macro getty_embed(g, sfx="") -%}
 <div class="getty" style="--gw: {{ g.w }}; --gh: {{ g.h }}">
 <a id="{{ g.id }}{{ sfx }}" class="gie-single" href="https://www.gettyimages.com/detail/{{ g.item }}" target="_blank" rel="noopener" style="color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;">Embed from Getty Images</a>

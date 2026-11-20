@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import meter, row, event_card, hero_block, getty_embed %}
+{% from "_macros.html" import meter, row, event_card, hero_block, getty_embed, getty_frame %}
 {% block jsonld %}<script type="application/ld+json">{{ [
   {"@context": "https://schema.org", "@type": "WebSite", "name": site.site_name, "url": site.site_url | trim('/') ~ '/', "inLanguage": "ar",
    "description": site.description or site.tagline,
@@ -82,7 +82,7 @@
   <div class="section-head"><h2 id="files-h">ملفات لاماسو</h2></div>
   <div class="files__grid">{% for a in files %}
     <article class="file" style="--cat: var(--c-{{ a.category }})">
-      {% if not a.thumb and a.getty %}<div class="file__pic file__pic--getty">{{ getty_embed(a.getty, "-f") }}</div>{% else %}<a class="file__pic" href="{{ root }}article/{{ a.id }}.html" tabindex="-1" aria-hidden="true">{% if a.thumb %}<img src="{{ root }}{{ a.thumb }}" alt="" width="640" height="360" loading="lazy" decoding="async">{% endif %}</a>{% endif %}
+      {% if not a.thumb and a.getty %}<div class="file__pic file__pic--getty">{{ getty_frame(a.getty) }}</div>{% else %}<a class="file__pic" href="{{ root }}article/{{ a.id }}.html" tabindex="-1" aria-hidden="true">{% if a.thumb %}<img src="{{ root }}{{ a.thumb }}" alt="" width="640" height="360" loading="lazy" decoding="async">{% endif %}</a>{% endif %}
       <p class="file__kind">{{ a.label if a.label and a.label != 'أرشيف' else cats[a.category].name_ar }}</p>
       <h3><a href="{{ root }}article/{{ a.id }}.html">{{ a.title }}</a></h3>
     </article>{% endfor %}
