@@ -5,7 +5,8 @@ date: 2026-11-20 14:10
 excerpt: مع صدور الجزء السادس من سلسلة «جي تي إيه» بعد 13 عاماً، تعود سوفاسكور إلى الجولة الأولى من دوري أبطال أوروبا 2013-2014، التي انطلقت يوم صدور الجزء الخامس، وتستعيد تشكيلتها المثالية. رونالدو وحده نال العلامة الكاملة.
 label: أرقام
 sources:
-  - سوفاسكور (نص من المالك) | https://www.sofascore.com/news/ | موقع
+  - سوفاسكور | https://www.sofascore.com/news/ | موقع
+  - نص من فريق تحرير لاماسو | | ناقل
   - الاتحاد الأوروبي لكرة القدم (برشلونة 4-0 أياكس) | https://www.uefa.com/news/newsid=1988450.html | رسمي
   - الجزيرة (نتائج الجولة الأولى 2013) | https://www.aljazeera.com/amp/sports/2013/9/18/messi-matches-ronaldos-hat-trick | موقع
   - تي إس إن (رحيل بنزيمة عن الهلال) | https://www.tsn.ca/soccer/article/al-hilal-benzema-agree-to-terminate-contract-after-six-months/ | موقع

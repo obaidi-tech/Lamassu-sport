@@ -8,7 +8,7 @@ sources:
   - الموقع الرسمي للدوري الألماني (عودة كومباني) | https://www.bundesliga.com/en/bundesliga/matchday/2026-2027/10/fc-bayern-muenchen-vs-1-fc-koeln/liveticker | رسمي
   - سبورتس مول (بايرن وكولن) | https://www.sportsmole.co.uk/football/bayern-munich/bundesliga-title-race/preview/bayern-vs-fc-koln-prediction-team-news-lineups_609217.html | موقع
   - بوليغا نيوز (مونشنغلادباخ ودورتموند) | https://bulinews.com/borussia-monchengladbach-borussia-dortmund-preview-can-the-hosts-spring-upset | موقع
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 commons: File:Allianz arena at night Richard Bartz.jpg
 tags: [الدوري الألماني, بايرن ميونخ]
 ---

@@ -9,7 +9,7 @@ sources:
   - ذا بننسولا (برنامج اليوم الأول) | https://thepeninsulaqatar.com/article/19/11/2026/rising-stars-take-centre-stage-as-u-17-world-cup-kicks-off | صحيفة
   - إي إس بي إن (جدول البطولة) | https://www.espn.com/soccer/schedule/_/league/fifa.world.u17 | موقع
   - مرحبا قطر (جدول البطولة) | https://marhaba.qa/fifa-u-17-world-cup-qatar-2026-full-match-schedule/ | موقع
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 getty: |
   <a id='wytmFDINTUVkKoihRu6CaQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'wytmFDINTUVkKoihRu6CaQ',sig:'zY4pOs7cO1t-T7ypB4gZ8WCXc3Wie0F4ow1844VxPyk=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>

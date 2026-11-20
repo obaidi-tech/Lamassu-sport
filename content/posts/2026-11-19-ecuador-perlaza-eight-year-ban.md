@@ -9,7 +9,8 @@ sources:
   - إكسترا الإكوادورية | https://www.extra.ec/noticia/deportes/ocho-anos-castigo-jugador-lanzo-piedra-arbitro-segunda-categoria-ecuador-168301.html | صحيفة
   - فيستاثو (الإيقاف المؤقت في أكتوبر) | https://www.vistazo.com/deportes/2026-10-21-fef-suspende-60-dias-jhon-perlaza-agredir-juez-linea-ascenso-nacional-NK11284382 | صحيفة
   - بريميسياس (اعتذار اللاعب) | https://www.primicias.ec/deportes/futbol/jhon-perlaza-sancionado-yantzaza-pide-disculpas-agresion-arbitro-segunda-categoria-135508/ | صحيفة
-  - رويترز ووكالة الأناضول (نص من المالك) | | ناقل
+  - رويترز ووكالة الأناضول | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 ---
 

@@ -8,7 +8,7 @@ sources:
   - لايف سكور (معاينة الجولة) | https://www.livescore.com/en/news/football/laliga/predictions/laliga-predictions-all-10-matchday-13-games/ | موقع
   - سكورز 24 (معاينة الجولة) | https://scores24.live/en/articles/weekly-predictions/la-liga-round-13-2026 | موقع
   - لاليغا أبديت (جدول الجولة) | https://laligaupdate.com/match-updates/laliga-schedule/ | موقع
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 commons: File:Camp Nou FC Barcelona.JPG
 tags: [الدوري الإسباني, برشلونة, ريال مدريد]
 ---

@@ -9,7 +9,8 @@ sources:
   - رانينغ ماغازين (تسلسل القضية) | https://runningmagazine.ca/the-scene/peres-jepchirchir-handed-three-year-doping-ban-over-epo/ | موقع
   - سيتيوس ماغ (موقف سلسلة الماراثونات الكبرى) | https://citiusmag.com/articles/peres-jepchirchir-doping-three-year-ban-epo-sydney-marathon-title-stripped | موقع
   - سي بي سي (ماراثون سيدني) | https://www.cbc.ca/sports/olympics/summer/athletics/peres-jepchirchir-doping-ban-three-years-marathon-aiu-9.7428104 | موقع
-  - رويترز (نص من المالك) | | ناقل
+  - رويترز | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 ---
 

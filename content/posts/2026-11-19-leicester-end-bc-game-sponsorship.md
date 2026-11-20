@@ -6,7 +6,8 @@ excerpt: ليستر سيتي ينهي شراكته مع شركة BC.GAME بأث�
 sources:
   - إس بي سي نيوز (إنهاء الصفقة وشروط الاسترداد) | https://sbcnews.co.uk/sportsbook/2026/11/19/leicester-cuts-sponsor-deal/ | موقع
   - ياهو سبورتس (بيان النادي) | https://sports.yahoo.com/articles/leicester-city-terminate-bc-game-103908934.html | موقع
-  - رويترز (نص من المالك) | | ناقل
+  - رويترز | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 ---
 

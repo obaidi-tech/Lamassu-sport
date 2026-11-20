@@ -9,7 +9,7 @@ sources:
   - إي إس بي إن (نتائج البطولة) | https://www.espn.com/soccer/scoreboard/_/league/fifa.world.u17 | موقع
   - صحيفة الكأس (اليوم الافتتاحي) | https://al-kas.com/169485/ | صحيفة
   - يلا كورة (مصر واليونان) | https://www.yallakora.com/fifa-u-17-world-cup/3071/news/574042/%D8%A7%D9%84%D9%8A%D9%88%D9%86%D8%A7%D9%86-%D8%AA%D9%87%D8%B2%D9%85-%D9%85%D8%B5%D8%B1-%D8%A8%D8%AB%D9%86%D8%A7%D8%A6%D9%8A%D8%A9-%D9%81%D9%8A-%D9%83%D8%A3%D8%B3-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D9%84%D9%84%D9%86%D8%A7%D8%B4%D8%A6%D9%8A%D9%86 | موقع
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 getty: |
   <a id='VkDV1LEBS0dHTavdZrBnzw' class='gie-single' href='https://www.gettyimages.com/detail/2305928332' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'VkDV1LEBS0dHTavdZrBnzw',sig:'LbHSK9hFmfPXRCkFOqgu6rfiUX_CEZHolOytZ16040U=',w:'594px',h:'396px',items:'2305928332',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>

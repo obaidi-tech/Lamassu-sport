@@ -13,7 +13,7 @@ sources:
   - الوطن (أفضل لاعب شاب) | https://www.elwatannews.com/news/details/8399837 | صحيفة
   - أخبار 24 (أفضل لاعب صالات) | https://www.akhbaar24.com/%D8%B3%D8%A8%D9%88%D8%B1%D8%AA-24/%D8%A7%D9%84%D9%83%D8%B1%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85%D9%8A%D8%A9/%D8%A7%D9%84%D9%82%D8%A7%D8%A6%D9%85%D8%A9-%D8%A7%D9%84%D9%83%D8%A7%D9%85%D9%84%D8%A9-%D9%84%D9%84%D9%81%D8%A7%D8%A6%D8%B2%D9%8A%D9%86-%D8%A8%D8%AC%D9%88%D8%A7%D8%A6%D8%B2-%D8%A7%D9%84%D8%A7%D8%AA%D8%AD%D8%A7%D8%AF-%D8%A7%D9%84%D8%A2%D8%B3%D9%8A%D9%88%D9%8A-2026-776270 | صحيفة
   - دكا تريبيون (جائزتا بنغلاديش) | https://www.dhakatribune.com/sport/football/425188/bff-win-two-honours-at-afc-awards-2026-in-bangkok | صحيفة
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
   - الاتحاد الآسيوي (جعفري أفضل مدربة 2025) | https://www.the-afc.com/en/about_afc/afc_annual_awards.html/news/afc-coach-of-the-year-women-2025-marziyeh-jafari | رسمي
   - الاتحاد الآسيوي (يو جونغ هيانغ في كأس آسيا تحت 17) | https://www.the-afc.com/en/national/afc_u17_womens_asian_cup.html/news/u17wac-japan-reaction-1 | رسمي
 no_image: true

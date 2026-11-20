@@ -8,7 +8,7 @@ sources:
   - الدوري الأمريكي للمحترفين (ملخص سيكسرز وماجيك) | https://www.nba.com/watch/video/game-recap-76ers-121-magic-116 | رسمي
   - فرانس برس عبر ذا تريبيون (جاز وليكرز) | https://tribune.net.ph/2026/11/19/lowly-jazz-snap-lakers-winning-9-game-streak | ناقل
   - سوفاسكور (هوكس وثاندر) | https://www.sofascore.com/basketball/match/atlanta-hawks-oklahoma-city-thunder/ttbsytb#id:16824908 | موقع
-  - نص من المالك | | ناقل
+  - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
 related:
   - 2026-11-18-pistons-end-spurs-streak.md
