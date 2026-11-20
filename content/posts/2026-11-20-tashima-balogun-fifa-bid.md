@@ -9,6 +9,8 @@ sources:
   - الجزيرة (المؤتمر الصحفي) | https://www.aljazeera.com/sports/2026/11/20/kozo-tashima-japan-fifa-president-election-balogun-red-card-world-cup-infantino | موقع
   - الشرق الأوسط (مكان المؤتمر) | https://english.aawsat.com/sports/5343477-tashima-says-balogun-red-card-row-world-cup-pushed-him-run-fifa-presidency | صحيفة
 no_image: true
+getty: |
+  <a id='joKFU9PKTj5dakD7yK84-Q' class='gie-single' href='https://www.gettyimages.com/detail/1148960372' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'joKFU9PKTj5dakD7yK84-Q',sig:'nRbwW3hLlGVFJcqAGzG1YSQ6RYZyu79WqZYIC5b1MFw=',w:'594px',h:'424px',items:'1148960372',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 story_id: fifa-election-2027
 follows: 2026-11-18-tashima-submits-fifa-candidacy.md
 related:
