@@ -10,6 +10,8 @@ sources:
   - سكاي سبورتس (الترتيب) | https://www.skysports.com/football/live-blog/13610687/tottenham-vs-ipswich-live-premier-league-match-updates-news-and-score | موقع
   - إي إس بي إن | https://www.espn.co.uk/football/match/_/gameId/401878754 | موقع
 no_image: true
+getty: |
+  <a id='7waiIomCQ2Rdw_e_SZiN7Q' class='gie-single' href='https://www.gettyimages.com/detail/2306209510' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7waiIomCQ2Rdw_e_SZiN7Q',sig:'V9zrEmtwD7qnza-_98cY5vAbDjbq7P_N8AtcJOgrRJE=',w:'594px',h:'404px',items:'2306209510',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي]
 ---
 
