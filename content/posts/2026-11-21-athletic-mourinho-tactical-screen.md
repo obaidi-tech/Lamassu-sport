@@ -13,6 +13,8 @@ sources:
   - نوغومانيا (الجهاز الفني لمورينيو) | https://en.nogomania.com/read/Jose-Mourinho-begins-Real-Madrid-s-new-era-at-Valdebebas.aspx | موقع
   - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
+getty: |
+  <a id='IWFKKTv7Te97z-MG1bz7gw' class='gie-single' href='https://www.gettyimages.com/detail/2262844540' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'IWFKKTv7Te97z-MG1bz7gw',sig:'HMmh1JVDEAtz7o4NFGZMGA9scOFSiGJ1XLMeepjhnq0=',w:'594px',h:'396px',items:'2262844540',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإسباني, ريال مدريد]
 related:
   - 2026-11-19-laliga-matchday-13-preview.md
