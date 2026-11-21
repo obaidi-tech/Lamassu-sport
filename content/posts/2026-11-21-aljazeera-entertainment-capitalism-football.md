@@ -11,7 +11,10 @@ sources:
   - بي إن سبورتس (17 تغييراً في الأجهزة الفنية بعد المونديال) | https://www.beinsports.com/en-us/soccer/fifa-world-cup-2026/articles/world-cup-2026-leaves-17-coaching-changes-after-the-tournament-2026-07-20 | موقع
   - وكالة أندينا البيروفية (أطفال باسم هالاند) | https://andina.pe/agencia/noticia-hundreds-of-peruvian-newborns-named-after-norways-striker-haaland-1083141.aspx | وكالة
   - نص من فريق تحرير لاماسو | | ناقل
-no_image: true
+image: images/entertainment-capitalism-fan-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل أشخاصاً حقيقيين
+image_alt: مشجع يلف عنقه بوشاح عليه رمز شريطي ويحمل هاتفاً يعرض رسماً بيانياً، في ملعب مزدحم ليلاً تحيط به شاشات لمؤشرات مالية ورموز عملات وأفق مدينة حديثة
 related:
   - 2026-11-08-world-cup-2026-in-numbers.md
   - 2026-11-08-offside-var-explained.md
