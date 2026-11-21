@@ -9,7 +9,8 @@ sources:
   - نيوز 9 (العودة من تأخر 16 نقطة) | https://news9.com/oklahoma-city-thunder/shai-gilgeous-alexander-praises-aday-maras-growth-after-thunder-win | موقع
   - سوفاسكور | https://www.sofascore.com/ | موقع
   - نص من فريق تحرير لاماسو | | ناقل
-no_image: true
+commons: search:Shai Gilgeous-Alexander Thunder
+image_alt: شاي غلجيوس-ألكسندر لاعب أوكلاهوما سيتي ثاندر
 related:
   - 2026-11-21-nuggets-beat-rockets-jokic-sengun.md
   - 2026-11-19-nba-sixers-magic-jazz-end-lakers.md
