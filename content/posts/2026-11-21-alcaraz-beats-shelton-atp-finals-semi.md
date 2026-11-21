@@ -9,6 +9,8 @@ sources:
   - ياهو سبورتس (النتيجة والشوط الفاصل) | https://sports.yahoo.com/articles/alcaraz-beats-shelton-atp-finals-164832790.html | موقع
   - شينخوا (نصف النهائي وتصنيف اللاعبين) | https://english.news.cn/20261121/f7a3526a6d064f7e8559130ca4c7a1c6/c.html | وكالة
 no_image: true
+getty: |
+  <a id='X4Bxs7JtTeZeK0V0GNfUwQ' class='gie-single' href='https://www.gettyimages.com/detail/2292036131' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'X4Bxs7JtTeZeK0V0GNfUwQ',sig:'UJX5sMRNTeBvhodJHRVHHphKwoFPJf_Q7qs1kDLH1w4=',w:'594px',h:'396px',items:'2292036131',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [التنس]
 related:
   - 2026-11-20-alcaraz-beats-cobolli-atp-finals.md
