@@ -43,6 +43,7 @@ SEARCH_ALIASES = {        # extra words a reader may type for a section
 }
 FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
 FILE_LABELS = {"تقرير مرجعي", "قراءة تحليلية", "ملف", "تقرير", "دراسة", "تحقيق"}
+COVER_W, COVER_Q = 1200, 75   # published copies of article photos (the stored originals stay as they are)
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
 
@@ -258,8 +259,18 @@ class Builder:
                         im.save(os.path.join(self.out, rel), "JPEG", quality=82, optimize=True, progressive=True)
                     if a.get("credit"):
                         a["credit"] = dict(a["credit"], cropped=True)
-                else:
-                    shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
+                else:                                       # a light copy: at most 1200px, JPEG 75 (≈35% smaller)
+                    rel = f"img/{a['id']}.jpg"
+                    try:
+                        from PIL import Image
+                        with Image.open(a["cover_src"]) as im:
+                            im = im.convert("RGB")
+                            if im.width > COVER_W:
+                                im = im.resize((COVER_W, round(im.height * COVER_W / im.width)), Image.LANCZOS)
+                            im.save(os.path.join(self.out, rel), "JPEG", quality=COVER_Q, optimize=True, progressive=True)
+                    except Exception:
+                        rel = f"img/{a['id']}{ext}"
+                        shutil.copyfile(a["cover_src"], os.path.join(self.out, rel))
                 a["image"] = a["cover"] = rel
                 try:
                     from PIL import Image

@@ -13,6 +13,7 @@ from html.parser import HTMLParser
 from urllib.parse import urldefrag, unquote, urlparse
 
 HEAVY_KB = 600          # page + its own images/css/js, excluding third-party embeds
+SITE_WARN_MB = 700     # warn well before GitHub Pages' 1 GB limit
 
 
 class Page(HTMLParser):
@@ -106,6 +107,9 @@ def check(root):
         weights.append((size // 1024, rel))
         if size // 1024 > HEAVY_KB:
             warns.append((rel, f"صفحة ثقيلة: {size // 1024} ك.ب (الحد {HEAVY_KB})"))
+    total = sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(root) for f in fs) // (1024 * 1024)
+    if total > SITE_WARN_MB:          # GitHub Pages refuses sites over 1 GB
+        warns.append((".", f"حجم الموقع {total} م.ب، يقترب من حد غيت هب (1024 م.ب): حان وقت أرشفة صور السنوات السابقة"))
     return pages, errors, warns, sorted(weights, reverse=True)
 
 
@@ -116,6 +120,7 @@ def main():
     pages, errors, warns, weights = check(root)
     lines = [f"# الفحص التقني للموقع", "",
              f"- الصفحات: {len(pages)}", f"- أخطاء: {len(errors)}", f"- تنبيهات: {len(warns)}",
+             f"- حجم الموقع: {sum(os.path.getsize(os.path.join(d, f)) for d, _, fs in os.walk(root) for f in fs) // (1024 * 1024)} م.ب (الحد 1024، والتنبيه عند {SITE_WARN_MB})",
              f"- متوسط وزن الصفحة: {sum(w for w, _ in weights) // max(1, len(weights))} ك.ب (دون التضمينات الخارجية)", ""]
     if errors:
         lines += ["## أخطاء", ""] + [f"- `{r}`: {m}" for r, m in errors] + [""]

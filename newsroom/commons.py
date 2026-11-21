@@ -181,11 +181,11 @@ class CommonsCache:
                 json.dump(self.data, f, ensure_ascii=False, indent=1)
 
 
-MAX_W, QUALITY = 1400, 80
+MAX_W, QUALITY = 1200, 80            # 1200px is enough for the widest place a photo is shown
 
 
 def _save_compressed(data: bytes, path: str):
-    """Keep stored photos small: at most 1400px wide, JPEG quality 80 (≈150–300 KB)."""
+    """Keep stored photos small: at most 1200px wide, JPEG quality 80 (≈120–250 KB)."""
     from io import BytesIO
     from PIL import Image
     im = Image.open(BytesIO(data)).convert("RGB")
