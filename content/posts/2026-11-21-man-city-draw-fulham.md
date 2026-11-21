@@ -9,6 +9,8 @@ sources:
   - أسوشيتد برس عبر كليك أورلاندو | https://www.clickorlando.com/sports/2026/11/21/man-citys-14-year-winning-run-against-fulham-is-over-after-draw-in-premier-league/ | وكالة
   - إي إس بي إن عن وكالة PA | https://www.espn.com/soccer/report/_/gameId/401879233 | موقع
 no_image: true
+getty: |
+  <a id='-0z9KXXaSxtMwXveezqwAg' class='gie-single' href='https://www.gettyimages.com/detail/2276079277' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-0z9KXXaSxtMwXveezqwAg',sig:'hVmMzkNfH6sQZT9sKscSPAdx0LLaLKcLXTRfyIqXP_I=',w:'594px',h:'396px',items:'2276079277',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي]
 ---
 
