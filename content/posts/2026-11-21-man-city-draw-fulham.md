@@ -25,6 +25,8 @@ tags: [الدوري الإنجليزي]
 
 أنهى التعادل سلسلة من 20 فوزاً متتالياً لسيتي على فولهام في جميع المسابقات منذ عام 2012. وقوبلت صافرة النهاية بصيحات استهجان في المدرجات.
 
+<a id='BPEtVuVnQ6pB_Pl3_g19jA' class='gie-single' href='https://www.gettyimages.com/detail/2267300206' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'BPEtVuVnQ6pB_Pl3_g19jA',sig:'76Dhhmh-cg5qLFBKaj8pv4QpCkB5RTGT87qjVFafuFo=',w:'594px',h:'429px',items:'2267300206',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
 وكان سيتي قد افتتح الموسم بسبعة انتصارات متتالية في الدوري، قبل أن يخسر أمام برايتون ولايبزيغ ونوتنغهام فورست. وجاء التعادل بعد وقت قصير من إدانة النادي بمخالفات واسعة لقواعد اللعب المالي، وفق وكالة أسوشيتد برس.
 
 أما فولهام فمدّ سلسلته دون هزيمة في الدوري إلى خمس مباريات.
