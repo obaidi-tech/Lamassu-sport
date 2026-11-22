@@ -11,7 +11,7 @@ sources:
   - عنوان من فريق تحرير لاماسو | | ناقل
 no_image: true
 getty: |
-  <a id='X4Bxs7JtTeZeK0V0GNfUwQ' class='gie-single' href='https://www.gettyimages.com/detail/2292036131' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'X4Bxs7JtTeZeK0V0GNfUwQ',sig:'UJX5sMRNTeBvhodJHRVHHphKwoFPJf_Q7qs1kDLH1w4=',w:'594px',h:'396px',items:'2292036131',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='OaH-UNEYRsVC1IP22Za4qQ' class='gie-single' href='https://www.gettyimages.com/detail/2303877727' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'OaH-UNEYRsVC1IP22Za4qQ',sig:'7WJEhGgBsSpDeAYbR6RlaVKzfiboLMjmub6QeiQLeaQ=',w:'594px',h:'396px',items:'2303877727',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [التنس]
 related:
   - 2026-11-21-alcaraz-beats-shelton-atp-finals-semi.md
