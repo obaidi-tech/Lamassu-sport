@@ -9,6 +9,8 @@ sources:
   - أسوشيتد برس عبر نيوز فور جاكس (أكتوبر) | https://www.news4jax.com/sports/2026/10/16/madrid-demands-la-liga-president-resigns-after-comparing-attacks-on-referees-with-nazi-propaganda/ | وكالة
   - فرونت أوفيس سبورتس (خلفية الخلاف) | https://frontofficesports.com/article/tebas-goebbels-comparison-latest-escalation-real-madrid-feud/ | موقع
 no_image: true
+getty: |
+  <a id='2wzaIscNQCpL7TXwl3plLA' class='gie-single' href='https://www.gettyimages.com/detail/2275304694' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'2wzaIscNQCpL7TXwl3plLA',sig:'Sc4_M980UN2_bd1_Kd5DAngPVYBVpSBWbH7PQhfZCdc=',w:'594px',h:'399px',items:'2275304694',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإسباني, ريال مدريد]
 ---
 
