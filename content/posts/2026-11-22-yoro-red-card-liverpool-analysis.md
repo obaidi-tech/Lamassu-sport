@@ -12,6 +12,7 @@ sources:
 no_image: true
 tags: [الدوري الإنجليزي]
 related:
+  - 2026-11-22-liverpool-thrash-ten-man-united.md
   - 2026-11-19-pochettino-man-utd-in-tray.md
   - 2026-11-13-man-utd-appoint-pochettino.md
 ---
