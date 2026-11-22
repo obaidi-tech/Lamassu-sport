@@ -10,6 +10,8 @@ sources:
   - بان أفريكا فوتبول (اليومان الثاني والثالث) | https://panafricafootball.com/article/u-17-world-cup-md2 | موقع
   - زامين (نتائج الجولة الأولى) | https://zamin.uz/en/sport/227670-u-17-world-cup-italy-and-morocco-score-6-goals-each-spain-routs-china.html | موقع
 no_image: true
+getty: |
+  <a id='wytmFDINTUVkKoihRu6CaQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'wytmFDINTUVkKoihRu6CaQ',sig:'zY4pOs7cO1t-T7ypB4gZ8WCXc3Wie0F4ow1844VxPyk=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-19-u17-world-cup-day-one-results.md
   - 2026-11-21-u17-world-cup-algeria-chile.md
