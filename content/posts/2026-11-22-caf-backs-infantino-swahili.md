@@ -9,8 +9,13 @@ sources:
   - بان أفريكا فوتبول (قرارات الجمعية) | https://panafricafootball.com/article/caf-general-assembly-decisions-11-26 | موقع
   - نيشن الكينية (السواحيلية) | https://nation.africa/kenya/sports/football/big-boost-as-kiswahili-becomes-one-of-caf-s-official-languages-5679744 | صحيفة
   - نيشن الكينية (دعم إنفانتينو) | https://nation.africa/kenya/sports/football/caf-endorses-infantino-for-re-election-as-fifa-president-5679816 | صحيفة
+  - الفيفا (كلمة إنفانتينو في أبوجا) | https://inside.fifa.com/organisation/president/news/president-sets-out-vision-for-african-football-caf | رسمي
+  - رويترز عبر آر جي (التمويل) | https://rg.org/en-ca/news/soccer/update-motsepe-caf-54-federations-back-infantino-fifa-grants-25-million | وكالة
+  - سبورتس وورلد غانا (موعد اعتماد البرنامج) | https://sportsworldghana.com/fifa-approves-25m-for-each-member-association-as-infantino-unveils-6-35bn-funding-plan/ | موقع
   - الجزيرة الإنجليزية (المرشحون الثلاثة) | https://aljazeera.com/sports/2026/11/19/fifa-confirms-diallo-tashima-as-infantinos-challengers-at-2027-election | موقع
 no_image: true
+updates:
+  - "2026-11-22 10:20 | أضيف قسم عن عرض إنفانتينو رفع تمويل الاتحادات إلى 25 مليون دولار"
 story_id: fifa-election-2027
 follows: 2026-11-21-conmebol-backs-infantino.md
 related:
@@ -26,6 +31,12 @@ related:
 ## السواحيلية لغة رسمية
 
 اعتمدت الجمعية أيضاً تعديلاً على النظام الأساسي يضيف السواحيلية إلى اللغات الرسمية للاتحاد، لتنضم إلى العربية والإنجليزية والفرنسية والبرتغالية. وجاء القرار بناءً على مقترح من اتحاد تنزانيا، بدعم من اتحادي كينيا وأوغندا، ووافقت عليه الاتحادات الأعضاء بأغلبية كبيرة.
+
+## عرض تمويل أكبر للاتحادات
+
+وفي الجمعية نفسها، عرض إنفانتينو رفع التمويل المخصص لكل اتحاد عضو في الفيفا إلى 25 مليون دولار خلال دورة 2027–2030، مقارنة بنحو 8 ملايين دولار في الدورة الحالية، ضمن برنامج تمويل جديد. وذكّر بأن كل اتحاد كان يتلقى مليون دولار كل أربع سنوات عند انتخابه رئيساً للفيفا عام 2016.
+
+لكن الزيادة لم تُعتمد نهائياً بعد. فقد أُعلن البرنامج أول مرة في أكتوبر، ويُنتظر أن يحسم مجلس الفيفا تفاصيله في ديسمبر، قبل عرضه على مؤتمر الفيفا مع الميزانية. ومن المقرر أن يبدأ العمل به في يناير 2027، أي قبل الانتخابات بثلاثة أشهر.
 
 ## أين يقف السباق؟
 
