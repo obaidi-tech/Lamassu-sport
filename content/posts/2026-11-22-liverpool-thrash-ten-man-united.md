@@ -7,8 +7,11 @@ sources:
   - رويترز | | ناقل
   - نص من فريق تحرير لاماسو | | ناقل
   - سكاي سبورتس | https://www.skysports.com/football/news/13611979/liverpool-4-0-man-utd-mauricio-pochettino-endures-nightmare-start-as-leny-yoros-early-red-card-sparks-collapse | موقع
+  - بي بي سي سبورت (غاري روز) | | موقع
   - ياهو سبورتس | https://sports.yahoo.com/soccer/article/mauricio-pochettinos-first-man-united-match-ends-with-4-0-loss-to-liverpool-after-early-red-card-182758941.html | موقع
 no_image: true
+updates:
+  - "2026-11-22 23:30 | أضيفت أرقام وقراءة الفريقين من تقرير بي بي سي"
 getty: |
   <a id='WU4yiy4SRy5TRtDDrapxoQ' class='gie-single' href='https://www.gettyimages.com/detail/2306373686' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WU4yiy4SRy5TRtDDrapxoQ',sig:'DxJfwEIIjlp7L01TBCYmYZITY1Ilheat7y1nJ2f-SJU=',w:'594px',h:'406px',items:'2306373686',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي]
@@ -31,3 +34,19 @@ related:
 صعد ليفربول إلى المركز الرابع برصيد 21 نقطة، بفارق سبع نقاط عن أرسنال المتصدر. أما مانشستر يونايتد فبقي في المركز التاسع عشر برصيد ثماني نقاط فقط، بفوز واحد في عشر مباريات.
 
 وأصبح بوكيتينو أول مدرب في تاريخ الدوري الإنجليزي الممتاز تستقبل شباك فريقه هدفين ويُطرد له لاعب في الشوط الأول من مباراته الأولى.
+
+## أرقام من المباراة
+
+- هذه أول مرة منذ عام 1937 يصل فيها مانشستر يونايتد إلى أنفيلد وهو في المراكز الثلاثة الأخيرة، وقد هبط الفريق في ذلك الموسم.
+- بوكيتينو هو المدرب الدائم الثامن ليونايتد منذ رحيل السير أليكس فيرغسون.
+- هذه البطاقة الحمراء الثانية ليورو هذا الموسم، والثالثة ليونايتد في آخر أربع مباريات.
+
+## قراءة في أداء الفريقين
+
+**ليفربول:** خسر الفريق مباراتين فقط من 11 في الدوري تحت قيادة أندوني إيراولا، لكن معظم نتائجه الجيدة جاءت خارج أرضه، إذ فاز في أربع من خمس مباريات، بينما لم يفز على أرضه سوى مرة واحدة قبل هذه المباراة. وكان استغلال الفرص مشكلته الأبرز، كما في الخسارة أمام أرسنال مطلع نوفمبر حين سدد 17 مرة دون أن تتجه أي كرة نحو المرمى. واستغل الفريق هذه المرة فرصه مبكراً، وقدم فيرتس واحدة من أفضل مبارياته منذ انضمامه العام الماضي.
+
+**مانشستر يونايتد:** فاجأ بوكيتينو بإشراك ماتيس دي ليخت أساسياً لأول مرة هذا العام، لكن الطرد المبكر أربك كل خططه. ويرى تقرير بي بي سي أن الانضباط سيكون من أولى الملفات التي على المدرب الجديد معالجتها.
+
+---
+
+*قسما الأرقام والقراءة ملخصان من تقرير بي بي سي سبورت، وليسا ترجمة كاملة له.*
