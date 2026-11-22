@@ -6,12 +6,12 @@ matches:
   - sofascore: 16363660
     title: ليفربول - مانشستر يونايتد
     until: 2026-11-22
-  - sofascore: 16421116
-    title: ريال مدريد - سيلتا فيغو
-    until: 2026-11-22
   - sofascore: 16421113
     title: برشلونة - فياريال
     when: 2026-11-22 16:00
+    until: 2026-11-22
+  - sofascore: 16421115
+    title: خيتافي - أتلتيكو مدريد
     until: 2026-11-22
   - sofascore: 16938806
     title: أرسنال - بوروسيا دورتموند
