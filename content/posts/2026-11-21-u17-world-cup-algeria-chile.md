@@ -9,6 +9,8 @@ sources:
   - الفيفا (المكسيك ورومانيا) | https://www.fifa.com/en/match-centre/match/102/292937/292938/400022647 | رسمي
   - البطولة (آخر النتائج) | https://www.elbotola.com/en/analytics/season/jw2r09hl4nprz84 | موقع
 no_image: true
+getty: |
+  <a id='S6P7Ty-5S2FN8tdiuaGDhA' class='gie-single' href='https://www.gettyimages.com/detail/2306215999' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'S6P7Ty-5S2FN8tdiuaGDhA',sig:'O2jCwetL-gNQPtt-LHwQ2gxIbccLAZIfwbzFNRp44eQ=',w:'594px',h:'390px',items:'2306215999',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: []
 related:
   - 2026-11-19-u17-world-cup-day-one-results.md
