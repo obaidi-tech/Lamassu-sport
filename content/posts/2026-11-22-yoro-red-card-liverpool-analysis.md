@@ -10,6 +10,8 @@ sources:
   - إن بي سي سبورتس (النتيجة) | https://www.nbcsports.com/soccer/live/liverpool-vs-manchester-united-live-updates-score-goals-highlights-stats-2026-november-22 | موقع
   - بي سوكر عن إفي (هدف الركلة الحرة) | https://www.besoccer.com/new/liverpool-4-0-manchester-united-yoro-sees-red-as-pochettinos-reign-begins-in-defeat-1442880 | موقع
 no_image: true
+getty: |
+  <a id='e4uZ9gbASq5qdV_UCQVXlQ' class='gie-single' href='https://www.gettyimages.com/detail/2306363759' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'e4uZ9gbASq5qdV_UCQVXlQ',sig:'dSVfBgbK_MY5CGVagASjp2oirxPf2_5FoYct_21MiFg=',w:'594px',h:'396px',items:'2306363759',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي]
 related:
   - 2026-11-22-liverpool-thrash-ten-man-united.md
