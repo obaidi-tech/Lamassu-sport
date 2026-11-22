@@ -4,7 +4,7 @@ category: top5
 date: 2026-11-22 22:50
 excerpt: طرد ليني يورو في الدقيقة الثامنة غيّر مباراة ليفربول ومانشستر يونايتد، التي انتهت 4-0 في أول مباراة لبوكيتينو. قراءة في القرار بين قواعد "منع فرصة محققة" وآراء المحللين والمدربين.
 sources:
-  - بي بي سي سبورت (ديل جونسون) | | موقع
+  - بي بي سي سبورت (ديل جونسون) | https://www.bbc.com/sport/football/articles/cq7827p8emmxo | موقع
   - نص من فريق تحرير لاماسو | | ناقل
   - سكاي سبورتس (تقرير المباراة) | https://www.skysports.com/football/news/13611979/liverpool-4-0-man-utd-mauricio-pochettino-endures-nightmare-start-as-leny-yoros-early-red-card-sparks-collapse | موقع
   - إن بي سي سبورتس (النتيجة) | https://www.nbcsports.com/soccer/live/liverpool-vs-manchester-united-live-updates-score-goals-highlights-stats-2026-november-22 | موقع
