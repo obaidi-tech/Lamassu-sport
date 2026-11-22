@@ -7,6 +7,7 @@ sources:
   - نص من فريق تحرير لاماسو (نتائج لايف سكور وآس) | | ناقل
   - سكاي سبورتس (ليفربول ومانشستر يونايتد) | https://www.skysports.com/football/news/13611979/liverpool-4-0-man-utd-mauricio-pochettino-endures-nightmare-start-as-leny-yoros-early-red-card-sparks-collapse | موقع
 no_image: true
+lead: true
 getty: |
   <a id='OXgQoWtGRClYucYUm-I1zA' class='gie-single' href='https://www.gettyimages.com/detail/2295630970' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'OXgQoWtGRClYucYUm-I1zA',sig:'aga5me9WEZysnBw-kaynRSa8oWGwYLSuczX7TLp-RZM=',w:'594px',h:'387px',items:'2295630970',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي, الدوري الإسباني, الدوري الألماني, برشلونة]
