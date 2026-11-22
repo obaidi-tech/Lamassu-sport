@@ -10,6 +10,8 @@ sources:
   - إنديا سبورتس هب (الهند والمتأهلون) | https://www.indiasportshub.com/articles/india-stand-alone-as-south-asia-s-sole-representative-at-2027-afc-u-17-asian-cup | موقع
   - زامين (القائمة الكاملة) | https://zamin.uz/en/sport/227702-u-17-asian-cup-in-uzbekistan-names-of-the-16-national-teams-revealed.html | موقع
 no_image: true
+getty: |
+  <a id='umDD3BqQRyh92-3-BPXeKw' class='gie-single' href='https://www.gettyimages.com/detail/2208383891' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'umDD3BqQRyh92-3-BPXeKw',sig:'MNKxq8nqVTAJyuI53mFAjjNrjHHZMszZEOZ3fK_yhmQ=',w:'594px',h:'396px',items:'2208383891',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-21-u17-world-cup-algeria-chile.md
 ---
