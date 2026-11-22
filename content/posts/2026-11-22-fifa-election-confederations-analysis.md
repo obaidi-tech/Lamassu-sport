@@ -15,6 +15,8 @@ sources:
   - يورونيوز (التخلي عن مشروع المستثمرين) | https://euronews.com/2026/08/01/fifa-bins-controversial-private-investment-plan-after-backlash | موقع
   - سبورتس وورلد غانا (اعتماد برنامج التمويل) | https://sportsworldghana.com/fifa-approves-25m-for-each-member-association-as-infantino-unveils-6-35bn-funding-plan/ | موقع
 no_image: true
+getty: |
+  <a id='-BRWfb6KQfZ0XaZ7LoCWdg' class='gie-single' href='https://www.gettyimages.com/detail/1148960372' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-BRWfb6KQfZ0XaZ7LoCWdg',sig:'5AYvgL_SubEN-rMH6uDtUMsFgsuYP7VMy-DmKhaHeEs=',w:'594px',h:'424px',items:'1148960372',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 story_id: fifa-election-2027
 follows: 2026-11-22-caf-backs-infantino-swahili.md
 related:
