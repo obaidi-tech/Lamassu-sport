@@ -9,6 +9,8 @@ sources:
   - سكاي سبورتس | https://www.skysports.com/football/news/13611979/liverpool-4-0-man-utd-mauricio-pochettino-endures-nightmare-start-as-leny-yoros-early-red-card-sparks-collapse | موقع
   - ياهو سبورتس | https://sports.yahoo.com/soccer/article/mauricio-pochettinos-first-man-united-match-ends-with-4-0-loss-to-liverpool-after-early-red-card-182758941.html | موقع
 no_image: true
+getty: |
+  <a id='WU4yiy4SRy5TRtDDrapxoQ' class='gie-single' href='https://www.gettyimages.com/detail/2306373686' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'WU4yiy4SRy5TRtDDrapxoQ',sig:'DxJfwEIIjlp7L01TBCYmYZITY1Ilheat7y1nJ2f-SJU=',w:'594px',h:'406px',items:'2306373686',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي]
 related:
   - 2026-11-22-yoro-red-card-liverpool-analysis.md
