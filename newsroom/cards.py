@@ -121,14 +121,10 @@ def make_card(path: str, title: str, category: str, cat_name: str, site_name: st
     _rtl(d, pad_r, H - 92, site_name, _font("heavy", 40), PAPER)
     small = _font("regular", 26)
     meter_x = pad_l
-    bars = 0 if category == "opinion" or n_sources == 0 else min(n_sources, 8)
+    bars = 0  # coverage meter removed (owner, 23 Nov 2026)
     for i in range(bars):
         d.rectangle((meter_x + i * 14, H - 62, meter_x + i * 14 + 8, H - 40), fill=AMBER)
-    label = sources_label(n_sources)
-    if category == "opinion":
-        label = "مقال رأي"
-    elif n_sources == 0:
-        label = ""
+    label = "مقال رأي" if category == "opinion" else ""
     d.text((meter_x + bars * 14 + (14 if bars else 0), H - 72), label, font=small, fill=(200, 208, 220),
            direction="rtl", language="ar")
     d.text((pad_l + 260, H - 72), date_label, font=small, fill=(150, 160, 180), direction="rtl", language="ar")

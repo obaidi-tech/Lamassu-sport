@@ -35,7 +35,6 @@
 {% block main %}
 <section class="edition" aria-label="أخبار اليوم">
   <p class="edition__line">{% if today_count %}تغطية اليوم: <b>{{ today_count }}</b>{% if today_sources %} · مصادرها: <b>{{ today_sources }}</b>{% endif %}{% endif %}{% if last_update %}{% if today_count %} · {% endif %}آخر تحديث: <time datetime="{{ last_update }}" data-ago data-day="{{ last_update | day }}">{{ last_update | ago }}</time>{% endif %}</p>
-  <p class="edition__legend"><span class="meter__bars" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span> عدد الجهات التي تناولت الحدث: مؤشر انتشار، لا دليل صحة.</p>
 </section>
 
 {% if lead %}
