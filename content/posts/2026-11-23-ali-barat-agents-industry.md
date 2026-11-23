@@ -85,7 +85,9 @@ related:
 
 لم يعد وكيل اللاعبين مجرد شخص يرافق النجم إلى مكتب رئيس النادي ثم يحصل على عمولته. فخلال العقود الثلاثة الأخيرة تحولت المهنة إلى صناعة تجمع القانون والتمويل والضرائب وحقوق الصورة والتسويق والتحليل والعلاقات الدولية. ولم يعد اللاعب يحتاج إلى من يفاوض على راتبه فقط، بل إلى فريق كامل يخطط لمسيرته منذ الفئات السنية، ويدير صورته التجارية، وينسق انتقال أسرته، ويحمي مصالحه التعاقدية في أكثر من بلد.
 
-<a id='ihcapGM8Rgt7K23BAXui2g' class='gie-single' href='https://www.gettyimages.com/detail/56221614' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'ihcapGM8Rgt7K23BAXui2g',sig:'dqivcAV8hBryuKcMXyffdVN-9NwjxEczOL5IPraPXwA=',w:'594px',h:'470px',items:'56221614',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+<a id='_0NI5VxARmFfw7xhCwk60A' class='gie-single' href='https://www.gettyimages.com/detail/977341946' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'_0NI5VxARmFfw7xhCwk60A',sig:'SF0_oZqIAOl_JmlXXZNRN24hKR7b0MXRdP8rOIbl7CU=',w:'594px',h:'396px',items:'977341946',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: الوكيل الإيطالي الهولندي مينو رايولا (1967-2022)، أحد أبرز وكلاء اللاعبين في العقدين الأخيرين، وارتبط اسمه بزلاتان إبراهيموفيتش وبول بوغبا وإرلينغ هالاند.
 
 وإلى جانب بارات، تبرز أسماء صنعت نموذج الوكيل الحديث:
 
