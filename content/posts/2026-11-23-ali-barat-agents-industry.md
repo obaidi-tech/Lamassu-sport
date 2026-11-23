@@ -17,6 +17,8 @@ sources:
   - محكمة العدل الأوروبية (بيان القضية C-209/23) | https://curia.europa.eu/site/upload/docs/application/pdf/2026-07/cp260110en.pdf | رسمي
   - بي بي سي سبورت (كيف تُحتسب أتعاب الوكلاء؟) | https://www.bbc.co.uk/sport/football/articles/c994l42lpdeo | موقع
 no_image: true
+getty: |
+  <a id='2hzmXcqmQYJIvhkbv9jZLg' class='gie-single' href='https://www.gettyimages.com/detail/1000218762' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'2hzmXcqmQYJIvhkbv9jZLg',sig:'QQHr9hrMNCMLtxyxuv-vIrYpsh7PVNAeEykFBm-uRR8=',w:'594px',h:'396px',items:'1000218762',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي, ريال مدريد]
 related:
   - 2026-11-23-jj-gabriel-real-madrid.md
