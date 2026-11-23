@@ -101,6 +101,8 @@ related:
 
 نشر مرصد كرة القدم التابع للمركز الدولي للدراسات الرياضية (CIES) في 22 أبريل 2026 تصنيفاً لأقوى وكالات اللاعبين، بحسب القيمة السوقية التقديرية للاعبين الذين تمثلهم أو تملك حقوق التفاوض على انتقالاتهم، من بين 1300 لاعب تتجاوز قيمة كل منهم 10 ملايين يورو.
 
+<a id='dC7rEGSWTAZlYxibe3CHTw' class='gie-single' href='https://www.gettyimages.com/detail/2190947187' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'dC7rEGSWTAZlYxibe3CHTw',sig:'pIYbS-BEcnKmVTUgo3jd5EkcGAv3vcGVy70pf2FmtSg=',w:'594px',h:'396px',items:'2190947187',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
 | المركز | الوكالة | القيمة التقديرية للاعبيها |
 |---|---|---|
 | 1 | CAA Stellar / Base | 2.56 مليار يورو (84 لاعباً) |
