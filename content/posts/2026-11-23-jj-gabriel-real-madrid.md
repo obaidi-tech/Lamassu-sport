@@ -7,6 +7,8 @@ sources:
   - بي بي سي سبورت (إيملين بيغلي وغيليم بالاغي وديل جونسون) | | موقع
   - نص من فريق تحرير لاماسو | | ناقل
 no_image: true
+getty: |
+  <a id='Yj42mWkfTWlLVUW0RxrdOg' class='gie-single' href='https://www.gettyimages.com/detail/2271831659' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'Yj42mWkfTWlLVUW0RxrdOg',sig:'DlcIPvUnp70qM_uY5wzpMIb74RX9y50gB6kriAeSvAk=',w:'594px',h:'396px',items:'2271831659',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [ريال مدريد]
 ---
 
