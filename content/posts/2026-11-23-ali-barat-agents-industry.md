@@ -1,5 +1,5 @@
 ---
-title: "علي بارات وصعود إمبراطوريات وكلاء اللاعبين"
+title: "من الظل إلى المليارات.. كيف أصبح وكلاء اللاعبين قوة في كرة القدم؟"
 category: orgs
 label: تقرير خاص
 date: 2026-11-23 15:40
@@ -102,6 +102,8 @@ related:
 نشر مرصد كرة القدم التابع للمركز الدولي للدراسات الرياضية (CIES) في 22 أبريل 2026 تصنيفاً لأقوى وكالات اللاعبين، بحسب القيمة السوقية التقديرية للاعبين الذين تمثلهم أو تملك حقوق التفاوض على انتقالاتهم، من بين 1300 لاعب تتجاوز قيمة كل منهم 10 ملايين يورو.
 
 <a id='dC7rEGSWTAZlYxibe3CHTw' class='gie-single' href='https://www.gettyimages.com/detail/2190947187' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'dC7rEGSWTAZlYxibe3CHTw',sig:'pIYbS-BEcnKmVTUgo3jd5EkcGAv3vcGVy70pf2FmtSg=',w:'594px',h:'396px',items:'2190947187',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: الوكيل البرتغالي خورخي مينديز، مؤسس شركة «جيستيفوت» التي تحتل المركز الثاني في تصنيف أقوى وكالات اللاعبين بقيمة تقديرية تبلغ 1.86 مليار يورو، وارتبط اسمه بمسيرة كريستيانو رونالدو وجوزيه مورينيو.
 
 | المركز | الوكالة | القيمة التقديرية للاعبيها |
 |---|---|---|

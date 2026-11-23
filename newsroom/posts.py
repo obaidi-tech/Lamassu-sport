@@ -228,7 +228,11 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             if "gie.widgets.load" in b:                  # a Getty Images embed code pasted on its own line
                 g = _getty(b)
                 if g:
-                    figures.append({"getty": g, "caption": ""})
+                    cap = ""                             # an optional «تعليق: …» paragraph right after the embed
+                    if i + 1 < len(body) and body[i + 1].strip().startswith("تعليق:"):
+                        cap = body[i + 1].strip()[len("تعليق:"):].strip()
+                        body[i + 1] = ""
+                    figures.append({"getty": g, "caption": cap})
                     body[i] = f"!fig:{len(figures) - 1}"
                 else:
                     log(f"  ⚠ {name}: كود تضمين غيتي غير صالح، فحُذف")
