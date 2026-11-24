@@ -130,7 +130,7 @@
   </details>
   {% elif a.sources %}
   <details class="sources sources--fold" id="sources">
-    <summary><h2>مصادر الخبر <span class="sources__count">({{ a.sources | length }})</span></h2></summary>
+    <summary><h2>المصادر</h2></summary>{#- owner, 24 Nov 2026: label "المصادر" without count -#}
     <p class="sources__note">يبيّن مؤشر التغطية عدد الجهات التي تناولت الحدث ({{ a.n_sources | sources }}): مؤشر انتشار، لا دليل صحة.{% if not own_news %} صيغ النص من الوقائع الواردة فيها.{% endif %}</p>
     <ul>{% for s in a.sources %}<li>{% if s.link %}<a href="{{ s.link }}" rel="nofollow noopener" target="_blank">{{ s.publisher }}</a>{% else %}<span>{{ s.publisher }}</span>{% endif %}
       {% if s.kind_ar %}<span class="badge src-kind src-kind--{{ s.kind }}">{{ s.kind_ar }}</span>{% elif s.kind == 'official' %}<span class="badge">جهة رسمية</span>{% elif s.kind == 'agency' %}<span class="badge">وكالة</span>{% endif %}
