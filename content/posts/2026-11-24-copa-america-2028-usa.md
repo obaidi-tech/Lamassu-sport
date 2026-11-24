@@ -10,6 +10,8 @@ sources:
   - فيلد ليفل ميديا عن ذا أثلتيك (مفاوضات ديسمبر 2025) | https://fieldlevelmedia.com/concacaf/report-u-s-in-talks-to-host-copa-america-2028/ | موقع
   - أيه أو إل (نظام 2024 بمشاركة كونكاكاف) | https://www.aol.com/articles/report-u-talks-host-copa-184051295.html | موقع
 no_image: true
+getty: |
+  <a id='VRXrxNeOS_djur-xO0Mjdw' class='gie-single' href='https://www.gettyimages.com/detail/2162063071' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'VRXrxNeOS_djur-xO0Mjdw',sig:'h9ki25IUzh7tyeiETUyLwQKtI00PvZM5Ib9-s4KUex8=',w:'594px',h:'396px',items:'2162063071',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 أعلن اتحادا أمريكا الجنوبية (كونميبول) وأمريكا الشمالية والوسطى والكاريبي (كونكاكاف)، اليوم الثلاثاء، أن الولايات المتحدة ستستضيف بطولة كوبا أمريكا 2028، للمرة الثالثة في تاريخها والثانية تواليا بعد نسخة 2024.
