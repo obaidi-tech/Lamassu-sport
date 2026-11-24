@@ -148,6 +148,10 @@ related:
 
 ### من آخر لقب إلى اليوم
 
+<a id='iRYY2VrbQPJv_6u2BejcWA' class='gie-single' href='https://www.gettyimages.com/detail/168611936' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'iRYY2VrbQPJv_6u2BejcWA',sig:'6znrw1ZUBTf_51Uf5GWhDwHl-uxY2sACizmTrN0RKG8=',w:'594px',h:'361px',items:'168611936',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: السير أليكس فيرغسون يرفع كأس الدوري الإنجليزي الممتاز في أولد ترافورد يوم 12 مايو 2013، بعد المباراة أمام سوانزي سيتي، في آخر تتويج بالدوري للنادي حتى اليوم.
+
 لم يكن التراجع خطاً مستقيماً، بل تخللته مواسم جيدة لم تتحول إلى نجاح مستدام:
 
 | الموسم | الترتيب في الدوري | الألقاب |
