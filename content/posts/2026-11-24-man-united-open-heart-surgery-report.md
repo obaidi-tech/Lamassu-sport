@@ -130,6 +130,8 @@ related:
 
 منذ اعتزال فيرغسون، جرّب يونايتد مدارس تدريبية متباينة، وكل تغيير جذري في فلسفة المدرب جرّ معه تعاقدات جديدة، واستغناء عن لاعبين، وتغييراً في الطاقم.
 
+<a id='axBR48R-Ti1HbW2YJto1qA' class='gie-single' href='https://www.gettyimages.com/detail/1129623993' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'axBR48R-Ti1HbW2YJto1qA',sig:'Iqmfj4G2Su3vBu_Kt0jdSTK034yuopTgH6XLVJ5UVOM=',w:'594px',h:'384px',items:'1129623993',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
 | المدرب | الفترة | المحصلة |
 |---|---|---|
 | ديفيد مويس | 2013-2014 | عقد لست سنوات، رحل بعد أقل من عام |
