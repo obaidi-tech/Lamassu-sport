@@ -10,7 +10,10 @@ sources:
   - فرانس 24 (القرار بالإجماع) | https://www.france24.com/ar/رياضة/20261124-مباشر-المغرب-السنغال-ترقب-ساعة-الحسم-الفائز-كأس-أمم-أفريقيا | موقع
   - العربي الجديد (بيان الاتحاد المغربي) | https://www.alaraby.co.uk/sport/الاتحاد-المغربي-يعلن-نيته-الطعن-في-قرار-المحكمة-الرياضية | صحيفة
   - تي آر تي عربي (خلفية القرار والجلسة) | https://www.trtarabi.com/article/8044ecae6575 | موقع
+  - ساديو ماني على إنستغرام | https://www.instagram.com/p/DgITVftCOCo/ | حساب رسمي
   - إن بي سي سبورتس (قرار الاتحاد الأفريقي في مارس) | https://www.nbcsports.com/soccer/news/senegal-stripped-of-afcon-title-morocco-declared-champions-by-governing-body | موقع
+updates:
+  - "2026-11-24 21:15 | أضيفت رسالة ساديو ماني على إنستغرام."
 no_image: true
 getty: |
   <a id='a9kqKg3zSTVfObd8I_HOZA' class='gie-single' href='https://www.gettyimages.com/detail/2256419724' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'a9kqKg3zSTVfObd8I_HOZA',sig:'uZIurRXGQ4acSwEOHtw6nkEkpUjW25E12wIuvkynEbI=',w:'594px',h:'396px',items:'2256419724',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
@@ -43,7 +46,7 @@ related:
 
 ## السنغال تمد يدها
 
-وصف الاتحاد السنغالي القرار بأنه انتصار «للنزاهة الرياضية»، وقال رئيسه عبد الله فال إن المحكمة «حققت العدالة للرياضة»، مؤكداً روابط الأخوة مع الاتحاد المغربي والشعب المغربي. وقال قائد المنتخب ساديو ماني إن لاعبي المغرب «قدموا أداء رائعاً ويمكنهم أن يفخروا به»، مضيفاً: «السنغال والمغرب شعبان شقيقان».
+وصف الاتحاد السنغالي القرار بأنه انتصار «للنزاهة الرياضية»، وقال رئيسه عبد الله فال إن المحكمة «حققت العدالة للرياضة»، مؤكداً روابط الأخوة مع الاتحاد المغربي والشعب المغربي. وفي رسالة على حسابه في إنستغرام، شكر قائد المنتخب ساديو ماني الجماهير وزملاءه والجهاز الفني، وقال إن دعم السنغاليين داخل البلاد وفي المهجر منح اللاعبين القوة في أصعب اللحظات من أجل النجمة الأفريقية الثانية. ووجّه رسالة احترام إلى الشعب المغربي ولاعبي منتخبه، قائلاً إنهم قدموا مشواراً يحق لهم الافتخار به، وأضاف: «السنغال والمغرب شعبان شقيقان، ونتمنى أن يواصل شغف كرة القدم تقريب المسافات بيننا». وختم: «تهانينا لكل السنغاليين، هذا الانتصار هو انتصاركم أيضاً».
 
 ## من الملعب إلى المحكمة
 
