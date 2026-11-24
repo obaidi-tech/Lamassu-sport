@@ -1,0 +1,249 @@
+{
+ "2017": {
+  "teams": 24,
+  "all": {
+   "matches": 52,
+   "goals": 183,
+   "gpm": 3.52,
+   "margin_avg": 2.21,
+   "pct_margin5": 7.7,
+   "pct_margin3": 36.5,
+   "pct_close": 36.5,
+   "pct_draw": 11.5,
+   "biggest": 6
+  },
+  "group": {
+   "matches": 36,
+   "goals": 125,
+   "gpm": 3.47,
+   "margin_avg": 2.19,
+   "pct_margin5": 8.3,
+   "pct_margin3": 36.1,
+   "pct_close": 38.9,
+   "pct_draw": 13.9,
+   "biggest": 6
+  },
+  "knockout": {
+   "matches": 16,
+   "goals": 58,
+   "gpm": 3.62,
+   "margin_avg": 2.25,
+   "pct_margin5": 6.2,
+   "pct_margin3": 37.5,
+   "pct_close": 31.2,
+   "pct_draw": 6.2,
+   "biggest": 5
+  },
+  "ppg_by_confed": {
+   "AFC": 1.13,
+   "CAF": 1.33,
+   "CONCACAF": 1.0,
+   "CONMEBOL": 2.08,
+   "OFC": 0.33,
+   "UEFA": 2.07
+  },
+  "arab_group": {
+   "Iraq": {
+    "W": 1,
+    "D": 1,
+    "L": 1,
+    "gf": 4,
+    "ga": 5,
+    "advanced": true
+   }
+  }
+ },
+ "2019": {
+  "teams": 24,
+  "all": {
+   "matches": 52,
+   "goals": 177,
+   "gpm": 3.4,
+   "margin_avg": 1.94,
+   "pct_margin5": 7.7,
+   "pct_margin3": 23.1,
+   "pct_close": 50.0,
+   "pct_draw": 9.6,
+   "biggest": 8
+  },
+  "group": {
+   "matches": 36,
+   "goals": 123,
+   "gpm": 3.42,
+   "margin_avg": 2.03,
+   "pct_margin5": 8.3,
+   "pct_margin3": 25.0,
+   "pct_close": 47.2,
+   "pct_draw": 11.1,
+   "biggest": 8
+  },
+  "knockout": {
+   "matches": 16,
+   "goals": 54,
+   "gpm": 3.38,
+   "margin_avg": 1.75,
+   "pct_margin5": 6.2,
+   "pct_margin3": 18.8,
+   "pct_close": 56.2,
+   "pct_draw": 6.2,
+   "biggest": 5
+  },
+  "ppg_by_confed": {
+   "AFC": 1.67,
+   "CAF": 1.5,
+   "CONCACAF": 0.42,
+   "CONMEBOL": 2.13,
+   "OFC": 0.5,
+   "UEFA": 1.73
+  },
+  "arab_group": {}
+ },
+ "2023": {
+  "teams": 24,
+  "all": {
+   "matches": 52,
+   "goals": 175,
+   "gpm": 3.37,
+   "margin_avg": 2.1,
+   "pct_margin5": 9.6,
+   "pct_margin3": 32.7,
+   "pct_close": 48.1,
+   "pct_draw": 17.3,
+   "biggest": 10
+  },
+  "group": {
+   "matches": 36,
+   "goals": 126,
+   "gpm": 3.5,
+   "margin_avg": 2.33,
+   "pct_margin5": 8.3,
+   "pct_margin3": 36.1,
+   "pct_close": 38.9,
+   "pct_draw": 13.9,
+   "biggest": 10
+  },
+  "knockout": {
+   "matches": 16,
+   "goals": 49,
+   "gpm": 3.06,
+   "margin_avg": 1.56,
+   "pct_margin5": 12.5,
+   "pct_margin3": 25.0,
+   "pct_close": 68.8,
+   "pct_draw": 25.0,
+   "biggest": 5
+  },
+  "ppg_by_confed": {
+   "AFC": 1.2,
+   "CAF": 1.75,
+   "CONCACAF": 1.0,
+   "CONMEBOL": 1.75,
+   "OFC": 0.0,
+   "UEFA": 2.07
+  },
+  "arab_group": {
+   "Morocco": {
+    "W": 2,
+    "D": 0,
+    "L": 1,
+    "gf": 5,
+    "ga": 3,
+    "advanced": true
+   }
+  }
+ },
+ "2025": {
+  "teams": 48,
+  "all": {
+   "matches": 104,
+   "goals": 326,
+   "gpm": 3.13,
+   "margin_avg": 2.04,
+   "pct_margin5": 13.5,
+   "pct_margin3": 26.9,
+   "pct_close": 51.9,
+   "pct_draw": 23.1,
+   "biggest": 16
+  },
+  "group": {
+   "matches": 72,
+   "goals": 250,
+   "gpm": 3.47,
+   "margin_avg": 2.39,
+   "pct_margin5": 18.1,
+   "pct_margin3": 34.7,
+   "pct_close": 47.2,
+   "pct_draw": 19.4,
+   "biggest": 16
+  },
+  "knockout": {
+   "matches": 32,
+   "goals": 76,
+   "gpm": 2.38,
+   "margin_avg": 1.25,
+   "pct_margin5": 3.1,
+   "pct_margin3": 9.4,
+   "pct_close": 62.5,
+   "pct_draw": 31.2,
+   "biggest": 5
+  },
+  "ppg_by_confed": {
+   "AFC": 1.22,
+   "CAF": 1.47,
+   "CONCACAF": 0.75,
+   "CONMEBOL": 1.76,
+   "OFC": 0.11,
+   "UEFA": 2.09
+  },
+  "arab_group": {
+   "Qatar": {
+    "W": 0,
+    "D": 2,
+    "L": 1,
+    "gf": 1,
+    "ga": 2,
+    "advanced": false
+   },
+   "Morocco": {
+    "W": 1,
+    "D": 0,
+    "L": 2,
+    "gf": 16,
+    "ga": 8,
+    "advanced": true
+   },
+   "United Arab Emirates": {
+    "W": 0,
+    "D": 1,
+    "L": 2,
+    "gf": 1,
+    "ga": 9,
+    "advanced": false
+   },
+   "Tunisia": {
+    "W": 1,
+    "D": 0,
+    "L": 2,
+    "gf": 6,
+    "ga": 3,
+    "advanced": true
+   },
+   "Egypt": {
+    "W": 1,
+    "D": 1,
+    "L": 1,
+    "gf": 5,
+    "ga": 5,
+    "advanced": true
+   },
+   "Saudi Arabia": {
+    "W": 1,
+    "D": 0,
+    "L": 2,
+    "gf": 3,
+    "ga": 5,
+    "advanced": false
+   }
+  }
+ }
+}
