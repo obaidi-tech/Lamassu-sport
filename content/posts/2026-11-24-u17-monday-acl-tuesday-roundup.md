@@ -16,6 +16,8 @@ sources:
   - وكالة مهر (تراكتور والوصل) | https://en.mehrnews.com/news/249641/Esteghalal-draws-vs-Al-Ain-Tractor-humiliated-by-Al-Wasl | وكالة
   - سبورت نيوز أفريكا (مواعيد دوري الأبطال) | https://sportnewsafrica.com/en/news/champions-league-fixtures-midweek-schedule-and-kick-off-times-24-25-november-2026/ | موقع
 no_image: true
+getty: |
+  <a id='wytmFDINTUVkKoihRu6CaQ' class='gie-single' href='https://www.gettyimages.com/detail/2248750552' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'wytmFDINTUVkKoihRu6CaQ',sig:'zY4pOs7cO1t-T7ypB4gZ8WCXc3Wie0F4ow1844VxPyk=',w:'594px',h:'396px',items:'2248750552',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [دوري أبطال أوروبا, ريال مدريد, أرسنال]
 related:
   - 2026-11-23-u17-world-cup-monday-preview.md
