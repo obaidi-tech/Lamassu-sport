@@ -106,6 +106,10 @@ related:
 
 ## 4. إنيوس: تقشف حسّن الحسابات ولم يحسّن الفريق
 
+<a id='58mfkcnKTqVASeacw_u9-Q' class='gie-single' href='https://www.gettyimages.com/detail/2154601625' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'58mfkcnKTqVASeacw_u9-Q',sig:'_SXurQKsojFh5Iz6qZPnlpTh__NLA_W_tgnQq5QFc6c=',w:'594px',h:'396px',items:'2154601625',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: السير جيم راتكليف، الشريك صاحب حصة الأقلية في مانشستر يونايتد، والسير أليكس فيرغسون.
+
 دخل السير جيم راتكليف ومجموعة إنيوس النادي مطلع 2024 بحصة أقلية، مع إدارة العمليات الكروية، فيما احتفظت عائلة غليزر بالأغلبية. وبدأت الإدارة الجديدة برنامج إعادة هيكلة واسعاً:
 
 - **الوظائف:** نحو 450 وظيفة أُلغيت على مرحلتين، من قوة عمل بلغت 1,140 موظفاً في يونيو 2024، أي نحو 39%.
