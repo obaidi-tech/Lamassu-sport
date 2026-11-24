@@ -5,7 +5,7 @@ label: تحليل
 date: 2026-11-24 14:10
 excerpt: كيفن دي بروين يعود الليلة إلى ملعب الاتحاد مع نابولي، بعد موسم ونصف في إيطاليا شهد إصابة طويلة وتغيير مركزه وخلافاً مع زميل وحديثاً عن رحيل في يناير.
 sources:
-  - بي بي سي سبورت، شمعون حافظ (نص من المالك) | https://www.bbc.co.uk/sport/football | صحيفة
+  - بي بي سي سبورت، شمعون حافظ (نص من المالك) | https://www.bbc.com/sport/football/articles/cqglreexkk06o | صحيفة
   - أفريكا سوكر (الخلاف مع لوكا وترتيب نابولي الأوروبي) | https://africasoccer.com/?p=651172 | موقع
   - فلاش سكور (دوره تحت أليغري وعرض آيندهوفن) | https://www.flashscore.com/news/dominant-for-belgium-but-struggling-under-allegri-why-de-bruyne-could-leave-napoli/8SdiN01K/ | موقع
   - توتو ميركاتو ويب (خسارة بورتو) | https://www.tuttomercatoweb.com/serie-a/lucca-de-bruyne-strade-divideranno-2290957 | موقع
