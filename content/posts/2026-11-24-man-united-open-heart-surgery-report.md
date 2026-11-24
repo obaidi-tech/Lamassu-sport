@@ -30,7 +30,7 @@ sources:
   - سكاي سبورتس (برادة: الفوز بالدوري خلال عامين) | https://www.skysports.com/football/news/12040/13550800/manchester-united-chief-executive-omar-berrada-says-club-can-win-premier-league-within-next-two-years | موقع
 no_image: true
 getty: |
-  <a id='G7YEuk71Typnh6Ynn5jp6g' class='gie-single' href='https://www.gettyimages.com/detail/1237476228' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'G7YEuk71Typnh6Ynn5jp6g',sig:'xR896Kgy-KWcoCufY0OhlYOQg8hbkaXjJVklTJs-9m4=',w:'594px',h:'440px',items:'1237476228',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='iRYY2VrbQPJv_6u2BejcWA' class='gie-single' href='https://www.gettyimages.com/detail/168611936' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'iRYY2VrbQPJv_6u2BejcWA',sig:'6znrw1ZUBTf_51Uf5GWhDwHl-uxY2sACizmTrN0RKG8=',w:'594px',h:'361px',items:'168611936',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [تشريح المؤسسات الرياضية, مانشستر يونايتد, رأس المال الرياضي]
 related:
   - 2026-11-22-liverpool-thrash-ten-man-united.md
@@ -59,6 +59,10 @@ related:
 > لا يجوز جمع هذه الأرقام في رقم واحد، لاختلاف فتراتها وطبيعتها المحاسبية وتداخل بعضها.
 
 ## 1. رانغنيك: المدرب الذي شخّص المؤسسة قبل الفريق
+
+<a id='G7YEuk71Typnh6Ynn5jp6g' class='gie-single' href='https://www.gettyimages.com/detail/1237476228' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'G7YEuk71Typnh6Ynn5jp6g',sig:'xR896Kgy-KWcoCufY0OhlYOQg8hbkaXjJVklTJs-9m4=',w:'594px',h:'440px',items:'1237476228',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: رالف رانغنيك وكريستيانو رونالدو خلال موسم 2021-2022 في مانشستر يونايتد.
 
 لم يكن تعيين رانغنيك في نوفمبر 2021 اختياراً لمدرب تقليدي. فالرجل اشتهر ببناء المشروعات الكروية ومنظومات الاستقطاب في أندية ريد بول، وكان الاتفاق أن يدرب الفريق مؤقتاً ثم ينتقل إلى دور استشاري لعامين.
 
@@ -150,10 +154,6 @@ related:
 منذ اعتزال فيرغسون، جرّب يونايتد مدارس تدريبية متباينة، وكل تغيير جذري في فلسفة المدرب جرّ معه تعاقدات جديدة، واستغناء عن لاعبين، وتغييراً في الطاقم.
 
 ### من آخر لقب إلى اليوم
-
-<a id='iRYY2VrbQPJv_6u2BejcWA' class='gie-single' href='https://www.gettyimages.com/detail/168611936' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'iRYY2VrbQPJv_6u2BejcWA',sig:'6znrw1ZUBTf_51Uf5GWhDwHl-uxY2sACizmTrN0RKG8=',w:'594px',h:'361px',items:'168611936',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
-
-تعليق: السير أليكس فيرغسون يرفع كأس الدوري الإنجليزي الممتاز في أولد ترافورد يوم 12 مايو 2013، بعد المباراة أمام سوانزي سيتي، في آخر تتويج بالدوري للنادي حتى اليوم.
 
 لم يكن التراجع خطاً مستقيماً، بل تخللته مواسم جيدة لم تتحول إلى نجاح مستدام:
 
