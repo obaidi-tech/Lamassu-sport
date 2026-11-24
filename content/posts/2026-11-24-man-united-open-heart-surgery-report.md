@@ -31,12 +31,14 @@ sources:
 no_image: true
 getty: |
   <a id='G7YEuk71Typnh6Ynn5jp6g' class='gie-single' href='https://www.gettyimages.com/detail/1237476228' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'G7YEuk71Typnh6Ynn5jp6g',sig:'xR896Kgy-KWcoCufY0OhlYOQg8hbkaXjJVklTJs-9m4=',w:'594px',h:'440px',items:'1237476228',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
-tags: [مانشستر يونايتد, الدوري الإنجليزي, رأس المال الرياضي]
+tags: [تشريح المؤسسات الرياضية, مانشستر يونايتد, رأس المال الرياضي]
 related:
   - 2026-11-22-liverpool-thrash-ten-man-united.md
   - 2026-11-23-ali-barat-agents-industry.md
   - 2026-11-21-aljazeera-entertainment-capitalism-football.md
 ---
+
+> الحلقة الأولى من سلسلة **«تشريح المؤسسات الرياضية»**، التي تدرس تجارب النجاح والإخفاق في الأندية والهيئات الرياضية وفق معايير الحوكمة والتمويل والإدارة والهوية والمعرفة المؤسسية.
 
 في أبريل 2022، وبعد خمسة أشهر فقط مدرباً مؤقتاً لمانشستر يونايتد، اختار الألماني رالف رانغنيك تشبيهاً طبياً لوصف حال النادي: لا يحتاج إلى «تعديلات تجميلية»، بل إلى «عملية قلب مفتوح».
 

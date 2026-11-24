@@ -41,7 +41,7 @@ def load_tags(path: str) -> list:
             continue
         terms = [name] + [str(x).strip() for x in (t.get("match") or []) if str(x).strip()]
         excl = [str(x).strip() for x in (t.get("exclude") or []) if str(x).strip()]
-        out.append({"name": name, "slug": slug,
+        out.append({"name": name, "slug": slug, "min": int(t.get("min") or MIN_FOR_PAGE),
                     "re": re.compile("|".join(_pattern(x) for x in terms)),
                     "ex": re.compile("|".join(re.escape(x) for x in excl)) if excl else None})
     return out
@@ -70,7 +70,8 @@ def assign(articles: list, tags: list, log=print) -> dict:
     for a in articles:
         for t in picked[a["id"]]:
             pages.setdefault(t["slug"], []).append(a)
-    pages = {s: items for s, items in pages.items() if len(items) >= MIN_FOR_PAGE}
+    mins = {t["slug"]: t.get("min", MIN_FOR_PAGE) for t in tags}       # a series tag may set min: 1
+    pages = {s: items for s, items in pages.items() if len(items) >= mins.get(s, MIN_FOR_PAGE)}
     for a in articles:
         a["tags"] = [{"name": t["name"], "slug": t["slug"]} for t in picked[a["id"]] if t["slug"] in pages]
     return pages

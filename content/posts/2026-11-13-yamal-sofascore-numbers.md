@@ -10,7 +10,7 @@ sources:
   - سوفاسكور (جائزة الموسم الماضي) | https://www.sofascore.com/news/barcelonas-dribble-engine/ | موقع
 commons: File:Lamine Yamal France v Spain 7.24.26-092.jpg
 image_alt: لامين يامال خلال مباراة إسبانيا وفرنسا في يوليو 2026
-tags: [برشلونة]
+tags: [برشلونة, الدوري الإسباني]
 related:
   - 2026-11-09-barcelona-comeback-at-atletico.md
   - 2026-11-13-real-madrid-tiers-guler-vinicius.md

@@ -40,3 +40,5 @@ tags:
   # الأركان الثابتة
   - {name: من المختبر, slug: from-the-lab}
   - {name: رأس المال الرياضي, slug: sports-capital}
+  # السلاسل: min: 1 تُظهر صفحة السلسلة من حلقتها الأولى
+  - {name: تشريح المؤسسات الرياضية, slug: institution-anatomy, min: 1}
