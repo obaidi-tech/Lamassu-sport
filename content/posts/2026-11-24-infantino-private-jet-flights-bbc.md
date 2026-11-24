@@ -5,7 +5,7 @@ label: تحقيق
 date: 2026-11-24 21:55
 excerpt: تحقيق لبي بي سي يرصد 39 رحلة بطائرة خاصة لرئيس الفيفا إلى 32 دولة خلال 115 يوماً منذ كشف خطة بيع حصص كأس العالم، ومنتقدون يرونها جزءاً من حملته الانتخابية، والفيفا يقول إنها ضمن واجباته وفق اللوائح.
 sources:
-  - بي بي سي سبورت وبي بي سي فيريفاي (نص من المالك) | https://www.bbc.com/sport/football | صحيفة
+  - بي بي سي سبورت وبي بي سي فيريفاي | https://www.bbc.com/sport/football/articles/cmkgk22w3vlvo | موقع
   - أسوشيتد برس عبر إيه بي سي نيوز (رحلات كأس العالم) | https://abcnews.com/Sports/wireStory/flight-hours-miles-world-cup-travels-fifas-infantino-134887457 | وكالة
   - قاعدة بيانات الاتحاد الأوروبي للانبعاثات (EDGAR) | https://edgar.jrc.ec.europa.eu/report_2026?vis=ghgpop#emissions_table | رسمي
 no_image: true
