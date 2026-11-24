@@ -4,7 +4,7 @@ category: orgs
 date: 2026-11-24 21:40
 excerpt: ديبي هيويت، نائبة رئيس الفيفا ورئيسة الاتحاد الإنجليزي، وقّعت اتفاق عدم إفصاح شرطاً للاطلاع في زيوريخ على وثائق مشروع «فيفا فوروارد إنتربرايز» الملغى، فلم يعد بإمكانها الحديث علناً عما قرأته.
 sources:
-  - بي بي سي سبورت (نص من المالك) | https://www.bbc.com/sport/football | صحيفة
+  - بي بي سي سبورت | https://www.bbc.com/sport/football/articles/cqx2x4k74ryxo | موقع
   - تايمز لايف عن رويترز (رسالة الفيفا إلى أعضاء المجلس) | https://www.timeslive.co.za/sport/soccer/2026-11-03-fifa-to-grant-access-to-documents-from-scrapped-world-cup-sell-off-plan/ | وكالة
   - لايف سكور عن ذي إندبندنت (شروط الاطلاع) | https://www.livescore.com/en/news/football/more/fa-chair-to-examine-gianni-infantinos-fifa-world-cup-sell-off-plan-documents-the-independent/ | صحيفة
   - إنسايد ورلد فوتبول (مطالبة هيويت في سبتمبر) | https://www.insideworldfootball.com/2026/09/18/english-fa-demands-infantino-releases-world-cup-sell-off-and-balogun-file-says-fifas-own-review-cant-be-trusted/ | موقع
