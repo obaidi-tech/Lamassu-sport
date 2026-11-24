@@ -4,7 +4,7 @@ category: top5
 date: 2026-11-24 21:50
 excerpt: "الاتحاد الإنجليزي يلغي البطاقة الحمراء التي تلقاها ليني يورو أمام ليفربول، فيصبح متاحاً لمواجهة برنتفورد، بينما يرى رئيس الحكام هوارد ويب أن قرار الطرد كان صحيحاً."
 sources:
-  - بي بي سي سبورت (سايمون ستون وديل جونسون) | | موقع
+  - بي بي سي سبورت (سايمون ستون وديل جونسون) | https://www.bbc.com/sport/football/articles/ck868g93djl5o | موقع
   - نص من فريق تحرير لاماسو | | ناقل
   - سكاي سبورتس | https://www.skysports.com/football/news/13616021/leny-yoros-red-card-for-manchester-united-against-liverpool-overturned-following-successful-appeal | موقع
   - ذي إندبندنت عبر ياهو سبورتس | https://sports.yahoo.com/articles/leny-yoro-ban-overturned-controversial-152256517.html | صحيفة
