@@ -10,6 +10,8 @@ sources:
   - أبو الهول (توقيت البيان) | https://www.abualhol.news/451055/ | صحيفة
   - سكاي نيوز عربية (التعاقد مع عموتة في يونيو) | https://www.skynewsarabia.com/sport/1875272-الأهلي-المصري-يعلن-التعاقد-المدرب-المغربي-الحسين-عموتة | موقع
 no_image: true
+getty: |
+  <a id='04QZTorITcVsq7AsCgo7Iw' class='gie-single' href='https://www.gettyimages.com/detail/2156552913' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'04QZTorITcVsq7AsCgo7Iw',sig:'6xeYAYuw5TwDyqqXgHDAMxOFnPA2oBcHD0bXRNxXebs=',w:'594px',h:'396px',items:'2156552913',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 أعلن الأهلي المصري، في الساعات الأولى من صباح اليوم الثلاثاء، انفصاله عن مدربه المغربي الحسين عموتة، بعد ساعات من خسارة الفريق أمام بيراميدز 0-2 في الجولة التاسعة من الدوري المصري الممتاز، وهي خسارته الأولى في المسابقة هذا الموسم.
