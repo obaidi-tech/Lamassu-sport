@@ -9,6 +9,8 @@ sources:
   - فور فور تو (حصيلة الموسم الماضي) | https://www.fourfourtwo.com/transfer/arsenal-striker-viktor-gyokeres-wants-to-leave-with-daily-exit-talks-ongoing-report | موقع
   - سبورتس مول عن إس في تي (تصريح جيوكيريس) | https://www.sportsmole.co.uk/football/arsenal/transfer-talk/news/gyokeres-breaks-silence-on-arsenal-exit-links_605868.html | موقع
 no_image: true
+getty: |
+  <a id='_sWKEPrsSPRzzlTvi0iY5w' class='gie-single' href='https://www.gettyimages.com/detail/2260396941' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'_sWKEPrsSPRzzlTvi0iY5w',sig:'IiCJTzYuVs7V0vVNL2ed-MiPuIL-Kw1p0QAiqu4SEls=',w:'594px',h:'396px',items:'2260396941',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإنجليزي, أرسنال]
 ---
 
