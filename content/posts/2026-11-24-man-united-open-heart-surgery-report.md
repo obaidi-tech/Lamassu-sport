@@ -130,8 +130,6 @@ related:
 
 منذ اعتزال فيرغسون، جرّب يونايتد مدارس تدريبية متباينة، وكل تغيير جذري في فلسفة المدرب جرّ معه تعاقدات جديدة، واستغناء عن لاعبين، وتغييراً في الطاقم.
 
-<a id='axBR48R-Ti1HbW2YJto1qA' class='gie-single' href='https://www.gettyimages.com/detail/1129623993' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'axBR48R-Ti1HbW2YJto1qA',sig:'Iqmfj4G2Su3vBu_Kt0jdSTK034yuopTgH6XLVJ5UVOM=',w:'594px',h:'384px',items:'1129623993',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
-
 | المدرب | الفترة | المحصلة |
 |---|---|---|
 | ديفيد مويس | 2013-2014 | عقد لست سنوات، رحل بعد أقل من عام |
@@ -205,6 +203,10 @@ related:
 ## 9. مؤسسة بلا ذاكرة
 
 لم يكن فيرغسون مجرد مدرب، بل كان على مدى 27 عاماً محور الهوية والثقافة وطريقة التعامل مع اللاعبين والإدارة. وبعد رحيله، صار النادي ينتقل بين مشروعات تدريبية متباينة، ويعيد صياغة أولوياته مع كل مدرب.
+
+<a id='axBR48R-Ti1HbW2YJto1qA' class='gie-single' href='https://www.gettyimages.com/detail/1129623993' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'axBR48R-Ti1HbW2YJto1qA',sig:'Iqmfj4G2Su3vBu_Kt0jdSTK034yuopTgH6XLVJ5UVOM=',w:'594px',h:'384px',items:'1129623993',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
+تعليق: جيل أكاديمية يونايتد الذهبي مع كأس دوري أبطال أوروبا في برشلونة عام 1999: (من اليسار) فيل نيفيل ونيكي بات ورايان غيغز ومدربهم في فريق الشباب إريك هاريسون وغاري نيفيل وبول سكولز وديفيد بيكام.
 
 الهوية الكروية لا تعني خطة لعب ثابتة، بل مبادئ توجّه القرارات مهما تغيرت الأسماء: العلاقة بين الفريق الأول والأكاديمية، ومعايير اختيار اللاعبين، وحدود صلاحيات المدرب والإدارة الرياضية. ومن دونها، يُطالب كل مدرب جديد ببناء جزء من المؤسسة من جديد.
 
