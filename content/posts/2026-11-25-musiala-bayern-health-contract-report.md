@@ -16,6 +16,8 @@ sources:
   - ياهو سبورتس (رومينيغه وكومباني) | https://sports.yahoo.com/articles/karl-heinz-rummenigge-defends-bayern-135900584.html | موقع
   - سبورتس مول (رد دريسن على فيفبرو) | https://www.sportsmole.co.uk/football/bayern-munich/news/bayern-accused-of-pressuring-jamal-musiala-over-contract_609611.html | موقع
 no_image: true
+getty: |
+  <a id='j_OCc5liTWFUGbleAvcBBw' class='gie-single' href='https://www.gettyimages.com/detail/2223698148' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'j_OCc5liTWFUGbleAvcBBw',sig:'819UyECyE4qBhl3hy4KltZhZo3YS2oCH0wfv4hPLfnM=',w:'594px',h:'396px',items:'2223698148',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [بايرن ميونخ, الدوري الألماني, رأس المال الرياضي]
 related:
   - 2026-11-24-ramelow-criticises-bayern-musiala.md
