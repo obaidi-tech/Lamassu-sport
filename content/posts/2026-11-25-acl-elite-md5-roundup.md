@@ -11,7 +11,9 @@ sources:
   - الديرة (الأندية السعودية والترتيب) | https://www.aldeereh.com/127204.html | صحيفة
   - وكالة الأنباء السعودية عبر أردو بوينت | https://www.urdupoint.com/arabic/story/2297617.html | وكالة
 no_image: true
-tags: [الدوري السعودي]
+getty: |
+  <a id='Uip5Dj3HTJJSBLGD__sDeQ' class='gie-single' href='https://www.gettyimages.com/detail/2259642609' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'Uip5Dj3HTJJSBLGD__sDeQ',sig:'HRrfWRslJZ38M-eXeAQMje8kKH8apYHt_iX5hBpkU4M=',w:'594px',h:'396px',items:'2259642609',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+tags: [النصر]
 related:
   - 2026-11-24-u17-monday-acl-tuesday-roundup.md
   - 2026-11-21-al-ahli-beat-al-nassr.md
