@@ -8,6 +8,8 @@ sources:
   - الموقع الرسمي للفورمولا 1 | https://www.formula1.com/en/latest/article/what-makes-the-qatar-grand-prix-special-and-why-you-should-see-it.2zZj0wc7e1CHMuZNMnvBX4 | رسمي
   - زوروا قطر (موعد السباق) | https://visitqatar.com/intl-en/events-calendar/2026-qatar-airways-grand-prix | رسمي
 no_image: true
+getty: |
+  <a id='7a_-PbRHS8lT84MnqpKNuA' class='gie-single' href='https://www.gettyimages.com/detail/2249022282' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7a_-PbRHS8lT84MnqpKNuA',sig:'hvYqUxKqD4-ILwZCnhYv1w1xN1g9Nytlz0-EbmeP_Jw=',w:'594px',h:'396px',items:'2249022282',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الفورمولا 1]
 related:
   - 2026-11-22-lusail-qatar-gp-preparations.md
