@@ -14,6 +14,8 @@ sources:
   - غول (تفاصيل تحقيق شتيرن) | https://www.goal.com/en/news/were-details-deliberately-withheld-new-revelations-in-the-jamal-musiala-case-at-bayern-munich/blt4b0dcda85a1da96c | موقع
   - غول (نقلاً عن بيلد) | https://goal.com/en/news/behind-the-scenes-new-musiala-setback-triggered-bayern-munich-officials-comments/blt13bb40e3af013f5e | موقع
   - ياهو سبورتس (رومينيغه وكومباني) | https://sports.yahoo.com/articles/karl-heinz-rummenigge-defends-bayern-135900584.html | موقع
+  - د.ب.أ عبر ياهو سبورتس (كومباني قبل مواجهة ليل) | https://sports.yahoo.com/articles/bayerns-kompany-musiala-not-indifferent-200325595.html | وكالة
+  - نيو ستريتس تايمز (تدريبات الثلاثاء) | https://www.nst.com.my/sports/football/2026/11/1585383/bruised-and-battered-bayern-vow-run-and-fight-lille | صحيفة
   - سبورتس مول (رد دريسن على فيفبرو) | https://www.sportsmole.co.uk/football/bayern-munich/news/bayern-accused-of-pressuring-jamal-musiala-over-contract_609611.html | موقع
 no_image: true
 getty: |
@@ -27,6 +29,8 @@ related:
 يمر جمال موسيالا (23 عاماً) بأصعب فترة في مسيرته. فبعد كسر في الساق في صيف 2025، ثم تشخيص اضطراب عصبي في أغسطس 2026، ثم إصابة عضلية جديدة، انتقلت قضيته من العيادة إلى العلن: قيادات في بايرن ميونيخ تتحدث عن مستقبله وعن قيمة عقده، والاتحاد الدولي للاعبين المحترفين (فيفبرو) يتهم النادي بالضغط عليه، والنادي ينفي.
 
 يجمع هذا التقرير ما هو مؤكد، ويفصله عما تقوله التقارير الصحفية ولم يتأكد رسمياً.
+
+**تحديث (الأربعاء 25 نوفمبر):** عادت القضية إلى الواجهة اليوم في المؤتمر الصحفي قبل مواجهة ليل. فقد قال المدرب فينسنت كومباني إن موسيالا «لا يقف غير مبالٍ» بالتصريحات الأخيرة عنه، لكنه أكد أن اللاعب والفريق كله يركزون على المباريات المقبلة. وتدرب موسيالا مع الفريق أمس، ويُتوقع أن يكون جاهزاً للمشاركة الليلة، دون أن يحدد كومباني حجم مشاركته.
 
 ## 1. آخر التطورات: اجتماع «بنّاء جداً»
 
