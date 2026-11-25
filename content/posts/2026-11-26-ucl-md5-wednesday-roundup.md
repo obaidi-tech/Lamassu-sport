@@ -14,7 +14,7 @@ sources:
   - فافيل (سلافيا - فياريال) | https://www.vavel.com/en-us/soccer/2026/11/25/1280628-slavia-prague-vs-villarreal-live-score-uefa-champions-league.html | موقع
 no_image: true
 getty: |
-  <a id='UzZHnykgQBlCQRtJ96rDhg' class='gie-single' href='https://www.gettyimages.com/detail/2231879417' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'UzZHnykgQBlCQRtJ96rDhg',sig:'qdEMia4Weu0SxJlyos8ui6yAKBPVoMTFxxYDSsywzSY=',w:'594px',h:'396px',items:'2231879417',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='SwoW9r83T7VKIqEoDr77fA' class='gie-single' href='https://www.gettyimages.com/detail/2294194728' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'SwoW9r83T7VKIqEoDr77fA',sig:'kFV7oHTd45XjyirJX2jOQv0cdAfoJu8tPcHGEDCIWCA=',w:'594px',h:'396px',items:'2294194728',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [دوري أبطال أوروبا, بايرن ميونخ, باريس سان جيرمان]
 related:
   - 2026-11-25-ucl-md5-wednesday-preview.md
