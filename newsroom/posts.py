@@ -20,6 +20,7 @@ File format (edit it straight in GitHub's web editor):
     updates:                      editors only (never shown on the site): "2026-11-05 14:11 | تصحيح: ما تغيّر"
       - "2026-11-05 14:11 | تصحيح: …"  (quote it if it has ": "); the newest sets «آخر تحديث». List: tools/editor_log.py
     featured: true                (optional, for news) put it in the lead spot on the home page
+    in_files: true                (optional) show it in the «ملفات لاماسو» band instead of the top runners
     references: true              (optional) an original guide or study reading, not news: the sources are
                                   shown as «المراجع» without the coverage meter
     story_id: f1-2026-brazil      (optional) the same id on every post of one developing story
@@ -316,6 +317,7 @@ def load_posts(posts_dir: str, tz: str, site_name: str, log=print, commons=None)
             "category": category,
             "sub": "own",
             "lead_pin": _lead_hours(meta.get("lead")),
+            "file_pin": bool(meta.get("in_files")),   # owner: show in «ملفات لاماسو», not the top runners
             "score": (20 if meta.get("featured") else 3 + 2 * len(srcs)) if is_news else 0,
             "n_sources": 0 if (external or meta.get("roundup") or meta.get("references")) else len(srcs),
             "references": bool(meta.get("references")),

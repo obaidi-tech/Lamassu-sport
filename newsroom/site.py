@@ -42,7 +42,7 @@ SEARCH_ALIASES = {        # extra words a reader may type for a section
     "top5": "كرة قدم الدوريات الكبرى الدوري الإنجليزي الإسباني الإيطالي فيفا الاتحاد الآسيوي المنتخبات",
 }
 FEATURE_CATS = {"culture", "awareness"}   # never take the home page lead spot
-FILE_LABELS = {"تقرير مرجعي", "قراءة تحليلية", "ملف", "تقرير", "دراسة", "تحقيق"}
+FILE_LABELS = {"تقرير مرجعي", "قراءة تحليلية", "ملف", "تقرير", "تقرير خاص", "دراسة", "تحقيق"}
 COVER_W, COVER_Q = 1200, 75   # published copies of article photos (the stored originals stay as they are)
 CARD_DAYS = 30            # newer articles get their own card image; older ones share a category image
 
@@ -398,12 +398,12 @@ class Builder:
 
         news = [a for a in articles if a["category"] != "opinion"]
         # the lead spot and "most covered" are for the day's news, not features (culture, studies)
-        headline = [a for a in news if a["category"] not in FEATURE_CATS]
+        headline = [a for a in news if a["category"] not in FEATURE_CATS and not a.get("file_pin")]
         recent = [a for a in headline if self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=30)]
         pool = recent or headline[:30]
         # the lead is always the newest story; the runners are the rest ranked by coverage
         lead = max(pool, key=lambda a: a["published_at"]) if pool else None
-        pinned = [a for a in articles if a.get("lead_pin")
+        pinned = [a for a in articles if a.get("lead_pin") and not a.get("file_pin")
                   and self.now - datetime.fromisoformat(a["published_at"]) < timedelta(hours=a["lead_pin"])]
         if pinned:                        # an editor's choice (lead: true / lead: N) beats "newest", for N hours
             lead = max(pinned, key=lambda a: a["published_at"])
@@ -417,8 +417,9 @@ class Builder:
             used.add(lead["id"])
         # «ملفات لاماسو»: our own longer pieces (culture, awareness, labelled reports) get one band
         # with pictures; they then leave the plain section lists below, so nothing shows twice
-        files = [a for a in news if a["id"] not in used and a.get("own")
-                 and (a["category"] in FEATURE_CATS or a.get("label") in FILE_LABELS)][:4]
+        pinned_files = [a for a in news if a["id"] not in used and a.get("file_pin")]   # in_files: true first
+        files = (pinned_files + [a for a in news if a["id"] not in used and a.get("own") and not a.get("file_pin")
+                 and (a["category"] in FEATURE_CATS or a.get("label") in FILE_LABELS)])[:4]
         for a in files:
             a["thumb"] = self._thumb(a)
             used.add(a["id"])

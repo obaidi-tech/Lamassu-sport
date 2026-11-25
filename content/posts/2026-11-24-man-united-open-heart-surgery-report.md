@@ -1,4 +1,5 @@
 ---
+in_files: true
 title: "جراحة لم تكتمل.. ماذا حدث لمانشستر يونايتد؟"
 category: orgs
 label: تقرير خاص
