@@ -14,6 +14,8 @@ sources:
   - بلانيت إف 1 (الترتيب النهائي) | https://www.planetf1.com/news/2026-las-vegas-grand-prix-race-report | موقع
   - لا فوتشي دي نيويورك (أنتونيلي وراسل) | https://lavocedinewyork.com/en/sports/2026/11/22/verstappen-wins-las-vegas-grand-prix-antonelli-fourth/ | موقع
 no_image: true
+getty: |
+  <a id='m6GWWzlTQdluW8sfQ0l6kw' class='gie-single' href='https://www.gettyimages.com/detail/2236557354' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'m6GWWzlTQdluW8sfQ0l6kw',sig:'25gfsEHaLJyB-__Ag5O-5rkDyL_rOYBUiarn4CrbIp0=',w:'594px',h:'396px',items:'2236557354',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 updates:
   - "2026-11-22 19:40 | أضيف ترتيب المراكز العشرة الأولى، ومراكز أنتونيلي وراسل، وموقف البطولتين"
 tags: [الفورمولا 1]
