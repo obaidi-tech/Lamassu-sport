@@ -9,6 +9,8 @@ sources:
   - ياهو سبورتس (تغطية مباشرة) | https://sports.yahoo.com/soccer/live/champions-league-scores-live-updates-viktor-gyokeres-strike-has-arsenal-ahead-real-madrid-trails-psv-205401287.html | موقع
   - سكاي سبورتس (النتائج والترتيب) | https://www.skysports.com/champions-league | موقع
 no_image: true
+getty: |
+  <a id='IlHSo5CmQJtV8hG6yx-vLA' class='gie-single' href='https://www.gettyimages.com/detail/2294928006' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'IlHSo5CmQJtV8hG6yx-vLA',sig:'R7gD4iIjD0BEnoV7FbTMTW_aojeE39RZoJyvPPzpTDo=',w:'594px',h:'396px',items:'2294928006',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [دوري أبطال أوروبا, ريال مدريد, أرسنال]
 related:
   - 2026-11-24-u17-tuesday-five-qualify-algeria-win.md
