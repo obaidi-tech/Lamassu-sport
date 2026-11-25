@@ -14,7 +14,7 @@ sources:
   - إي إس بي إن (مواعيد الخميس) | https://www.espn.com/soccer/schedule/_/league/fifa.world.u17 | موقع
 no_image: true
 getty: |
-  <a id='49KJ2-LHQdFeNJljc5R7SA' class='gie-single' href='https://www.gettyimages.com/detail/2306068436' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'49KJ2-LHQdFeNJljc5R7SA',sig:'j8YBRkttT-30SsQV5pUBIXy7zw99ceKaEWL5H8H8gvs=',w:'594px',h:'396px',items:'2306068436',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='Eob9G1FfQ6BRY3MvbtvqHA' class='gie-single' href='https://www.gettyimages.com/detail/2306678824' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'Eob9G1FfQ6BRY3MvbtvqHA',sig:'AgPVTgETUTrPTuJCbKPOl34Z9tV6FdQKHStU4p6Pl8M=',w:'594px',h:'401px',items:'2306678824',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-24-u17-tuesday-five-qualify-algeria-win.md
   - 2026-11-25-u17-scouts-aspire.md
