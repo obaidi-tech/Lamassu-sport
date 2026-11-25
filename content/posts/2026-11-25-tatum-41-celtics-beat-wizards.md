@@ -8,9 +8,8 @@ sources:
   - سي بي إس بوسطن | https://www.cbsnews.com/boston/news/tatum-scores-41-to-help-celtics-snap-4-game-skid-with-a-131-116-win-over-wizards/ | موقع
   - يارد باركر | https://www.yardbarker.com/nba/articles/celtics_beat_wizards_131_116_as_tatum_scores_41/s1_17668_44615216 | موقع
   - بليتشر ريبورت | https://bleacherreport.com/articles/25537449-tatum-shines-celtics-beat-wizards-box-score-stats-highlights-dybantsa-ad-george-more | موقع
-no_image: true
-getty: |
-  <a id='ckQ59PEHT5B6fAcWwbauTg' class='gie-single' href='https://www.gettyimages.com/detail/2166224904' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'ckQ59PEHT5B6fAcWwbauTg',sig:'1aOCPaJeJNTnHFHQNDuS5TH_D5xH9uZM7U5UG49cdbs=',w:'594px',h:'396px',items:'2166224904',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+commons: File:Jayson Tatum (51686834897).jpg
+image_alt: جايسون تاتوم لاعب بوسطن سلتيكس
 related:
   - 2026-11-24-nba-pacers-stop-thunder-lakers-roundup.md
 ---
