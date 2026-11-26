@@ -10,6 +10,8 @@ sources:
   - دازن (مواعيد الجولة) | https://www.dazn.com/it-IT/news/calcio/calendario-completo-serie-a-dove-vedere-le-partite/1qtugc7g9k7w71sjt6einxmm8w | موقع
   - ويليام هيل نيوز (أرقام الجولة) | https://williamhillnews.it/calcio/serie-a-numeri-e-curiosita-della-13a-giornata-il-como-davanti-alla-juve-per-la-prima-volta-la-lazio-a-torino/ | موقع
 no_image: true
+getty: |
+  <a id='h39g74KfQzJLSsaAE_G6kQ' class='gie-single' href='https://www.gettyimages.com/detail/2239158004' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'h39g74KfQzJLSsaAE_G6kQ',sig:'APP7UJlzqDPGEu3x3UbudQ3OIKUVw10sCNtUjYpJlVE=',w:'594px',h:'396px',items:'2239158004',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإيطالي]
 ---
 
