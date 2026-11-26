@@ -91,6 +91,8 @@ related:
 
 لكن الباحثين نبهوا إلى أن التضخم رُصد أيضاً لدى رياضيي القوة الذين لا يستخدمون المنشطات، وأن «الارتباط لا يعني السببية». والعينة صغيرة ومنتقاة من المتوفين، فلا يجوز تعميم نتائجها.
 
+<a id='LfJO3styTaBJufrxt3JoAg' class='gie-single' href='https://www.gettyimages.com/detail/1200843523' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'LfJO3styTaBJufrxt3JoAg',sig:'RxfM8k9afzVyttqsxrthDLcisEjuAtTDN-m8DQwvfU0=',w:'594px',h:'396px',items:'1200843523',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+
 ## 4. المنشطات: ما الذي ثبت علمياً؟
 
 أبرز الأدلة الحديثة جاءت من الدنمارك، حيث تتبع باحثون 1,189 رجلاً عوقبوا لاستخدامهم المنشطات الابتنائية في صالات التدريب بين 2006 و2018، وقارنوهم بـ59,450 رجلاً من عامة السكان في العمر نفسه:
