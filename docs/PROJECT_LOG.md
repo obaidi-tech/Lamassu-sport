@@ -2,7 +2,7 @@
 
 هذا الملف هو الذاكرة الدائمة للمشروع. يجمع الرؤية والقرارات المتفق عليها، وما أُنجز، والأفكار المؤجلة. **يُحدَّث مع كل قرار أو إضافة جديدة.** وإذا بدأت محادثة جديدة مع Claude، فاطلب منه قراءة هذا الملف أولاً.
 
-- **الموقع:** https://obaidi-tech.github.io/Lamassu-sport/
+- **الموقع:** https://lamassusport.com/ (كان: https://obaidi-tech.github.io/Lamassu-sport/ ويُحوَّل إليه تلقائياً)
 - **المستودع:** github.com/obaidi-tech/lamassu-sport
 - **المالك:** محمد العبيدي ([لينكدإن](https://www.linkedin.com/in/al0baidi))
 
