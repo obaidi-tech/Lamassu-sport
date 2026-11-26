@@ -92,45 +92,59 @@ def _rtl(draw, right_x, y, text, font, fill):
 
 def make_card(path: str, title: str, category: str, cat_name: str, site_name: str,
               date_label: str, n_sources: int):
+    """Share card (og:image). Built to stay legible as a small link-preview thumbnail (owner, 26 Nov 2026):
+    big headline, wing + name masthead, category pill, amber rule. Text only: no photos, so no licensing risk."""
     accent = CAT_COLORS.get(category, CAT_COLORS["top5"])
     img = Image.new("RGB", (W, H), INK)
     d = ImageDraw.Draw(img)
 
-    # faint arcs: a quiet nod to a stadium bowl, drawn in the accent colour
-    for i, r in enumerate(range(260, 900, 90)):
-        d.arc((-r // 2 - 200, H - r // 2, r * 1.2 - 200, H + r), 200, 340,
-              fill=tuple(int(a * 0.22 + b * 0.78) for a, b in zip(accent, INK)), width=3)
+    # stadium-bowl arcs, low on the far edge, in the accent colour
+    for r in range(260, 1500, 110):
+        d.ellipse((-r + 60, H - r // 2 + 60, r + 60, H + r * 1.4 + 60),
+                  outline=tuple(int(a * 0.20 + b * 0.80) for a, b in zip(accent, INK)), width=3)
+    d.rectangle((W - 22, 0, W, H), fill=accent)                    # category stripe on the reading edge
+    pad_r, pad_l = W - 78, 70
 
-    d.rectangle((W - 18, 0, W, H), fill=accent)                    # category stripe on the reading edge
-    pad_r, pad_l = W - 80, 80
+    # masthead: wing + name (right), category pill (left)
+    name_f = _font("heavy", 50)
+    nw = _len(name_f, site_name)
+    _rtl(d, pad_r, 34, site_name, name_f, PAPER)
+    wing_png = os.path.join(ROOT, "site_assets", "brand", "lamassu-wing.png")
+    if os.path.exists(wing_png):
+        wing = Image.open(wing_png).convert("RGBA").resize((74, 74), Image.LANCZOS)
+        img.paste(wing, (int(pad_r - nw - 16 - 74), 40), wing)
+    else:
+        _draw_wing(d, pad_r - nw - 16, 50, scale=1.7)
+    if cat_name:
+        tag_font = _font("heavy", 34)
+        tw = _len(tag_font, cat_name)
+        d.rounded_rectangle((pad_l, 44, pad_l + tw + 48, 106), radius=31, fill=accent)
+        _rtl(d, pad_l + tw + 24, 40, cat_name, tag_font, (255, 255, 255))
 
-    tag_font = _font("semi", 30)
-    tw = _len(tag_font, cat_name)
-    d.rounded_rectangle((pad_r - tw - 36, 64, pad_r, 114), radius=25, fill=accent)
-    _rtl(d, pad_r - 18, 61, cat_name, tag_font, (255, 255, 255))
-
-    f, lines, size = _fit_headline(title, pad_r - pad_l)
-    lh = int(size * 1.45)
-    y = 150 + max(0, (3 - len(lines)) * lh // 2)
+    # headline: as large as fits in three lines, centred in the space between masthead and footer
+    top, bottom = 140, H - 100
+    sizes = (96, 88, 80, 74, 68, 62, 56)
+    for i, sz in enumerate(sizes):                                 # largest size whose block also fits the height
+        f, lines, size = _fit(title, "heavy", sizes[i:], pad_r - pad_l, 3)
+        lh = int(size * 1.34)
+        block = lh * len(lines) + 56
+        if block <= bottom - top:
+            break
+    y = top + max(0, (bottom - top - block) // 2)
     for line in lines:
         _rtl(d, pad_r, y, line, f, PAPER)
         y += lh
+    d.rectangle((pad_r - 170, y + 40, pad_r, y + 50), fill=AMBER)
 
-    # footer: wordmark (right), date + coverage meter (left)
-    d.line((pad_l, H - 110, pad_r, H - 110), fill=(52, 66, 96), width=2)
-    _rtl(d, pad_r, H - 92, site_name, _font("heavy", 40), PAPER)
-    small = _font("regular", 26)
-    meter_x = pad_l
-    bars = 0  # coverage meter removed (owner, 23 Nov 2026)
-    for i in range(bars):
-        d.rectangle((meter_x + i * 14, H - 62, meter_x + i * 14 + 8, H - 40), fill=AMBER)
-    label = "مقال رأي" if category == "opinion" else ""
-    d.text((meter_x + bars * 14 + (14 if bars else 0), H - 72), label, font=small, fill=(200, 208, 220),
-           direction="rtl", language="ar")
-    d.text((pad_l + 260, H - 72), date_label, font=small, fill=(150, 160, 180), direction="rtl", language="ar")
+    # footer: date (left), opinion label (right)
+    small = _font("semi", 30)
+    if date_label:
+        d.text((pad_l, H - 70), date_label, font=small, fill=(170, 180, 200), direction="rtl", language="ar")
+    if category == "opinion":
+        _rtl(d, pad_r, H - 70, "مقال رأي", small, AMBER)
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    img.save(path, "JPEG", quality=85, optimize=True, progressive=True)
+    img.save(path, "JPEG", quality=88, optimize=True, progressive=True)
     return path
 
 
