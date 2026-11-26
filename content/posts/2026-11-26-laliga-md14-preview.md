@@ -11,6 +11,8 @@ sources:
   - غول (تقديم مباراة ريال مدريد وألافيس) | https://goal.com/es/noticias/real-madrid-vs-deportivo-alaves-previa-de-laliga-y-todo-lo-que-debes-saber/bltd15d3073704c61d6 | موقع
   - فلاش سكور (أرقام المواجهة) | https://www.flashscore.es/partido/futbol/alaves-hxt57t2q/real-madrid-W8mj7MDD/ | موقع
 no_image: true
+getty: |
+  <a id='iqe_nHfmQeR8J2G3f3l6hw' class='gie-single' href='https://www.gettyimages.com/detail/2303982425' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'iqe_nHfmQeR8J2G3f3l6hw',sig:'C1ev6gjVWFghiEvdzTYoYUT9kZ5XAcFP0M9hTVmpj38=',w:'594px',h:'396px',items:'2303982425',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الإسباني, ريال مدريد, برشلونة]
 related:
   - 2026-11-26-ucl-md5-wednesday-roundup.md
