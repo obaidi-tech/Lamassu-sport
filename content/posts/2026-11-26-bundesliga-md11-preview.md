@@ -9,6 +9,8 @@ sources:
   - رابطة الدوري الألماني (مواعيد الجولة) | https://www.bundesliga.com/en/bundesliga/matchday | رسمي
   - أنشتوسسايتن (مواعيد الجولة) | https://anstosszeiten.de/bundesliga/spieltag-11/ | موقع
 no_image: true
+getty: |
+  <a id='czsF_3iLReVJJkhadAAMew' class='gie-single' href='https://www.gettyimages.com/detail/2270947275' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'czsF_3iLReVJJkhadAAMew',sig:'Gj7qKMcn7nISBDJBjy3v-AXbD7crZwtrtmIZ5F-rF4Y=',w:'594px',h:'396px',items:'2270947275',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الدوري الألماني, بايرن ميونخ]
 ---
 
