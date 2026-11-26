@@ -8,6 +8,8 @@ sources:
   - ذا نكست ويب (نقلاً عن رويترز وبي بي سي سبورت) | https://thenextweb.com/news/fifa-cyberattack-handsome-boy-hacking-club-12gb | موقع
   - فانغارد (نقلاً عن رويترز) | https://www.vanguardngr.com/2026/11/fifa-confirms-cyberattack-says-hackers-stole-personal-business-data/ | صحيفة
 no_image: true
+getty: |
+  <a id='7wAkl4UYTvdCD2Wc9Y2TAA' class='gie-single' href='https://www.gettyimages.com/detail/2287630168' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7wAkl4UYTvdCD2Wc9Y2TAA',sig:'jMPvUVP3FoC1aa7K6Fv1UcbmHoYR4aKQu4qMYqHYY7E=',w:'594px',h:'395px',items:'2287630168',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [فيفا]
 related:
   - 2026-11-24-hewitt-nda-ffe-documents.md
