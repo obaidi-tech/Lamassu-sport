@@ -2,8 +2,7 @@
 title: "أجساد الأبطال وقلوبهم المنهكة.. من يحمي لاعبي كمال الأجسام؟"
 category: awareness
 label: تقرير خاص
-draft: true
-date: 2026-11-26 10:30
+date: 2026-11-26 16:10
 excerpt: "من محمد بن عزيزة إلى سجاد جواد: لاماسو تراجع ثلاثة عقود من الوفيات المبكرة بين أبطال كمال الأجسام، وما تقوله الدراسات الطبية عن القلب والمنشطات والتجفيف، ومسؤولية المنظومة الرياضية."
 sources:
   - فكرة ومسودة من فريق تحرير لاماسو | | ناقل
@@ -22,7 +21,7 @@ sources:
   - جنريشن آيرون (مايك ماتارازو) | https://generationiron.com/r-p-mike-matarazzo-1965-2014/ | موقع
 no_image: true
 getty: |
-  <a id='BgenEgPSQrh1tpJoGSscMw' class='gie-single' href='https://www.gettyimages.com/detail/72562296' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'BgenEgPSQrh1tpJoGSscMw',sig:'HAjNy1_PyOnHh12MhOFxzGpOBJw_HhDYoxVLOVmP0yg=',w:'594px',h:'403px',items:'72562296',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='-FSHSW6XSBpOFqQvn1cvqw' class='gie-single' href='https://www.gettyimages.com/detail/2299095281' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-FSHSW6XSBpOFqQvn1cvqw',sig:'re48yKD6ZkJCxwpfEiAHxgDb3AKgrucyInB-1jxYNMU=',w:'594px',h:'396px',items:'2299095281',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-25-musiala-bayern-health-contract-report.md
 ---
@@ -57,6 +56,8 @@ related:
 | سجاد جواد | العراق | 2026 | 30 | لم يُعلن السبب الطبي |
 
 **ملاحظة:** لا تُثبت هذه القائمة أن الوفيات تتزايد مع الزمن، ولا أن لها سبباً مشتركاً. لكنها تبين أن الظاهرة ليست حديثة، وأنها استمرت رغم تطور الطب الرياضي ووسائل التشخيص.
+
+<a id='BgenEgPSQrh1tpJoGSscMw' class='gie-single' href='https://www.gettyimages.com/detail/72562296' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'BgenEgPSQrh1tpJoGSscMw',sig:'HAjNy1_PyOnHh12MhOFxzGpOBJw_HhDYoxVLOVmP0yg=',w:'594px',h:'403px',items:'72562296',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 
 ## 2. ماذا تقول الأرقام؟
 
@@ -180,4 +181,4 @@ related:
 
 ولا ينبغي أن تبقى وفاة الأبطال أخباراً عابرة تنتهي بانتهاء التعزية. فالبطولة التي تتطلب من الرياضي التضحية بصحته تستدعي مراجعة مفهوم البطولة نفسه.
 
-> **ملاحظة من لاماسو:** هذا التقرير الحلقة الأولى من مشروع تحقيق أوسع. ونعمل على استكماله بمقابلات مع اختصاصي في أمراض القلب الرياضية، واختصاصي في التغذية الرياضية، ولاعب محترف أو معتزل، ونسعى إلى الحصول على رد من الاتحادات المعنية. والتقرير لا ينسب وفاة أي لاعب إلى سبب لم تؤكده جهة طبية رسمية.
+> **ملاحظة من لاماسو:** هذا التقرير الحلقة الأولى من مشروع تحقيق أوسع.
