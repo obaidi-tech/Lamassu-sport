@@ -10,6 +10,8 @@ sources:
   - كيه 24 (تفسير الاتحاد الأوروبي) | https://k24.digital/sports/champions-league/uefa-explains-why-manchester-uniteds-late-winner-against-sporting-was-disallowed | موقع
   - فوتبول إنسايدر (رأي كيث هاكيت) | https://www.footballinsider247.com/manchester-united/ex-refs-chief-this-is-the-real-reason-late-man-united-goal-vs-sporting-is-disallowed | موقع
 no_image: true
+getty: |
+  <a id='ZbIR4jB1RvxAlZxxMpqTGw' class='gie-single' href='https://www.gettyimages.com/detail/2305902690' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'ZbIR4jB1RvxAlZxxMpqTGw',sig:'1rXH9HU0S0OZpJ4FisLPWxtlpT6tMY9lCZD4dxMYgpg=',w:'594px',h:'396px',items:'2305902690',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [مانشستر يونايتد, دوري أبطال أوروبا]
 related:
   - 2026-11-26-ucl-md5-wednesday-roundup.md
