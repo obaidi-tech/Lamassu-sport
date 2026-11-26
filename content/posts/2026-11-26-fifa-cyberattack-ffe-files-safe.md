@@ -8,7 +8,7 @@ sources:
   - ذا نكست ويب (نقلاً عن رويترز وبي بي سي سبورت) | https://thenextweb.com/news/fifa-cyberattack-handsome-boy-hacking-club-12gb | موقع
   - فانغارد (نقلاً عن رويترز) | https://www.vanguardngr.com/2026/11/fifa-confirms-cyberattack-says-hackers-stole-personal-business-data/ | صحيفة
 no_image: true
-tags: [الفيفا]
+tags: [فيفا]
 related:
   - 2026-11-24-hewitt-nda-ffe-documents.md
 ---
