@@ -21,6 +21,8 @@ sources:
   - مسل إنسايدر (غريغ كوفاكس) | https://muscle-insider.com/canadian-profiles/greg-kovacs | موقع
   - جنريشن آيرون (مايك ماتارازو) | https://generationiron.com/r-p-mike-matarazzo-1965-2014/ | موقع
 no_image: true
+getty: |
+  <a id='BgenEgPSQrh1tpJoGSscMw' class='gie-single' href='https://www.gettyimages.com/detail/72562296' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'BgenEgPSQrh1tpJoGSscMw',sig:'HAjNy1_PyOnHh12MhOFxzGpOBJw_HhDYoxVLOVmP0yg=',w:'594px',h:'403px',items:'72562296',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-25-musiala-bayern-health-contract-report.md
 ---
