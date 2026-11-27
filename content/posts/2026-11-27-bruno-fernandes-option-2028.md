@@ -9,6 +9,8 @@ sources:
   - بي بي سي عبر نايل بوست | https://nilepost.co.ug/sports/391217/man-utd-trigger-fernandes-one-year-contract-extension | موقع
   - غول | https://www.goal.com/en-gb/news/man-utd-trigger-bruno-fernandes-contract-option/bltbdc6ca4ed3b72cae | موقع
 no_image: true
+getty: |
+  <a id='8IkJjEX7RbRfqkZGO-DtmQ' class='gie-single' href='https://www.gettyimages.com/detail/2306707767' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'8IkJjEX7RbRfqkZGO-DtmQ',sig:'W6JzniUk5MPwAZcsSjNQKmwfWKX_A8puLAfGh7Y7m2g=',w:'594px',h:'396px',items:'2306707767',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [مانشستر يونايتد]
 related:
   - 2026-11-27-pogba-united-arsenal-patience.md
