@@ -10,6 +10,8 @@ sources:
   - أسوشيتد برس عبر إيه بي سي نيوز | https://abcnews.com/Sports/wireStory/bournemouth-tops-europa-league-after-beating-celta-vigo-138472338 | وكالة
   - ون فوتبول عبر ياهو سبورتس | https://sports.yahoo.com/soccer/articles/europa-league-ac-milan-rally-193900063.html | موقع
 no_image: true
+getty: |
+  <a id='06vC11XrQtpKoUTDZXnl1Q' class='gie-single' href='https://www.gettyimages.com/detail/2306442801' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'06vC11XrQtpKoUTDZXnl1Q',sig:'Sld3jMWyPTv7EHN02Q1GxWLgUBCHPYp_mYdj3C7H84o=',w:'594px',h:'410px',items:'2306442801',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [يوفنتوس]
 ---
 
