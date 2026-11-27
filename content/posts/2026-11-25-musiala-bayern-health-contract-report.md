@@ -24,6 +24,7 @@ getty: |
   <a id='j_OCc5liTWFUGbleAvcBBw' class='gie-single' href='https://www.gettyimages.com/detail/2223698148' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'j_OCc5liTWFUGbleAvcBBw',sig:'819UyECyE4qBhl3hy4KltZhZo3YS2oCH0wfv4hPLfnM=',w:'594px',h:'396px',items:'2223698148',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [بايرن ميونخ, الدوري الألماني, رأس المال الرياضي]
 related:
+  - 2026-11-27-musiala-hamstring-out-again.md
   - 2026-11-27-kahn-criticises-bayern-musiala.md
   - 2026-11-24-ramelow-criticises-bayern-musiala.md
   - 2026-11-25-ucl-md5-wednesday-preview.md
@@ -101,6 +102,7 @@ related:
 | 24 نوفمبر | اجتماع إدارة النادي مع ممثلي اللاعب |
 | 25 نوفمبر | بايرن يخسر أمام ليل 1-2، وكيميش ينتقد طريقة التعامل مع موسيالا |
 | 27 نوفمبر | أوليفر كان ينتقد هونيس ورومينيغه، وبي بي سي تنشر تفاصيل جديدة |
+| 27 نوفمبر | بايرن يعلن إصابة موسيالا في عضلات الفخذ الخلفية اليمنى وغيابه «حتى إشعار آخر» |
 
 ## تحديث (الجمعة 27 نوفمبر): ما أضافه تقرير بي بي سي
 
