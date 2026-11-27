@@ -2272,3 +2272,13 @@ entries:
     archive_checked: true
     post: 2026-11-28-friday-europe-leagues-roundup.md
     note: "حصاد بطلب المالك. هدافا تشيلسي غير مذكورين لتضارب المصادر، وهداف بريست غير متاح. صورة غيتي 2307170092 أرسلها المالك."
+  - id: M-2026-11-28-02
+    date: 2026-11-28 02:30
+    title: "إيطاليا تتخطى التشيك وتبلغ نهائي كأس ديفيز"
+    source: المالك، تنس ناو، لا بريس، إيل سولي 24 أوري
+    status: تحديث
+    follows: 2026-11-27-davis-cup-musetti-mensik-italy-lead.md
+    verified: true
+    archive_checked: true
+    post: 2026-11-27-davis-cup-musetti-mensik-italy-lead.md
+    note: "تحديث الخبر بالنتيجة النهائية 2-1 بطلب المالك، واختُصر العنوان المقترح إلى أقل من 50 حرفاً."
