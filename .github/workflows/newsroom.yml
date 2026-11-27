@@ -1,4 +1,5 @@
-# غرفة الأخبار: تعمل كل ساعتين من 06:00 إلى 22:00 بتوقيت الرياض، وتنشر الموقع على GitHub Pages مجاناً
+# غرفة الأخبار: تعيد بناء الموقع كل ساعتين من 06:00 إلى 22:00 بتوقيت الرياض، وتجمع الأخبار المقترحة
+# مرتين يومياً فقط (09:07 و19:07) في وضع المسودة: لا يُنشر شيء قبل موافقة المالك (27 نوفمبر 2026)
 # المتطلبات:
 #   Settings → Pages → Source: GitHub Actions
 #   Settings → Secrets and variables → Actions → ANTHROPIC_API_KEY
@@ -6,7 +7,8 @@ name: newsroom
 
 on:
   schedule:
-    - cron: "7 3-19/2 * * *"        # UTC = 06:07، 08:07 … 22:07 بتوقيت الرياض
+    - cron: "7 3-19/2 * * *"        # إعادة البناء: UTC = 06:07، 08:07 … 22:07 بتوقيت الرياض
+    - cron: "7 6,16 * * *"          # جمع الأخبار المقترحة: 09:07 و19:07 بتوقيت الرياض
   workflow_dispatch: {}
 
 permissions:
@@ -33,12 +35,13 @@ jobs:
       - name: Collect, write, publish
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SCHEDULE: ${{ github.event.schedule }}
+          EVENT: ${{ github.event_name }}
         run: |
-          if [ -n "$ANTHROPIC_API_KEY" ]; then
-            python run.py --publish
+          if [ -n "$ANTHROPIC_API_KEY" ] && { [ "$SCHEDULE" = "7 6,16 * * *" ] || [ "$EVENT" = "workflow_dispatch" ]; }; then
+            python run.py --publish     # publish_mode: draft → الأخبار تذهب إلى content/pending بانتظار الموافقة
           else
-            # لا مفتاح بعد: لا جمع آلي ولا تكلفة. يُبنى الموقع من الأخبار والمقالات اليدوية، ويبدأ النشر الآلي تلقائياً عند إضافة المفتاح
-            echo "::notice::ANTHROPIC_API_KEY غير موجود — بناء الموقع من المحتوى اليدوي فقط"
+            # دورة إعادة بناء، أو لا مفتاح بعد: لا جمع ولا تكلفة. يُطبّق قرارات المراجعة ويُبنى الموقع
             python run.py --build-only
           fi
       - name: Save content
