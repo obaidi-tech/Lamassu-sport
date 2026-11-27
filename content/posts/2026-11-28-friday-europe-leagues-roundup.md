@@ -12,6 +12,8 @@ sources:
   - وكالة الأنباء الألمانية عبر فولكسشتيمه | https://www.volksstimme.de/panorama/gladbach-verspielt-sieg-fullkrug-rettet-bremen-4364191 | وكالة
   - سبورت رادار (النتائج والإحصاءات) | | بيانات
 no_image: true
+getty: |
+  <a id='--6V68sbSPR2ggZm1uFioQ' class='gie-single' href='https://www.gettyimages.com/detail/2307170092' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'--6V68sbSPR2ggZm1uFioQ',sig:'IkKoEGuHC7eM_RJ2kkjh-75tLSkR8Rf9o9Pat4Tzk84=',w:'594px',h:'418px',items:'2307170092',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 ---
 
 افتُتحت جولات نهاية الأسبوع في الدوريات الأوروبية الخمسة الكبرى مساء الجمعة بخمس مباريات، أبرزها فوز نوتنغهام فورست على تشيلسي، وتعادل مثير بين فيردر بريمن وبوروسيا مونشنغلادباخ.
