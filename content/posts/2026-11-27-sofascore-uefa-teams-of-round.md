@@ -9,6 +9,8 @@ sources:
   - سوفا سكور (بلزن - بنفيكا) | https://www.sofascore.com/news/kabongo-hits-a-perfect-10-as-viktoria-plzen-beat-benfica-4-0 | موقع
   - فلاش سكور (تشكيلة الدوري الأوروبي) | https://www.flashscore.com/news/soccer-europa-league-team-of-the-round-juventus-nec-plzen-players-dominate-xi/d6C42g4m/ | موقع
 no_image: true
+getty: |
+  <a id='AhcbLFzZQYRUkpg74qrwmA' class='gie-single' href='https://www.gettyimages.com/detail/2283563129' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'AhcbLFzZQYRUkpg74qrwmA',sig:'ptx6HvdQVbUAj7f_KnA0NoRU0QaHQiflsOqgwsDnsmk=',w:'594px',h:'396px',items:'2283563129',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-26-ucl-md5-wednesday-roundup.md
   - 2026-11-27-europa-league-md5-roundup.md
