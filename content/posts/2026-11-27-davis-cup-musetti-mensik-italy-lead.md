@@ -13,7 +13,7 @@ sources:
   - إيتالبرس | https://www.italpress.com/coppa-davis-semifinale-italia-repubblica-ceca-musetti-cobolli-risultato-aggiornamenti/ | وكالة
 no_image: true
 getty: |
-  <a id='RrG-snXjQnVaxTAaWvfIFg' class='gie-single' href='https://www.gettyimages.com/detail/2307135321' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'RrG-snXjQnVaxTAaWvfIFg',sig:'_VXU4ZQizt3TVAKYDXfxTq_2sFDIh0IUiM_tyxoGNXY=',w:'594px',h:'396px',items:'2307135321',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+  <a id='GPAUs0yeQepPRrJbyW-gHA' class='gie-single' href='https://www.gettyimages.com/detail/2307169920' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'GPAUs0yeQepPRrJbyW-gHA',sig:'FvW2ylexzX7HvbsZXFa4-0nl582ZrHXiqwsBev_fi48=',w:'594px',h:'396px',items:'2307169920',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-26-davis-cup-britain-semis.md
 ---
