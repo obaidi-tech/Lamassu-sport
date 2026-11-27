@@ -20,8 +20,10 @@ sources:
   - مسل إنسايدر (غريغ كوفاكس) | https://muscle-insider.com/canadian-profiles/greg-kovacs | موقع
   - جنريشن آيرون (مايك ماتارازو) | https://generationiron.com/r-p-mike-matarazzo-1965-2014/ | موقع
 no_image: true
-getty: |
-  <a id='-FSHSW6XSBpOFqQvn1cvqw' class='gie-single' href='https://www.gettyimages.com/detail/2299095281' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-FSHSW6XSBpOFqQvn1cvqw',sig:'re48yKD6ZkJCxwpfEiAHxgDb3AKgrucyInB-1jxYNMU=',w:'594px',h:'396px',items:'2299095281',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
+image: images/bodybuilding-heart-risk-ai.jpg
+image_credit: Lamassu
+image_note: صورة توضيحية مولّدة بالذكاء الاصطناعي، ولا تمثّل أي لاعب
+image_alt: كأس لبطولة كمال أجسام ونموذج قلب وسماعة طبية ومحقنة ووجبة رياضية، وفي الخلفية رياضي جالس منهك في صالة تدريب
 related:
   - 2026-11-25-musiala-bayern-health-contract-report.md
 ---
@@ -35,6 +37,8 @@ related:
 وقبل الإجابة، تنبيهان ضروريان:
 - تمارين المقاومة وبناء العضلات مفيدة للصحة. والحديث هنا عن ممارسات عالية الخطورة في المستويات التنافسية، لا عن الرياضة نفسها.
 - وفاة لاعب كمال أجسام لا تعني تلقائياً أن المنشطات سببها، ما لم تثبت ذلك التحقيقات والتقارير الطبية.
+
+<a id='-FSHSW6XSBpOFqQvn1cvqw' class='gie-single' href='https://www.gettyimages.com/detail/2299095281' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'-FSHSW6XSBpOFqQvn1cvqw',sig:'re48yKD6ZkJCxwpfEiAHxgDb3AKgrucyInB-1jxYNMU=',w:'594px',h:'396px',items:'2299095281',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 
 ## 1. ثلاثة عقود من الوفيات المبكرة
 
