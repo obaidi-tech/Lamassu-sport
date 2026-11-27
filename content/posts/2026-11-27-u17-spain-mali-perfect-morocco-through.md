@@ -12,6 +12,8 @@ sources:
   - راو تشيلي (هدافا مالي) | https://www.rawchili.com/5160361/ | موقع
   - فيتنام نت | https://www.vietnam.vn/en/u17-world-cup-2026-trung-quoc-di-tiep-tay-ban-nha-pho-dien-suc-manh | موقع
 no_image: true
+getty: |
+  <a id='yKDry-R0SGR8sUPP1liZqg' class='gie-single' href='https://www.gettyimages.com/detail/2307002367' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'yKDry-R0SGR8sUPP1liZqg',sig:'DRT4wNUl5Wsl0VFJsyx3I_jPitPNIPRQQUpz6pCUIfo=',w:'594px',h:'412px',items:'2307002367',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-25-u17-egypt-saudi-qualify-qatar-waits.md
 ---
