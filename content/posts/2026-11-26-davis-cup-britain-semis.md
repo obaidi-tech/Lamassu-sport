@@ -4,8 +4,10 @@ category: other_sports
 date: 2026-11-26 21:30
 excerpt: "فازت بريطانيا على ألمانيا 2-1 في ربع نهائي كأس ديفيز للتنس في بولونيا، بعدما حسم الثنائي هنري باتن ونيل سكوبسكي مباراة الزوجي، لتبلغ المربع الذهبي لأول مرة منذ 2019."
 sources:
+  - رويترز (بالعربية) | https://www.reuters.com/ar/sports/INCY74UIYROQJNNZ7SVGEP3QNE-2026-11-26/ | وكالة
   - رويترز عبر الشرق الأوسط الإنجليزية | https://english.aawsat.com/sports/5346035-patten-skupski-send-britain-past-germany-davis-cup-semi-finals | وكالة
   - رابطة محترفي التنس | https://www.atptour.com/en/news/great-britain-germany-davis-cup-2026 | رسمي
+  - آركايد (إسبانيا - النمسا) | https://www.archyde.com/spain-leads-austria-2-0-in-davis-cup-quarterfinal-in-bologna/ | موقع
   - الاتحاد البريطاني للتنس | https://www.lta.org.uk/fan-zone/davis-cup/news/final-8-great-britain-vs-germany-results-updates | رسمي
 no_image: true
 getty: |
@@ -26,4 +28,4 @@ getty: |
 
 ## الطريق إلى اللقب
 
-تلتقي بريطانيا يوم السبت الفائز من مواجهة إسبانيا والنمسا، وتسعى إلى لقبها الأول منذ 2015. وفي نصف النهائي الآخر، تلتقي إيطاليا، حاملة اللقب في آخر ثلاث نسخ والبلد المضيف، مع التشيك يوم الجمعة.
+تلتقي بريطانيا يوم السبت منتخب إسبانيا، الذي حسم مواجهته مع النمسا بالفوز في مباراتي الفردي، دون أن يحتاج إلى نجمه كارلوس ألكاراز. وتسعى بريطانيا إلى لقبها الأول منذ 2015. وفي نصف النهائي الآخر، تلتقي إيطاليا، حاملة اللقب في آخر ثلاث نسخ والبلد المضيف، مع التشيك يوم الجمعة.
