@@ -13,6 +13,8 @@ sources:
   - رابطة الدوري الإسباني (تعاقدات ريال مدريد) | https://www.laliga.com/en-FR/clubs/real-madrid/transfers | رسمي
   - فيتشاخيس (لطيف عيسمان) | https://www.fichajes.net/en/news/real-madrid-confirms-its-first-signing-for-2027-20261113.html | موقع
 no_image: true
+getty: |
+  <a id='qVCiDDAmQBpm4tNPCdNI_Q' class='gie-single' href='https://www.gettyimages.com/detail/2306323004' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'qVCiDDAmQBpm4tNPCdNI_Q',sig:'Jw7yVmDVZNBtAngGKE6dGuF4BOOqZxyZyZlK0iVlCag=',w:'594px',h:'393px',items:'2306323004',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-21-athletic-mourinho-tactical-screen.md
   - 2026-11-04-real-madrid-jj-gabriel.md
