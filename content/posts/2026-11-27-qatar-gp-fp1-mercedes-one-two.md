@@ -9,6 +9,8 @@ sources:
   - د ب أ عبر ياهو سبورتس | https://sports.yahoo.com/f1/articles/antonelli-tops-first-practice-f1-144830970.html | وكالة
   - إف 1 لايف بالس | https://blog.f1livepulse.com/2026-qatar-gp-fp1-antonelli-mercedes-medium-tyres | موقع
 no_image: true
+getty: |
+  <a id='7a_-PbRHS8lT84MnqpKNuA' class='gie-single' href='https://www.gettyimages.com/detail/2249022282' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7a_-PbRHS8lT84MnqpKNuA',sig:'hvYqUxKqD4-ILwZCnhYv1w1xN1g9Nytlz0-EbmeP_Jw=',w:'594px',h:'396px',items:'2249022282',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [الفورمولا 1]
 related:
   - 2026-11-26-bearman-haas-2027.md
