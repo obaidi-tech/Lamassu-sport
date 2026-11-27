@@ -287,6 +287,14 @@ class Builder:
                 a["image"] = rel
             else:
                 a["image"] = f"img/default-{a['category']}.jpg"
+            # version the share image by its content: LinkedIn caches an image by URL and ignores a changed file
+            # behind the same URL, so a new picture must get a new URL (owner, 27 Nov 2026)
+            try:
+                import hashlib as _h
+                with open(os.path.join(self.out, a["image"]), "rb") as fh:
+                    a["image_v"] = _h.sha1(fh.read()).hexdigest()[:8]
+            except OSError:
+                a["image_v"] = ""
 
     # ── build ──────────────────────────────────────────────────────────
     def _file_date(self, path):
