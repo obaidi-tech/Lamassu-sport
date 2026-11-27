@@ -2168,7 +2168,7 @@ entries:
     title: "موسيالا وبايرن.. حين تصبح صحة اللاعب قضية مالية"
     source: بي بي سي سبورت (رابط من المالك) عبر إعادة نشر
     status: تحديث
-    follows: M-2026-11-25-04
+    follows: 2026-11-25-musiala-bayern-health-contract-report.md
     verified: true
     archive_checked: true
     post: 2026-11-25-musiala-bayern-health-contract-report.md
@@ -2182,3 +2182,12 @@ entries:
     archive_checked: true
     post: 2026-11-27-bruno-fernandes-option-2028.md
     note: "رابط بي بي سي لم يُجلب مباشرة (خارج القائمة المسموحة)، فقُرئ نصه عبر إعادات نشر. بلا صورة."
+  - id: M-2026-11-27-10
+    date: 2026-11-27 20:00
+    title: "مرسيدس تحتل أول مركزين في التجارب الأولى بقطر"
+    source: رويترز (رابط من المالك)، الاتحاد الدولي للسيارات، د ب أ، إف 1 لايف بالس
+    status: جديد
+    verified: true
+    archive_checked: true
+    post: 2026-11-27-qatar-gp-fp1-mercedes-one-two.md
+    note: "رابط رويترز لم يُجلب (خارج القائمة المسموحة). الأزمنة والفارق (0.507) من النتائج الرسمية للاتحاد الدولي، بينما ذكر موقع ذا ريس 0.467 فلم يُعتمد. بلا صورة."
