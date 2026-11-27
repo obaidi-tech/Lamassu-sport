@@ -10,6 +10,8 @@ sources:
   - شفارتسفيلدر بوته | https://www.schwarzwaelder-bote.de/sport/frueherer-vorstandsboss-kahn-rechnet-mit-bayern-bossen-ab-haben-musiala-beschaedigt-79788728.html | صحيفة
   - فوسبال ناتسيونال مانشافت (تصريح كيميش) | https://fussballnationalmannschaft.net/kimmich-musiala-kritik-bayern-bosse-hoeness-rummenigge-123341334.html | موقع
 no_image: true
+getty: |
+  <a id='7Jt_4eoMTJ9jz9mi-M5cTQ' class='gie-single' href='https://www.gettyimages.com/detail/2306496538' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'7Jt_4eoMTJ9jz9mi-M5cTQ',sig:'jH5_1TOl53tfEMkKDDs-_BEm8t-kN7a_ygNsIL0m200=',w:'594px',h:'396px',items:'2306496538',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 tags: [بايرن ميونخ]
 related:
   - 2026-11-25-musiala-bayern-health-contract-report.md
