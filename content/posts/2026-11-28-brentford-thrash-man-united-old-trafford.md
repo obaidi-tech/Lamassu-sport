@@ -10,6 +10,7 @@ sources:
   - إي إس بي إن | https://www.espn.co.uk/football/match/_/gameId/401879226 | موقع
   - إن بي سي سبورتس | https://www.nbcsports.com/soccer/live/manchester-united-vs-brentford-live-updates-score-goals-highlights-stats-2026-november-28 | موقع
   - سبورت رادار (الإحصاءات) | | بيانات
+lead: true
 no_image: true
 related:
   - 2026-11-22-liverpool-thrash-ten-man-united.md
