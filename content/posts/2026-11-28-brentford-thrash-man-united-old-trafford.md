@@ -12,6 +12,8 @@ sources:
   - سبورت رادار (الإحصاءات) | | بيانات
 lead: true
 no_image: true
+getty: |
+  <a id='IVQyC4orS4RYd_VVxZK8MQ' class='gie-single' href='https://www.gettyimages.com/detail/2299556634' target='_blank' style='color:#a7a7a7;text-decoration:none;font-weight:normal !important;border:none;display:inline-block;'>Embed from Getty Images</a><script>window.gie=window.gie||function(c){(gie.q=gie.q||[]).push(c)};gie(function(){gie.widgets.load({id:'IVQyC4orS4RYd_VVxZK8MQ',sig:'7ZHK1vdqrhp_S8nEWTagkLft2Aao38MN4jxT_T--ImM=',w:'594px',h:'436px',items:'2299556634',caption: true ,tld:'com',is360: false })});</script><script src='//embed-cdn.gettyimages.com/widgets.js' charset='utf-8' async></script>
 related:
   - 2026-11-22-liverpool-thrash-ten-man-united.md
   - 2026-11-26-man-utd-sporting-controversial-decisions.md
